@@ -1,0 +1,28 @@
+1) Try sending multiple signals in GNURadio
+2) Send square wave in FPGA with Verilog
+3) Make FPGA changes, compile, and write
+
+AFTER YOU CAN SEND A BASIC SQUARE WAVE WITH THE FPGA IN VERILOG 
+
+4) Use DDS core to send multiple waveforms.
+5) Feedback loop
+
+
+3/16/2017
+
+TODO: Set up github
+Set up some kind of lab notebook (markdown? Mathematica? Python? Something!!!)
+
+Can now switch around lights. Just need to change constraint file, following schematic accordingly,
+then plug into computer, start up companion, and change the USRP Sink image file.  can also do a manual
+make but GNURadio probably easier. 
+
+Also spent a lot of time with prof thompson and followed the ettus github. Looks like a few key paths are
+important. We might just be able to insert something into duc_chain. In radio_legacy.v (in radio200) there's
+a call to duc_chain thta uses sample_tx. We can probably just assign sample_tx a different value that we determine
+in a different module and recompile, and it might just run. sample_tx, btw, is just some 32 bit value, and the first 16 bits get mapped to 
+q, and the last 16 bits get mapped to i. 
+
+Before that, should change UCF file and assign radio_clk to one of those gps pins, so I can just read out the clock
+cycle. Should also read about the Cordic algorithm and just generally how mixing works so I can predict the output
+sidebands. It looks like all the data comes through axi_fifo_short.v in fpga/usrp3/luib/fifo, thats where it interfaces

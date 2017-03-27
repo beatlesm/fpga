@@ -77,8 +77,7 @@ NET "rx_codec_d*" DRIVE = 2;
 
 NET "cat_clkout_fpga"  LOC = "J3"  | IOSTANDARD = LVCMOS18;
 NET "codec_data_clk_p"  LOC = "K3"  | IOSTANDARD = LVCMOS18;
-NET "codec_fb_clk_p"  LOC = "A15"  | IOSTANDARD = LVCMOS18  | DRIVE = 2 ;
-## P3
+NET "codec_fb_clk_p"  LOC = "P3"  | IOSTANDARD = LVCMOS18  | DRIVE = 2 ;
 NET "codec_main_clk_p"  LOC = "K5"   | IOSTANDARD = LVDS_25;
 NET "codec_main_clk_n"  LOC = "K4"   | IOSTANDARD = LVDS_25;
 
@@ -184,10 +183,8 @@ NET "GPIF_*" DRIVE = 2;
 NET "GPIF_*" SLEW = SLOW;
 
 ## GPS
-## below line should be gps_lock
-NET "clock_out"  LOC = "B14" | IOSTANDARD = LVCMOS33 ;
-# NET "gps_rxd"  LOC = "A15" | IOSTANDARD = LVCMOS33 ;
-NET "gps_rxd"  LOC = "K5" | IOSTANDARD = LVCMOS33 ;
+NET "gps_lock"  LOC = "B14" | IOSTANDARD = LVCMOS33 ;
+NET "gps_rxd"  LOC = "A15" | IOSTANDARD = LVCMOS33 ;
 NET "gps_txd"  LOC = "A14" | IOSTANDARD = LVCMOS33  | PULLUP;
 NET "gps_txd_nmea"  LOC = "C15" | IOSTANDARD = LVCMOS33 | PULLUP ;
 

@@ -26,3 +26,7 @@ q, and the last 16 bits get mapped to i.
 Before that, should change UCF file and assign radio_clk to one of those gps pins, so I can just read out the clock
 cycle. Should also read about the Cordic algorithm and just generally how mixing works so I can predict the output
 sidebands. It looks like all the data comes through axi_fifo_short.v in fpga/usrp3/luib/fifo, thats where it interfaces
+
+3/26/2017
+
+Two possible avenues -- either output radio_clk to SMA connection (need to try this) or read off of pin. Pin should just need to change UCF connection...not sure why it's not working? radio_clk need to actually write some code (done) and try changing. 

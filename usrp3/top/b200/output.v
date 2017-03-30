@@ -3,7 +3,9 @@ module output (radio_clk, PPS_IN_INT);
 input radio_clk;
 output PPS_IN_INT;
 
-assign var_name = radio_clk;
+always @( * ) begin
+	PPS_IN_INT <= radio_clk;
+end
 
 endmodule
 

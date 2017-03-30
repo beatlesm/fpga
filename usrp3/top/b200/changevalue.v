@@ -1,8 +1,6 @@
-module changevalue (PPS_IN_INT);
+module changevalue (
+	output gps_lock
+);
 
-output PPS_IN_INT;
-PPS_IN_INT <= 1;
-
+assign gps_lock = 1'b1;
 endmodule
-
-

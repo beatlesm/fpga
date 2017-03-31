@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: b200.prj
@@ -338,7 +338,7 @@ Elaborating module <IDDR2(DDR_ALIGNMENT="C0")>.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200_io.v" Line 168: Assignment to rx_frame_d2 ignored, since the identifier is never used
 
 Elaborating module <ODDR2(DDR_ALIGNMENT="C0",SRTYPE="ASYNC")>.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 267: Assignment to spare_signal ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 268: Assignment to spare_signal ignored, since the identifier is never used
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200_core.v" Line 230: Port readback_stb is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200_core.v" Line 261: Port space is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200_core.v" Line 273: Port space is not connected to this instance
@@ -913,7 +913,7 @@ WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/gpif2/gpi
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/gpif2/gpif2_slave_fifo32.v" Line 540: Assignment to ctrl_bus_error ignored, since the identifier is never used
 
 Elaborating module <fifo64_to_gpif2(FIFO_SIZE=5)>.
-WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 185: Net <reset> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 186: Net <reset> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -933,9 +933,9 @@ WARNING:Xst:647 - Input <FPGA_CFG_CS> is never used. This port will be preserved
 WARNING:Xst:647 - Input <AUX_PWR_ON> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 134: Output port <CLK_OUT1_40_int> of the instance <gen_clks> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 134: Output port <CLK_OUT3_100_bus> of the instance <gen_clks> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 281: Output port <debug> of the instance <b200_core> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 281: Output port <debug_txd> of the instance <b200_core> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 341: Output port <debug> of the instance <slave_fifo32> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 282: Output port <debug> of the instance <b200_core> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 282: Output port <debug_txd> of the instance <b200_core> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 344: Output port <debug> of the instance <slave_fifo32> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <reset> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 1-bit register for signal <clocks_ready>.
     Found 8-bit register for signal <fe0_gpio>.
@@ -943,7 +943,7 @@ WARNING:Xst:653 - Signal <reset> is used but never assigned. This sourceless sig
     Found 9-bit register for signal <misc_outs_r<8:0>>.
     Found 16-bit register for signal <clocks_ready_count>.
     Found 16-bit adder for signal <clocks_ready_count[15]_GND_1_o_add_0_OUT> created at line 154.
-    Found 1-bit tristate buffer for signal <fx3_miso> created at line 234
+    Found 1-bit tristate buffer for signal <fx3_miso> created at line 235
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  42 D-type flip-flop(s).
@@ -7097,6 +7097,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <occupied_0> (withou
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <o_tvalid> has a constant value of 0 in block <axi_fifo_bram_4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <empty_reg> has a constant value of 1 in block <axi_fifo_bram_4>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <differentiator_3_96> in Unit <cic_interp> is equivalent to the following 20 FFs/Latches, which will be removed : <differentiator_3_97> <differentiator_3_98> <differentiator_3_99> <differentiator_3_100> <differentiator_3_101> <differentiator_3_102> <differentiator_3_103> <differentiator_3_104> <differentiator_3_105> <differentiator_3_106> <differentiator_3_107> <differentiator_3_108> <differentiator_3_109> <differentiator_3_110> <differentiator_3_111> <differentiator_3_112> <differentiator_3_113> <differentiator_3_114> <differentiator_3_115> <differentiator_3_116> 
+WARNING:Xst:2041 - Unit b200: 1 internal tristate is replaced by logic (pull-up yes): gpio_atr_io_inst/gpio_pins<0>.
 
 Optimizing unit <b200> ...
 
@@ -9334,11 +9335,10 @@ Building and optimizing final netlist ...
 Replicating register slave_fifo32/sloe to handle IOB=TRUE attribute
 Changing polarity of register slave_fifo32/sloe to handle IOB=TRUE attribute
 Changing polarity of register gpio_atr_io_inst/gpio_ddr_reg_1 to handle IOB=TRUE attribute
-Changing polarity of register gpio_atr_io_inst/gpio_ddr_reg_0 to handle IOB=TRUE attribute
 PACKER Warning: Lut duc_chain/cordic/cordic_stage2/z_is_pos3 is driving XOR and other loads hence can not be packed with the XOR/Carry. This would result in an extra LUT for a feedthrough.
 PACKER Warning: Lut duc_chain/cordic/cordic_stage1/z_is_pos3 is driving XOR and other loads hence can not be packed with the XOR/Carry. This would result in an extra LUT for a feedthrough.
 PACKER Warning: Lut duc_chain/cordic/cordic_stage0/z_is_pos3 is driving XOR and other loads hence can not be packed with the XOR/Carry. This would result in an extra LUT for a feedthrough.
-Found area constraint ratio of 100 (+ 5) on block b200, actual ratio is 18.
+Found area constraint ratio of 100 (+ 5) on block b200, actual ratio is 19.
 In hierarchy level b200_core.
 Forward register balancing over carry chain radio_ctrl_proc/time_compare/Mcompar_now_cy<0>
 Forward register balancing over carry chain extra_rx_buff/fifo_bram/Mcount_wr_addr_cy<0>
@@ -11563,55 +11563,6 @@ Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003> :
 	Register(s) blk000000be has(ve) been backward balanced into : blk000000be_BRB0 blk000000be_BRB1 blk000000be_BRB2.
 Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003> processed.
 
-Processing Unit <b200> :
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB4.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB2.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB4.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB2.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB4 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB4 .
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB4 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB5.
-	Register(s) slave_fifo32/next_addr_0 has(ve) been backward balanced into : slave_fifo32/next_addr_0_BRB0 .
-	Register(s) slave_fifo32/next_addr_1 has(ve) been backward balanced into : slave_fifo32/next_addr_1_BRB0.
-Unit <b200> processed.
-
-Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> :
-	Register(s) blk000000bf has(ve) been backward balanced into : blk000000bf_BRB0 blk000000bf_BRB1 blk000000bf_BRB2 blk000000bf_BRB3.
-	Register(s) blk000000c1 has(ve) been backward balanced into : blk000000c1_BRB0 blk000000c1_BRB1 blk000000c1_BRB2.
-Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> processed.
-
-Processing Unit <b200_core/radio_0> :
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_0 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_0_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_1 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_1_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_2 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_2_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_3 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_3_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_4 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_4_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_5 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_5_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_6 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_6_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_7 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_7_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_8 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_8_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_9 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_9_BRB0 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB2 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB5.
-	Register(s) buffer_whole_pkt/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : buffer_whole_pkt/axi_fifo/post_fifo/a_4_BRB0 buffer_whole_pkt/axi_fifo/post_fifo/a_4_BRB1.
-	Register(s) ddc_chain/new_hb.strobe_unscaled has(ve) been backward balanced into : ddc_chain/new_hb.strobe_unscaled_BRB0 ddc_chain/new_hb.strobe_unscaled_BRB1 ddc_chain/new_hb.strobe_unscaled_BRB2 ddc_chain/new_hb.strobe_unscaled_BRB3 ddc_chain/new_hb.strobe_unscaled_BRB4.
-	Register(s) fe_gpio_atr/ogpio_0 has(ve) been backward balanced into : fe_gpio_atr/ogpio_0_BRB1 fe_gpio_atr/ogpio_0_BRB3 fe_gpio_atr/ogpio_0_BRB4 fe_gpio_atr/ogpio_0_BRB5.
-	Register(s) fe_gpio_atr/ogpio_1 has(ve) been backward balanced into : fe_gpio_atr/ogpio_1_BRB1 fe_gpio_atr/ogpio_1_BRB3 fe_gpio_atr/ogpio_1_BRB4 fe_gpio_atr/ogpio_1_BRB5.
-	Register(s) fe_gpio_atr/ogpio_2 has(ve) been backward balanced into : fe_gpio_atr/ogpio_2_BRB1 fe_gpio_atr/ogpio_2_BRB3 fe_gpio_atr/ogpio_2_BRB4 fe_gpio_atr/ogpio_2_BRB5.
-	Register(s) fe_gpio_atr/ogpio_3 has(ve) been backward balanced into : fe_gpio_atr/ogpio_3_BRB1 fe_gpio_atr/ogpio_3_BRB3 fe_gpio_atr/ogpio_3_BRB4 fe_gpio_atr/ogpio_3_BRB5.
-	Register(s) fe_gpio_atr/ogpio_4 has(ve) been backward balanced into : fe_gpio_atr/ogpio_4_BRB1 fe_gpio_atr/ogpio_4_BRB3 fe_gpio_atr/ogpio_4_BRB4 fe_gpio_atr/ogpio_4_BRB5.
-	Register(s) fe_gpio_atr/ogpio_5 has(ve) been backward balanced into : fe_gpio_atr/ogpio_5_BRB1 fe_gpio_atr/ogpio_5_BRB3 fe_gpio_atr/ogpio_5_BRB4 fe_gpio_atr/ogpio_5_BRB5.
-	Register(s) fe_gpio_atr/ogpio_6 has(ve) been backward balanced into : fe_gpio_atr/ogpio_6_BRB1 fe_gpio_atr/ogpio_6_BRB3 fe_gpio_atr/ogpio_6_BRB4 fe_gpio_atr/ogpio_6_BRB5.
-	Register(s) fe_gpio_atr/ogpio_7 has(ve) been backward balanced into : fe_gpio_atr/ogpio_7_BRB1 fe_gpio_atr/ogpio_7_BRB3 fe_gpio_atr/ogpio_7_BRB4 fe_gpio_atr/ogpio_7_BRB5.
-	Register(s) new_rx_control/sr_rx_halt/changed has(ve) been backward balanced into : new_rx_control/sr_rx_halt/changed_BRB0 new_rx_control/sr_rx_halt/changed_BRB1 new_rx_control/sr_rx_halt/changed_BRB2 new_rx_control/sr_rx_halt/changed_BRB3 new_rx_control/sr_rx_halt/changed_BRB4 new_rx_control/sr_rx_halt/changed_BRB5.
-Unit <b200_core/radio_0> processed.
-
 Processing Unit <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk> :
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB1.
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB1.
@@ -11736,6 +11687,55 @@ Processing Unit <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2cl
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
 Unit <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk> processed.
+
+Processing Unit <b200> :
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB4.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB2.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB4.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB2.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB4 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB4 .
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB4 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB5.
+	Register(s) slave_fifo32/next_addr_0 has(ve) been backward balanced into : slave_fifo32/next_addr_0_BRB0 .
+	Register(s) slave_fifo32/next_addr_1 has(ve) been backward balanced into : slave_fifo32/next_addr_1_BRB0.
+Unit <b200> processed.
+
+Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> :
+	Register(s) blk000000bf has(ve) been backward balanced into : blk000000bf_BRB0 blk000000bf_BRB1 blk000000bf_BRB2 blk000000bf_BRB3.
+	Register(s) blk000000c1 has(ve) been backward balanced into : blk000000c1_BRB0 blk000000c1_BRB1 blk000000c1_BRB2.
+Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> processed.
+
+Processing Unit <b200_core/radio_0> :
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_0 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_0_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_1 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_1_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_2 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_2_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_3 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_3_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_4 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_4_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_5 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_5_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_6 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_6_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_7 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_7_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_8 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_8_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_9 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_9_BRB0 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB2 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB5.
+	Register(s) buffer_whole_pkt/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : buffer_whole_pkt/axi_fifo/post_fifo/a_4_BRB0 buffer_whole_pkt/axi_fifo/post_fifo/a_4_BRB1.
+	Register(s) ddc_chain/new_hb.strobe_unscaled has(ve) been backward balanced into : ddc_chain/new_hb.strobe_unscaled_BRB0 ddc_chain/new_hb.strobe_unscaled_BRB1 ddc_chain/new_hb.strobe_unscaled_BRB2 ddc_chain/new_hb.strobe_unscaled_BRB3 ddc_chain/new_hb.strobe_unscaled_BRB4.
+	Register(s) fe_gpio_atr/ogpio_0 has(ve) been backward balanced into : fe_gpio_atr/ogpio_0_BRB1 fe_gpio_atr/ogpio_0_BRB3 fe_gpio_atr/ogpio_0_BRB4 fe_gpio_atr/ogpio_0_BRB5.
+	Register(s) fe_gpio_atr/ogpio_1 has(ve) been backward balanced into : fe_gpio_atr/ogpio_1_BRB1 fe_gpio_atr/ogpio_1_BRB3 fe_gpio_atr/ogpio_1_BRB4 fe_gpio_atr/ogpio_1_BRB5.
+	Register(s) fe_gpio_atr/ogpio_2 has(ve) been backward balanced into : fe_gpio_atr/ogpio_2_BRB1 fe_gpio_atr/ogpio_2_BRB3 fe_gpio_atr/ogpio_2_BRB4 fe_gpio_atr/ogpio_2_BRB5.
+	Register(s) fe_gpio_atr/ogpio_3 has(ve) been backward balanced into : fe_gpio_atr/ogpio_3_BRB1 fe_gpio_atr/ogpio_3_BRB3 fe_gpio_atr/ogpio_3_BRB4 fe_gpio_atr/ogpio_3_BRB5.
+	Register(s) fe_gpio_atr/ogpio_4 has(ve) been backward balanced into : fe_gpio_atr/ogpio_4_BRB1 fe_gpio_atr/ogpio_4_BRB3 fe_gpio_atr/ogpio_4_BRB4 fe_gpio_atr/ogpio_4_BRB5.
+	Register(s) fe_gpio_atr/ogpio_5 has(ve) been backward balanced into : fe_gpio_atr/ogpio_5_BRB1 fe_gpio_atr/ogpio_5_BRB3 fe_gpio_atr/ogpio_5_BRB4 fe_gpio_atr/ogpio_5_BRB5.
+	Register(s) fe_gpio_atr/ogpio_6 has(ve) been backward balanced into : fe_gpio_atr/ogpio_6_BRB1 fe_gpio_atr/ogpio_6_BRB3 fe_gpio_atr/ogpio_6_BRB4 fe_gpio_atr/ogpio_6_BRB5.
+	Register(s) fe_gpio_atr/ogpio_7 has(ve) been backward balanced into : fe_gpio_atr/ogpio_7_BRB1 fe_gpio_atr/ogpio_7_BRB3 fe_gpio_atr/ogpio_7_BRB4 fe_gpio_atr/ogpio_7_BRB5.
+	Register(s) new_rx_control/sr_rx_halt/changed has(ve) been backward balanced into : new_rx_control/sr_rx_halt/changed_BRB0 new_rx_control/sr_rx_halt/changed_BRB1 new_rx_control/sr_rx_halt/changed_BRB2 new_rx_control/sr_rx_halt/changed_BRB3 new_rx_control/sr_rx_halt/changed_BRB4 new_rx_control/sr_rx_halt/changed_BRB5.
+Unit <b200_core/radio_0> processed.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> of sequential type is unconnected in block <vita_time_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <vita_time_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <vita_time_fifo/fifo_short_2clk>.
@@ -15607,11 +15607,11 @@ Top Level Output File Name         : b200.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 29989
+# BELS                             : 29990
 #      GND                         : 100
 #      INV                         : 473
 #      LUT1                        : 759
-#      LUT2                        : 3522
+#      LUT2                        : 3523
 #      LUT3                        : 4961
 #      LUT4                        : 1751
 #      LUT5                        : 2116
@@ -15623,7 +15623,7 @@ Primitive and Black Box Usage:
 #      MUXF7                       : 98
 #      VCC                         : 6
 #      XORCY                       : 6380
-# FlipFlops/Latches                : 18780
+# FlipFlops/Latches                : 18781
 #      FD                          : 746
 #      FD_1                        : 1
 #      FDC                         : 592
@@ -15637,7 +15637,7 @@ Primitive and Black Box Usage:
 #      FDS                         : 60
 #      FDSE                        : 76
 #      IDDR2                       : 13
-#      ODDR2                       : 15
+#      ODDR2                       : 16
 # RAMS                             : 537
 #      RAM16X1D                    : 294
 #      RAM32M                      : 96
@@ -15654,8 +15654,8 @@ Primitive and Black Box Usage:
 #      IBUF                        : 23
 #      IBUFG                       : 1
 #      IBUFGDS                     : 1
-#      IOBUF                       : 34
-#      OBUF                        : 94
+#      IOBUF                       : 33
+#      OBUF                        : 95
 #      OBUFT                       : 1
 # DCMs                             : 1
 #      DCM_SP                      : 1
@@ -15669,24 +15669,24 @@ Selected Device : 6slx75fgg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           18648  out of  93296    19%  
- Number of Slice LUTs:                20952  out of  46648    44%  
-    Number used as Logic:             16473  out of  46648    35%  
+ Number of Slice Registers:           18650  out of  93296    19%  
+ Number of Slice LUTs:                20953  out of  46648    44%  
+    Number used as Logic:             16474  out of  46648    35%  
     Number used as Memory:             4479  out of  11072    40%  
        Number used as RAM:              972
        Number used as SRL:             3507
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  29313
-   Number with an unused Flip Flop:   10665  out of  29313    36%  
-   Number with an unused LUT:          8361  out of  29313    28%  
-   Number of fully used LUT-FF pairs: 10287  out of  29313    35%  
+ Number of LUT Flip Flop pairs used:  29315
+   Number with an unused Flip Flop:   10665  out of  29315    36%  
+   Number with an unused LUT:          8362  out of  29315    28%  
+   Number of fully used LUT-FF pairs: 10288  out of  29315    35%  
    Number of unique control sets:       501
 
 IO Utilization: 
  Number of IOs:                         172
  Number of bonded IOBs:                 155  out of    280    55%  
-    IOB Flip Flops/Latches:             132
+    IOB Flip Flops/Latches:             131
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:              144  out of    172    83%  
@@ -15716,7 +15716,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 codec_main_clk_p                   | DCM_SP:CLKFX           | 5578  |
-codec_data_clk_p                   | IBUFG+BUFIO2+BUFGMUX   | 17325 |
+codec_data_clk_p                   | IBUFG+BUFIO2+BUFGMUX   | 17327 |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -15765,7 +15765,7 @@ Delay:               7.084ns (Levels of Logic = 5)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'codec_data_clk_p'
   Clock period: 12.588ns (frequency: 79.438MHz)
-  Total number of paths / destination ports: 1325473 / 52085
+  Total number of paths / destination ports: 1325475 / 52086
 -------------------------------------------------------------------------
 Delay:               12.588ns (Levels of Logic = 17)
   Source:            b200_core/radio_0/convert_xxxx_to_16sc/demux_pack_chain/axi_fifo_short/o_tdata_34 (FF)
@@ -15822,7 +15822,7 @@ Offset:              3.501ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'codec_data_clk_p'
-  Total number of paths / destination ports: 17 / 17
+  Total number of paths / destination ports: 16 / 16
 -------------------------------------------------------------------------
 Offset:              1.903ns (Levels of Logic = 1)
   Source:            FPGA_RXD0 (PAD)
@@ -15862,7 +15862,7 @@ Offset:              4.555ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'codec_data_clk_p'
-  Total number of paths / destination ports: 21 / 19
+  Total number of paths / destination ports: 19 / 18
 -------------------------------------------------------------------------
 Offset:              3.597ns (Levels of Logic = 1)
   Source:            gpio_atr_io_inst/gpio_out_iob_1 (FF)
@@ -15924,15 +15924,15 @@ codec_main_clk_p|    7.084|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 253.00 secs
-Total CPU time to Xst completion: 243.61 secs
+Total REAL time to Xst completion: 251.00 secs
+Total CPU time to Xst completion: 242.18 secs
  
 --> 
 
 
-Total memory usage is 756444 kilobytes
+Total memory usage is 717152 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 8714 (   0 filtered)
+Number of warnings : 8715 (   0 filtered)
 Number of infos    :  584 (   0 filtered)
 

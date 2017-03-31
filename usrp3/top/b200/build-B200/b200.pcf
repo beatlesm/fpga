@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Mar 30 15:00:13 2017
+// Written by: Map P.20131013 on Thu Mar 30 20:29:14 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -16,7 +16,7 @@ COMP "fx3_ce" LOCATE = SITE "H20" LEVEL 1;
 COMP "cat_ce" LOCATE = SITE "Y1" LEVEL 1;
 COMP "pll_ce" LOCATE = SITE "W11" LEVEL 1;
 COMP "LED_TXRX1_RX" LOCATE = SITE "K16" LEVEL 1;
-COMP "LED_TXRX1_TX" LOCATE = SITE "C22" LEVEL 1;
+COMP "LED_TXRX1_TX" LOCATE = SITE "C20" LEVEL 1;
 COMP "LED_TXRX2_RX" LOCATE = SITE "D21" LEVEL 1;
 COMP "LED_TXRX2_TX" LOCATE = SITE "D22" LEVEL 1;
 COMP "codec_ctrl_out<0>" LOCATE = SITE "D1" LEVEL 1;
@@ -27,7 +27,7 @@ COMP "codec_ctrl_out<4>" LOCATE = SITE "P1" LEVEL 1;
 COMP "codec_ctrl_out<5>" LOCATE = SITE "J1" LEVEL 1;
 COMP "codec_ctrl_out<6>" LOCATE = SITE "B1" LEVEL 1;
 COMP "codec_ctrl_out<7>" LOCATE = SITE "H2" LEVEL 1;
-COMP "LED_RX1" LOCATE = SITE "C20" LEVEL 1;
+COMP "LED_RX1" LOCATE = SITE "C22" LEVEL 1;
 COMP "LED_RX2" LOCATE = SITE "L15" LEVEL 1;
 COMP "codec_reset" LOCATE = SITE "Y2" LEVEL 1;
 COMP "SRX1_RX" LOCATE = SITE "D15" LEVEL 1;
@@ -17958,12 +17958,17 @@ PIN b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003/blk00000115_pins<92>
         = BEL
         "b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003/blk00000115"
         PINNAME CLK;
+PIN S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<1> = BEL
+        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN" PINNAME CK0;
+PIN S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<2> = BEL
+        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN" PINNAME CK1;
 TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
         "fe0_gpio_2" BEL "fe0_gpio_3" BEL "fe0_gpio_4" BEL "fe0_gpio_5" BEL
         "fe0_gpio_6" BEL "fe0_gpio_7" BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "fe1_gpio_2" BEL "fe1_gpio_3" BEL "fe1_gpio_4" BEL "fe1_gpio_5" BEL
         "fe1_gpio_6" BEL "fe1_gpio_7" BEL "radio_sync/reset_out_tmp" BEL
-        "radio_sync/reset_int" BEL "gpio_atr_io_inst/gpio_out_iob_1" BEL
+        "radio_sync/reset_int" BEL "gpio_atr_io_inst/gpio_in_iob_0" BEL
+        "gpio_atr_io_inst/gpio_out_iob_1" BEL
         "gpio_atr_io_inst/gpio_out_iob_0" BEL
         "gpio_atr_io_inst/gpio_ddr_reg_1" BEL
         "gpio_atr_io_inst/gpio_ddr_reg_0" BEL "b200_io_i0/radio_clk_bufg" BEL
@@ -41664,14 +41669,18 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
         "b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003/blk000004e1/blk00000506/DP"
         BEL
         "b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003/blk000004e1/blk00000506/SP"
-        BEL "gpio_atr_io_inst/gpio_in_iob_1" BEL
-        "gpio_atr_io_inst/gpio_in_iob_0";
+        PIN "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<1>" PIN
+        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<2>" PIN
+        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<1>" PIN
+        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<2>" BEL
+        "gpio_atr_io_inst/gpio_in_iob_1";
 TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
         "fe0_gpio_2" BEL "fe0_gpio_3" BEL "fe0_gpio_4" BEL "fe0_gpio_5" BEL
         "fe0_gpio_6" BEL "fe0_gpio_7" BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "fe1_gpio_2" BEL "fe1_gpio_3" BEL "fe1_gpio_4" BEL "fe1_gpio_5" BEL
         "fe1_gpio_6" BEL "fe1_gpio_7" BEL "radio_sync/reset_out_tmp" BEL
-        "radio_sync/reset_int" BEL "gpio_atr_io_inst/gpio_out_iob_1" BEL
+        "radio_sync/reset_int" BEL "gpio_atr_io_inst/gpio_in_iob_0" BEL
+        "gpio_atr_io_inst/gpio_out_iob_1" BEL
         "gpio_atr_io_inst/gpio_out_iob_0" BEL
         "gpio_atr_io_inst/gpio_ddr_reg_1" BEL
         "gpio_atr_io_inst/gpio_ddr_reg_0" BEL "b200_io_i0/radio_clk_bufg" BEL
@@ -65372,8 +65381,11 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
         "b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003/blk000004e1/blk00000506/DP"
         BEL
         "b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003/blk000004e1/blk00000506/SP"
-        BEL "gpio_atr_io_inst/gpio_in_iob_1" BEL
-        "gpio_atr_io_inst/gpio_in_iob_0";
+        PIN "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<1>" PIN
+        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<2>" PIN
+        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<1>" PIN
+        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<2>" BEL
+        "gpio_atr_io_inst/gpio_in_iob_1";
 TIMEGRP b200_io_i0_siso_clk_unbuf = BEL "b200_io_i0/siso_clk_bufg" BEL
         "b200_io_i0/tx_q_11" BEL "b200_io_i0/tx_q_10" BEL "b200_io_i0/tx_q_9"
         BEL "b200_io_i0/tx_q_8" BEL "b200_io_i0/tx_q_7" BEL

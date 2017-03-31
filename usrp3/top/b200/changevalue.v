@@ -1,6 +1,6 @@
 module changevalue (
-	output gps_lock
+	output fp_gpio<0>
 );
 
-assign gps_lock = 1'b1;
+assign fp_gpio<0> = 1'b1;
 endmodule

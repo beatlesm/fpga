@@ -164,11 +164,12 @@ module b200 (
     //S6CLK2PIN S6CLK2PIN_dbg1 (.I(debug_clk_int[1]), .O(debug_clk[1]));
     assign      debug_clk[1:0] = 2'b0;
     S6CLK2PIN S6CLK2PIN_gpif (.I(gpif_clk), .O(IFCLK));
+    
 
     ///////////////////////////////////////////////////////////////////////
     // Create sync reset signals
     ///////////////////////////////////////////////////////////////////////
-    wire gpif_rst, bus_rst, radio_rst;
+
     reset_sync gpif_sync(.clk(gpif_clk), .reset_in(!clocks_ready), .reset_out(gpif_rst));
     reset_sync bus_sync(.clk(bus_clk), .reset_in(!clocks_ready), .reset_out(bus_rst));
     reset_sync radio_sync(.clk(radio_clk), .reset_in(!clocks_ready), .reset_out(radio_rst));
@@ -326,8 +327,10 @@ module b200 (
    `ifdef DEBUG_UART
       assign fp_gpio_in = 10'h000;                  // B200 with UART
    `else
+      wire discard_old_txd;
+      S6CLK2PIN S6CLK2PIN_gpif_2 (.I(radio_clk), .O(FPGA_TXD0));
       gpio_atr_io #(.WIDTH(2)) gpio_atr_io_inst (   // B200 no UART
-         .clk(radio_clk), .gpio_pins({FPGA_RXD0, FPGA_TXD0}),
+         .clk(radio_clk), .gpio_pins({FPGA_RXD0, discard_old_txd}),
          .gpio_ddr(fp_gpio_ddr[9:8]), .gpio_out(fp_gpio_out[9:8]), .gpio_in(fp_gpio_in[9:8])
       );
       assign fp_gpio_in[7:0] = 8'h00;

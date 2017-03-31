@@ -71,7 +71,6 @@ b200_core.v \
 b200_io.v \
 b200.ucf \
 timing.ucf \
-changevalue.v \
 S6CLK2PIN.v \
 $(B200_COREGEN_SRCS)
 

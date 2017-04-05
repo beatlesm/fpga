@@ -6,6 +6,7 @@
 /***********************************************************
  * B200 Module Declaration
  **********************************************************/
+//`include "signal.v";
 module b200 (
    // SPI Interfaces
    output 	 cat_ce,
@@ -130,6 +131,8 @@ module b200 (
     // generate clocks from always on codec main clk
     ///////////////////////////////////////////////////////////////////////
     wire bus_clk, gpif_clk, radio_clk;
+    wire square_wave;
+    signal base_signal (.radio_clk(radio_clk), .sig_out(square_wave));
     wire locked;
     b200_clk_gen gen_clks
     (
@@ -328,7 +331,7 @@ module b200 (
       assign fp_gpio_in = 10'h000;                  // B200 with UART
    `else
       wire discard_old_txd;
-      S6CLK2PIN S6CLK2PIN_gpif_2 (.I(radio_clk), .O(FPGA_TXD0));
+      S6CLK2PIN S6CLK2PIN_gpif_2 (.I(square_wave), .O(FPGA_TXD0));
       gpio_atr_io #(.WIDTH(2)) gpio_atr_io_inst (   // B200 no UART
          .clk(radio_clk), .gpio_pins({FPGA_RXD0, discard_old_txd}),
          .gpio_ddr(fp_gpio_ddr[9:8]), .gpio_out(fp_gpio_out[9:8]), .gpio_in(fp_gpio_in[9:8])

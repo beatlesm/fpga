@@ -284,6 +284,8 @@ Analyzing Verilog file "/home/thompsonlab/Documents/fpga/usrp3/lib/control/simpl
 Parsing module <simple_spi_core>.
 Analyzing Verilog file "/home/thompsonlab/Documents/fpga/usrp3/lib/control/serial_to_settings.v" into library work
 Parsing module <serial_to_settings>.
+Analyzing Verilog file "/home/thompsonlab/Documents/fpga/usrp3/top/b200/signal.v" into library work
+Parsing module <signal>.
 Analyzing Verilog file "/home/thompsonlab/Documents/fpga/usrp3/top/b200/S6CLK2PIN.v" into library work
 Parsing module <S6CLK2PIN>.
 Analyzing Verilog file "/home/thompsonlab/Documents/fpga/usrp3/top/b200/coregen/b200_clk_gen.v" into library work
@@ -306,6 +308,9 @@ Parsing module <b200>.
 =========================================================================
 
 Elaborating module <b200>.
+
+Elaborating module <signal>.
+WARNING:HDLCompiler:413 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/signal.v" Line 8: Result of 3-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <b200_clk_gen>.
 
@@ -338,7 +343,7 @@ Elaborating module <IDDR2(DDR_ALIGNMENT="C0")>.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200_io.v" Line 168: Assignment to rx_frame_d2 ignored, since the identifier is never used
 
 Elaborating module <ODDR2(DDR_ALIGNMENT="C0",SRTYPE="ASYNC")>.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 268: Assignment to spare_signal ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 271: Assignment to spare_signal ignored, since the identifier is never used
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200_core.v" Line 230: Port readback_stb is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200_core.v" Line 261: Port space is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200_core.v" Line 273: Port space is not connected to this instance
@@ -913,7 +918,7 @@ WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/gpif2/gpi
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/gpif2/gpif2_slave_fifo32.v" Line 540: Assignment to ctrl_bus_error ignored, since the identifier is never used
 
 Elaborating module <fifo64_to_gpif2(FIFO_SIZE=5)>.
-WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 186: Net <reset> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 189: Net <reset> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -931,25 +936,35 @@ WARNING:Xst:647 - Input <gps_lock> is never used. This port will be preserved an
 WARNING:Xst:647 - Input <gps_txd_nmea> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <FPGA_CFG_CS> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <AUX_PWR_ON> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 134: Output port <CLK_OUT1_40_int> of the instance <gen_clks> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 134: Output port <CLK_OUT3_100_bus> of the instance <gen_clks> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 282: Output port <debug> of the instance <b200_core> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 282: Output port <debug_txd> of the instance <b200_core> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 344: Output port <debug> of the instance <slave_fifo32> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 137: Output port <CLK_OUT1_40_int> of the instance <gen_clks> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 137: Output port <CLK_OUT3_100_bus> of the instance <gen_clks> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 285: Output port <debug> of the instance <b200_core> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 285: Output port <debug_txd> of the instance <b200_core> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" line 347: Output port <debug> of the instance <slave_fifo32> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <reset> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 1-bit register for signal <clocks_ready>.
     Found 8-bit register for signal <fe0_gpio>.
     Found 8-bit register for signal <fe1_gpio>.
     Found 9-bit register for signal <misc_outs_r<8:0>>.
     Found 16-bit register for signal <clocks_ready_count>.
-    Found 16-bit adder for signal <clocks_ready_count[15]_GND_1_o_add_0_OUT> created at line 154.
-    Found 1-bit tristate buffer for signal <fx3_miso> created at line 235
+    Found 16-bit adder for signal <clocks_ready_count[15]_GND_1_o_add_0_OUT> created at line 157.
+    Found 1-bit tristate buffer for signal <fx3_miso> created at line 238
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  42 D-type flip-flop(s).
 	inferred   2 Multiplexer(s).
 	inferred   1 Tristate(s).
 Unit <b200> synthesized.
+
+Synthesizing Unit <signal>.
+    Related source file is "/home/thompsonlab/Documents/fpga/usrp3/top/b200/signal.v".
+    Found 1-bit register for signal <sig_out>.
+    Found 2-bit register for signal <counter>.
+    Found 2-bit adder for signal <counter[1]_GND_2_o_add_1_OUT> created at line 8.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+Unit <signal> synthesized.
 
 Synthesizing Unit <b200_clk_gen>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/top/b200/coregen/b200_clk_gen.v".
@@ -1070,7 +1085,7 @@ Synthesizing Unit <pps_generator>.
         CLK_FREQ = 100000000
         DUTY_CYCLE = 25
     Found 32-bit register for signal <count>.
-    Found 32-bit adder for signal <count[31]_GND_20_o_add_2_OUT> created at line 21.
+    Found 32-bit adder for signal <count[31]_GND_21_o_add_2_OUT> created at line 21.
     Found 32-bit comparator greater for signal <n0000> created at line 18
     Found 32-bit comparator greater for signal <pps> created at line 25
     Summary:
@@ -1115,12 +1130,12 @@ Synthesizing Unit <axi_fifo_short_1>.
     Found 6-bit register for signal <space>.
     Found 6-bit register for signal <occupied>.
     Found 5-bit register for signal <a>.
-    Found 6-bit subtractor for signal <space[5]_GND_22_o_sub_18_OUT> created at line 118.
-    Found 6-bit subtractor for signal <occupied[5]_GND_22_o_sub_25_OUT> created at line 126.
-    Found 5-bit adder for signal <a[4]_GND_22_o_add_4_OUT> created at line 80.
-    Found 6-bit adder for signal <space[5]_GND_22_o_add_16_OUT> created at line 116.
-    Found 6-bit adder for signal <occupied[5]_GND_22_o_add_25_OUT> created at line 128.
-    Found 5-bit subtractor for signal <GND_22_o_GND_22_o_sub_3_OUT<4:0>> created at line 74.
+    Found 6-bit subtractor for signal <space[5]_GND_23_o_sub_18_OUT> created at line 118.
+    Found 6-bit subtractor for signal <occupied[5]_GND_23_o_sub_25_OUT> created at line 126.
+    Found 5-bit adder for signal <a[4]_GND_23_o_add_4_OUT> created at line 80.
+    Found 6-bit adder for signal <space[5]_GND_23_o_add_16_OUT> created at line 116.
+    Found 6-bit adder for signal <occupied[5]_GND_23_o_add_25_OUT> created at line 128.
+    Found 5-bit subtractor for signal <GND_23_o_GND_23_o_sub_3_OUT<4:0>> created at line 74.
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred  85 D-type flip-flop(s).
@@ -1187,7 +1202,7 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/control_200/cvita_ua
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 12-bit adder for signal <seqnum[11]_GND_26_o_add_3_OUT> created at line 101.
+    Found 12-bit adder for signal <seqnum[11]_GND_27_o_add_3_OUT> created at line 101.
     Found 2-bit 4-to-1 multiplexer for signal <txd_state[1]_txd_state[1]_wide_mux_17_OUT> created at line 136.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -1205,8 +1220,8 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/wishbone/simple_uart
     Found 16-bit register for signal <baud_ctr>.
     Found 4-bit register for signal <bit_ctr>.
     Found 1-bit register for signal <rx_d1>.
-    Found 16-bit adder for signal <baud_ctr[15]_GND_27_o_add_11_OUT> created at line 47.
-    Found 4-bit adder for signal <bit_ctr[3]_GND_27_o_add_20_OUT> created at line 58.
+    Found 16-bit adder for signal <baud_ctr[15]_GND_28_o_add_11_OUT> created at line 47.
+    Found 4-bit adder for signal <bit_ctr[3]_GND_28_o_add_20_OUT> created at line 58.
     Found 16-bit comparator equal for signal <shift_now> created at line 26
     Found 16-bit comparator greater for signal <n0014> created at line 44
     Found 16-bit comparator not equal for signal <baud_ctr[15]_clkdiv[15]_equal_20_o> created at line 57
@@ -1252,12 +1267,12 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_fifo_bram.v
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit subtractor for signal <space[15]_GND_29_o_sub_35_OUT> created at line 159.
-    Found 16-bit subtractor for signal <occupied[15]_GND_29_o_sub_42_OUT> created at line 167.
-    Found 7-bit adder for signal <wr_addr[6]_GND_29_o_add_1_OUT> created at line 50.
-    Found 7-bit adder for signal <rd_addr[6]_GND_29_o_add_12_OUT> created at line 107.
-    Found 16-bit adder for signal <space[15]_GND_29_o_add_33_OUT> created at line 157.
-    Found 16-bit adder for signal <occupied[15]_GND_29_o_add_42_OUT> created at line 169.
+    Found 16-bit subtractor for signal <space[15]_GND_30_o_sub_35_OUT> created at line 159.
+    Found 16-bit subtractor for signal <occupied[15]_GND_30_o_sub_42_OUT> created at line 167.
+    Found 7-bit adder for signal <wr_addr[6]_GND_30_o_add_1_OUT> created at line 50.
+    Found 7-bit adder for signal <rd_addr[6]_GND_30_o_add_12_OUT> created at line 107.
+    Found 16-bit adder for signal <space[15]_GND_30_o_add_33_OUT> created at line 157.
+    Found 16-bit adder for signal <occupied[15]_GND_30_o_add_42_OUT> created at line 169.
     Found 7-bit subtractor for signal <dont_write_past_me> created at line 110.
     Found 7-bit comparator equal for signal <rd_addr[6]_wr_addr[6]_equal_11_o> created at line 98
     Found 7-bit comparator equal for signal <becoming_full> created at line 111
@@ -1310,9 +1325,9 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/wishbone/simple_uart
     Found 4-bit register for signal <bit_ctr>.
     Found 1-bit register for signal <tx>.
     Found 16-bit register for signal <baud_ctr>.
-    Found 16-bit adder for signal <baud_ctr[15]_GND_32_o_add_2_OUT> created at line 35.
-    Found 4-bit adder for signal <bit_ctr[3]_GND_32_o_add_10_OUT> created at line 44.
-    Found 1-bit 12-to-1 multiplexer for signal <bit_ctr[3]_PWR_33_o_Mux_18_o> created at line 52.
+    Found 16-bit adder for signal <baud_ctr[15]_GND_33_o_add_2_OUT> created at line 35.
+    Found 4-bit adder for signal <bit_ctr[3]_GND_33_o_add_10_OUT> created at line 44.
+    Found 1-bit 12-to-1 multiplexer for signal <bit_ctr[3]_PWR_34_o_Mux_18_o> created at line 52.
     Found 16-bit comparator lessequal for signal <n0001> created at line 32
     Found 16-bit comparator equal for signal <baud_ctr[15]_clkdiv[15]_equal_21_o> created at line 66
     Summary:
@@ -1432,7 +1447,7 @@ Synthesizing Unit <synchronizer_impl>.
     Set property "ASYNC_REG = TRUE" for signal <value<1>>.
     Found 1-bit register for signal <value<1>>.
     Found 1-bit register for signal <value<0>>.
-INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal value[0][0]_GND_40_o_MUX_423_o may hinder XST clustering optimizations.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal value[0][0]_GND_41_o_MUX_423_o may hinder XST clustering optimizations.
     Summary:
 	inferred   2 D-type flip-flop(s).
 	inferred   2 Multiplexer(s).
@@ -1460,7 +1475,7 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/control/simple_spi_c
     Found 8-bit register for signal <sen_reg>.
     Found 17-bit adder for signal <n0140[16:0]> created at line 141.
     Found 7-bit adder for signal <bit_counter_next> created at line 145.
-    Found 3-bit 7-to-1 multiplexer for signal <state[2]_GND_41_o_wide_mux_40_OUT> created at line 156.
+    Found 3-bit 7-to-1 multiplexer for signal <state[2]_GND_42_o_wide_mux_40_OUT> created at line 156.
     Found 16-bit comparator equal for signal <sclk_counter_done> created at line 140
     Found 7-bit comparator equal for signal <bit_counter_done> created at line 146
     Summary:
@@ -1542,12 +1557,12 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_fifo_bram.v
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit subtractor for signal <space[15]_GND_46_o_sub_35_OUT> created at line 159.
-    Found 16-bit subtractor for signal <occupied[15]_GND_46_o_sub_42_OUT> created at line 167.
-    Found 12-bit adder for signal <wr_addr[11]_GND_46_o_add_1_OUT> created at line 50.
-    Found 12-bit adder for signal <rd_addr[11]_GND_46_o_add_12_OUT> created at line 107.
-    Found 16-bit adder for signal <space[15]_GND_46_o_add_33_OUT> created at line 157.
-    Found 16-bit adder for signal <occupied[15]_GND_46_o_add_42_OUT> created at line 169.
+    Found 16-bit subtractor for signal <space[15]_GND_47_o_sub_35_OUT> created at line 159.
+    Found 16-bit subtractor for signal <occupied[15]_GND_47_o_sub_42_OUT> created at line 167.
+    Found 12-bit adder for signal <wr_addr[11]_GND_47_o_add_1_OUT> created at line 50.
+    Found 12-bit adder for signal <rd_addr[11]_GND_47_o_add_12_OUT> created at line 107.
+    Found 16-bit adder for signal <space[15]_GND_47_o_add_33_OUT> created at line 157.
+    Found 16-bit adder for signal <occupied[15]_GND_47_o_add_42_OUT> created at line 169.
     Found 12-bit subtractor for signal <dont_write_past_me> created at line 110.
     Found 12-bit comparator equal for signal <rd_addr[11]_wr_addr[11]_equal_11_o> created at line 98
     Found 12-bit comparator equal for signal <becoming_full> created at line 111
@@ -1664,8 +1679,8 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_packet_gate
 INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_packet_gate.v" line 74: Output port <occupied> of the instance <axi_fifo> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <dump>.
     Found 8-bit register for signal <num_packets>.
-    Found 8-bit subtractor for signal <num_packets[7]_GND_54_o_sub_15_OUT> created at line 71.
-    Found 8-bit adder for signal <num_packets[7]_GND_54_o_add_11_OUT> created at line 67.
+    Found 8-bit subtractor for signal <num_packets[7]_GND_55_o_sub_15_OUT> created at line 71.
+    Found 8-bit adder for signal <num_packets[7]_GND_55_o_add_11_OUT> created at line 67.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   8 D-type flip-flop(s).
@@ -2161,12 +2176,12 @@ Synthesizing Unit <axi_fifo_short_2>.
     Found 6-bit register for signal <space>.
     Found 6-bit register for signal <occupied>.
     Found 5-bit register for signal <a>.
-    Found 6-bit subtractor for signal <space[5]_GND_80_o_sub_18_OUT> created at line 118.
-    Found 6-bit subtractor for signal <occupied[5]_GND_80_o_sub_25_OUT> created at line 126.
-    Found 5-bit adder for signal <a[4]_GND_80_o_add_4_OUT> created at line 80.
-    Found 6-bit adder for signal <space[5]_GND_80_o_add_16_OUT> created at line 116.
-    Found 6-bit adder for signal <occupied[5]_GND_80_o_add_25_OUT> created at line 128.
-    Found 5-bit subtractor for signal <GND_80_o_GND_80_o_sub_3_OUT<4:0>> created at line 74.
+    Found 6-bit subtractor for signal <space[5]_GND_81_o_sub_18_OUT> created at line 118.
+    Found 6-bit subtractor for signal <occupied[5]_GND_81_o_sub_25_OUT> created at line 126.
+    Found 5-bit adder for signal <a[4]_GND_81_o_add_4_OUT> created at line 80.
+    Found 6-bit adder for signal <space[5]_GND_81_o_add_16_OUT> created at line 116.
+    Found 6-bit adder for signal <occupied[5]_GND_81_o_add_25_OUT> created at line 128.
+    Found 5-bit subtractor for signal <GND_81_o_GND_81_o_sub_3_OUT<4:0>> created at line 74.
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred 196 D-type flip-flop(s).
@@ -2194,7 +2209,7 @@ Synthesizing Unit <new_tx_control>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 12-bit adder for signal <seqnum[11]_GND_81_o_add_18_OUT> created at line 95.
+    Found 12-bit adder for signal <seqnum[11]_GND_82_o_add_18_OUT> created at line 95.
     Found 1-bit 4-to-1 multiplexer for signal <_n0338> created at line 106.
     Found 12-bit comparator equal for signal <n0037> created at line 112
     Summary:
@@ -2226,7 +2241,7 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/tx_responde
 INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/tx_responder.v" line 39: Output port <i_tready> of the instance <ack_queue> is unconnected or connected to loadless signal.
     Found 12-bit register for signal <reply_seqnum>.
     Found 12-bit register for signal <seqnum_int>.
-    Found 12-bit adder for signal <reply_seqnum[11]_GND_83_o_add_5_OUT> created at line 32.
+    Found 12-bit adder for signal <reply_seqnum[11]_GND_84_o_add_5_OUT> created at line 32.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
@@ -2240,8 +2255,8 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/trigger_con
 INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/trigger_context_pkt.v" line 26: Output port <changed> of the instance <sr_packets> is unconnected or connected to loadless signal.
     Found 31-bit register for signal <packet_count>.
     Found 31-bit register for signal <cycle_count>.
-    Found 31-bit adder for signal <cycle_count[30]_GND_84_o_add_2_OUT> created at line 37.
-    Found 31-bit adder for signal <packet_count[30]_GND_84_o_add_8_OUT> created at line 46.
+    Found 31-bit adder for signal <cycle_count[30]_GND_85_o_add_2_OUT> created at line 37.
+    Found 31-bit adder for signal <packet_count[30]_GND_85_o_add_8_OUT> created at line 46.
     Found 31-bit comparator lessequal for signal <n0015> created at line 48
     Found 31-bit comparator lessequal for signal <n0018> created at line 48
     Summary:
@@ -2285,12 +2300,12 @@ Synthesizing Unit <axi_fifo_short_3>.
     Found 6-bit register for signal <space>.
     Found 6-bit register for signal <occupied>.
     Found 5-bit register for signal <a>.
-    Found 6-bit subtractor for signal <space[5]_GND_87_o_sub_18_OUT> created at line 118.
-    Found 6-bit subtractor for signal <occupied[5]_GND_87_o_sub_25_OUT> created at line 126.
-    Found 5-bit adder for signal <a[4]_GND_87_o_add_4_OUT> created at line 80.
-    Found 6-bit adder for signal <space[5]_GND_87_o_add_16_OUT> created at line 116.
-    Found 6-bit adder for signal <occupied[5]_GND_87_o_add_25_OUT> created at line 128.
-    Found 5-bit subtractor for signal <GND_87_o_GND_87_o_sub_3_OUT<4:0>> created at line 74.
+    Found 6-bit subtractor for signal <space[5]_GND_88_o_sub_18_OUT> created at line 118.
+    Found 6-bit subtractor for signal <occupied[5]_GND_88_o_sub_25_OUT> created at line 126.
+    Found 5-bit adder for signal <a[4]_GND_88_o_add_4_OUT> created at line 80.
+    Found 6-bit adder for signal <space[5]_GND_88_o_add_16_OUT> created at line 116.
+    Found 6-bit adder for signal <occupied[5]_GND_88_o_add_25_OUT> created at line 128.
+    Found 5-bit subtractor for signal <GND_88_o_GND_88_o_sub_3_OUT<4:0>> created at line 74.
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred 116 D-type flip-flop(s).
@@ -2365,7 +2380,7 @@ Synthesizing Unit <cic_strober_1>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/cic_strober.v".
         WIDTH = 8
     Found 8-bit register for signal <counter>.
-    Found 8-bit subtractor for signal <GND_92_o_GND_92_o_sub_3_OUT<7:0>> created at line 31.
+    Found 8-bit subtractor for signal <GND_93_o_GND_93_o_sub_3_OUT<7:0>> created at line 31.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   8 D-type flip-flop(s).
@@ -2376,7 +2391,7 @@ Synthesizing Unit <cic_strober_2>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/cic_strober.v".
         WIDTH = 2
     Found 2-bit register for signal <counter>.
-    Found 2-bit subtractor for signal <GND_93_o_GND_93_o_sub_3_OUT<1:0>> created at line 31.
+    Found 2-bit subtractor for signal <GND_94_o_GND_94_o_sub_3_OUT<1:0>> created at line 31.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   2 D-type flip-flop(s).
@@ -3495,14 +3510,14 @@ Synthesizing Unit <float_to_iq>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/float_to_iq.v".
         BITS_IN = 32
         BITS_OUT = 16
-    Found 9-bit subtractor for signal <GND_135_o_GND_135_o_sub_10_OUT> created at line 47.
-    Found 9-bit subtractor for signal <GND_135_o_GND_135_o_sub_11_OUT> created at line 47.
-    Found 9-bit subtractor for signal <GND_135_o_GND_135_o_sub_17_OUT> created at line 58.
+    Found 9-bit subtractor for signal <GND_136_o_GND_136_o_sub_10_OUT> created at line 47.
+    Found 9-bit subtractor for signal <GND_136_o_GND_136_o_sub_11_OUT> created at line 47.
+    Found 9-bit subtractor for signal <GND_136_o_GND_136_o_sub_17_OUT> created at line 58.
     Found 25-bit adder for signal <n0057> created at line 52.
-    Found 16-bit adder for signal <shift[15]_GND_135_o_add_20_OUT> created at line 60.
+    Found 16-bit adder for signal <shift[15]_GND_136_o_add_20_OUT> created at line 60.
     Found 16-bit shifter logical right for signal <shift> created at line 58
     Found 8-bit comparator greater for signal <tiny_exp> created at line 29
-    Found 8-bit comparator greater for signal <GND_135_o_in[30]_LessThan_9_o> created at line 47
+    Found 8-bit comparator greater for signal <GND_136_o_in[30]_LessThan_9_o> created at line 47
     Summary:
 	inferred   5 Adder/Subtractor(s).
 	inferred   2 Comparator(s).
@@ -3533,8 +3548,8 @@ WARNING:Xst:653 - Signal <debug> is used but never assigned. This sourceless sig
     Found 16-bit adder for signal <chdr_payload_lines16> created at line 34.
     Found 15-bit subtractor for signal <chdr_almost_payload_lines16<15:1>> created at line 32.
     Found 64-bit 4-to-1 multiplexer for signal <o_tdata> created at line 94.
-    Found 3-bit comparator greater for signal <GND_137_o_i_tdata[34]_LessThan_6_o> created at line 66
-    Found 3-bit comparator greater for signal <i_tdata[34]_PWR_144_o_LessThan_7_o> created at line 66
+    Found 3-bit comparator greater for signal <GND_138_o_i_tdata[34]_LessThan_6_o> created at line 66
+    Found 3-bit comparator greater for signal <i_tdata[34]_PWR_145_o_LessThan_7_o> created at line 66
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   1 D-type flip-flop(s).
@@ -3616,10 +3631,10 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/new_rx_fram
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 17-bit subtractor for signal <GND_139_o_GND_139_o_sub_19_OUT> created at line 127.
-    Found 16-bit adder for signal <numsamps[15]_GND_139_o_add_17_OUT> created at line 126.
-    Found 16-bit adder for signal <len[15]_GND_139_o_add_41_OUT> created at line 153.
-    Found 12-bit adder for signal <seqnum[11]_GND_139_o_add_47_OUT> created at line 160.
+    Found 17-bit subtractor for signal <GND_140_o_GND_140_o_sub_19_OUT> created at line 127.
+    Found 16-bit adder for signal <numsamps[15]_GND_140_o_add_17_OUT> created at line 126.
+    Found 16-bit adder for signal <len[15]_GND_140_o_add_41_OUT> created at line 153.
+    Found 12-bit adder for signal <seqnum[11]_GND_140_o_add_47_OUT> created at line 160.
     Found 64-bit 4-to-1 multiplexer for signal <o_tdata_int> created at line 38.
     Found 32-bit comparator lessequal for signal <n0009> created at line 127
     Summary:
@@ -3690,12 +3705,12 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_fifo_bram.v
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit subtractor for signal <space[15]_GND_143_o_sub_35_OUT> created at line 159.
-    Found 16-bit subtractor for signal <occupied[15]_GND_143_o_sub_42_OUT> created at line 167.
-    Found 11-bit adder for signal <wr_addr[10]_GND_143_o_add_1_OUT> created at line 50.
-    Found 11-bit adder for signal <rd_addr[10]_GND_143_o_add_12_OUT> created at line 107.
-    Found 16-bit adder for signal <space[15]_GND_143_o_add_33_OUT> created at line 157.
-    Found 16-bit adder for signal <occupied[15]_GND_143_o_add_42_OUT> created at line 169.
+    Found 16-bit subtractor for signal <space[15]_GND_144_o_sub_35_OUT> created at line 159.
+    Found 16-bit subtractor for signal <occupied[15]_GND_144_o_sub_42_OUT> created at line 167.
+    Found 11-bit adder for signal <wr_addr[10]_GND_144_o_add_1_OUT> created at line 50.
+    Found 11-bit adder for signal <rd_addr[10]_GND_144_o_add_12_OUT> created at line 107.
+    Found 16-bit adder for signal <space[15]_GND_144_o_add_33_OUT> created at line 157.
+    Found 16-bit adder for signal <occupied[15]_GND_144_o_add_42_OUT> created at line 169.
     Found 11-bit subtractor for signal <dont_write_past_me> created at line 110.
     Found 11-bit comparator equal for signal <rd_addr[10]_wr_addr[10]_equal_11_o> created at line 98
     Found 11-bit comparator equal for signal <becoming_full> created at line 111
@@ -3729,12 +3744,12 @@ Synthesizing Unit <axi_fifo_short_4>.
     Found 6-bit register for signal <space>.
     Found 6-bit register for signal <occupied>.
     Found 5-bit register for signal <a>.
-    Found 6-bit subtractor for signal <space[5]_GND_145_o_sub_18_OUT> created at line 118.
-    Found 6-bit subtractor for signal <occupied[5]_GND_145_o_sub_25_OUT> created at line 126.
-    Found 5-bit adder for signal <a[4]_GND_145_o_add_4_OUT> created at line 80.
-    Found 6-bit adder for signal <space[5]_GND_145_o_add_16_OUT> created at line 116.
-    Found 6-bit adder for signal <occupied[5]_GND_145_o_add_25_OUT> created at line 128.
-    Found 5-bit subtractor for signal <GND_145_o_GND_145_o_sub_3_OUT<4:0>> created at line 74.
+    Found 6-bit subtractor for signal <space[5]_GND_146_o_sub_18_OUT> created at line 118.
+    Found 6-bit subtractor for signal <occupied[5]_GND_146_o_sub_25_OUT> created at line 126.
+    Found 5-bit adder for signal <a[4]_GND_146_o_add_4_OUT> created at line 80.
+    Found 6-bit adder for signal <space[5]_GND_146_o_add_16_OUT> created at line 116.
+    Found 6-bit adder for signal <occupied[5]_GND_146_o_add_25_OUT> created at line 128.
+    Found 5-bit subtractor for signal <GND_146_o_GND_146_o_sub_3_OUT<4:0>> created at line 74.
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred 101 D-type flip-flop(s).
@@ -3768,7 +3783,7 @@ INFO:Xst:1799 - State 1101 is never reached in FSM <ibs_state>.
     | States             | 13                                             |
     | Transitions        | 34                                             |
     | Inputs             | 12                                             |
-    | Outputs            | 12                                             |
+    | Outputs            | 11                                             |
     | Clock              | clk (rising_edge)                              |
     | Reset              | reset (positive)                               |
     | Reset type         | synchronous                                    |
@@ -3776,7 +3791,7 @@ INFO:Xst:1799 - State 1101 is never reached in FSM <ibs_state>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 28-bit subtractor for signal <lines_left[27]_GND_146_o_sub_28_OUT> created at line 176.
+    Found 28-bit subtractor for signal <lines_left[27]_GND_147_o_sub_28_OUT> created at line 176.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  60 D-type flip-flop(s).
@@ -4352,7 +4367,7 @@ Synthesizing Unit <cic_strober>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/cic_strober.v".
         WIDTH = 8
     Found 8-bit register for signal <counter>.
-    Found 8-bit subtractor for signal <GND_179_o_GND_179_o_sub_3_OUT<7:0>> created at line 31.
+    Found 8-bit subtractor for signal <GND_180_o_GND_180_o_sub_3_OUT<7:0>> created at line 31.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   8 D-type flip-flop(s).
@@ -4591,8 +4606,8 @@ Synthesizing Unit <iq_to_float>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/iq_to_float.v".
         BITS_IN = 16
         BITS_OUT = 32
-    Found 5-bit subtractor for signal <GND_199_o_GND_199_o_sub_8_OUT> created at line 44.
-    Found 16-bit adder for signal <in[15]_GND_199_o_add_2_OUT> created at line 37.
+    Found 5-bit subtractor for signal <GND_200_o_GND_200_o_sub_8_OUT> created at line 44.
+    Found 16-bit adder for signal <in[15]_GND_200_o_add_2_OUT> created at line 37.
     Found 16-bit adder for signal <complement> created at line 40.
     Found 8-bit adder for signal <n0076[7:0]> created at line 46.
     Found 16-bit shifter logical left for signal <pre_frac> created at line 44
@@ -4713,7 +4728,7 @@ Synthesizing Unit <serial_to_settings>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 5-bit adder for signal <counter[4]_GND_206_o_add_12_OUT> created at line 88.
+    Found 5-bit adder for signal <counter[4]_GND_207_o_add_12_OUT> created at line 88.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  52 D-type flip-flop(s).
@@ -4739,9 +4754,9 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/wishbone/simple_uart
     Found 4-bit register for signal <bit_ctr>.
     Found 1-bit register for signal <tx>.
     Found 16-bit register for signal <baud_ctr>.
-    Found 16-bit adder for signal <baud_ctr[15]_GND_208_o_add_2_OUT> created at line 35.
-    Found 4-bit adder for signal <bit_ctr[3]_GND_208_o_add_10_OUT> created at line 44.
-    Found 1-bit 12-to-1 multiplexer for signal <bit_ctr[3]_PWR_219_o_Mux_18_o> created at line 52.
+    Found 16-bit adder for signal <baud_ctr[15]_GND_209_o_add_2_OUT> created at line 35.
+    Found 4-bit adder for signal <bit_ctr[3]_GND_209_o_add_10_OUT> created at line 44.
+    Found 1-bit 12-to-1 multiplexer for signal <bit_ctr[3]_PWR_220_o_Mux_18_o> created at line 52.
     Found 16-bit comparator lessequal for signal <n0001> created at line 32
     Found 16-bit comparator equal for signal <baud_ctr[15]_clkdiv[15]_equal_21_o> created at line 66
     Summary:
@@ -4775,8 +4790,8 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/wishbone/simple_uart
     Found 8-bit register for signal <sr>.
     Found 16-bit register for signal <baud_ctr>.
     Found 4-bit register for signal <bit_ctr>.
-    Found 16-bit adder for signal <baud_ctr[15]_GND_221_o_add_11_OUT> created at line 47.
-    Found 4-bit adder for signal <bit_ctr[3]_GND_221_o_add_20_OUT> created at line 58.
+    Found 16-bit adder for signal <baud_ctr[15]_GND_222_o_add_11_OUT> created at line 47.
+    Found 4-bit adder for signal <bit_ctr[3]_GND_222_o_add_20_OUT> created at line 58.
     Found 16-bit comparator equal for signal <shift_now> created at line 26
     Found 16-bit comparator greater for signal <n0014> created at line 44
     Found 16-bit comparator not equal for signal <baud_ctr[15]_clkdiv[15]_equal_20_o> created at line 57
@@ -4824,12 +4839,12 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_fifo_bram.v
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit subtractor for signal <space[15]_GND_223_o_sub_35_OUT> created at line 159.
-    Found 16-bit subtractor for signal <occupied[15]_GND_223_o_sub_42_OUT> created at line 167.
-    Found 8-bit adder for signal <wr_addr[7]_GND_223_o_add_1_OUT> created at line 50.
-    Found 8-bit adder for signal <rd_addr[7]_GND_223_o_add_12_OUT> created at line 107.
-    Found 16-bit adder for signal <space[15]_GND_223_o_add_33_OUT> created at line 157.
-    Found 16-bit adder for signal <occupied[15]_GND_223_o_add_42_OUT> created at line 169.
+    Found 16-bit subtractor for signal <space[15]_GND_224_o_sub_35_OUT> created at line 159.
+    Found 16-bit subtractor for signal <occupied[15]_GND_224_o_sub_42_OUT> created at line 167.
+    Found 8-bit adder for signal <wr_addr[7]_GND_224_o_add_1_OUT> created at line 50.
+    Found 8-bit adder for signal <rd_addr[7]_GND_224_o_add_12_OUT> created at line 107.
+    Found 16-bit adder for signal <space[15]_GND_224_o_add_33_OUT> created at line 157.
+    Found 16-bit adder for signal <occupied[15]_GND_224_o_add_42_OUT> created at line 169.
     Found 8-bit subtractor for signal <dont_write_past_me> created at line 110.
     Found 8-bit comparator equal for signal <rd_addr[7]_wr_addr[7]_equal_11_o> created at line 98
     Found 8-bit comparator equal for signal <becoming_full> created at line 111
@@ -4926,9 +4941,9 @@ WARNING:Xst:653 - Signal <debug> is used but never assigned. This sourceless sig
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <idle_cycles[2]_GND_228_o_add_42_OUT> created at line 289.
-    Found 16-bit adder for signal <transfer_size[15]_GND_228_o_add_50_OUT> created at line 366.
-    Found 2-bit adder for signal <fifoadr[0]_GND_228_o_add_98_OUT> created at line 444.
+    Found 3-bit adder for signal <idle_cycles[2]_GND_229_o_add_42_OUT> created at line 289.
+    Found 16-bit adder for signal <transfer_size[15]_GND_229_o_add_50_OUT> created at line 366.
+    Found 2-bit adder for signal <fifoadr[0]_GND_229_o_add_98_OUT> created at line 444.
     Found 1-bit tristate buffer for signal <gpif_d<31>> created at line 81
     Found 1-bit tristate buffer for signal <gpif_d<30>> created at line 81
     Found 1-bit tristate buffer for signal <gpif_d<29>> created at line 81
@@ -5008,12 +5023,12 @@ Synthesizing Unit <axi_fifo_short_5>.
     Found 6-bit register for signal <space>.
     Found 6-bit register for signal <occupied>.
     Found 5-bit register for signal <a>.
-    Found 6-bit subtractor for signal <space[5]_GND_263_o_sub_18_OUT> created at line 118.
-    Found 6-bit subtractor for signal <occupied[5]_GND_263_o_sub_25_OUT> created at line 126.
-    Found 5-bit adder for signal <a[4]_GND_263_o_add_4_OUT> created at line 80.
-    Found 6-bit adder for signal <space[5]_GND_263_o_add_16_OUT> created at line 116.
-    Found 6-bit adder for signal <occupied[5]_GND_263_o_add_25_OUT> created at line 128.
-    Found 5-bit subtractor for signal <GND_263_o_GND_263_o_sub_3_OUT<4:0>> created at line 74.
+    Found 6-bit subtractor for signal <space[5]_GND_264_o_sub_18_OUT> created at line 118.
+    Found 6-bit subtractor for signal <occupied[5]_GND_264_o_sub_25_OUT> created at line 126.
+    Found 5-bit adder for signal <a[4]_GND_264_o_add_4_OUT> created at line 80.
+    Found 6-bit adder for signal <space[5]_GND_264_o_add_16_OUT> created at line 116.
+    Found 6-bit adder for signal <occupied[5]_GND_264_o_add_25_OUT> created at line 128.
+    Found 5-bit subtractor for signal <GND_264_o_GND_264_o_sub_3_OUT<4:0>> created at line 74.
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred  53 D-type flip-flop(s).
@@ -5045,12 +5060,12 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo_200/axi_fifo_le
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit subtractor for signal <space[15]_GND_264_o_sub_32_OUT> created at line 154.
-    Found 16-bit subtractor for signal <occupied[15]_GND_264_o_sub_39_OUT> created at line 162.
-    Found 8-bit adder for signal <wr_addr[7]_GND_264_o_add_1_OUT> created at line 61.
-    Found 8-bit adder for signal <rd_addr[7]_GND_264_o_add_12_OUT> created at line 118.
-    Found 16-bit adder for signal <space[15]_GND_264_o_add_30_OUT> created at line 152.
-    Found 16-bit adder for signal <occupied[15]_GND_264_o_add_39_OUT> created at line 164.
+    Found 16-bit subtractor for signal <space[15]_GND_265_o_sub_32_OUT> created at line 154.
+    Found 16-bit subtractor for signal <occupied[15]_GND_265_o_sub_39_OUT> created at line 162.
+    Found 8-bit adder for signal <wr_addr[7]_GND_265_o_add_1_OUT> created at line 61.
+    Found 8-bit adder for signal <rd_addr[7]_GND_265_o_add_12_OUT> created at line 118.
+    Found 16-bit adder for signal <space[15]_GND_265_o_add_30_OUT> created at line 152.
+    Found 16-bit adder for signal <occupied[15]_GND_265_o_add_39_OUT> created at line 164.
     Found 8-bit subtractor for signal <dont_write_past_me> created at line 121.
     Found 8-bit comparator equal for signal <rd_addr[7]_wr_addr[7]_equal_11_o> created at line 109
     Found 8-bit comparator equal for signal <becoming_full> created at line 122
@@ -5106,17 +5121,17 @@ WARNING:Xst:653 - Signal <gate_terror> is used but never assigned. This sourcele
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit subtractor for signal <lines32[15]_GND_267_o_sub_28_OUT> created at line 85.
+    Found 16-bit subtractor for signal <lines32[15]_GND_268_o_sub_28_OUT> created at line 85.
     Found 16-bit adder for signal <hdr_bytes> created at line 43.
-    Found 13-bit adder for signal <_n0236> created at line 71.
-    Found 13-bit adder for signal <_n0209> created at line 72.
-    Found 12-bit adder for signal <seq_id_actual[11]_GND_267_o_add_20_OUT> created at line 74.
-    Found 13-bit adder for signal <_n0267> created at line 76.
-    Found 16-bit comparator greater for signal <GND_267_o_hdr_lines32[15]_LessThan_5_o> created at line 48
+    Found 13-bit adder for signal <_n0209> created at line 71.
+    Found 13-bit adder for signal <_n0271> created at line 72.
+    Found 12-bit adder for signal <seq_id_actual[11]_GND_268_o_add_20_OUT> created at line 74.
+    Found 13-bit adder for signal <_n0236> created at line 76.
+    Found 16-bit comparator greater for signal <GND_268_o_hdr_lines32[15]_LessThan_5_o> created at line 48
     Found 12-bit comparator not equal for signal <n0022> created at line 73
-    Found 13-bit comparator not equal for signal <n0019> created at line 0
     Found 13-bit comparator not equal for signal <n0015> created at line 0
     Found 13-bit comparator not equal for signal <n0011> created at line 0
+    Found 13-bit comparator not equal for signal <n0019> created at line 0
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred  30 D-type flip-flop(s).
@@ -5133,8 +5148,8 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_packet_gate
 INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_packet_gate.v" line 74: Output port <occupied> of the instance <axi_fifo> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <dump>.
     Found 8-bit register for signal <num_packets>.
-    Found 8-bit subtractor for signal <num_packets[7]_GND_268_o_sub_15_OUT> created at line 71.
-    Found 8-bit adder for signal <num_packets[7]_GND_268_o_add_11_OUT> created at line 67.
+    Found 8-bit subtractor for signal <num_packets[7]_GND_269_o_sub_15_OUT> created at line 71.
+    Found 8-bit adder for signal <num_packets[7]_GND_269_o_add_11_OUT> created at line 67.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   9 D-type flip-flop(s).
@@ -5188,12 +5203,12 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_fifo_bram.v
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit subtractor for signal <space[15]_GND_271_o_sub_35_OUT> created at line 159.
-    Found 16-bit subtractor for signal <occupied[15]_GND_271_o_sub_42_OUT> created at line 167.
-    Found 14-bit adder for signal <wr_addr[13]_GND_271_o_add_1_OUT> created at line 50.
-    Found 14-bit adder for signal <rd_addr[13]_GND_271_o_add_12_OUT> created at line 107.
-    Found 16-bit adder for signal <space[15]_GND_271_o_add_33_OUT> created at line 157.
-    Found 16-bit adder for signal <occupied[15]_GND_271_o_add_42_OUT> created at line 169.
+    Found 16-bit subtractor for signal <space[15]_GND_272_o_sub_35_OUT> created at line 159.
+    Found 16-bit subtractor for signal <occupied[15]_GND_272_o_sub_42_OUT> created at line 167.
+    Found 14-bit adder for signal <wr_addr[13]_GND_272_o_add_1_OUT> created at line 50.
+    Found 14-bit adder for signal <rd_addr[13]_GND_272_o_add_12_OUT> created at line 107.
+    Found 16-bit adder for signal <space[15]_GND_272_o_add_33_OUT> created at line 157.
+    Found 16-bit adder for signal <occupied[15]_GND_272_o_add_42_OUT> created at line 169.
     Found 14-bit subtractor for signal <dont_write_past_me> created at line 110.
     Found 14-bit comparator equal for signal <rd_addr[13]_wr_addr[13]_equal_11_o> created at line 98
     Found 14-bit comparator equal for signal <becoming_full> created at line 111
@@ -5221,7 +5236,7 @@ Synthesizing Unit <axi_fifo32_to_fifo64>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_fifo32_to_fifo64.v".
     Found 32-bit register for signal <holding>.
     Found 1-bit register for signal <state>.
-    Found 3-bit adder for signal <occ_in[2]_PWR_241_o_add_11_OUT> created at line 37.
+    Found 3-bit adder for signal <occ_in[2]_PWR_242_o_add_11_OUT> created at line 37.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  33 D-type flip-flop(s).
@@ -5297,13 +5312,13 @@ WARNING:Xst:653 - Signal <gate_terror> is used but never assigned. This sourcele
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit subtractor for signal <lines32[15]_GND_278_o_sub_28_OUT> created at line 85.
+    Found 16-bit subtractor for signal <lines32[15]_GND_279_o_sub_28_OUT> created at line 85.
     Found 16-bit adder for signal <hdr_bytes> created at line 43.
-    Found 13-bit adder for signal <_n0209> created at line 71.
-    Found 13-bit adder for signal <_n0236> created at line 72.
-    Found 12-bit adder for signal <seq_id_actual[11]_GND_278_o_add_20_OUT> created at line 74.
-    Found 13-bit adder for signal <_n0263> created at line 76.
-    Found 16-bit comparator greater for signal <GND_278_o_hdr_lines32[15]_LessThan_5_o> created at line 48
+    Found 13-bit adder for signal <_n0224> created at line 71.
+    Found 13-bit adder for signal <_n0251> created at line 72.
+    Found 12-bit adder for signal <seq_id_actual[11]_GND_279_o_add_20_OUT> created at line 74.
+    Found 13-bit adder for signal <_n0278> created at line 76.
+    Found 16-bit comparator greater for signal <GND_279_o_hdr_lines32[15]_LessThan_5_o> created at line 48
     Found 12-bit comparator not equal for signal <n0022> created at line 73
     Found 13-bit comparator not equal for signal <n0015> created at line 0
     Found 13-bit comparator not equal for signal <n0019> created at line 0
@@ -5324,8 +5339,8 @@ INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_packet_gate
 INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_packet_gate.v" line 74: Output port <occupied> of the instance <axi_fifo> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <dump>.
     Found 8-bit register for signal <num_packets>.
-    Found 8-bit subtractor for signal <num_packets[7]_GND_279_o_sub_15_OUT> created at line 71.
-    Found 8-bit adder for signal <num_packets[7]_GND_279_o_add_11_OUT> created at line 67.
+    Found 8-bit subtractor for signal <num_packets[7]_GND_280_o_sub_15_OUT> created at line 71.
+    Found 8-bit adder for signal <num_packets[7]_GND_280_o_add_11_OUT> created at line 67.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   9 D-type flip-flop(s).
@@ -5367,7 +5382,7 @@ Macro Statistics
  4096x65-bit dual-port RAM                             : 4
 # Multipliers                                          : 1
  16x2-bit multiplier                                   : 1
-# Adders/Subtractors                                   : 482
+# Adders/Subtractors                                   : 483
  11-bit adder                                          : 2
  11-bit subtractor                                     : 1
  12-bit adder                                          : 14
@@ -5382,7 +5397,7 @@ Macro Statistics
  17-bit adder                                          : 5
  17-bit subtractor                                     : 1
  18-bit subtractor                                     : 6
- 2-bit adder                                           : 1
+ 2-bit adder                                           : 2
  2-bit subtractor                                      : 2
  23-bit addsub                                         : 40
  25-bit adder                                          : 4
@@ -5412,8 +5427,8 @@ Macro Statistics
  8-bit addsub                                          : 5
  8-bit subtractor                                      : 8
  9-bit subtractor                                      : 20
-# Registers                                            : 1038
- 1-bit register                                        : 367
+# Registers                                            : 1040
+ 1-bit register                                        : 368
  10-bit register                                       : 13
  11-bit register                                       : 2
  12-bit register                                       : 40
@@ -5424,7 +5439,7 @@ Macro Statistics
  176-bit register                                      : 1
  18-bit register                                       : 114
  19-bit register                                       : 2
- 2-bit register                                        : 16
+ 2-bit register                                        : 17
  208-bit register                                      : 6
  22-bit register                                       : 1
  23-bit register                                       : 42
@@ -5532,6 +5547,7 @@ WARNING:Xst:1290 - Hierarchical block <serial_to_settings_i1> is unconnected in 
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <debug_uart> is unconnected in block <b200_core>.
    It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <counter_1> in Unit <base_signal> is equivalent to the following FF/Latch, which will be removed : <sig_out> 
 WARNING:Xst:1710 - FF/Latch <out_14> (without init value) has a constant value of 0 in block <new_destination>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <out_15> (without init value) has a constant value of 0 in block <new_destination>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <out_16> (without init value) has a constant value of 0 in block <new_destination>. This FF/Latch will be trimmed during the optimization process.
@@ -6396,6 +6412,10 @@ INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing
     -----------------------------------------------------------------------
 Unit <ram_2port_5> synthesized (advanced).
 
+Synthesizing (advanced) Unit <signal>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <signal> synthesized (advanced).
+
 Synthesizing (advanced) Unit <simple_uart_tx>.
 The following registers are absorbed into counter <baud_ctr>: 1 register on signal <baud_ctr>.
 Unit <simple_uart_tx> synthesized (advanced).
@@ -6455,7 +6475,7 @@ Macro Statistics
  4096x65-bit dual-port block RAM                       : 4
 # Multipliers                                          : 1
  16x2-bit multiplier                                   : 1
-# Adders/Subtractors                                   : 339
+# Adders/Subtractors                                   : 340
  11-bit subtractor                                     : 1
  12-bit adder                                          : 3
  12-bit subtractor                                     : 4
@@ -6468,7 +6488,7 @@ Macro Statistics
  17-bit adder                                          : 5
  17-bit subtractor                                     : 1
  18-bit subtractor                                     : 6
- 2-bit adder                                           : 1
+ 2-bit adder                                           : 2
  2-bit subtractor                                      : 2
  23-bit addsub                                         : 40
  25-bit adder                                          : 4
@@ -6499,13 +6519,14 @@ Macro Statistics
  9-bit subtractor                                      : 20
 # Adder Trees                                          : 1
  29-bit / 6-inputs adder tree                          : 1
-# Counters                                             : 135
+# Counters                                             : 136
  11-bit up counter                                     : 2
  12-bit up counter                                     : 11
  14-bit up counter                                     : 4
  16-bit down counter                                   : 2
  16-bit up counter                                     : 3
  16-bit updown counter                                 : 14
+ 2-bit up counter                                      : 1
  31-bit up counter                                     : 2
  32-bit up counter                                     : 1
  5-bit updown counter                                  : 35
@@ -6516,8 +6537,8 @@ Macro Statistics
  8-bit updown counter                                  : 1
 # Accumulators                                         : 2
  32-bit up loadable accumulator                        : 2
-# Registers                                            : 14500
- Flip-Flops                                            : 14500
+# Registers                                            : 14501
+ Flip-Flops                                            : 14501
 # Comparators                                          : 69
  11-bit comparator equal                               : 2
  12-bit comparator equal                               : 9
@@ -7061,6 +7082,7 @@ WARNING:Xst:2677 - Node <transfer_size_12> of sequential type is unconnected in 
 WARNING:Xst:2677 - Node <transfer_size_13> of sequential type is unconnected in block <gpif2_slave_fifo32>.
 WARNING:Xst:2677 - Node <transfer_size_14> of sequential type is unconnected in block <gpif2_slave_fifo32>.
 WARNING:Xst:2677 - Node <transfer_size_15> of sequential type is unconnected in block <gpif2_slave_fifo32>.
+INFO:Xst:2261 - The FF/Latch <base_signal/sig_out> in Unit <b200> is equivalent to the following FF/Latch, which will be removed : <base_signal/counter_1> 
 INFO:Xst:2261 - The FF/Latch <pipeline_3_135> in Unit <cic_interp> is equivalent to the following 20 FFs/Latches, which will be removed : <pipeline_3_136> <pipeline_3_137> <pipeline_3_138> <pipeline_3_139> <pipeline_3_140> <pipeline_3_141> <pipeline_3_142> <pipeline_3_143> <pipeline_3_144> <pipeline_3_145> <pipeline_3_146> <pipeline_3_147> <pipeline_3_148> <pipeline_3_149> <pipeline_3_150> <pipeline_3_151> <pipeline_3_152> <pipeline_3_153> <pipeline_3_154> <pipeline_3_155> 
 INFO:Xst:2261 - The FF/Latch <x0_24> in Unit <cordic_z24_1> is equivalent to the following FF/Latch, which will be removed : <x0_25> 
 INFO:Xst:2261 - The FF/Latch <y0_24> in Unit <cordic_z24_1> is equivalent to the following FF/Latch, which will be removed : <y0_25> 
@@ -9352,7 +9374,7 @@ Forward register balancing over carry chain convert_16sc_to_xxxx/convert_16sc_to
 Forward register balancing over carry chain convert_16sc_to_xxxx/convert_16sc_to_12sc/Madd_round_i0_cy<3>
 Forward register balancing over carry chain convert_16sc_to_xxxx/convert_16sc_to_12sc/Madd_round_q1_cy<3>
 Forward register balancing over carry chain convert_16sc_to_xxxx/convert_16sc_to_12sc/Madd_round_i1_cy<3>
-Forward register balancing over carry chain tx_control/Madd_seqnum[11]_GND_81_o_add_18_OUT_cy<0>
+Forward register balancing over carry chain tx_control/Madd_seqnum[11]_GND_82_o_add_18_OUT_cy<0>
 Forward register balancing over carry chain convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_imag1/Madd_n0057_cy<7>
 Forward register balancing over carry chain convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_real1/Madd_n0057_cy<7>
 Forward register balancing over carry chain buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/Mcount_rd_addr_cy<0>
@@ -9360,7 +9382,7 @@ Forward register balancing over carry chain buffer_whole_pkt/axi_fifo/main_fifo/
 In hierarchy level b200_core/radio_0.
 Forward register balancing over carry chain convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_imag1/Madd_n0057_cy<7>
 Forward register balancing over carry chain convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_real1/Madd_n0057_cy<7>
-Forward register balancing over carry chain slave_fifo32/Madd_transfer_size[15]_GND_228_o_add_50_OUT_cy<0>
+Forward register balancing over carry chain slave_fifo32/Madd_transfer_size[15]_GND_229_o_add_50_OUT_cy<0>
 Forward register balancing over carry chain slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/Msub_dont_write_past_me_cy<1>
 Forward register balancing over carry chain slave_fifo32/gpif2_to_fifo64_tx/min_read_buff/Mcount_wr_addr_cy<0>
 Forward register balancing over carry chain slave_fifo32/gpif2_to_fifo64_tx/min_read_buff/Mcount_rd_addr_cy<0>
@@ -9372,17 +9394,17 @@ In hierarchy level b200_core/radio_0.
 Forward register balancing over carry chain convert_xxxx_to_16sc/convert_12sc_to_16sc/Msub_just_samples_in_cy<3>
 Forward register balancing over carry chain tx_fifo/fifo_1clk/fifo_bram/Mcount_wr_addr_cy<0>
 Forward register balancing over carry chain tx_fifo/fifo_1clk/fifo_bram/Mcount_rd_addr_cy<0>
-Forward register balancing over carry chain new_rx_framer/Msub_GND_139_o_GND_139_o_sub_19_OUT_cy<1>
+Forward register balancing over carry chain new_rx_framer/Msub_GND_140_o_GND_140_o_sub_19_OUT_cy<1>
 Forward register balancing over carry chain new_rx_framer/datafifo/fifo_bram/Mcount_rd_addr_cy<0>
 In hierarchy level b200_core/radio_0.
 Forward register balancing over carry chain convert_xxxx_to_16sc/convert_12sc_to_16sc/Madd__n0156_cy<4>
 Forward register balancing over carry chain convert_xxxx_to_16sc/convert_12sc_to_16sc/Madd__n0157_cy<4>
 Forward register balancing over carry chain convert_xxxx_to_16sc/convert_12sc_to_16sc/Madd__n0154_cy<4>
 In hierarchy level b200_core/radio_0.
-Forward register balancing over carry chain convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/Madd_in[15]_GND_199_o_add_2_OUT_cy<0>
-Forward register balancing over carry chain convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/Madd_in[15]_GND_199_o_add_2_OUT_cy<0>
-Forward register balancing over carry chain convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/Madd_in[15]_GND_199_o_add_2_OUT_cy<0>
-Forward register balancing over carry chain convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/Madd_in[15]_GND_199_o_add_2_OUT_cy<0>
+Forward register balancing over carry chain convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/Madd_in[15]_GND_200_o_add_2_OUT_cy<0>
+Forward register balancing over carry chain convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/Madd_in[15]_GND_200_o_add_2_OUT_cy<0>
+Forward register balancing over carry chain convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/Madd_in[15]_GND_200_o_add_2_OUT_cy<0>
+Forward register balancing over carry chain convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/Madd_in[15]_GND_200_o_add_2_OUT_cy<0>
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <vita_time_fifo/fifo_short_2clk> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <vita_time_fifo/fifo_short_2clk> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <vita_time_fifo/fifo_short_2clk> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
@@ -11558,11 +11580,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 
 Pipelining and Register Balancing Report ...
 
-Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003> :
-	Register(s) blk000000bc has(ve) been backward balanced into : blk000000bc_BRB0 blk000000bc_BRB1 blk000000bc_BRB2 blk000000bc_BRB3.
-	Register(s) blk000000be has(ve) been backward balanced into : blk000000be_BRB0 blk000000be_BRB1 blk000000be_BRB2.
-Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003> processed.
-
 Processing Unit <b200> :
 	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB4.
 	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB2.
@@ -11582,35 +11599,6 @@ Processing Unit <b200> :
 	Register(s) slave_fifo32/next_addr_0 has(ve) been backward balanced into : slave_fifo32/next_addr_0_BRB0 .
 	Register(s) slave_fifo32/next_addr_1 has(ve) been backward balanced into : slave_fifo32/next_addr_1_BRB0.
 Unit <b200> processed.
-
-Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> :
-	Register(s) blk000000bf has(ve) been backward balanced into : blk000000bf_BRB0 blk000000bf_BRB1 blk000000bf_BRB2 blk000000bf_BRB3.
-	Register(s) blk000000c1 has(ve) been backward balanced into : blk000000c1_BRB0 blk000000c1_BRB1 blk000000c1_BRB2.
-Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> processed.
-
-Processing Unit <b200_core/radio_0> :
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_0 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_0_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_1 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_1_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_2 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_2_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_3 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_3_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_4 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_4_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_5 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_5_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_6 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_6_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_7 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_7_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_8 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_8_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_9 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_9_BRB0 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB2 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB5.
-	Register(s) buffer_whole_pkt/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : buffer_whole_pkt/axi_fifo/post_fifo/a_4_BRB0 buffer_whole_pkt/axi_fifo/post_fifo/a_4_BRB1.
-	Register(s) ddc_chain/new_hb.strobe_unscaled has(ve) been backward balanced into : ddc_chain/new_hb.strobe_unscaled_BRB0 ddc_chain/new_hb.strobe_unscaled_BRB1 ddc_chain/new_hb.strobe_unscaled_BRB2 ddc_chain/new_hb.strobe_unscaled_BRB3 ddc_chain/new_hb.strobe_unscaled_BRB4.
-	Register(s) fe_gpio_atr/ogpio_0 has(ve) been backward balanced into : fe_gpio_atr/ogpio_0_BRB1 fe_gpio_atr/ogpio_0_BRB3 fe_gpio_atr/ogpio_0_BRB4 fe_gpio_atr/ogpio_0_BRB5.
-	Register(s) fe_gpio_atr/ogpio_1 has(ve) been backward balanced into : fe_gpio_atr/ogpio_1_BRB1 fe_gpio_atr/ogpio_1_BRB3 fe_gpio_atr/ogpio_1_BRB4 fe_gpio_atr/ogpio_1_BRB5.
-	Register(s) fe_gpio_atr/ogpio_2 has(ve) been backward balanced into : fe_gpio_atr/ogpio_2_BRB1 fe_gpio_atr/ogpio_2_BRB3 fe_gpio_atr/ogpio_2_BRB4 fe_gpio_atr/ogpio_2_BRB5.
-	Register(s) fe_gpio_atr/ogpio_3 has(ve) been backward balanced into : fe_gpio_atr/ogpio_3_BRB1 fe_gpio_atr/ogpio_3_BRB3 fe_gpio_atr/ogpio_3_BRB4 fe_gpio_atr/ogpio_3_BRB5.
-	Register(s) fe_gpio_atr/ogpio_4 has(ve) been backward balanced into : fe_gpio_atr/ogpio_4_BRB1 fe_gpio_atr/ogpio_4_BRB3 fe_gpio_atr/ogpio_4_BRB4 fe_gpio_atr/ogpio_4_BRB5.
-	Register(s) fe_gpio_atr/ogpio_5 has(ve) been backward balanced into : fe_gpio_atr/ogpio_5_BRB1 fe_gpio_atr/ogpio_5_BRB3 fe_gpio_atr/ogpio_5_BRB4 fe_gpio_atr/ogpio_5_BRB5.
-	Register(s) fe_gpio_atr/ogpio_6 has(ve) been backward balanced into : fe_gpio_atr/ogpio_6_BRB1 fe_gpio_atr/ogpio_6_BRB3 fe_gpio_atr/ogpio_6_BRB4 fe_gpio_atr/ogpio_6_BRB5.
-	Register(s) fe_gpio_atr/ogpio_7 has(ve) been backward balanced into : fe_gpio_atr/ogpio_7_BRB1 fe_gpio_atr/ogpio_7_BRB3 fe_gpio_atr/ogpio_7_BRB4 fe_gpio_atr/ogpio_7_BRB5.
-	Register(s) new_rx_control/sr_rx_halt/changed has(ve) been backward balanced into : new_rx_control/sr_rx_halt/changed_BRB0 new_rx_control/sr_rx_halt/changed_BRB1 new_rx_control/sr_rx_halt/changed_BRB2 new_rx_control/sr_rx_halt/changed_BRB3 new_rx_control/sr_rx_halt/changed_BRB4 new_rx_control/sr_rx_halt/changed_BRB5.
-Unit <b200_core/radio_0> processed.
 
 Processing Unit <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk> :
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB1.
@@ -11736,6 +11724,40 @@ Processing Unit <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2cl
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
 Unit <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk> processed.
+
+Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> :
+	Register(s) blk000000bf has(ve) been backward balanced into : blk000000bf_BRB0 blk000000bf_BRB1 blk000000bf_BRB2 blk000000bf_BRB3.
+	Register(s) blk000000c1 has(ve) been backward balanced into : blk000000c1_BRB0 blk000000c1_BRB1 blk000000c1_BRB2.
+Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> processed.
+
+Processing Unit <b200_core/radio_0> :
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_0 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_0_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_1 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_1_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_2 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_2_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_3 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_3_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_4 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_4_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_5 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_5_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_6 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_6_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_7 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_7_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_8 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_8_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_9 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_9_BRB0 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB2 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB5.
+	Register(s) buffer_whole_pkt/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : buffer_whole_pkt/axi_fifo/post_fifo/a_4_BRB0 buffer_whole_pkt/axi_fifo/post_fifo/a_4_BRB1.
+	Register(s) ddc_chain/new_hb.strobe_unscaled has(ve) been backward balanced into : ddc_chain/new_hb.strobe_unscaled_BRB0 ddc_chain/new_hb.strobe_unscaled_BRB1 ddc_chain/new_hb.strobe_unscaled_BRB2 ddc_chain/new_hb.strobe_unscaled_BRB3 ddc_chain/new_hb.strobe_unscaled_BRB4.
+	Register(s) fe_gpio_atr/ogpio_0 has(ve) been backward balanced into : fe_gpio_atr/ogpio_0_BRB1 fe_gpio_atr/ogpio_0_BRB3 fe_gpio_atr/ogpio_0_BRB4 fe_gpio_atr/ogpio_0_BRB5.
+	Register(s) fe_gpio_atr/ogpio_1 has(ve) been backward balanced into : fe_gpio_atr/ogpio_1_BRB1 fe_gpio_atr/ogpio_1_BRB3 fe_gpio_atr/ogpio_1_BRB4 fe_gpio_atr/ogpio_1_BRB5.
+	Register(s) fe_gpio_atr/ogpio_2 has(ve) been backward balanced into : fe_gpio_atr/ogpio_2_BRB1 fe_gpio_atr/ogpio_2_BRB3 fe_gpio_atr/ogpio_2_BRB4 fe_gpio_atr/ogpio_2_BRB5.
+	Register(s) fe_gpio_atr/ogpio_3 has(ve) been backward balanced into : fe_gpio_atr/ogpio_3_BRB1 fe_gpio_atr/ogpio_3_BRB3 fe_gpio_atr/ogpio_3_BRB4 fe_gpio_atr/ogpio_3_BRB5.
+	Register(s) fe_gpio_atr/ogpio_4 has(ve) been backward balanced into : fe_gpio_atr/ogpio_4_BRB1 fe_gpio_atr/ogpio_4_BRB3 fe_gpio_atr/ogpio_4_BRB4 fe_gpio_atr/ogpio_4_BRB5.
+	Register(s) fe_gpio_atr/ogpio_5 has(ve) been backward balanced into : fe_gpio_atr/ogpio_5_BRB1 fe_gpio_atr/ogpio_5_BRB3 fe_gpio_atr/ogpio_5_BRB4 fe_gpio_atr/ogpio_5_BRB5.
+	Register(s) fe_gpio_atr/ogpio_6 has(ve) been backward balanced into : fe_gpio_atr/ogpio_6_BRB1 fe_gpio_atr/ogpio_6_BRB3 fe_gpio_atr/ogpio_6_BRB4 fe_gpio_atr/ogpio_6_BRB5.
+	Register(s) fe_gpio_atr/ogpio_7 has(ve) been backward balanced into : fe_gpio_atr/ogpio_7_BRB1 fe_gpio_atr/ogpio_7_BRB3 fe_gpio_atr/ogpio_7_BRB4 fe_gpio_atr/ogpio_7_BRB5.
+	Register(s) new_rx_control/sr_rx_halt/changed has(ve) been backward balanced into : new_rx_control/sr_rx_halt/changed_BRB0 new_rx_control/sr_rx_halt/changed_BRB1 new_rx_control/sr_rx_halt/changed_BRB2 new_rx_control/sr_rx_halt/changed_BRB3 new_rx_control/sr_rx_halt/changed_BRB4 new_rx_control/sr_rx_halt/changed_BRB5.
+Unit <b200_core/radio_0> processed.
+
+Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003> :
+	Register(s) blk000000bc has(ve) been backward balanced into : blk000000bc_BRB0 blk000000bc_BRB1 blk000000bc_BRB2 blk000000bc_BRB3.
+	Register(s) blk000000be has(ve) been backward balanced into : blk000000be_BRB0 blk000000be_BRB1 blk000000be_BRB2.
+Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003> processed.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> of sequential type is unconnected in block <vita_time_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <vita_time_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <vita_time_fifo/fifo_short_2clk>.
@@ -13676,8 +13698,8 @@ Unit <radio_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 13888
- Flip-Flops                                            : 13888
+# Registers                                            : 13890
+ Flip-Flops                                            : 13890
 # Shift Registers                                      : 8
  13-bit shift register                                 : 2
  2-bit shift register                                  : 6
@@ -15607,11 +15629,11 @@ Top Level Output File Name         : b200.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 29990
+# BELS                             : 29992
 #      GND                         : 100
-#      INV                         : 473
+#      INV                         : 474
 #      LUT1                        : 759
-#      LUT2                        : 3523
+#      LUT2                        : 3524
 #      LUT3                        : 4961
 #      LUT4                        : 1751
 #      LUT5                        : 2116
@@ -15623,8 +15645,8 @@ Primitive and Black Box Usage:
 #      MUXF7                       : 98
 #      VCC                         : 6
 #      XORCY                       : 6380
-# FlipFlops/Latches                : 18781
-#      FD                          : 746
+# FlipFlops/Latches                : 18783
+#      FD                          : 748
 #      FD_1                        : 1
 #      FDC                         : 592
 #      FDCE                        : 1376
@@ -15669,18 +15691,18 @@ Selected Device : 6slx75fgg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           18650  out of  93296    19%  
- Number of Slice LUTs:                20953  out of  46648    44%  
-    Number used as Logic:             16474  out of  46648    35%  
+ Number of Slice Registers:           18652  out of  93296    19%  
+ Number of Slice LUTs:                20955  out of  46648    44%  
+    Number used as Logic:             16476  out of  46648    35%  
     Number used as Memory:             4479  out of  11072    40%  
        Number used as RAM:              972
        Number used as SRL:             3507
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  29315
-   Number with an unused Flip Flop:   10665  out of  29315    36%  
-   Number with an unused LUT:          8362  out of  29315    28%  
-   Number of fully used LUT-FF pairs: 10288  out of  29315    35%  
+ Number of LUT Flip Flop pairs used:  29317
+   Number with an unused Flip Flop:   10665  out of  29317    36%  
+   Number with an unused LUT:          8362  out of  29317    28%  
+   Number of fully used LUT-FF pairs: 10290  out of  29317    35%  
    Number of unique control sets:       501
 
 IO Utilization: 
@@ -15712,12 +15734,14 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-codec_main_clk_p                   | DCM_SP:CLKFX           | 5578  |
-codec_data_clk_p                   | IBUFG+BUFIO2+BUFGMUX   | 17327 |
------------------------------------+------------------------+-------+
+-----------------------------------+---------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                 | Load  |
+-----------------------------------+---------------------------------------+-------+
+codec_main_clk_p                   | DCM_SP:CLKFX                          | 5578  |
+codec_data_clk_p                   | IBUFG+BUFIO2+BUFGMUX                  | 17327 |
+base_signal/sig_out                | NONE(S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN)| 2     |
+-----------------------------------+---------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -15753,7 +15777,7 @@ Delay:               7.084ns (Levels of Logic = 5)
     ----------------------------------------  ------------
      FDRE:C->Q             8   0.447   1.031  slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/num_packets_2 (slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/num_packets_2)
      LUT3:I0->O            6   0.205   0.745  slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/Mmux_num_packets[7]_num_packets[7]_mux_17_OUT411 (slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/Mmux_num_packets[7]_num_packets[7]_mux_17_OUT41)
-     LUT5:I4->O           13   0.205   0.933  slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/Msub_num_packets[7]_GND_268_o_sub_15_OUT_cy<6>11 (slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/Msub_num_packets[7]_GND_268_o_sub_15_OUT_cy<6>)
+     LUT5:I4->O           13   0.205   0.933  slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/Msub_num_packets[7]_GND_269_o_sub_15_OUT_cy<6>11 (slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/Msub_num_packets[7]_GND_269_o_sub_15_OUT_cy<6>)
      LUT5:I4->O           28   0.205   1.235  slave_fifo32/gpif2_to_fifo64_tx/fifo32_to_fifo64/Mmux_o_tvalid11 (tx_tvalid)
      begin scope: 'b200_core:tx_tvalid'
      LUT2:I1->O           54   0.205   1.573  extra_tx_buff/fifo_bram/write1 (extra_tx_buff/fifo_bram/write)
@@ -15765,7 +15789,7 @@ Delay:               7.084ns (Levels of Logic = 5)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'codec_data_clk_p'
   Clock period: 12.588ns (frequency: 79.438MHz)
-  Total number of paths / destination ports: 1325475 / 52086
+  Total number of paths / destination ports: 1325478 / 52088
 -------------------------------------------------------------------------
 Delay:               12.588ns (Levels of Logic = 17)
   Source:            b200_core/radio_0/convert_xxxx_to_16sc/demux_pack_chain/axi_fifo_short/o_tdata_34 (FF)
@@ -15925,14 +15949,14 @@ codec_main_clk_p|    7.084|         |         |         |
 
 
 Total REAL time to Xst completion: 254.00 secs
-Total CPU time to Xst completion: 245.61 secs
+Total CPU time to Xst completion: 246.21 secs
  
 --> 
 
 
-Total memory usage is 717120 kilobytes
+Total memory usage is 726564 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 8715 (   0 filtered)
-Number of infos    :  584 (   0 filtered)
+Number of warnings : 8716 (   0 filtered)
+Number of infos    :  587 (   0 filtered)
 

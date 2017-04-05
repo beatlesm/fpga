@@ -72,6 +72,7 @@ b200_io.v \
 b200.ucf \
 timing.ucf \
 S6CLK2PIN.v \
+signal.v \
 $(B200_COREGEN_SRCS)
 
 # GPIO only available for B210

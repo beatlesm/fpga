@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Apr 04 20:49:41 2017
+// Written by: Map P.20131013 on Tue Apr 04 21:29:55 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -7079,14 +7079,14 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/num_packets_6"
         BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/num_packets_7"
-        BEL "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<0>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<1>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<2>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<3>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<4>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<5>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<6>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<7>_FRB" BEL
+        BEL "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<0>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<1>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<2>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<3>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<4>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<5>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<6>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<7>_FRB" BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<1>_FRB"
         BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<2>_FRB"
@@ -15224,14 +15224,14 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/num_packets_6"
         BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/num_packets_7"
-        BEL "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<0>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<1>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<2>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<3>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<4>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<5>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<6>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_228_o_add_50_OUT<7>_FRB" BEL
+        BEL "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<0>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<1>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<2>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<3>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<4>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<5>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<6>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_229_o_add_50_OUT<7>_FRB" BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<1>_FRB"
         BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<2>_FRB"
@@ -17958,16 +17958,13 @@ PIN b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003/blk00000115_pins<92>
         = BEL
         "b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003/blk00000115"
         PINNAME CLK;
-PIN S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<1> = BEL
-        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN" PINNAME CK0;
-PIN S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<2> = BEL
-        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN" PINNAME CK1;
-TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
-        "fe0_gpio_2" BEL "fe0_gpio_3" BEL "fe0_gpio_4" BEL "fe0_gpio_5" BEL
-        "fe0_gpio_6" BEL "fe0_gpio_7" BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
+TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "fe1_gpio_2" BEL "fe1_gpio_3" BEL "fe1_gpio_4" BEL "fe1_gpio_5" BEL
-        "fe1_gpio_6" BEL "fe1_gpio_7" BEL "radio_sync/reset_out_tmp" BEL
-        "radio_sync/reset_int" BEL "gpio_atr_io_inst/gpio_in_iob_0" BEL
+        "fe1_gpio_6" BEL "fe1_gpio_7" BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
+        "fe0_gpio_2" BEL "fe0_gpio_3" BEL "fe0_gpio_4" BEL "fe0_gpio_5" BEL
+        "fe0_gpio_6" BEL "fe0_gpio_7" BEL "base_signal/sig_out" BEL
+        "radio_sync/reset_out_tmp" BEL "radio_sync/reset_int" BEL
+        "base_signal/counter_0" BEL "gpio_atr_io_inst/gpio_in_iob_0" BEL
         "gpio_atr_io_inst/gpio_out_iob_1" BEL
         "gpio_atr_io_inst/gpio_out_iob_0" BEL
         "gpio_atr_io_inst/gpio_ddr_reg_1" BEL
@@ -30914,29 +30911,29 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
         BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_12sc/i1<11>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<0>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<0>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<1>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<2>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<3>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<4>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<5>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<6>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<7>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<8>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<9>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<10>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<11>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<11>_FRB"
         BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_imag1/n0057<8>_FRB"
         BEL
@@ -31096,37 +31093,37 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
         BEL
         "b200_core/radio_0/tx_fifo/fifo_1clk/fifo_bram/Mcount_rd_addr11_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<1>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<2>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<3>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<4>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<5>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<6>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<7>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<8>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<9>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<10>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<11>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<11>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<12>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<12>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<13>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<13>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<14>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<14>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<15>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<15>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<16>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<16>_FRB"
         BEL "b200_core/radio_0/new_rx_framer/datafifo/fifo_bram/Result<0>_FRB"
         BEL "b200_core/radio_0/new_rx_framer/datafifo/fifo_bram/Result<1>_FRB"
         BEL "b200_core/radio_0/new_rx_framer/datafifo/fifo_bram/Result<2>_FRB"
@@ -31321,133 +31318,133 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
         BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_12sc_to_16sc/Madd__n0154_cy<17>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<0>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<0>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<1>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<2>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<3>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<4>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<5>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<6>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<7>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<8>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<9>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<10>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<11>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<11>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<12>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<12>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<13>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<13>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<14>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<14>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<15>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<15>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<0>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<0>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<1>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<2>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<3>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<4>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<5>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<6>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<7>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<8>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<9>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<10>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<11>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<11>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<12>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<12>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<13>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<13>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<14>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<14>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<15>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<15>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<0>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<0>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<1>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<2>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<3>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<4>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<5>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<6>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<7>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<8>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<9>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<10>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<11>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<11>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<12>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<12>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<13>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<13>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<14>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<14>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<15>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<15>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<0>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<0>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<1>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<2>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<3>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<4>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<5>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<6>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<7>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<8>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<9>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<10>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<11>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<11>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<12>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<12>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<13>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<13>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<14>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<14>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<15>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<15>_FRB"
         PIN
         "b200_core/radio_0/tx_fifo/fifo_1clk/fifo_bram/ram/Mram_ram17_pins<26>"
         PIN
@@ -41669,17 +41666,14 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
         "b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003/blk000004e1/blk00000506/DP"
         BEL
         "b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003/blk000004e1/blk00000506/SP"
-        PIN "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<1>" PIN
-        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<2>" PIN
-        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<1>" PIN
-        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<2>" BEL
-        "gpio_atr_io_inst/gpio_in_iob_1";
-TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
-        "fe0_gpio_2" BEL "fe0_gpio_3" BEL "fe0_gpio_4" BEL "fe0_gpio_5" BEL
-        "fe0_gpio_6" BEL "fe0_gpio_7" BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
+        BEL "gpio_atr_io_inst/gpio_in_iob_1";
+TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "fe1_gpio_2" BEL "fe1_gpio_3" BEL "fe1_gpio_4" BEL "fe1_gpio_5" BEL
-        "fe1_gpio_6" BEL "fe1_gpio_7" BEL "radio_sync/reset_out_tmp" BEL
-        "radio_sync/reset_int" BEL "gpio_atr_io_inst/gpio_in_iob_0" BEL
+        "fe1_gpio_6" BEL "fe1_gpio_7" BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
+        "fe0_gpio_2" BEL "fe0_gpio_3" BEL "fe0_gpio_4" BEL "fe0_gpio_5" BEL
+        "fe0_gpio_6" BEL "fe0_gpio_7" BEL "base_signal/sig_out" BEL
+        "radio_sync/reset_out_tmp" BEL "radio_sync/reset_int" BEL
+        "base_signal/counter_0" BEL "gpio_atr_io_inst/gpio_in_iob_0" BEL
         "gpio_atr_io_inst/gpio_out_iob_1" BEL
         "gpio_atr_io_inst/gpio_out_iob_0" BEL
         "gpio_atr_io_inst/gpio_ddr_reg_1" BEL
@@ -54626,29 +54620,29 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
         BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_12sc/i1<11>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<0>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<0>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<1>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<2>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<3>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<4>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<5>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<6>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<7>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<8>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<9>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<10>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_81_o_add_18_OUT<11>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_82_o_add_18_OUT<11>_FRB"
         BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_imag1/n0057<8>_FRB"
         BEL
@@ -54808,37 +54802,37 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
         BEL
         "b200_core/radio_0/tx_fifo/fifo_1clk/fifo_bram/Mcount_rd_addr11_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<1>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<2>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<3>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<4>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<5>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<6>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<7>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<8>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<9>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<10>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<11>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<11>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<12>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<12>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<13>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<13>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<14>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<14>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<15>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<15>_FRB"
         BEL
-        "b200_core/radio_0/new_rx_framer/GND_139_o_GND_139_o_sub_19_OUT<16>_FRB"
+        "b200_core/radio_0/new_rx_framer/GND_140_o_GND_140_o_sub_19_OUT<16>_FRB"
         BEL "b200_core/radio_0/new_rx_framer/datafifo/fifo_bram/Result<0>_FRB"
         BEL "b200_core/radio_0/new_rx_framer/datafifo/fifo_bram/Result<1>_FRB"
         BEL "b200_core/radio_0/new_rx_framer/datafifo/fifo_bram/Result<2>_FRB"
@@ -55033,133 +55027,133 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
         BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_12sc_to_16sc/Madd__n0154_cy<17>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<0>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<0>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<1>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<2>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<3>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<4>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<5>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<6>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<7>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<8>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<9>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<10>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<11>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<11>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<12>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<12>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<13>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<13>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<14>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<14>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_199_o_add_2_OUT<15>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag0/in[15]_GND_200_o_add_2_OUT<15>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<0>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<0>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<1>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<2>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<3>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<4>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<5>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<6>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<7>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<8>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<9>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<10>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<11>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<11>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<12>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<12>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<13>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<13>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<14>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<14>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_199_o_add_2_OUT<15>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real0/in[15]_GND_200_o_add_2_OUT<15>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<0>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<0>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<1>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<2>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<3>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<4>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<5>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<6>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<7>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<8>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<9>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<10>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<11>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<11>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<12>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<12>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<13>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<13>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<14>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<14>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_199_o_add_2_OUT<15>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_imag1/in[15]_GND_200_o_add_2_OUT<15>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<0>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<0>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<1>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<2>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<3>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<4>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<5>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<6>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<7>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<8>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<9>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<10>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<11>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<11>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<12>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<12>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<13>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<13>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<14>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<14>_FRB"
         BEL
-        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_199_o_add_2_OUT<15>_FRB"
+        "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/iq_to_float_real1/in[15]_GND_200_o_add_2_OUT<15>_FRB"
         PIN
         "b200_core/radio_0/tx_fifo/fifo_1clk/fifo_bram/ram/Mram_ram17_pins<26>"
         PIN
@@ -65381,11 +65375,7 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe0_gpio_0" BEL "fe0_gpio_1" BEL
         "b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003/blk000004e1/blk00000506/DP"
         BEL
         "b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003/blk000004e1/blk00000506/SP"
-        PIN "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<1>" PIN
-        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<2>" PIN
-        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<1>" PIN
-        "S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN_pins<2>" BEL
-        "gpio_atr_io_inst/gpio_in_iob_1";
+        BEL "gpio_atr_io_inst/gpio_in_iob_1";
 TIMEGRP b200_io_i0_siso_clk_unbuf = BEL "b200_io_i0/siso_clk_bufg" BEL
         "b200_io_i0/tx_q_11" BEL "b200_io_i0/tx_q_10" BEL "b200_io_i0/tx_q_9"
         BEL "b200_io_i0/tx_q_8" BEL "b200_io_i0/tx_q_7" BEL

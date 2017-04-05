@@ -71,7 +71,7 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  163568 paths analyzed, 25096 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   9.848ns.
+ Minimum period is   9.810ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -91,7 +91,7 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  411 paths analyzed, 291 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  11.762ns.
+ Minimum period is  14.536ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -101,7 +101,7 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  27 paths analyzed, 26 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   8.476ns.
+ Minimum period is  10.558ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -130,9 +130,9 @@ Timing constraint: TS_b200_io_i0_mimo_clk_unbuf = PERIOD TIMEGRP
 "b200_io_i0_mimo_clk_unbuf"         TS_codec_data_clk_p * 2 HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 1367598 paths analyzed, 95248 endpoints analyzed, 0 failing endpoints
+ 1367601 paths analyzed, 95251 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  23.528ns.
+ Minimum period is  29.564ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -153,8 +153,8 @@ Derived Constraints for TS_codec_main_clk
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_codec_main_clk              |     25.000ns|     16.000ns|     24.620ns|            0|            0|            0|       163568|
-| TS_gen_clks_clkfx             |     10.000ns|      9.848ns|          N/A|            0|            0|       163568|            0|
+|TS_codec_main_clk              |     25.000ns|     16.000ns|     24.525ns|            0|            0|            0|       163568|
+| TS_gen_clks_clkfx             |     10.000ns|      9.810ns|          N/A|            0|            0|       163568|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 Derived Constraints for TS_codec_data_clk_p
@@ -163,13 +163,13 @@ Derived Constraints for TS_codec_data_clk_p
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_codec_data_clk_p            |     16.276ns|      0.925ns|     11.764ns|            0|            0|            0|      1368036|
+|TS_codec_data_clk_p            |     16.276ns|      0.925ns|     14.782ns|            0|            0|            0|      1368039|
 | TS_b200_io_i0_io_clk_lb_b     |     16.276ns|      1.403ns|          N/A|            0|            0|            0|            0|
-| TS_b200_io_i0_siso_clk_unbuf  |     16.276ns|     11.762ns|          N/A|            0|            0|          411|            0|
-| TS_b200_io_i0_io_clk_lb       |     16.276ns|      8.476ns|          N/A|            0|            0|           27|            0|
+| TS_b200_io_i0_siso_clk_unbuf  |     16.276ns|     14.536ns|          N/A|            0|            0|          411|            0|
+| TS_b200_io_i0_io_clk_lb       |     16.276ns|     10.558ns|          N/A|            0|            0|           27|            0|
 | TS_b200_io_i0_siso_clk2_unbuf |     16.276ns|      3.124ns|          N/A|            0|            0|            0|            0|
 | TS_b200_io_i0_io_clk_lt_b     |     16.276ns|      0.814ns|          N/A|            0|            0|            0|            0|
-| TS_b200_io_i0_mimo_clk_unbuf  |     32.552ns|     23.528ns|          N/A|            0|            0|      1367598|            0|
+| TS_b200_io_i0_mimo_clk_unbuf  |     32.552ns|     29.564ns|          N/A|            0|            0|      1367601|            0|
 | TS_b200_io_i0_io_clk_lt       |     16.276ns|      0.818ns|          N/A|            0|            0|            0|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
@@ -185,7 +185,7 @@ Clock to Setup on destination clock codec_data_clk_p
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-codec_data_clk_p|   16.533|    5.882|    5.881|    3.617|
+codec_data_clk_p|   29.564|    6.259|    7.268|    4.297|
 ----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock codec_main_clk_n
@@ -193,8 +193,8 @@ Clock to Setup on destination clock codec_main_clk_n
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-codec_main_clk_n|    9.848|         |         |         |
-codec_main_clk_p|    9.848|         |         |         |
+codec_main_clk_n|    9.810|         |         |         |
+codec_main_clk_p|    9.810|         |         |         |
 ----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock codec_main_clk_p
@@ -202,8 +202,8 @@ Clock to Setup on destination clock codec_main_clk_p
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-codec_main_clk_n|    9.848|         |         |         |
-codec_main_clk_p|    9.848|         |         |         |
+codec_main_clk_n|    9.810|         |         |         |
+codec_main_clk_p|    9.810|         |         |         |
 ----------------+---------+---------+---------+---------+
 
 
@@ -212,20 +212,20 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 1531604 paths, 0 nets, and 101711 connections
+Constraints cover 1531607 paths, 0 nets, and 101873 connections
 
 Design statistics:
-   Minimum period:  23.528ns   (Maximum frequency:  42.503MHz)
+   Minimum period:  29.564ns   (Maximum frequency:  33.825MHz)
 
 
-Analysis completed Tue Apr  4 20:54:06 2017 
+Analysis completed Tue Apr  4 21:34:52 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 1003 MB
+Peak Memory Usage: 1004 MB
 
 
 

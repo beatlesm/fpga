@@ -5,13 +5,16 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/thompsonlab/Documents/fpga/usrp3/top/b200/signal.v" Line 8: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/thompsonlab/Documents/fpga/usrp3/top/b200/coregen/b200_clk_gen.v" Line 136: Assignment to <arg fmt="%s" index="1">status_int</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200_io.v" Line 168: Assignment to <arg fmt="%s" index="1">rx_frame_d2</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 268: Assignment to <arg fmt="%s" index="1">spare_signal</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 271: Assignment to <arg fmt="%s" index="1">spare_signal</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200_core.v" Line 230: Port <arg fmt="%s" index="1">readback_stb</arg> is not connected to this instance
@@ -458,7 +461,7 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/thompsonlab/Documents/fpga/usrp3/lib/gpif2/gpif2_slave_fifo32.v" Line 540: Assignment to <arg fmt="%s" index="1">ctrl_bus_error</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 186: Net &lt;<arg fmt="%s" index="1">reset</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 189: Net &lt;<arg fmt="%s" index="1">reset</arg>&gt; does not have a driver.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">codec_ctrl_out&lt;5:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -491,19 +494,19 @@
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">AUX_PWR_ON</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v</arg>&quot; line <arg fmt="%s" index="2">134</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT1_40_int</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_clks</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v</arg>&quot; line <arg fmt="%s" index="2">137</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT1_40_int</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_clks</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v</arg>&quot; line <arg fmt="%s" index="2">134</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT3_100_bus</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_clks</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v</arg>&quot; line <arg fmt="%s" index="2">137</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT3_100_bus</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_clks</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v</arg>&quot; line <arg fmt="%s" index="2">282</arg>: Output port &lt;<arg fmt="%s" index="3">debug</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">b200_core</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v</arg>&quot; line <arg fmt="%s" index="2">285</arg>: Output port &lt;<arg fmt="%s" index="3">debug</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">b200_core</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v</arg>&quot; line <arg fmt="%s" index="2">282</arg>: Output port &lt;<arg fmt="%s" index="3">debug_txd</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">b200_core</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v</arg>&quot; line <arg fmt="%s" index="2">285</arg>: Output port &lt;<arg fmt="%s" index="3">debug_txd</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">b200_core</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v</arg>&quot; line <arg fmt="%s" index="2">344</arg>: Output port &lt;<arg fmt="%s" index="3">debug</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">slave_fifo32</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v</arg>&quot; line <arg fmt="%s" index="2">347</arg>: Output port &lt;<arg fmt="%s" index="3">debug</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">slave_fifo32</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">reset</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -683,7 +686,7 @@
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">in&lt;31:3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="2774" delta="new" >HDL ADVISOR - <arg fmt="%s" index="1">KEEP</arg> <arg fmt="%s" index="2">property</arg> attached to signal <arg fmt="%s" index="3">value[0][0]_GND_40_o_MUX_423_o</arg> may hinder XST clustering optimizations.
+<msg type="info" file="Xst" num="2774" delta="new" >HDL ADVISOR - <arg fmt="%s" index="1">KEEP</arg> <arg fmt="%s" index="2">property</arg> attached to signal <arg fmt="%s" index="3">value[0][0]_GND_41_o_MUX_423_o</arg> may hinder XST clustering optimizations.
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/thompsonlab/Documents/fpga/usrp3/lib/control/simple_spi_core.v</arg>&quot; line <arg fmt="%s" index="2">71</arg>: Output port &lt;<arg fmt="%s" index="3">changed</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">divider_sr</arg>&gt; is unconnected or connected to loadless signal.
@@ -1473,6 +1476,9 @@ It will be removed from the design.
 
 <msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">debug_uart</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">b200_core</arg>&gt;.
 It will be removed from the design.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">counter_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">base_signal</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;sig_out&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">out_14</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">new_destination</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -3795,6 +3801,9 @@ It will be removed from the design.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">transfer_size_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">gpif2_slave_fifo32</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">base_signal/sig_out</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">b200</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;base_signal/counter_1&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">pipeline_3_135</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_interp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">20 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;pipeline_3_136&gt; &lt;pipeline_3_137&gt; &lt;pipeline_3_138&gt; &lt;pipeline_3_139&gt; &lt;pipeline_3_140&gt; &lt;pipeline_3_141&gt; &lt;pipeline_3_142&gt; &lt;pipeline_3_143&gt; &lt;pipeline_3_144&gt; &lt;pipeline_3_145&gt; &lt;pipeline_3_146&gt; &lt;pipeline_3_147&gt; &lt;pipeline_3_148&gt; &lt;pipeline_3_149&gt; &lt;pipeline_3_150&gt; &lt;pipeline_3_151&gt; &lt;pipeline_3_152&gt; &lt;pipeline_3_153&gt; &lt;pipeline_3_154&gt; &lt;pipeline_3_155&gt; </arg>
@@ -27896,6 +27905,9 @@ It will be removed from the design.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

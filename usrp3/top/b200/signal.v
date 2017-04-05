@@ -5,7 +5,7 @@ module signal(radio_clk, sig_out);
 
 	always @(posedge radio_clk)
 		begin
-			counter = counter + 1'b1;
+			counter = counter + 1;
 			sig_out = counter[1];
 		end
 endmodule

@@ -338,12 +338,28 @@ endgenerate
    wire [63:0] 	error_code;
    wire [31:0] 	sid;
    wire [23:0] tx_fe_i, tx_fe_q;
+   wire [15:0] top_signal;
+   wire [15:0] bot_signal
+
+   // Starting Rohit's code
+   
+   // Ending Rohit's code
 
    wire [31:0] debug_tx_control;
 
+   
+   input_signal inp_sig (.radio_clk(radio_clk), .run_tx(run_tx), .tx_idle(tx_idle), .tx(tx));
+
    always @(posedge radio_clk) begin
-      tx[31:16] <= (run_tx) ? tx_fe_i[23:8] : tx_idle[31:16];
-      tx[15:0]  <= (run_tx) ? tx_fe_q[23:8] : tx_idle[15:0];
+      counter = counter + 1;
+      if (counter[1] == 1) begin
+      	tx[31:16] <= (run_tx) ? 16'b1010101010101010 : tx_idle[31:16];
+      	tx[15:0] <= (run_tx) ? 16'b1010101010101010 : tx_idle[15:0];
+	end 
+      else begin
+      	tx[31:16] <= (run_tx) ? 16'b0000000000000000 : tx_idle[31:16];
+      	tx[15:0] <= (run_tx) ? 16'b0000000000000000 : tx_idle[15:0];
+	end
    end
 
    wire [63:0] tx_tdata_i; wire tx_tlast_i, tx_tvalid_i, tx_tready_i;

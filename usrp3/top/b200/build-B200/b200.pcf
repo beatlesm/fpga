@@ -1,9 +1,8 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Apr 10 11:02:19 2017
+// Written by: Map P.20131013 on Fri Apr 14 20:56:30 2017
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "SRX1_RX" LOCATE = SITE "D15" LEVEL 1;
 COMP "SRX1_TX" LOCATE = SITE "C16" LEVEL 1;
 COMP "SRX2_RX" LOCATE = SITE "B12" LEVEL 1;
 COMP "SRX2_TX" LOCATE = SITE "D11" LEVEL 1;
@@ -173,6 +172,7 @@ COMP "SFDX2_RX" LOCATE = SITE "C11" LEVEL 1;
 COMP "SFDX2_TX" LOCATE = SITE "A11" LEVEL 1;
 COMP "tx_bandsel_a" LOCATE = SITE "C13" LEVEL 1;
 COMP "tx_bandsel_b" LOCATE = SITE "D17" LEVEL 1;
+COMP "SRX1_RX" LOCATE = SITE "D15" LEVEL 1;
 PIN
         b200_core/radio_0/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/ram/Mram_ram1_pins<24>
         = BEL
@@ -17873,7 +17873,6 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/sr_demux_dst/out_0" BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/sr_demux_dst/out_1" BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/sr_demux_dst/out_0" BEL
-        "b200_core/radio_0/inp_sig/counter_0" BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/demux_pack_chain/dm_state_FSM_FFd1"
         BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/demux_pack_chain/dm_state_FSM_FFd2"
@@ -19030,6 +19029,29 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_2" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_1" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_0" BEL
+        "b200_core/radio_0/inp_sig/i_9" BEL "b200_core/radio_0/inp_sig/i_8"
+        BEL "b200_core/radio_0/inp_sig/i_7" BEL
+        "b200_core/radio_0/inp_sig/i_6" BEL "b200_core/radio_0/inp_sig/i_5"
+        BEL "b200_core/radio_0/inp_sig/i_4" BEL
+        "b200_core/radio_0/inp_sig/i_3" BEL "b200_core/radio_0/inp_sig/i_2"
+        BEL "b200_core/radio_0/inp_sig/i_1" BEL
+        "b200_core/radio_0/inp_sig/i_0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_31" BEL
+        "b200_core/radio_0/inp_sig/tx_out_30" BEL
+        "b200_core/radio_0/inp_sig/tx_out_29" BEL
+        "b200_core/radio_0/inp_sig/tx_out_28" BEL
+        "b200_core/radio_0/inp_sig/tx_out_27" BEL
+        "b200_core/radio_0/inp_sig/tx_out_26" BEL
+        "b200_core/radio_0/inp_sig/tx_out_25" BEL
+        "b200_core/radio_0/inp_sig/tx_out_24" BEL
+        "b200_core/radio_0/inp_sig/tx_out_23" BEL
+        "b200_core/radio_0/inp_sig/tx_out_22" BEL
+        "b200_core/radio_0/inp_sig/tx_out_21" BEL
+        "b200_core/radio_0/inp_sig/tx_out_20" BEL
+        "b200_core/radio_0/inp_sig/tx_out_19" BEL
+        "b200_core/radio_0/inp_sig/tx_out_18" BEL
+        "b200_core/radio_0/inp_sig/tx_out_17" BEL
+        "b200_core/radio_0/inp_sig/tx_out_16" BEL
         "b200_core/radio_0/tx_deframer/td_state_FSM_FFd1" BEL
         "b200_core/radio_0/tx_deframer/td_state_FSM_FFd2" BEL
         "b200_core/radio_0/tx_deframer/sid_31" BEL
@@ -25821,7 +25843,7 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_12sc/needs_extra_line"
         BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/end_on_odd"
-        BEL "b200_core/radio_0/inp_sig/tx_out_1" BEL
+        BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_12sc_to_16sc/in_exline"
         BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_12sc_to_16sc/has_exline"
@@ -26093,23 +26115,23 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_real1/n0057<23>_FRB"
         BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_real1/Madd_n0057_cy<23>_FRB"
-        BEL "b200_core/radio_0/N556_FRB" BEL "b200_core/radio_0/N557_FRB" BEL
-        "b200_core/radio_0/N558_FRB" BEL "b200_core/radio_0/N559_FRB" BEL
+        BEL "b200_core/radio_0/N558_FRB" BEL "b200_core/radio_0/N559_FRB" BEL
         "b200_core/radio_0/N560_FRB" BEL "b200_core/radio_0/N561_FRB" BEL
         "b200_core/radio_0/N562_FRB" BEL "b200_core/radio_0/N563_FRB" BEL
         "b200_core/radio_0/N564_FRB" BEL "b200_core/radio_0/N565_FRB" BEL
         "b200_core/radio_0/N566_FRB" BEL "b200_core/radio_0/N567_FRB" BEL
         "b200_core/radio_0/N568_FRB" BEL "b200_core/radio_0/N569_FRB" BEL
         "b200_core/radio_0/N570_FRB" BEL "b200_core/radio_0/N571_FRB" BEL
+        "b200_core/radio_0/N572_FRB" BEL "b200_core/radio_0/N573_FRB" BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_imag1/Madd_n0057_cy<23>_FRB1"
-        BEL "b200_core/radio_0/N573_FRB" BEL "b200_core/radio_0/N574_FRB" BEL
-        "b200_core/radio_0/N575_FRB" BEL "b200_core/radio_0/N576_FRB" BEL
+        BEL "b200_core/radio_0/N575_FRB" BEL "b200_core/radio_0/N576_FRB" BEL
         "b200_core/radio_0/N577_FRB" BEL "b200_core/radio_0/N578_FRB" BEL
         "b200_core/radio_0/N579_FRB" BEL "b200_core/radio_0/N580_FRB" BEL
         "b200_core/radio_0/N581_FRB" BEL "b200_core/radio_0/N582_FRB" BEL
         "b200_core/radio_0/N583_FRB" BEL "b200_core/radio_0/N584_FRB" BEL
         "b200_core/radio_0/N585_FRB" BEL "b200_core/radio_0/N586_FRB" BEL
         "b200_core/radio_0/N587_FRB" BEL "b200_core/radio_0/N588_FRB" BEL
+        "b200_core/radio_0/N589_FRB" BEL "b200_core/radio_0/N590_FRB" BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_real1/Madd_n0057_cy<23>_FRB1"
         BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_12sc_to_16sc/ADDERTREE_INTERNAL_Madd1_lut<0>3_FRB"
@@ -36779,7 +36801,6 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/sr_demux_dst/out_0" BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/sr_demux_dst/out_1" BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/sr_demux_dst/out_0" BEL
-        "b200_core/radio_0/inp_sig/counter_0" BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/demux_pack_chain/dm_state_FSM_FFd1"
         BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/demux_pack_chain/dm_state_FSM_FFd2"
@@ -37936,6 +37957,29 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_2" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_1" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_0" BEL
+        "b200_core/radio_0/inp_sig/i_9" BEL "b200_core/radio_0/inp_sig/i_8"
+        BEL "b200_core/radio_0/inp_sig/i_7" BEL
+        "b200_core/radio_0/inp_sig/i_6" BEL "b200_core/radio_0/inp_sig/i_5"
+        BEL "b200_core/radio_0/inp_sig/i_4" BEL
+        "b200_core/radio_0/inp_sig/i_3" BEL "b200_core/radio_0/inp_sig/i_2"
+        BEL "b200_core/radio_0/inp_sig/i_1" BEL
+        "b200_core/radio_0/inp_sig/i_0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_31" BEL
+        "b200_core/radio_0/inp_sig/tx_out_30" BEL
+        "b200_core/radio_0/inp_sig/tx_out_29" BEL
+        "b200_core/radio_0/inp_sig/tx_out_28" BEL
+        "b200_core/radio_0/inp_sig/tx_out_27" BEL
+        "b200_core/radio_0/inp_sig/tx_out_26" BEL
+        "b200_core/radio_0/inp_sig/tx_out_25" BEL
+        "b200_core/radio_0/inp_sig/tx_out_24" BEL
+        "b200_core/radio_0/inp_sig/tx_out_23" BEL
+        "b200_core/radio_0/inp_sig/tx_out_22" BEL
+        "b200_core/radio_0/inp_sig/tx_out_21" BEL
+        "b200_core/radio_0/inp_sig/tx_out_20" BEL
+        "b200_core/radio_0/inp_sig/tx_out_19" BEL
+        "b200_core/radio_0/inp_sig/tx_out_18" BEL
+        "b200_core/radio_0/inp_sig/tx_out_17" BEL
+        "b200_core/radio_0/inp_sig/tx_out_16" BEL
         "b200_core/radio_0/tx_deframer/td_state_FSM_FFd1" BEL
         "b200_core/radio_0/tx_deframer/td_state_FSM_FFd2" BEL
         "b200_core/radio_0/tx_deframer/sid_31" BEL
@@ -44727,7 +44771,7 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_12sc/needs_extra_line"
         BEL
         "b200_core/radio_0/convert_16sc_to_xxxx/convert_16sc_to_32f/end_on_odd"
-        BEL "b200_core/radio_0/inp_sig/tx_out_1" BEL
+        BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_12sc_to_16sc/in_exline"
         BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_12sc_to_16sc/has_exline"
@@ -44999,23 +45043,23 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_real1/n0057<23>_FRB"
         BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_real1/Madd_n0057_cy<23>_FRB"
-        BEL "b200_core/radio_0/N556_FRB" BEL "b200_core/radio_0/N557_FRB" BEL
-        "b200_core/radio_0/N558_FRB" BEL "b200_core/radio_0/N559_FRB" BEL
+        BEL "b200_core/radio_0/N558_FRB" BEL "b200_core/radio_0/N559_FRB" BEL
         "b200_core/radio_0/N560_FRB" BEL "b200_core/radio_0/N561_FRB" BEL
         "b200_core/radio_0/N562_FRB" BEL "b200_core/radio_0/N563_FRB" BEL
         "b200_core/radio_0/N564_FRB" BEL "b200_core/radio_0/N565_FRB" BEL
         "b200_core/radio_0/N566_FRB" BEL "b200_core/radio_0/N567_FRB" BEL
         "b200_core/radio_0/N568_FRB" BEL "b200_core/radio_0/N569_FRB" BEL
         "b200_core/radio_0/N570_FRB" BEL "b200_core/radio_0/N571_FRB" BEL
+        "b200_core/radio_0/N572_FRB" BEL "b200_core/radio_0/N573_FRB" BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_imag1/Madd_n0057_cy<23>_FRB1"
-        BEL "b200_core/radio_0/N573_FRB" BEL "b200_core/radio_0/N574_FRB" BEL
-        "b200_core/radio_0/N575_FRB" BEL "b200_core/radio_0/N576_FRB" BEL
+        BEL "b200_core/radio_0/N575_FRB" BEL "b200_core/radio_0/N576_FRB" BEL
         "b200_core/radio_0/N577_FRB" BEL "b200_core/radio_0/N578_FRB" BEL
         "b200_core/radio_0/N579_FRB" BEL "b200_core/radio_0/N580_FRB" BEL
         "b200_core/radio_0/N581_FRB" BEL "b200_core/radio_0/N582_FRB" BEL
         "b200_core/radio_0/N583_FRB" BEL "b200_core/radio_0/N584_FRB" BEL
         "b200_core/radio_0/N585_FRB" BEL "b200_core/radio_0/N586_FRB" BEL
         "b200_core/radio_0/N587_FRB" BEL "b200_core/radio_0/N588_FRB" BEL
+        "b200_core/radio_0/N589_FRB" BEL "b200_core/radio_0/N590_FRB" BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_32f_to_16sc/float_to_iq_real1/Madd_n0057_cy<23>_FRB1"
         BEL
         "b200_core/radio_0/convert_xxxx_to_16sc/convert_12sc_to_16sc/ADDERTREE_INTERNAL_Madd1_lut<0>3_FRB"

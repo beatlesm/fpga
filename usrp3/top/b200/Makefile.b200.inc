@@ -75,6 +75,7 @@ S6CLK2PIN.v \
 signal.v \
 ../../lib/radio_200/input_signal.v \
 ../../lib/radio_200/radio_legacy.v \
+../../lib/radio_200/sine_lookup.v \
 $(B200_COREGEN_SRCS)
 
 # GPIO only available for B210

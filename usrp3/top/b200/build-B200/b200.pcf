@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Apr 23 00:01:35 2017
+// Written by: Map P.20131013 on Sun Apr 23 18:54:44 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -19036,6 +19036,7 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_31" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_30" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_29" BEL
+        "b200_core/radio_0/inp_sig/tx_out_10" BEL
         "b200_core/radio_0/inp_sig/tx_out_9" BEL
         "b200_core/radio_0/inp_sig/tx_out_8" BEL
         "b200_core/radio_0/inp_sig/tx_out_7" BEL
@@ -37961,6 +37962,7 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_31" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_30" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_29" BEL
+        "b200_core/radio_0/inp_sig/tx_out_10" BEL
         "b200_core/radio_0/inp_sig/tx_out_9" BEL
         "b200_core/radio_0/inp_sig/tx_out_8" BEL
         "b200_core/radio_0/inp_sig/tx_out_7" BEL

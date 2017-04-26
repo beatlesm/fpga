@@ -2,7 +2,6 @@ module input_signal(radio_clk, get_tx);
    input radio_clk;
    output [31:0] get_tx;
    reg [31:0] phase_acc1;
-   reg [31:0] phase_acc2;
    reg [31:0] tx_out;
    integer i;
    // Square Wave
@@ -20,10 +19,9 @@ module input_signal(radio_clk, get_tx);
    end
 */
     always @(posedge radio_clk) begin
-//        phase_acc1 = phase_acc1 + 1342177280;
-        phase_acc2 = phase_acc2 + 1879048192;
-        tx_out[9:0] = sine[phase_acc1[31:21]] + sine[phase_acc2[31:21]];
-        tx_out[31:10] = 22'b0000000000000000000000;
+        phase_acc1 = phase_acc1 + 1342177280;
+        tx_out[10:0] = sine[phase_acc1[31:21]] + sine[phase_acc2[31:21]];
+        tx_out[31:11] = 21'b000000000000000000000;
     end
    assign get_tx = tx_out;
 

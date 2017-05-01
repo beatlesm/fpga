@@ -1,9 +1,33 @@
-module input_signal(radio_clk, get_tx);
+module input_signal(radio_clk, radio_rst, set_stb, set_addr, set_data, get_tx);
    input radio_clk;
+   input radio_rst;
+   input set_stb;
+   input [7:0] set_addr;
+   input [31:0] set_data;
+
+
    output [31:0] get_tx;
    reg [31:0] phase_acc1;
    reg [31:0] tx_out;
-   integer i;
+
+   reg [31:0] codeword = 920030940;
+   wire [31:0] codeword_sr = 520030940; // settings reg module output
+   wire codeword_ch; // bit indicating that reg has just changed
+
+   setting_reg #(.my_addr(164)) sr_0 // 0 is the address that I choose, 8 bit address space
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(codeword_sr), .changed(codeword_ch));
+
+    integer count = 0;
+/*   
+   always @(posedge radio_clk) begin
+        if (count == 0) begin
+            codeword = 920030940;
+        end
+        if (codeword_ch) begin
+            count = count + 1;
+            codeword = codeword_sr;
+        end
+    end*/
    // Square Wave
   /* 
    always @(posedge radio_clk) begin
@@ -19,8 +43,8 @@ module input_signal(radio_clk, get_tx);
    end
 */
     always @(posedge radio_clk) begin
-        phase_acc1 = phase_acc1 + 1342177280;
-        tx_out[10:0] = sine[phase_acc1[31:21]] + sine[phase_acc2[31:21]];
+        phase_acc1 = phase_acc1 + codeword;
+        tx_out[10:0] = sine[phase_acc1[31:21]];
         tx_out[31:11] = 21'b000000000000000000000;
     end
    assign get_tx = tx_out;

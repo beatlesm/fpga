@@ -69,9 +69,9 @@ Timing constraint: TS_gen_clks_clkfx = PERIOD TIMEGRP "gen_clks_clkfx"
 TS_codec_main_clk / 2.5         HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 163568 paths analyzed, 25096 endpoints analyzed, 0 failing endpoints
+ 163264 paths analyzed, 25088 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   9.853ns.
+ Minimum period is   9.851ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -91,7 +91,7 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  411 paths analyzed, 291 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  14.440ns.
+ Minimum period is  15.466ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -101,7 +101,7 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  27 paths analyzed, 26 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   9.965ns.
+ Minimum period is  10.860ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -130,9 +130,9 @@ Timing constraint: TS_b200_io_i0_mimo_clk_unbuf = PERIOD TIMEGRP
 "b200_io_i0_mimo_clk_unbuf"         TS_codec_data_clk_p * 2 HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 1136982 paths analyzed, 62324 endpoints analyzed, 0 failing endpoints
+ 1136208 paths analyzed, 62272 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  24.948ns.
+ Minimum period is  25.740ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -153,8 +153,8 @@ Derived Constraints for TS_codec_main_clk
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_codec_main_clk              |     25.000ns|     16.000ns|     24.633ns|            0|            0|            0|       163568|
-| TS_gen_clks_clkfx             |     10.000ns|      9.853ns|          N/A|            0|            0|       163568|            0|
+|TS_codec_main_clk              |     25.000ns|     16.000ns|     24.628ns|            0|            0|            0|       163264|
+| TS_gen_clks_clkfx             |     10.000ns|      9.851ns|          N/A|            0|            0|       163264|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 Derived Constraints for TS_codec_data_clk_p
@@ -163,13 +163,13 @@ Derived Constraints for TS_codec_data_clk_p
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_codec_data_clk_p            |     16.276ns|      0.925ns|     14.440ns|            0|            0|            0|      1137420|
+|TS_codec_data_clk_p            |     16.276ns|      0.925ns|     15.466ns|            0|            0|            0|      1136646|
 | TS_b200_io_i0_io_clk_lb_b     |     16.276ns|      1.403ns|          N/A|            0|            0|            0|            0|
-| TS_b200_io_i0_siso_clk_unbuf  |     16.276ns|     14.440ns|          N/A|            0|            0|          411|            0|
-| TS_b200_io_i0_io_clk_lb       |     16.276ns|      9.965ns|          N/A|            0|            0|           27|            0|
+| TS_b200_io_i0_siso_clk_unbuf  |     16.276ns|     15.466ns|          N/A|            0|            0|          411|            0|
+| TS_b200_io_i0_io_clk_lb       |     16.276ns|     10.860ns|          N/A|            0|            0|           27|            0|
 | TS_b200_io_i0_siso_clk2_unbuf |     16.276ns|      3.124ns|          N/A|            0|            0|            0|            0|
 | TS_b200_io_i0_io_clk_lt_b     |     16.276ns|      0.814ns|          N/A|            0|            0|            0|            0|
-| TS_b200_io_i0_mimo_clk_unbuf  |     32.552ns|     24.948ns|          N/A|            0|            0|      1136982|            0|
+| TS_b200_io_i0_mimo_clk_unbuf  |     32.552ns|     25.740ns|          N/A|            0|            0|      1136208|            0|
 | TS_b200_io_i0_io_clk_lt       |     16.276ns|      0.818ns|          N/A|            0|            0|            0|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
@@ -185,7 +185,7 @@ Clock to Setup on destination clock codec_data_clk_p
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-codec_data_clk_p|   19.692|    6.237|    7.220|    4.304|
+codec_data_clk_p|   20.846|    6.435|    7.733|    4.531|
 ----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock codec_main_clk_n
@@ -193,8 +193,8 @@ Clock to Setup on destination clock codec_main_clk_n
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-codec_main_clk_n|    9.853|         |         |         |
-codec_main_clk_p|    9.853|         |         |         |
+codec_main_clk_n|    9.851|         |         |         |
+codec_main_clk_p|    9.851|         |         |         |
 ----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock codec_main_clk_p
@@ -202,8 +202,8 @@ Clock to Setup on destination clock codec_main_clk_p
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-codec_main_clk_n|    9.853|         |         |         |
-codec_main_clk_p|    9.853|         |         |         |
+codec_main_clk_n|    9.851|         |         |         |
+codec_main_clk_p|    9.851|         |         |         |
 ----------------+---------+---------+---------+---------+
 
 
@@ -212,20 +212,20 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 1300988 paths, 0 nets, and 79435 connections
+Constraints cover 1299910 paths, 0 nets, and 79224 connections
 
 Design statistics:
-   Minimum period:  24.948ns   (Maximum frequency:  40.083MHz)
+   Minimum period:  25.740ns   (Maximum frequency:  38.850MHz)
 
 
-Analysis completed Sun Apr 23 18:57:52 2017 
+Analysis completed Sat Apr 29 17:52:51 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 863 MB
+Peak Memory Usage: 864 MB
 
 
 

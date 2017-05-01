@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-thompsonlab3::  Sun Apr 23 18:54:53 2017
+thompsonlab3::  Sat Apr 29 17:49:30 2017
 
 par -w -intstyle ise -ol high -mt off b200_map.ncd b200.ncd b200.pcf 
 
@@ -21,16 +21,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                12,972 out of  93,296   13%
-    Number used as Flip Flops:              12,949
+  Number of Slice Registers:                12,980 out of  93,296   13%
+    Number used as Flip Flops:              12,958
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:               23
-  Number of Slice LUTs:                     13,242 out of  46,648   28%
-    Number used as logic:                    9,673 out of  46,648   20%
-      Number using O6 output only:           7,148
-      Number using O5 output only:             560
-      Number using O5 and O6:                1,965
+    Number used as AND/OR logics:               22
+  Number of Slice LUTs:                     13,240 out of  46,648   28%
+    Number used as logic:                    9,700 out of  46,648   20%
+      Number using O6 output only:           7,123
+      Number using O5 output only:             580
+      Number using O5 and O6:                1,997
       Number used as ROM:                        0
     Number used as Memory:                   3,207 out of  11,072   28%
       Number used as Dual Port RAM:            544
@@ -42,18 +42,18 @@ Slice Logic Utilization:
         Number using O6 output only:         1,949
         Number using O5 output only:             0
         Number using O5 and O6:                714
-    Number used exclusively as route-thrus:    362
-      Number with same-slice register load:    308
-      Number with same-slice carry load:        52
-      Number with other load:                    2
+    Number used exclusively as route-thrus:    333
+      Number with same-slice register load:    279
+      Number with same-slice carry load:        54
+      Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,737 out of  11,662   40%
-  Number of MUXCYs used:                     4,604 out of  23,324   19%
-  Number of LUT Flip Flop pairs used:       15,513
-    Number with an unused Flip Flop:         4,159 out of  15,513   26%
-    Number with an unused LUT:               2,271 out of  15,513   14%
-    Number of fully used LUT-FF pairs:       9,083 out of  15,513   58%
+  Number of occupied Slices:                 4,764 out of  11,662   40%
+  Number of MUXCYs used:                     4,656 out of  23,324   19%
+  Number of LUT Flip Flop pairs used:       15,479
+    Number with an unused Flip Flop:         4,182 out of  15,479   27%
+    Number with an unused LUT:               2,239 out of  15,479   14%
+    Number of fully used LUT-FF pairs:       9,058 out of  15,479   58%
     Number of slice register sites lost
       to control set restrictions:               0 out of  93,296    0%
 
@@ -69,8 +69,8 @@ IO Utilization:
     IOB Flip Flops:                            158
 
 Specific Feature Utilization:
-  Number of RAMB16BWERs:                       140 out of     172   81%
-  Number of RAMB8BWERs:                          7 out of     344    2%
+  Number of RAMB16BWERs:                       141 out of     172   81%
+  Number of RAMB8BWERs:                          8 out of     344    2%
   Number of BUFIO2/BUFIO2_2CLKs:                 5 out of      32   15%
     Number used as BUFIO2s:                      4
     Number used as BUFIO2_2CLKs:                 1
@@ -113,7 +113,7 @@ Router effort level (-rl):    High
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
    Command Line Tools User Guide for information on generating a TSI report.
 Starting initial Timing Analysis.  REAL time: 22 secs 
-Finished initial Timing Analysis.  REAL time: 22 secs 
+Finished initial Timing Analysis.  REAL time: 23 secs 
 
 WARNING:Par:288 - The signal fx3_sclk_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal fx3_mosi_IBUF has no load.  PAR will not attempt to route this signal.
@@ -132,119 +132,95 @@ WARNING:Par:288 - The signal codec_ctrl_out<3>_IBUF has no load.  PAR will not a
 WARNING:Par:288 - The signal codec_ctrl_out<4>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal codec_ctrl_out<5>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM11_RAMD_D1_O
+   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O has
-   no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O
+   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
+   /Mram_RAM2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
+   /Mram_RAM1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O
-   has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O
-   has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM10_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM10_RAMD_D1_O
+   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O
-   has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O has
-   no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM7_RAMD_D1_O has
-   no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM11_RAMD_D1_O has
-   no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
-   ram_RAM6_RAMC_D1_DPO has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
-   ram_RAM6_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O
-   has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM9_RAMD_D1_O
-   has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM7_RAMD_D1_O
-   has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM11_RAMD_D1_O
-   has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O
-   has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O
-   has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM10_RAMD_D1_O has
-   no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O has
-   no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
-   ram_RAM4_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
-   ram_RAM2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
-   ram_RAM5_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM8_RAMD_D1_O
+   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM11_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM9_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O
+   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM8_RAMD_D1_O has
+   no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O has
+   no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM10_RAMD_D1_O has
+   no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
+   /Mram_RAM3_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
+   /Mram_RAM4_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM9_RAMD_D1_O has
+   no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
+   ram_RAM2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
+   /Mram_RAM5_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O
+   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM8_RAMD_D1_O
+   has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O
+   has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM7_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM8_RAMD_D1_O
+   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM10_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O
+   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM9_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O has
-   no load.  PAR will not attempt to route this signal.
+   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O
+   has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
-   ram_RAM5_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+   slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
+   ram_RAM6_RAMC_D1_DPO has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
+   ram_RAM6_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
    ram_RAM1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
-   ram_RAM3_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
+   /Mram_RAM6_RAMC_D1_DPO has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM9_RAMD_D1_O has
-   no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O has
-   no load.  PAR will not attempt to route this signal.
+   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
+   /Mram_RAM6_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
    ram_RAM2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
@@ -258,23 +234,56 @@ WARNING:Par:288 - The signal
    slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
    ram_RAM1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM7_RAMD_D1_O
-   has no load.  PAR will not attempt to route this signal.
+   slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
+   ram_RAM3_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O has
+   no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O has
    no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
+   slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
+   ram_RAM4_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
+   ram_RAM3_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
+   ram_RAM5_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
+   ram_RAM5_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM11_RAMD_D1_O has
+   no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM7_RAMD_D1_O has
+   no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM8_RAMD_D1_O
+   has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM11_RAMD_D1_O
+   has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM7_RAMD_D1_O
+   has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O
+   has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
    slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
    ram_RAM4_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/M
-   ram_RAM3_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O
+   has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM8_RAMD_D1_O has
+   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O has
    no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
-   /Mram_RAM2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+   slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
+   /Mram_RAM3_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
    /Mram_RAM4_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
@@ -286,60 +295,51 @@ WARNING:Par:288 - The signal
    /Mram_RAM6_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
-   /Mram_RAM5_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
-   /Mram_RAM1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
-   /Mram_RAM3_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
-   /Mram_RAM1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
-   /Mram_RAM5_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
-   /Mram_RAM4_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
-   slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
    /Mram_RAM2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
-   /Mram_RAM6_RAMC_D1_DPO has no load.  PAR will not attempt to route this signal.
+   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O
+   has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
-   /Mram_RAM6_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+   b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O
+   has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O has
+   no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O has
+   no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
-   /Mram_RAM3_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+   /Mram_RAM1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm
+   /Mram_RAM5_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 93096 unrouted;      REAL time: 24 secs 
+Phase  1  : 93073 unrouted;      REAL time: 25 secs 
 
-Phase  2  : 74500 unrouted;      REAL time: 29 secs 
+Phase  2  : 74293 unrouted;      REAL time: 30 secs 
 
-Phase  3  : 25418 unrouted;      REAL time: 1 mins 10 secs 
+Phase  3  : 25560 unrouted;      REAL time: 1 mins 17 secs 
 
-Phase  4  : 25434 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 17 secs 
+Phase  4  : 25560 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 23 secs 
 
 Updating file: b200.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 12 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 32 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 12 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 32 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 12 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 32 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 12 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 32 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 12 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 32 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 17 secs 
-Total REAL time to Router completion: 2 mins 17 secs 
-Total CPU time to Router completion: 2 mins 23 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 38 secs 
+Total REAL time to Router completion: 2 mins 38 secs 
+Total CPU time to Router completion: 2 mins 42 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -357,16 +357,11 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           radio_clk | BUFGMUX_X3Y16| No   | 2459 |  0.906     |  1.889      |
+|           radio_clk | BUFGMUX_X3Y16| No   | 2445 |  0.906     |  1.889      |
 +---------------------+--------------+------+------+------------+-------------+
-| b200_io_i0/siso_clk | BUFGMUX_X2Y11| No   |   39 |  0.388     |  1.386      |
+|            gpif_clk | BUFGMUX_X3Y13| No   | 1439 |  0.914     |  1.897      |
 +---------------------+--------------+------+------+------------+-------------+
-|            gpif_clk | BUFGMUX_X3Y13| No   | 1429 |  0.913     |  1.897      |
-+---------------------+--------------+------+------+------------+-------------+
-| base_signal/sig_out |         Local|      |    3 |  0.000     |  0.958      |
-+---------------------+--------------+------+------+------------+-------------+
-|b200_io_i0/io_clk_lb |              |      |      |            |             |
-|                     |         Local|      |   23 |  0.018     |  1.841      |
+| b200_io_i0/siso_clk | BUFGMUX_X2Y11| No   |   32 |  0.140     |  1.385      |
 +---------------------+--------------+------+------+------------+-------------+
 |b200_io_i0/io_clk_lb |              |      |      |            |             |
 |                  _b |         Local|      |   23 |  0.018     |  1.841      |
@@ -374,8 +369,13 @@ Generating Clock Report
 |b200_io_i0/io_clk_lt |              |      |      |            |             |
 |                  _b |         Local|      |    4 |  0.000     |  1.839      |
 +---------------------+--------------+------+------+------------+-------------+
+|b200_io_i0/io_clk_lb |              |      |      |            |             |
+|                     |         Local|      |   23 |  0.018     |  1.841      |
++---------------------+--------------+------+------+------------+-------------+
 |b200_io_i0/io_clk_lt |              |      |      |            |             |
 |                     |         Local|      |    4 |  0.000     |  1.839      |
++---------------------+--------------+------+------+------------+-------------+
+| base_signal/sig_out |         Local|      |    3 |  0.000     |  1.660      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -397,20 +397,20 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_gen_clks_clkfx = PERIOD TIMEGRP "gen_c | SETUP       |     0.147ns|     9.853ns|       0|           0
-  lks_clkfx" TS_codec_main_clk / 2.5        | HOLD        |     0.271ns|            |       0|           0
+  TS_gen_clks_clkfx = PERIOD TIMEGRP "gen_c | SETUP       |     0.149ns|     9.851ns|       0|           0
+  lks_clkfx" TS_codec_main_clk / 2.5        | HOLD        |     0.187ns|            |       0|           0
     HIGH 50%                                |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_b200_io_i0_siso_clk_unbuf = PERIOD TIM | SETUP       |     0.918ns|    14.440ns|       0|           0
-  EGRP "b200_io_i0_siso_clk_unbuf"          | HOLD        |     0.368ns|            |       0|           0
+  TS_b200_io_i0_siso_clk_unbuf = PERIOD TIM | SETUP       |     0.405ns|    15.466ns|       0|           0
+  EGRP "b200_io_i0_siso_clk_unbuf"          | HOLD        |     0.354ns|            |       0|           0
   TS_codec_data_clk_p HIGH 50%              |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_b200_io_i0_mimo_clk_unbuf = PERIOD TIM | SETUP       |     1.901ns|    24.948ns|       0|           0
-  EGRP "b200_io_i0_mimo_clk_unbuf"          | HOLD        |     0.203ns|            |       0|           0
+  TS_b200_io_i0_mimo_clk_unbuf = PERIOD TIM | SETUP       |     1.703ns|    25.740ns|       0|           0
+  EGRP "b200_io_i0_mimo_clk_unbuf"          | HOLD        |     0.173ns|            |       0|           0
   TS_codec_data_clk_p * 2 HIGH 50%          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_b200_io_i0_io_clk_lb = PERIOD TIMEGRP  | SETUP       |     6.311ns|     9.965ns|       0|           0
-  "b200_io_i0_io_clk_lb"         TS_codec_d | HOLD        |     0.704ns|            |       0|           0
+  TS_b200_io_i0_io_clk_lb = PERIOD TIMEGRP  | SETUP       |     5.416ns|    10.860ns|       0|           0
+  "b200_io_i0_io_clk_lb"         TS_codec_d | HOLD        |     1.107ns|            |       0|           0
   ata_clk_p HIGH 50%                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   TS_gpif_clk = PERIOD TIMEGRP "gpif_clk" 1 | MINPERIOD   |     6.876ns|     3.124ns|       0|           0
@@ -454,8 +454,8 @@ Derived Constraints for TS_codec_main_clk
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_codec_main_clk              |     25.000ns|     16.000ns|     24.633ns|            0|            0|            0|       163568|
-| TS_gen_clks_clkfx             |     10.000ns|      9.853ns|          N/A|            0|            0|       163568|            0|
+|TS_codec_main_clk              |     25.000ns|     16.000ns|     24.628ns|            0|            0|            0|       163264|
+| TS_gen_clks_clkfx             |     10.000ns|      9.851ns|          N/A|            0|            0|       163264|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 Derived Constraints for TS_codec_data_clk_p
@@ -464,13 +464,13 @@ Derived Constraints for TS_codec_data_clk_p
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_codec_data_clk_p            |     16.276ns|      0.925ns|     14.440ns|            0|            0|            0|      1137420|
+|TS_codec_data_clk_p            |     16.276ns|      0.925ns|     15.466ns|            0|            0|            0|      1136646|
 | TS_b200_io_i0_io_clk_lb_b     |     16.276ns|      1.403ns|          N/A|            0|            0|            0|            0|
-| TS_b200_io_i0_siso_clk_unbuf  |     16.276ns|     14.440ns|          N/A|            0|            0|          411|            0|
-| TS_b200_io_i0_io_clk_lb       |     16.276ns|      9.965ns|          N/A|            0|            0|           27|            0|
+| TS_b200_io_i0_siso_clk_unbuf  |     16.276ns|     15.466ns|          N/A|            0|            0|          411|            0|
+| TS_b200_io_i0_io_clk_lb       |     16.276ns|     10.860ns|          N/A|            0|            0|           27|            0|
 | TS_b200_io_i0_siso_clk2_unbuf |     16.276ns|      3.124ns|          N/A|            0|            0|            0|            0|
 | TS_b200_io_i0_io_clk_lt_b     |     16.276ns|      0.814ns|          N/A|            0|            0|            0|            0|
-| TS_b200_io_i0_mimo_clk_unbuf  |     32.552ns|     24.948ns|          N/A|            0|            0|      1136982|            0|
+| TS_b200_io_i0_mimo_clk_unbuf  |     32.552ns|     25.740ns|          N/A|            0|            0|      1136208|            0|
 | TS_b200_io_i0_io_clk_lt       |     16.276ns|      0.818ns|          N/A|            0|            0|            0|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
@@ -488,10 +488,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 77 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 2 mins 22 secs 
-Total CPU time to PAR completion: 2 mins 27 secs 
+Total REAL time to PAR completion: 2 mins 43 secs 
+Total CPU time to PAR completion: 2 mins 47 secs 
 
-Peak Memory Usage:  1153 MB
+Peak Memory Usage:  1156 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

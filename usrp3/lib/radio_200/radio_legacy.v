@@ -344,7 +344,7 @@ endgenerate
 
     // Starting Rohit's code
    wire [31:0] get_tx;
-   input_signal inp_sig (.radio_clk(radio_clk), .get_tx(get_tx)); 
+   input_signal inp_sig (.radio_clk(radio_clk), .radio_rst(radio_rst), .set_stb(set_stb), .set_addr(set_addr), .set_data(set_data), .get_tx(get_tx)); 
 
    //input_signal inp_sig (.radio_clk(radio_clk), .run_tx(run_tx), .tx_idle(tx_idle), .tx(tx));
 

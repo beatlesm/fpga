@@ -357,7 +357,7 @@ endgenerate
 
    wire [31:0] debug_tx_control;
 
-   // Starting Rohit's code
+   // Starting JTL code
    wire [31:0] get_tx;
    wire [31:0] llr_reg0_val;
    wire [31:0] llr_reg1_val;
@@ -373,7 +373,7 @@ endgenerate
       	tx[15:0] <= (run_tx) ? get_tx[15:0] : tx_idle[15:0];
    end
 
-   // Ending Rohit's code
+   // Ending JTL code
 
 
 
@@ -404,7 +404,7 @@ endgenerate
       .vita_time(vita_time),
       .o_tdata(txresp_tdata_r), .o_tlast(txresp_tlast_r), .o_tvalid(txresp_tvalid_r), .o_tready(txresp_tready_r));
 ///////////////////////////////////////////////////////////////////////////////////////////
-//CUSTOM SEDR MODULE
+// Starting JTL Code
 ///////////////////////////////////////////////////////////////////////////////////////////
 		
 	   wire [63:0] 	  new_time;
@@ -455,16 +455,10 @@ endgenerate
 	assign rst_local = radio_rst | rst_wfrm;
 
 
-generate
-	if (CUSTOM_ON == 1) begin
-			
-	
-end else begin
 	assign run_tx2 = run_tx;
 	assign sample_tx2 = sample_tx;
 	assign strobe_tx2 = strobe_tx;
-end
-endgenerate	
+// Ending JTL code
 ///////////////////////////////////////////////////////////////////////////////////////////
    wire [31:0]       debug_duc_chain;
    duc_chain #(.BASE(SR_TX_DSP), .DSPNO(0), .WIDTH(24), .NEW_HB_INTERP(NEW_HB_INTERP),.DEVICE(DEVICE)) duc_chain

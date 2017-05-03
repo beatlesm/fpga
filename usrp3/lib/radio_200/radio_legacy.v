@@ -14,8 +14,9 @@ module radio_legacy
     parameter NEW_HB_INTERP = 0,
     parameter NEW_HB_DECIM = 0,
     parameter SOURCE_FLOW_CONTROL = 0,
-    parameter USER_SETTINGS = 0,
-    parameter DEVICE = "SPARTAN6"
+    parameter USER_SETTINGS = 1,
+    parameter DEVICE = "SPARTAN6",
+    parameter CUSTOM_ON = 1
   )
   (input radio_clk, input radio_rst,
    input [31:0] rx, output reg [31:0] tx,
@@ -33,6 +34,7 @@ module radio_legacy
    output [63:0] debug
    );
 
+`define DELETE_FORMAT_CONVERSION 1
 
    // ///////////////////////////////////////////////////////////////////////////////
    // FIFO Interfacing to the bus clk domain
@@ -132,13 +134,26 @@ module radio_legacy
    localparam SR_FP_GPIO      = 8'd200;
    localparam SR_USER_SR_BASE = 8'd253;
    localparam SR_USER_RB_ADDR = 8'd255;
+   
+   
+   localparam SR_CMD_RX      = 8'd160;//sr_cmd_tx
+   localparam SR_TIME_H_RX   = 8'd161;//sr_time_h_tx
+   localparam SR_TIME_L_RX   = 8'd162;//sr_time_l_tx
+   localparam SR_CNTRL       = 8'd163;//sr_cntrl
+   localparam SR_LLR_REG0    = 8'd164;//sr_llr_reg0  x"00" & "000" & "00110" & x"0" & "1010" & "00101000" 
+   localparam SR_LLR_REG1    = 8'd165;//sr_llr_reg1
+   localparam SR_LLR_REG2    = 8'd166;//sr_llr_reg2
+   localparam SR_LLR_REG3    = 8'd167;//sr_llr_reg3
+   localparam SR_LLR_REG4    = 8'd168;//sr_llr_reg4
+   
+   
 
    wire           set_stb;
    wire [7:0]     set_addr;
    wire [31:0]    set_data;
    wire [31:0]    test_readback;
    wire [9:0] 	  fp_gpio_readback;
-   wire           run_rx, run_tx;
+   wire           run_rx, run_tx, run_tx2;
    wire           rx_flow_ctrl_busy;
 
    reg [63:0]     rb_data;
@@ -259,7 +274,7 @@ endgenerate
    gpio_atr #(.BASE(SR_ATR), .WIDTH(32), .DEFAULT_DDR(32'hFFFFFFFF), .DEFAULT_IDLE(32'h00000000)) fe_gpio_atr
      (.clk(radio_clk),.reset(radio_rst),
       .set_stb(set_stb),.set_addr(set_addr),.set_data(set_data),
-      .rx(run_rx), .tx(run_tx),
+      .rx(run_rx), .tx(run_tx2),
       .gpio_in(fe_gpio_in), .gpio_out(fe_gpio_out), .gpio_ddr(fe_gpio_ddr), .gpio_sw_rb() );
 
    generate
@@ -267,7 +282,7 @@ endgenerate
          gpio_atr #(.BASE(SR_FP_GPIO), .WIDTH(10)) fp_gpio_atr
             (.clk(radio_clk),.reset(radio_rst),
             .set_stb(set_stb),.set_addr(set_addr),.set_data(set_data),
-            .rx(run_rx), .tx(run_tx),
+            .rx(run_rx), .tx(run_tx2),
             .gpio_in(fp_gpio_in), .gpio_out(fp_gpio_out), .gpio_ddr(fp_gpio_ddr), .gpio_sw_rb(fp_gpio_readback));
       end
    endgenerate
@@ -332,21 +347,26 @@ endgenerate
 
    wire [175:0] txsample_tdata;
    wire 	txsample_tvalid, txsample_tready;
-   wire [31:0] 	sample_tx;
+   wire [31:0] 	sample_tx,sample_tx2;
    wire 	ack_or_error, packet_consumed;
    wire [11:0] 	seqnum;
    wire [63:0] 	error_code;
    wire [31:0] 	sid;
    wire [23:0] tx_fe_i, tx_fe_q;
+   wire strobe_tx2, strobe_tx;
 
    wire [31:0] debug_tx_control;
-   reg [1:0] counter = 2'b00;
 
-    // Starting Rohit's code
+   // Starting Rohit's code
    wire [31:0] get_tx;
-   input_signal inp_sig (.radio_clk(radio_clk), .radio_rst(radio_rst), .set_stb(set_stb), .set_addr(set_addr), .set_data(set_data), .get_tx(get_tx)); 
+   wire [31:0] llr_reg0_val;
+   wire [31:0] llr_reg1_val;
 
-   //input_signal inp_sig (.radio_clk(radio_clk), .run_tx(run_tx), .tx_idle(tx_idle), .tx(tx));
+//   input_signal inp_sig(.radio_clk(radio_clk), .codeword(llr_reg0_val), .get_tx(get_tx));
+// input_signal_adv allows for multiple codewords. need to find a smoother way of doing this/ 
+   input_signal_adv inp_sig(.radio_clk(radio_clk), .codeword1(llr_reg0_val), .codeword2(llr_reg1_val),.get_tx(get_tx));
+
+
 
    always @(posedge radio_clk) begin
       	tx[31:16] <= (run_tx) ? get_tx[31:16] : tx_idle[31:16];
@@ -354,7 +374,11 @@ endgenerate
    end
 
    // Ending Rohit's code
-   wire [63:0] tx_tdata_i; wire tx_tlast_i, tx_tvalid_i, tx_tready_i;
+
+
+
+
+    wire [63:0] tx_tdata_i; wire tx_tlast_i, tx_tvalid_i, tx_tready_i;
 
    new_tx_deframer tx_deframer
      (.clk(radio_clk), .reset(radio_rst), .clear(1'b0),
@@ -369,7 +393,7 @@ endgenerate
       .ack_or_error(ack_or_error), .packet_consumed(packet_consumed),
       .seqnum(seqnum), .error_code(error_code), .sid(sid),
       .sample_tdata(txsample_tdata), .sample_tvalid(txsample_tvalid), .sample_tready(txsample_tready),
-      .sample(sample_tx), .run(run_tx), .strobe(strobe_tx),
+      .sample(sample_tx), .run(run_tx), .strobe(strobe_tx2),
       .debug(debug_tx_control));
 
    tx_responder #(.BASE(SR_TX_CTRL+2)) tx_responder
@@ -379,13 +403,75 @@ endgenerate
       .seqnum(seqnum), .error_code(error_code), .sid(sid),
       .vita_time(vita_time),
       .o_tdata(txresp_tdata_r), .o_tlast(txresp_tlast_r), .o_tvalid(txresp_tvalid_r), .o_tready(txresp_tready_r));
+///////////////////////////////////////////////////////////////////////////////////////////
+//CUSTOM SEDR MODULE
+///////////////////////////////////////////////////////////////////////////////////////////
+		
+	   wire [63:0] 	  new_time;
+	   wire [31:0] 	  new_command;
+	   wire chg0,chg1,chg2,chg3;//,early,late;
+	   wire [31:0]    cntrl_reg_val, llr_reg1_val,  llr_reg2_val,  llr_reg3_val, llr_reg4_val; //llr_reg0_val, 
+	   wire rst_wfrm,rst_local;	
 
+	   setting_reg #(.my_addr(SR_CMD_RX), .awidth(8), .width(32)) sr_cmd_rx
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(new_command), .changed(chg0));
+         
+	   setting_reg #(.my_addr(SR_TIME_H_RX), .awidth(8), .width(32)) sr_time_h_rx
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(new_time[63:32]), .changed(chg1));
+	   
+	   setting_reg #(.my_addr(SR_TIME_L_RX), .awidth(8), .width(32)) sr_time_l_rx
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(new_time[31:0]), .changed(chg2));
+      
+      setting_reg #(.my_addr(SR_CNTRL), .awidth(8), .width(32)) sr_cntrl
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(cntrl_reg_val), .changed());
+
+      setting_reg #(.my_addr(SR_LLR_REG0), .awidth(8), .width(32)) sr_llr_reg0
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(llr_reg0_val), .changed());
+
+      setting_reg #(.my_addr(SR_LLR_REG1), .awidth(8), .width(32)) sr_llr_reg1
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(llr_reg1_val), .changed());
+
+      setting_reg #(.my_addr(SR_LLR_REG2), .awidth(8), .width(32)) sr_llr_reg2
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(llr_reg2_val), .changed());
+
+      setting_reg #(.my_addr(SR_LLR_REG3), .awidth(8), .width(32)) sr_llr_reg3
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(llr_reg3_val), .changed());
+
+      setting_reg #(.my_addr(SR_LLR_REG4), .awidth(8), .width(32)) sr_llr_reg4
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(llr_reg4_val), .changed());
+
+
+	assign rst_wfrm =  cntrl_reg_val[0];//Resets RX
+
+	assign rst_local = radio_rst | rst_wfrm;
+
+
+generate
+	if (CUSTOM_ON == 1) begin
+			
+	
+end else begin
+	assign run_tx2 = run_tx;
+	assign sample_tx2 = sample_tx;
+	assign strobe_tx2 = strobe_tx;
+end
+endgenerate	
+///////////////////////////////////////////////////////////////////////////////////////////
    wire [31:0]       debug_duc_chain;
    duc_chain #(.BASE(SR_TX_DSP), .DSPNO(0), .WIDTH(24), .NEW_HB_INTERP(NEW_HB_INTERP),.DEVICE(DEVICE)) duc_chain
      (.clk(radio_clk), .rst(radio_rst), .clr(1'b0),
       .set_stb(set_stb),.set_addr(set_addr),.set_data(set_data),
       .tx_fe_i(tx_fe_i),.tx_fe_q(tx_fe_q),
-      .sample(sample_tx), .run(run_tx), .strobe(strobe_tx),
+      .sample(sample_tx2), .run(run_tx2), .strobe(strobe_tx),
       .debug(debug_duc_chain) );
 
 `ifdef DELETE_FORMAT_CONVERSION
@@ -406,8 +492,8 @@ endgenerate
    //  RX Chain
 
    wire 	full, eob_rx;
-   wire 	strobe_rx;
-   wire [31:0] 	sample_rx;
+   wire 	strobe_rx,strobe_rx2;
+   wire [31:0] 	sample_rx,sample_rx2;
    wire [31:0] 	  rx_sid;
    wire [11:0] 	  rx_seqnum;
    wire [63:0] rx_tdata_i; wire rx_tlast_i, rx_tvalid_i, rx_tready_i;
@@ -417,7 +503,7 @@ endgenerate
      (.clk(radio_clk), .reset(radio_rst), .clear(1'b0),
       .set_stb(set_stb), .set_addr(set_addr), .set_data(set_data),
       .vita_time(vita_time),
-      .strobe(strobe_rx), .sample(sample_rx), .run(run_rx), .eob(eob_rx), .full(full),
+      .strobe(strobe_rx2), .sample(sample_rx2), .run(run_rx), .eob(eob_rx), .full(full),
       .sid(rx_sid), .seqnum(rx_seqnum),
       .o_tdata(rx_tdata_i), .o_tlast(rx_tlast_i), .o_tvalid(rx_tvalid_i), .o_tready(rx_tready_i),
       .debug(debug_rx_framer));
@@ -427,11 +513,24 @@ endgenerate
      (.clk(radio_clk), .reset(radio_rst), .clear(1'b0),
       .set_stb(set_stb), .set_addr(set_addr), .set_data(set_data),
       .vita_time(vita_time),
-      .strobe(strobe_rx), .run(run_rx), .eob(eob_rx), .full(full),
+      .strobe(strobe_rx2), .run(run_rx), .eob(eob_rx), .full(full),
       .sid(rx_sid), .seqnum(rx_seqnum),
       .err_tdata(rx_err_tdata_r), .err_tlast(rx_err_tlast_r), .err_tvalid(rx_err_tvalid_r), .err_tready(rx_err_tready_r),
       .ibs_state(ibs_state),
       .debug(debug_rx_control));
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//CUSTOM SEDR MODULE
+///////////////////////////////////////////////////////////////////////////////////////////
+generate
+	if (CUSTOM_ON == 1) begin
+
+end else begin
+	assign sample_rx2 = sample_rx;
+	assign strobe_rx2 = strobe_rx;
+end
+endgenerate	
+///////////////////////////////////////////////////////////////////////////////////////////
 
    wire [31:0] 	     debug_ddc_chain;
 
@@ -444,6 +543,8 @@ endgenerate
       .rx_fe_i({rx_fe[31:16],8'd0}),.rx_fe_q({rx_fe[15:0],8'd0}),
       .sample(sample_rx), .run(run_rx), .strobe(strobe_rx),
       .debug(debug_ddc_chain) );
+
+
 
 `ifdef DELETE_FORMAT_CONVERSION
    assign 	     rx_prefc_tdata_r = rx_tdata_i;
@@ -479,9 +580,6 @@ endgenerate
       .i2_tdata(64'h0), .i2_tlast(1'b0), .i2_tvalid(1'b0), .i2_tready(),
       .i3_tdata(64'h0), .i3_tlast(1'b0), .i3_tvalid(1'b0), .i3_tready(),
       .o_tdata(rmux_tdata_r), .o_tlast(rmux_tlast_r), .o_tvalid(rmux_tvalid_r), .o_tready(rmux_tready_r));
-
-
-
 
    /*******************************************************************
     * Debug only logic below here.

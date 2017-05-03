@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/thompsonlab/Documents/fpga/usrp3/top/b200/build-B200/b200.ncd
-OUTFILE=/home/thompsonlab/Documents/fpga/usrp3/top/b200/build-B200/b200.bit
-FAMILY=Spartan6
-PART=xc6slx75-3fgg484
-WORKINGDIR=/home/thompsonlab/Documents/fpga/usrp3/top/b200/build-B200
-LICENSE=WebPack
-USER_INFO=211311039_0_0_813

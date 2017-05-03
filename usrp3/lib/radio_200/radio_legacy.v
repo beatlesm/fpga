@@ -410,7 +410,7 @@ endgenerate
 	   wire [63:0] 	  new_time;
 	   wire [31:0] 	  new_command;
 	   wire chg0,chg1,chg2,chg3;//,early,late;
-	   wire [31:0]    cntrl_reg_val, llr_reg1_val,  llr_reg2_val,  llr_reg3_val, llr_reg4_val; //llr_reg0_val, 
+	   wire [31:0]    cntrl_reg_val, llr_reg2_val,  llr_reg3_val, llr_reg4_val; //llr_reg0_val, llr_reg1_val,  
 	   wire rst_wfrm,rst_local;	
 
 	   setting_reg #(.my_addr(SR_CMD_RX), .awidth(8), .width(32)) sr_cmd_rx

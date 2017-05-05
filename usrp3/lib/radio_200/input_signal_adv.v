@@ -1,12 +1,27 @@
-module input_signal_adv(radio_clk, codeword1, codeword2, get_tx);
+module input_signal_adv(radio_clk, codeword1, codeword2,codeword3,codeword4, codeword5, codeword6, codeword7, codeword8, codeword9, get_tx);
    input radio_clk;
    input [31:0] codeword1;
    input [31:0] codeword2;
+   input [31:0] codeword3;
+   input [31:0] codeword4;
+   input [31:0] codeword5;
+   input [31:0] codeword6;
+   input [31:0] codeword7;
+   input [31:0] codeword8;
+   input [31:0] codeword9;
 
 
    output [31:0] get_tx;
    reg [31:0] phase_acc1;
    reg [31:0] phase_acc2;
+   reg [31:0] phase_acc3;
+   reg [31:0] phase_acc4;
+   reg [31:0] phase_acc5;
+   reg [31:0] phase_acc6;
+   reg [31:0] phase_acc7;
+   reg [31:0] phase_acc8;
+   reg [31:0] phase_acc9;
+
    reg [31:0] tx_out;
 
 /*   
@@ -36,8 +51,17 @@ module input_signal_adv(radio_clk, codeword1, codeword2, get_tx);
     always @(posedge radio_clk) begin
         phase_acc1 = phase_acc1 + codeword1;
 		phase_acc2 = phase_acc2 + codeword2;
-        tx_out[10:0] = sine[phase_acc1[31:21]] + sine[phase_acc2[31:21]];
-        tx_out[31:11] = 21'b000000000000000000000;
+		phase_acc3 = phase_acc3 + codeword3;
+		phase_acc4 = phase_acc4 + codeword4;
+		phase_acc5 = phase_acc5 + codeword5;
+		phase_acc6 = phase_acc6 + codeword6;
+		phase_acc7 = phase_acc7 + codeword7;
+		phase_acc8 = phase_acc8 + codeword8;
+		phase_acc9 = phase_acc9 + codeword9;
+
+
+        tx_out[13:0] = sine[phase_acc1[31:21]] + sine[phase_acc2[31:21]] + sine[phase_acc3[31:21]] + sine[phase_acc4[31:21]] + sine[phase_acc5[31:21]] + sine[phase_acc6[31:21]] + sine[phase_acc7[31:21]] + sine[phase_acc8[31:21]] + sine[phase_acc9[31:21]];
+        tx_out[31:14] = 20'b00000000000000000000;
     end
    assign get_tx = tx_out;
 

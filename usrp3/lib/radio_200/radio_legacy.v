@@ -145,6 +145,13 @@ module radio_legacy
    localparam SR_LLR_REG2    = 8'd166;//sr_llr_reg2
    localparam SR_LLR_REG3    = 8'd167;//sr_llr_reg3
    localparam SR_LLR_REG4    = 8'd168;//sr_llr_reg4
+   localparam SR_LLR_REG5    = 8'd169;//sr_llr_reg1
+   localparam SR_LLR_REG6    = 8'd170;//sr_llr_reg2
+   localparam SR_LLR_REG7    = 8'd171;//sr_llr_reg3
+   localparam SR_LLR_REG8    = 8'd172;//sr_llr_reg4
+   localparam SR_LLR_REG9    = 8'd173;//sr_llr_reg4
+
+
    
    
 
@@ -362,13 +369,12 @@ endgenerate
 
    // Starting JTL code
    wire [31:0] get_tx;
-   wire [31:0] llr_reg0_val;
-   wire [31:0] llr_reg1_val;
+   wire [31:0] llr_reg0_val, llr_reg1_val, llr_reg2_val,llr_reg3_val,llr_reg4_val,llr_reg5_val,llr_reg6_val,llr_reg7_val,llr_reg8_val,llr_reg9_val;
 
 //   input_signal inp_sig(.radio_clk(radio_clk), .codeword(llr_reg0_val), .get_tx(get_tx));
 // input_signal_adv allows for multiple codewords. need to find a smoother way of doing this/ 
-   input_signal_adv inp_sig(.radio_clk(radio_clk), .codeword1(llr_reg0_val), .codeword2(llr_reg1_val),.get_tx(get_tx));
-
+   //input_signal_adv inp_sig(.radio_clk(radio_clk), .codeword1(llr_reg0_val), .codeword2(llr_reg1_val), .codeword3(llr_reg2_val), .codeword4(llr_reg3_val),.codeword5(llr_reg4_val), .codeword6(llr_reg5_val), .codeword7(llr_reg6_val), .codeword8(llr_reg7_val), .codeword9(llr_reg8_val),.get_tx(get_tx));
+   input_signal2 inp_sig(.radio_clk(radio_clk), .data0(llr_reg0_val), .data1(llr_reg1_val), .data2(llr_reg2_val), .get_tx(get_tx));
 
 
    always @(posedge radio_clk) begin
@@ -417,7 +423,7 @@ endgenerate
 	   wire [63:0] 	  new_time;
 	   wire [31:0] 	  new_command;
 	   wire chg0,chg1,chg2,chg3;//,early,late;
-	   wire [31:0]    cntrl_reg_val, llr_reg2_val,  llr_reg3_val, llr_reg4_val; //llr_reg0_val, llr_reg1_val,  
+	   wire [31:0]    cntrl_reg_val;// llr_reg2_val,  llr_reg3_val, llr_reg4_val; //llr_reg0_val, llr_reg1_val,  
 	   wire rst_wfrm,rst_local;	
 
 	   setting_reg #(.my_addr(SR_CMD_RX), .awidth(8), .width(32)) sr_cmd_rx
@@ -456,6 +462,25 @@ endgenerate
         (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
          .out(llr_reg4_val), .changed());
 
+      setting_reg #(.my_addr(SR_LLR_REG5), .awidth(8), .width(32)) sr_llr_reg5
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(llr_reg5_val), .changed());
+
+      setting_reg #(.my_addr(SR_LLR_REG6), .awidth(8), .width(32)) sr_llr_reg6
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(llr_reg6_val), .changed());
+
+      setting_reg #(.my_addr(SR_LLR_REG7), .awidth(8), .width(32)) sr_llr_reg7
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(llr_reg7_val), .changed());
+
+      setting_reg #(.my_addr(SR_LLR_REG8), .awidth(8), .width(32)) sr_llr_reg8
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(llr_reg8_val), .changed());
+
+      setting_reg #(.my_addr(SR_LLR_REG9), .awidth(8), .width(32)) sr_llr_reg9
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(llr_reg9_val), .changed());
 
 	assign rst_wfrm =  cntrl_reg_val[0];//Resets RX
 

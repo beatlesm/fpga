@@ -73,8 +73,7 @@ b200.ucf \
 timing.ucf \
 S6CLK2PIN.v \
 signal.v \
-../../lib/radio_200/input_signal.v \
-../../lib/radio_200/input_signal_adv.v \
+../../lib/radio_200/input_signal2.v \
 ../../lib/radio_200/radio_legacy.v \
 $(B200_COREGEN_SRCS)
 

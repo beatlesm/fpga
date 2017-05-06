@@ -216,8 +216,8 @@ Analyzing Verilog file "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/new_
 Parsing module <new_rx_control>.
 Analyzing Verilog file "/home/thompsonlab/Documents/fpga/usrp3/lib/timing/timekeeper.v" into library work
 Parsing module <timekeeper>.
-Analyzing Verilog file "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal_adv.v" into library work
-Parsing module <input_signal_adv>.
+Analyzing Verilog file "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal2.v" into library work
+Parsing module <input_signal2>.
 Analyzing Verilog file "/home/thompsonlab/Documents/fpga/usrp3/lib/packet_proc_200/source_flow_control_legacy.v" into library work
 Parsing module <source_flow_control_legacy>.
 Analyzing Verilog file "/home/thompsonlab/Documents/fpga/usrp3/lib/gpif2/gpif2_error_checker.v" into library work
@@ -432,7 +432,7 @@ Elaborating module <setting_reg(my_addr=8'b10000000,width=32)>.
 Elaborating module <setting_reg(my_addr=32'b010000001,width=32)>.
 
 Elaborating module <setting_reg(my_addr=32'b010000010,width=3)>.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 184: Assignment to debug_radio_ctrl_proc ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 183: Assignment to debug_radio_ctrl_proc ignored, since the identifier is never used
 
 Elaborating module <user_settings(BASE=8'b11111101)>.
 
@@ -481,8 +481,9 @@ Elaborating module <setting_reg(my_addr=32'b011001100,width=10,at_reset=0)>.
 
 Elaborating module <setting_reg(my_addr=32'b011001101,width=10)>.
 
-Elaborating module <input_signal_adv>.
-WARNING:HDLCompiler:872 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal_adv.v" Line 71: Using initial value of sine since it is never assigned
+Elaborating module <input_signal2>.
+WARNING:HDLCompiler:872 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal2.v" Line 61: Using initial value of sine since it is never assigned
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal2.v" Line 43: Assignment to amp_test ignored, since the identifier is never used
 
 Elaborating module <new_tx_deframer>.
 
@@ -494,7 +495,7 @@ Elaborating module <new_tx_control(BASE=8'b01000000)>.
 
 Elaborating module <setting_reg(my_addr=8'b01000000,width=3)>.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/new_tx_control.v" Line 48: Assignment to policy_wait ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 408: Assignment to debug_tx_control ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 410: Assignment to debug_tx_control ignored, since the identifier is never used
 
 Elaborating module <tx_responder(BASE=32'b01000010)>.
 
@@ -513,37 +514,43 @@ WARNING:HDLCompiler:413 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_f
 WARNING:HDLCompiler:413 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_fifo_short.v" Line 80: Result of 6-bit expression is truncated to fit in 5-bit target.
 
 Elaborating module <setting_reg(my_addr=8'b10100000,awidth=8,width=32)>.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 431: Assignment to new_command ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 433: Assignment to new_command ignored, since the identifier is never used
 
 Elaborating module <setting_reg(my_addr=8'b10100001,awidth=8,width=32)>.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 435: Assignment to new_time ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 437: Assignment to new_time ignored, since the identifier is never used
 
 Elaborating module <setting_reg(my_addr=8'b10100010,awidth=8,width=32)>.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 439: Assignment to new_time ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 441: Assignment to new_time ignored, since the identifier is never used
 
 Elaborating module <setting_reg(my_addr=8'b10100011,awidth=8,width=32)>.
 
 Elaborating module <setting_reg(my_addr=8'b10100100,awidth=8,width=32)>.
 
-Elaborating module <setting_reg(my_addr=8'b10100101,awidth=8,width=32)>.
+Elaborating module <setting_reg(my_addr=8'b10100101,awidth=8,width=16)>.
 
-Elaborating module <setting_reg(my_addr=8'b10100110,awidth=8,width=32)>.
+Elaborating module <setting_reg(my_addr=8'b10100110,awidth=8,width=16)>.
 
-Elaborating module <setting_reg(my_addr=8'b10100111,awidth=8,width=32)>.
+Elaborating module <setting_reg(my_addr=8'b10100111,awidth=8,width=16)>.
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 461: Assignment to llr_reg3_val ignored, since the identifier is never used
 
-Elaborating module <setting_reg(my_addr=8'b10101000,awidth=8,width=32)>.
+Elaborating module <setting_reg(my_addr=8'b10101000,awidth=8,width=16)>.
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 465: Assignment to llr_reg4_val ignored, since the identifier is never used
 
-Elaborating module <setting_reg(my_addr=8'b10101001,awidth=8,width=32)>.
+Elaborating module <setting_reg(my_addr=8'b10101001,awidth=8,width=16)>.
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 469: Assignment to llr_reg5_val ignored, since the identifier is never used
 
-Elaborating module <setting_reg(my_addr=8'b10101010,awidth=8,width=32)>.
+Elaborating module <setting_reg(my_addr=8'b10101010,awidth=8,width=16)>.
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 473: Assignment to llr_reg6_val ignored, since the identifier is never used
 
-Elaborating module <setting_reg(my_addr=8'b10101011,awidth=8,width=32)>.
+Elaborating module <setting_reg(my_addr=8'b10101011,awidth=8,width=16)>.
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 477: Assignment to llr_reg7_val ignored, since the identifier is never used
 
-Elaborating module <setting_reg(my_addr=8'b10101100,awidth=8,width=32)>.
+Elaborating module <setting_reg(my_addr=8'b10101100,awidth=8,width=16)>.
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 481: Assignment to llr_reg8_val ignored, since the identifier is never used
 
-Elaborating module <setting_reg(my_addr=8'b10101101,awidth=8,width=32)>.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 483: Assignment to llr_reg9_val ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 487: Assignment to rst_local ignored, since the identifier is never used
+Elaborating module <setting_reg(my_addr=8'b10101101,awidth=8,width=16)>.
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 485: Assignment to llr_reg9_val ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 489: Assignment to rst_local ignored, since the identifier is never used
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/duc_chain.v" Line 227: Port reset is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/duc_chain.v" Line 229: Port reset is not connected to this instance
 
@@ -636,8 +643,8 @@ Elaborating module <clip_reg(bits_in=36,bits_out=33,STROBED=1)>.
 Elaborating module <clip(bits_in=36,bits_out=33)>.
 WARNING:HDLCompiler:552 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/duc_chain.v" Line 227: Input port reset is not connected on this instance
 WARNING:HDLCompiler:552 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/duc_chain.v" Line 229: Input port reset is not connected on this instance
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 501: Assignment to tx_fe_i ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 503: Assignment to debug_duc_chain ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 503: Assignment to tx_fe_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 505: Assignment to debug_duc_chain ignored, since the identifier is never used
 
 Elaborating module <new_rx_framer(BASE=32'b01100100,SAMPLE_FIFO_SIZE=11)>.
 
@@ -661,7 +668,7 @@ WARNING:HDLCompiler:413 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_f
 Elaborating module <axi_fifo_short(WIDTH=81)>.
 WARNING:HDLCompiler:413 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_fifo_short.v" Line 74: Result of 32-bit expression is truncated to fit in 5-bit target.
 WARNING:HDLCompiler:413 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_fifo_short.v" Line 80: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 537: Assignment to debug_rx_framer ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 539: Assignment to debug_rx_framer ignored, since the identifier is never used
 
 Elaborating module <new_rx_control(BASE=8'b01100000)>.
 
@@ -673,7 +680,7 @@ Elaborating module <setting_reg(my_addr=32'b01100010)>.
 
 Elaborating module <setting_reg(my_addr=32'b01100011)>.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/new_rx_control.v" Line 87: Assignment to early ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 548: Assignment to debug_rx_control ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 550: Assignment to debug_rx_control ignored, since the identifier is never used
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_chain.v" Line 241: Port reset is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_chain.v" Line 243: Port reset is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_chain.v" Line 278: Port reset is not connected to this instance
@@ -772,14 +779,14 @@ WARNING:HDLCompiler:552 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_ch
 WARNING:HDLCompiler:552 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_chain.v" Line 243: Input port reset is not connected on this instance
 WARNING:HDLCompiler:552 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_chain.v" Line 278: Input port reset is not connected on this instance
 WARNING:HDLCompiler:552 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_chain.v" Line 280: Input port reset is not connected on this instance
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 573: Assignment to debug_ddc_chain ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 575: Assignment to debug_ddc_chain ignored, since the identifier is never used
 
 Elaborating module <axi_mux4(PRIO=1,WIDTH=64,BUFFER=1)>.
 
 Elaborating module <axi_mux4(PRIO=0,WIDTH=64)>.
-WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 186: Net <rb_data_user[63]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 523: Net <strobe_rx2> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 524: Net <sample_rx2[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 185: Net <rb_data_user[63]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 525: Net <strobe_rx2> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 526: Net <sample_rx2[31]> does not have a driver.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200_core.v" Line 318: Assignment to radio0_debug ignored, since the identifier is never used
 
 Elaborating module <serial_to_settings>.
@@ -884,13 +891,19 @@ WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/gpif2/gpi
 
 Elaborating module <fifo64_to_gpif2(FIFO_SIZE=5)>.
 WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 189: Net <reset> does not have a driver.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 194. All outputs of instance <user_settings> of block <user_settings> are unconnected in block <radio_legacy>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 199. All outputs of instance <user_rb_addr> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 429. All outputs of instance <sr_cmd_rx> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 433. All outputs of instance <sr_time_h_rx> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 437. All outputs of instance <sr_time_l_rx> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 441. All outputs of instance <sr_cntrl> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 481. All outputs of instance <sr_llr_reg9> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 193. All outputs of instance <user_settings> of block <user_settings> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 198. All outputs of instance <user_rb_addr> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 431. All outputs of instance <sr_cmd_rx> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 435. All outputs of instance <sr_time_h_rx> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 439. All outputs of instance <sr_time_l_rx> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 443. All outputs of instance <sr_cntrl> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 459. All outputs of instance <sr_llr_reg3> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 463. All outputs of instance <sr_llr_reg4> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 467. All outputs of instance <sr_llr_reg5> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 471. All outputs of instance <sr_llr_reg6> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 475. All outputs of instance <sr_llr_reg7> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 479. All outputs of instance <sr_llr_reg8> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 483. All outputs of instance <sr_llr_reg9> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -1594,58 +1607,64 @@ Synthesizing Unit <radio_legacy>.
         USER_SETTINGS = 1
         DEVICE = "SPARTAN6"
         CUSTOM_ON = 1
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 170: Output port <sync_out> of the instance <timekeeper> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 177: Output port <debug> of the instance <radio_ctrl_proc> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 194: Output port <set_addr_user> of the instance <user_settings> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 194: Output port <set_data_user> of the instance <user_settings> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 194: Output port <set_stb_user> of the instance <user_settings> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 199: Output port <out> of the instance <user_rb_addr> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 199: Output port <changed> of the instance <user_rb_addr> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 252: Output port <i_tready> of the instance <vita_time_fifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 262: Output port <changed> of the instance <sr_loopback> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 266: Output port <changed> of the instance <sr_test> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 270: Output port <changed> of the instance <sr_codec_idle> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 274: Output port <changed> of the instance <sr_rdback> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 281: Output port <gpio_sw_rb> of the instance <fe_gpio_atr> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 394: Output port <debug> of the instance <tx_deframer> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 400: Output port <debug> of the instance <tx_control> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 429: Output port <out> of the instance <sr_cmd_rx> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 429: Output port <changed> of the instance <sr_cmd_rx> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 433: Output port <out> of the instance <sr_time_h_rx> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 433: Output port <changed> of the instance <sr_time_h_rx> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 437: Output port <out> of the instance <sr_time_l_rx> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 437: Output port <changed> of the instance <sr_time_l_rx> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 441: Output port <out> of the instance <sr_cntrl> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 441: Output port <changed> of the instance <sr_cntrl> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 445: Output port <changed> of the instance <sr_llr_reg0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 449: Output port <changed> of the instance <sr_llr_reg1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 453: Output port <changed> of the instance <sr_llr_reg2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 457: Output port <changed> of the instance <sr_llr_reg3> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 461: Output port <changed> of the instance <sr_llr_reg4> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 465: Output port <changed> of the instance <sr_llr_reg5> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 469: Output port <changed> of the instance <sr_llr_reg6> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 473: Output port <changed> of the instance <sr_llr_reg7> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 477: Output port <changed> of the instance <sr_llr_reg8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 481: Output port <out> of the instance <sr_llr_reg9> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 481: Output port <changed> of the instance <sr_llr_reg9> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 498: Output port <tx_fe_i> of the instance <duc_chain> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 498: Output port <tx_fe_q> of the instance <duc_chain> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 498: Output port <debug> of the instance <duc_chain> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 530: Output port <debug> of the instance <new_rx_framer> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 540: Output port <debug> of the instance <new_rx_control> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 568: Output port <sample> of the instance <ddc_chain> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 568: Output port <debug> of the instance <ddc_chain> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 568: Output port <strobe> of the instance <ddc_chain> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 593: Output port <i2_tready> of the instance <rx_mux> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 593: Output port <i3_tready> of the instance <rx_mux> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 604: Output port <i2_tready> of the instance <response_mux> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 604: Output port <i3_tready> of the instance <response_mux> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 169: Output port <sync_out> of the instance <timekeeper> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 176: Output port <debug> of the instance <radio_ctrl_proc> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 193: Output port <set_addr_user> of the instance <user_settings> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 193: Output port <set_data_user> of the instance <user_settings> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 193: Output port <set_stb_user> of the instance <user_settings> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 198: Output port <out> of the instance <user_rb_addr> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 198: Output port <changed> of the instance <user_rb_addr> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 251: Output port <i_tready> of the instance <vita_time_fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 261: Output port <changed> of the instance <sr_loopback> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 265: Output port <changed> of the instance <sr_test> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 269: Output port <changed> of the instance <sr_codec_idle> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 273: Output port <changed> of the instance <sr_rdback> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 280: Output port <gpio_sw_rb> of the instance <fe_gpio_atr> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 396: Output port <debug> of the instance <tx_deframer> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 402: Output port <debug> of the instance <tx_control> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 431: Output port <out> of the instance <sr_cmd_rx> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 431: Output port <changed> of the instance <sr_cmd_rx> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 435: Output port <out> of the instance <sr_time_h_rx> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 435: Output port <changed> of the instance <sr_time_h_rx> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 439: Output port <out> of the instance <sr_time_l_rx> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 439: Output port <changed> of the instance <sr_time_l_rx> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 443: Output port <out> of the instance <sr_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 443: Output port <changed> of the instance <sr_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 447: Output port <changed> of the instance <sr_llr_reg0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 451: Output port <changed> of the instance <sr_llr_reg1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 455: Output port <changed> of the instance <sr_llr_reg2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 459: Output port <out> of the instance <sr_llr_reg3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 459: Output port <changed> of the instance <sr_llr_reg3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 463: Output port <out> of the instance <sr_llr_reg4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 463: Output port <changed> of the instance <sr_llr_reg4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 467: Output port <out> of the instance <sr_llr_reg5> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 467: Output port <changed> of the instance <sr_llr_reg5> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 471: Output port <out> of the instance <sr_llr_reg6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 471: Output port <changed> of the instance <sr_llr_reg6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 475: Output port <out> of the instance <sr_llr_reg7> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 475: Output port <changed> of the instance <sr_llr_reg7> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 479: Output port <out> of the instance <sr_llr_reg8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 479: Output port <changed> of the instance <sr_llr_reg8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 483: Output port <out> of the instance <sr_llr_reg9> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 483: Output port <changed> of the instance <sr_llr_reg9> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 500: Output port <tx_fe_i> of the instance <duc_chain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 500: Output port <tx_fe_q> of the instance <duc_chain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 500: Output port <debug> of the instance <duc_chain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 532: Output port <debug> of the instance <new_rx_framer> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 542: Output port <debug> of the instance <new_rx_control> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 570: Output port <sample> of the instance <ddc_chain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 570: Output port <debug> of the instance <ddc_chain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 570: Output port <strobe> of the instance <ddc_chain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 595: Output port <i2_tready> of the instance <rx_mux> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 595: Output port <i3_tready> of the instance <rx_mux> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 606: Output port <i2_tready> of the instance <response_mux> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 606: Output port <i3_tready> of the instance <response_mux> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <rb_data_user> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <sample_rx2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <strobe_rx2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 32-bit register for signal <tx>.
     Found 64-bit register for signal <vita_time_b>.
-    Found 64-bit 7-to-1 multiplexer for signal <rb_data> created at line 234.
+    Found 64-bit 7-to-1 multiplexer for signal <rb_data> created at line 233.
     Summary:
 	inferred  96 D-type flip-flop(s).
 	inferred   3 Multiplexer(s).
@@ -2201,50 +2220,29 @@ WARNING:Xst:647 - Input <in<31:10>> is never used. This port will be preserved a
 	inferred  11 D-type flip-flop(s).
 Unit <setting_reg_29> synthesized.
 
-Synthesizing Unit <input_signal_adv>.
-    Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal_adv.v".
-    Found 32-bit register for signal <phase_acc2>.
-    Found 32-bit register for signal <phase_acc3>.
-    Found 32-bit register for signal <phase_acc4>.
-    Found 32-bit register for signal <phase_acc5>.
-    Found 32-bit register for signal <phase_acc6>.
-    Found 32-bit register for signal <phase_acc7>.
-    Found 32-bit register for signal <phase_acc8>.
-    Found 32-bit register for signal <phase_acc9>.
-    Found 32-bit register for signal <phase_acc1>.
-    Found 14-bit register for signal <tx_out>.
-    Found 32-bit adder for signal <phase_acc1[31]_codeword1[31]_add_1_OUT> created at line 52.
-    Found 32-bit adder for signal <phase_acc2[31]_codeword2[31]_add_2_OUT> created at line 53.
-    Found 32-bit adder for signal <phase_acc3[31]_codeword3[31]_add_3_OUT> created at line 54.
-    Found 32-bit adder for signal <phase_acc4[31]_codeword4[31]_add_4_OUT> created at line 55.
-    Found 32-bit adder for signal <phase_acc5[31]_codeword5[31]_add_5_OUT> created at line 56.
-    Found 32-bit adder for signal <phase_acc6[31]_codeword6[31]_add_6_OUT> created at line 57.
-    Found 32-bit adder for signal <phase_acc7[31]_codeword7[31]_add_7_OUT> created at line 58.
-    Found 32-bit adder for signal <phase_acc8[31]_codeword8[31]_add_8_OUT> created at line 59.
-    Found 32-bit adder for signal <phase_acc9[31]_codeword9[31]_add_9_OUT> created at line 60.
-    Found 11-bit adder for signal <n0124[10:0]> created at line 63.
-    Found 12-bit adder for signal <n0127[11:0]> created at line 63.
-    Found 13-bit adder for signal <n0130[12:0]> created at line 63.
-    Found 14-bit adder for signal <_n0147> created at line 63.
-    Found 14-bit adder for signal <_n0148> created at line 63.
-    Found 14-bit adder for signal <_n0149> created at line 63.
-    Found 14-bit adder for signal <_n0150> created at line 63.
-    Found 14-bit adder for signal <BUS_0013_GND_84_o_add_26_OUT> created at line 63.
-    Found 2048x10-bit Read Only RAM for signal <phase_acc1[31]_GND_84_o_wide_mux_10_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc2[31]_GND_84_o_wide_mux_11_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc3[31]_GND_84_o_wide_mux_13_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc4[31]_GND_84_o_wide_mux_15_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc5[31]_GND_84_o_wide_mux_17_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc6[31]_GND_84_o_wide_mux_19_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc7[31]_GND_84_o_wide_mux_21_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc8[31]_GND_84_o_wide_mux_23_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc9[31]_GND_84_o_wide_mux_25_OUT>
-    WARNING:Xst:2404 -  FFs/Latches <tx_out<31:14>> (without init value) have a constant value of 0 in block <input_signal_adv>.
+Synthesizing Unit <input_signal2>.
+    Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal2.v".
+WARNING:Xst:647 - Input <codeword0<23:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword0<31:29>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <phase_acc0>.
+    Found 16-bit register for signal <phase_acc1>.
+    Found 16-bit register for signal <phase_acc2>.
+    Found 12-bit register for signal <tx_out>.
+    Found 16-bit adder for signal <phase_acc0[15]_codeword0[15]_add_1_OUT> created at line 49.
+    Found 16-bit adder for signal <phase_acc1[15]_codeword1[15]_add_2_OUT> created at line 50.
+    Found 16-bit adder for signal <phase_acc2[15]_codeword2[15]_add_3_OUT> created at line 51.
+    Found 11-bit adder for signal <phase_acc0[15]_GND_84_o_add_4_OUT> created at line 53.
+    Found 11-bit adder for signal <n0049[10:0]> created at line 53.
+    Found 12-bit adder for signal <n0052[11:0]> created at line 53.
+    Found 2048x10-bit Read Only RAM for signal <phase_acc0[15]_GND_84_o_wide_mux_5_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc1[15]_GND_84_o_wide_mux_6_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc2[15]_GND_84_o_wide_mux_8_OUT>
+    WARNING:Xst:2404 -  FFs/Latches <tx_out<31:12>> (without init value) have a constant value of 0 in block <input_signal2>.
     Summary:
-	inferred   9 RAM(s).
-	inferred  17 Adder/Subtractor(s).
-	inferred 302 D-type flip-flop(s).
-Unit <input_signal_adv> synthesized.
+	inferred   3 RAM(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred  60 D-type flip-flop(s).
+Unit <input_signal2> synthesized.
 
 Synthesizing Unit <new_tx_deframer>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/new_tx_deframer.v".
@@ -2438,97 +2436,27 @@ Synthesizing Unit <setting_reg_38>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/control/setting_reg.v".
         my_addr = 8'b10100101
         awidth = 8
-        width = 32
+        width = 16
         at_reset = 0
+WARNING:Xst:647 - Input <in<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <changed>.
-    Found 32-bit register for signal <out>.
+    Found 16-bit register for signal <out>.
     Summary:
-	inferred  33 D-type flip-flop(s).
+	inferred  17 D-type flip-flop(s).
 Unit <setting_reg_38> synthesized.
 
 Synthesizing Unit <setting_reg_39>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/control/setting_reg.v".
         my_addr = 8'b10100110
         awidth = 8
-        width = 32
+        width = 16
         at_reset = 0
+WARNING:Xst:647 - Input <in<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <changed>.
-    Found 32-bit register for signal <out>.
+    Found 16-bit register for signal <out>.
     Summary:
-	inferred  33 D-type flip-flop(s).
+	inferred  17 D-type flip-flop(s).
 Unit <setting_reg_39> synthesized.
-
-Synthesizing Unit <setting_reg_40>.
-    Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/control/setting_reg.v".
-        my_addr = 8'b10100111
-        awidth = 8
-        width = 32
-        at_reset = 0
-    Found 1-bit register for signal <changed>.
-    Found 32-bit register for signal <out>.
-    Summary:
-	inferred  33 D-type flip-flop(s).
-Unit <setting_reg_40> synthesized.
-
-Synthesizing Unit <setting_reg_41>.
-    Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/control/setting_reg.v".
-        my_addr = 8'b10101000
-        awidth = 8
-        width = 32
-        at_reset = 0
-    Found 1-bit register for signal <changed>.
-    Found 32-bit register for signal <out>.
-    Summary:
-	inferred  33 D-type flip-flop(s).
-Unit <setting_reg_41> synthesized.
-
-Synthesizing Unit <setting_reg_42>.
-    Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/control/setting_reg.v".
-        my_addr = 8'b10101001
-        awidth = 8
-        width = 32
-        at_reset = 0
-    Found 1-bit register for signal <changed>.
-    Found 32-bit register for signal <out>.
-    Summary:
-	inferred  33 D-type flip-flop(s).
-Unit <setting_reg_42> synthesized.
-
-Synthesizing Unit <setting_reg_43>.
-    Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/control/setting_reg.v".
-        my_addr = 8'b10101010
-        awidth = 8
-        width = 32
-        at_reset = 0
-    Found 1-bit register for signal <changed>.
-    Found 32-bit register for signal <out>.
-    Summary:
-	inferred  33 D-type flip-flop(s).
-Unit <setting_reg_43> synthesized.
-
-Synthesizing Unit <setting_reg_44>.
-    Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/control/setting_reg.v".
-        my_addr = 8'b10101011
-        awidth = 8
-        width = 32
-        at_reset = 0
-    Found 1-bit register for signal <changed>.
-    Found 32-bit register for signal <out>.
-    Summary:
-	inferred  33 D-type flip-flop(s).
-Unit <setting_reg_44> synthesized.
-
-Synthesizing Unit <setting_reg_45>.
-    Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/control/setting_reg.v".
-        my_addr = 8'b10101100
-        awidth = 8
-        width = 32
-        at_reset = 0
-    Found 1-bit register for signal <changed>.
-    Found 32-bit register for signal <out>.
-    Summary:
-	inferred  33 D-type flip-flop(s).
-Unit <setting_reg_45> synthesized.
 
 Synthesizing Unit <duc_chain>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/duc_chain.v".
@@ -5007,15 +4935,15 @@ WARNING:Xst:653 - Signal <gate_terror> is used but never assigned. This sourcele
     -----------------------------------------------------------------------
     Found 16-bit subtractor for signal <lines32[15]_GND_269_o_sub_28_OUT> created at line 85.
     Found 16-bit adder for signal <hdr_bytes> created at line 43.
-    Found 13-bit adder for signal <_n0209> created at line 71.
-    Found 13-bit adder for signal <_n0283> created at line 72.
+    Found 13-bit adder for signal <_n0217> created at line 71.
+    Found 13-bit adder for signal <_n0256> created at line 72.
     Found 12-bit adder for signal <seq_id_actual[11]_GND_269_o_add_20_OUT> created at line 74.
-    Found 13-bit adder for signal <_n0244> created at line 76.
+    Found 13-bit adder for signal <_n0283> created at line 76.
     Found 16-bit comparator greater for signal <GND_269_o_hdr_lines32[15]_LessThan_5_o> created at line 48
     Found 12-bit comparator not equal for signal <n0022> created at line 73
     Found 13-bit comparator not equal for signal <n0015> created at line 0
-    Found 13-bit comparator not equal for signal <n0011> created at line 0
     Found 13-bit comparator not equal for signal <n0019> created at line 0
+    Found 13-bit comparator not equal for signal <n0011> created at line 0
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred  30 D-type flip-flop(s).
@@ -5257,23 +5185,23 @@ Unit <fifo64_to_gpif2_2> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 20
+# RAMs                                                 : 14
  128x8-bit dual-port RAM                               : 2
  16384x33-bit dual-port RAM                            : 2
- 2048x10-bit single-port Read Only RAM                 : 9
+ 2048x10-bit single-port Read Only RAM                 : 3
  2048x65-bit dual-port RAM                             : 1
  256x33-bit dual-port RAM                              : 1
  256x8-bit dual-port RAM                               : 1
  4096x65-bit dual-port RAM                             : 4
-# Adders/Subtractors                                   : 408
- 11-bit adder                                          : 3
+# Adders/Subtractors                                   : 397
+ 11-bit adder                                          : 4
  11-bit subtractor                                     : 1
  12-bit adder                                          : 15
  12-bit subtractor                                     : 4
- 13-bit adder                                          : 7
- 14-bit adder                                          : 9
+ 13-bit adder                                          : 6
+ 14-bit adder                                          : 4
  14-bit subtractor                                     : 2
- 16-bit adder                                          : 10
+ 16-bit adder                                          : 13
  16-bit addsub                                         : 22
  16-bit subtractor                                     : 2
  17-bit adder                                          : 1
@@ -5287,7 +5215,7 @@ Macro Statistics
  27-bit subtractor                                     : 2
  3-bit adder                                           : 3
  31-bit adder                                          : 6
- 32-bit adder                                          : 12
+ 32-bit adder                                          : 3
  34-bit adder                                          : 2
  39-bit adder                                          : 8
  39-bit subtractor                                     : 8
@@ -5304,14 +5232,14 @@ Macro Statistics
  8-bit adder                                           : 4
  8-bit addsub                                          : 5
  8-bit subtractor                                      : 8
-# Registers                                            : 1002
- 1-bit register                                        : 346
+# Registers                                            : 984
+ 1-bit register                                        : 340
  10-bit register                                       : 13
  11-bit register                                       : 2
- 12-bit register                                       : 36
- 14-bit register                                       : 5
+ 12-bit register                                       : 37
+ 14-bit register                                       : 4
  156-bit register                                      : 6
- 16-bit register                                       : 37
+ 16-bit register                                       : 42
  176-bit register                                      : 1
  18-bit register                                       : 114
  19-bit register                                       : 2
@@ -5325,7 +5253,7 @@ Macro Statistics
  28-bit register                                       : 1
  3-bit register                                        : 6
  31-bit register                                       : 6
- 32-bit register                                       : 59
+ 32-bit register                                       : 42
  33-bit register                                       : 29
  4-bit register                                        : 5
  48-bit register                                       : 12
@@ -5754,6 +5682,17 @@ WARNING:Xst:2677 - Node <out_27> of sequential type is unconnected in block <sr_
 WARNING:Xst:2677 - Node <out_28> of sequential type is unconnected in block <sr_packets>.
 WARNING:Xst:2677 - Node <out_29> of sequential type is unconnected in block <sr_packets>.
 WARNING:Xst:2677 - Node <out_30> of sequential type is unconnected in block <sr_packets>.
+WARNING:Xst:2677 - Node <out_16> of sequential type is unconnected in block <sr_llr_reg0>.
+WARNING:Xst:2677 - Node <out_17> of sequential type is unconnected in block <sr_llr_reg0>.
+WARNING:Xst:2677 - Node <out_18> of sequential type is unconnected in block <sr_llr_reg0>.
+WARNING:Xst:2677 - Node <out_19> of sequential type is unconnected in block <sr_llr_reg0>.
+WARNING:Xst:2677 - Node <out_20> of sequential type is unconnected in block <sr_llr_reg0>.
+WARNING:Xst:2677 - Node <out_21> of sequential type is unconnected in block <sr_llr_reg0>.
+WARNING:Xst:2677 - Node <out_22> of sequential type is unconnected in block <sr_llr_reg0>.
+WARNING:Xst:2677 - Node <out_23> of sequential type is unconnected in block <sr_llr_reg0>.
+WARNING:Xst:2677 - Node <out_29> of sequential type is unconnected in block <sr_llr_reg0>.
+WARNING:Xst:2677 - Node <out_30> of sequential type is unconnected in block <sr_llr_reg0>.
+WARNING:Xst:2677 - Node <out_31> of sequential type is unconnected in block <sr_llr_reg0>.
 WARNING:Xst:2677 - Node <result_0> of sequential type is unconnected in block <new_hb.hb1_i0>.
 WARNING:Xst:2677 - Node <result_1> of sequential type is unconnected in block <new_hb.hb1_i0>.
 WARNING:Xst:2677 - Node <result_2> of sequential type is unconnected in block <new_hb.hb1_i0>.
@@ -6199,118 +6138,44 @@ Synthesizing (advanced) Unit <gpif2_error_checker_2>.
 The following registers are absorbed into counter <lines32>: 1 register on signal <lines32>.
 Unit <gpif2_error_checker_2> synthesized (advanced).
 
-Synthesizing (advanced) Unit <input_signal_adv>.
-The following registers are absorbed into accumulator <phase_acc2>: 1 register on signal <phase_acc2>.
+Synthesizing (advanced) Unit <input_signal2>.
 The following registers are absorbed into accumulator <phase_acc1>: 1 register on signal <phase_acc1>.
-The following registers are absorbed into accumulator <phase_acc3>: 1 register on signal <phase_acc3>.
-The following registers are absorbed into accumulator <phase_acc4>: 1 register on signal <phase_acc4>.
-The following registers are absorbed into accumulator <phase_acc5>: 1 register on signal <phase_acc5>.
-The following registers are absorbed into accumulator <phase_acc6>: 1 register on signal <phase_acc6>.
-The following registers are absorbed into accumulator <phase_acc7>: 1 register on signal <phase_acc7>.
-The following registers are absorbed into accumulator <phase_acc8>: 1 register on signal <phase_acc8>.
-The following registers are absorbed into accumulator <phase_acc9>: 1 register on signal <phase_acc9>.
-	The following adders/subtractors are grouped into adder tree <Madd_BUS_0013_GND_84_o_add_26_OUT1> :
- 	<Madd_n0124[10:0]> in block <input_signal_adv>, 	<Madd_n0127[11:0]> in block <input_signal_adv>, 	<Madd_n0130[12:0]> in block <input_signal_adv>, 	<Madd__n0147> in block <input_signal_adv>, 	<Madd__n0149> in block <input_signal_adv>, 	<Madd__n0148> in block <input_signal_adv>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc1[31]_GND_84_o_wide_mux_10_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+The following registers are absorbed into accumulator <phase_acc2>: 1 register on signal <phase_acc2>.
+The following registers are absorbed into accumulator <phase_acc0>: 1 register on signal <phase_acc0>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc1[15]_GND_84_o_wide_mux_6_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc1[31]_codeword1[31]_add_1_OUT> |          |
+    |     addrA          | connected to signal <phase_acc1[15]_codeword1[15]_add_2_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc2[31]_GND_84_o_wide_mux_11_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc2[15]_GND_84_o_wide_mux_8_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc2[31]_codeword2[31]_add_2_OUT> |          |
+    |     addrA          | connected to signal <phase_acc2[15]_codeword2[15]_add_3_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc3[31]_GND_84_o_wide_mux_13_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc3[31]_codeword3[31]_add_3_OUT> |          |
+    |     addrA          | connected to signal <phase_acc0[15]_GND_84_o_add_4_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc4[31]_GND_84_o_wide_mux_15_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 2048-word x 10-bit                  |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc4[31]_codeword4[31]_add_4_OUT> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc5[31]_GND_84_o_wide_mux_17_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 2048-word x 10-bit                  |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc5[31]_codeword5[31]_add_5_OUT> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc6[31]_GND_84_o_wide_mux_19_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 2048-word x 10-bit                  |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc6[31]_codeword6[31]_add_6_OUT> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc7[31]_GND_84_o_wide_mux_21_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 2048-word x 10-bit                  |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc7[31]_codeword7[31]_add_7_OUT> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc8[31]_GND_84_o_wide_mux_23_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 2048-word x 10-bit                  |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc8[31]_codeword8[31]_add_8_OUT> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc9[31]_GND_84_o_wide_mux_25_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 2048-word x 10-bit                  |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc9[31]_codeword9[31]_add_9_OUT> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-Unit <input_signal_adv> synthesized (advanced).
+Unit <input_signal2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <new_rx_framer>.
 The following registers are absorbed into counter <seqnum>: 1 register on signal <seqnum>.
@@ -6388,21 +6253,22 @@ WARNING:Xst:2677 - Node <misc_outs_r_2> of sequential type is unconnected in blo
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 20
+# RAMs                                                 : 14
  128x8-bit dual-port block RAM                         : 2
  16384x33-bit dual-port block RAM                      : 2
- 2048x10-bit single-port distributed Read Only RAM     : 9
+ 2048x10-bit single-port distributed Read Only RAM     : 3
  2048x65-bit dual-port block RAM                       : 1
  256x33-bit dual-port block RAM                        : 1
  256x8-bit dual-port block RAM                         : 1
  4096x65-bit dual-port block RAM                       : 4
-# Adders/Subtractors                                   : 274
+# Adders/Subtractors                                   : 271
+ 11-bit adder                                          : 2
  11-bit subtractor                                     : 1
- 12-bit adder                                          : 3
+ 12-bit adder                                          : 4
  12-bit subtractor                                     : 4
  13-bit adder                                          : 6
  14-bit subtractor                                     : 2
- 16-bit adder                                          : 6
+ 16-bit adder                                          : 9
  16-bit addsub                                         : 8
  17-bit adder                                          : 1
  18-bit subtractor                                     : 6
@@ -6415,7 +6281,6 @@ Macro Statistics
  27-bit subtractor                                     : 2
  3-bit adder                                           : 3
  31-bit adder                                          : 4
- 32-bit adder                                          : 9
  34-bit adder                                          : 2
  39-bit adder                                          : 8
  39-bit subtractor                                     : 8
@@ -6430,8 +6295,6 @@ Macro Statistics
  7-bit subtractor                                      : 2
  8-bit addsub                                          : 4
  8-bit subtractor                                      : 8
-# Adder Trees                                          : 1
- 14-bit / 9-inputs adder tree                          : 1
 # Counters                                             : 124
  11-bit up counter                                     : 2
  12-bit up counter                                     : 11
@@ -6448,11 +6311,11 @@ Macro Statistics
  7-bit up counter                                      : 4
  8-bit up counter                                      : 4
  8-bit updown counter                                  : 1
-# Accumulators                                         : 11
- 32-bit up accumulator                                 : 9
+# Accumulators                                         : 5
+ 16-bit up accumulator                                 : 3
  32-bit up loadable accumulator                        : 2
-# Registers                                            : 14086
- Flip-Flops                                            : 14086
+# Registers                                            : 13854
+ Flip-Flops                                            : 13854
 # Comparators                                          : 58
  11-bit comparator equal                               : 2
  12-bit comparator equal                               : 9
@@ -7063,7 +6926,7 @@ Optimizing unit <setting_reg_22> ...
 
 Optimizing unit <setting_reg_23> ...
 
-Optimizing unit <input_signal_adv> ...
+Optimizing unit <input_signal2> ...
 
 Optimizing unit <new_tx_deframer> ...
 
@@ -7086,18 +6949,6 @@ Optimizing unit <setting_reg_37> ...
 Optimizing unit <setting_reg_38> ...
 
 Optimizing unit <setting_reg_39> ...
-
-Optimizing unit <setting_reg_40> ...
-
-Optimizing unit <setting_reg_41> ...
-
-Optimizing unit <setting_reg_42> ...
-
-Optimizing unit <setting_reg_43> ...
-
-Optimizing unit <setting_reg_44> ...
-
-Optimizing unit <setting_reg_45> ...
 
 Optimizing unit <duc_chain> ...
 
@@ -7964,14 +7815,19 @@ WARNING:Xst:2677 - Node <tx_responder/ack_queue/space_2> of sequential type is u
 WARNING:Xst:2677 - Node <tx_responder/ack_queue/space_1> of sequential type is unconnected in block <radio_0>.
 WARNING:Xst:2677 - Node <tx_responder/ack_queue/space_0> of sequential type is unconnected in block <radio_0>.
 WARNING:Xst:2677 - Node <sr_llr_reg0/changed> of sequential type is unconnected in block <radio_0>.
+WARNING:Xst:2677 - Node <sr_llr_reg0/out_31> of sequential type is unconnected in block <radio_0>.
+WARNING:Xst:2677 - Node <sr_llr_reg0/out_30> of sequential type is unconnected in block <radio_0>.
+WARNING:Xst:2677 - Node <sr_llr_reg0/out_29> of sequential type is unconnected in block <radio_0>.
+WARNING:Xst:2677 - Node <sr_llr_reg0/out_23> of sequential type is unconnected in block <radio_0>.
+WARNING:Xst:2677 - Node <sr_llr_reg0/out_22> of sequential type is unconnected in block <radio_0>.
+WARNING:Xst:2677 - Node <sr_llr_reg0/out_21> of sequential type is unconnected in block <radio_0>.
+WARNING:Xst:2677 - Node <sr_llr_reg0/out_20> of sequential type is unconnected in block <radio_0>.
+WARNING:Xst:2677 - Node <sr_llr_reg0/out_19> of sequential type is unconnected in block <radio_0>.
+WARNING:Xst:2677 - Node <sr_llr_reg0/out_18> of sequential type is unconnected in block <radio_0>.
+WARNING:Xst:2677 - Node <sr_llr_reg0/out_17> of sequential type is unconnected in block <radio_0>.
+WARNING:Xst:2677 - Node <sr_llr_reg0/out_16> of sequential type is unconnected in block <radio_0>.
 WARNING:Xst:2677 - Node <sr_llr_reg1/changed> of sequential type is unconnected in block <radio_0>.
 WARNING:Xst:2677 - Node <sr_llr_reg2/changed> of sequential type is unconnected in block <radio_0>.
-WARNING:Xst:2677 - Node <sr_llr_reg3/changed> of sequential type is unconnected in block <radio_0>.
-WARNING:Xst:2677 - Node <sr_llr_reg4/changed> of sequential type is unconnected in block <radio_0>.
-WARNING:Xst:2677 - Node <sr_llr_reg5/changed> of sequential type is unconnected in block <radio_0>.
-WARNING:Xst:2677 - Node <sr_llr_reg6/changed> of sequential type is unconnected in block <radio_0>.
-WARNING:Xst:2677 - Node <sr_llr_reg7/changed> of sequential type is unconnected in block <radio_0>.
-WARNING:Xst:2677 - Node <sr_llr_reg8/changed> of sequential type is unconnected in block <radio_0>.
 WARNING:Xst:2677 - Node <duc_chain/sr_0/changed> of sequential type is unconnected in block <radio_0>.
 WARNING:Xst:2677 - Node <duc_chain/sr_1/changed> of sequential type is unconnected in block <radio_0>.
 WARNING:Xst:2677 - Node <duc_chain/new_hb.hb2_q0/result_15> of sequential type is unconnected in block <radio_0>.
@@ -9603,7 +9459,7 @@ Changing polarity of register gpio_atr_io_inst/gpio_ddr_reg_1 to handle IOB=TRUE
 PACKER Warning: Lut duc_chain/cordic/cordic_stage2/z_is_pos3 is driving XOR and other loads hence can not be packed with the XOR/Carry. This would result in an extra LUT for a feedthrough.
 PACKER Warning: Lut duc_chain/cordic/cordic_stage1/z_is_pos3 is driving XOR and other loads hence can not be packed with the XOR/Carry. This would result in an extra LUT for a feedthrough.
 PACKER Warning: Lut duc_chain/cordic/cordic_stage0/z_is_pos3 is driving XOR and other loads hence can not be packed with the XOR/Carry. This would result in an extra LUT for a feedthrough.
-Found area constraint ratio of 100 (+ 5) on block b200, actual ratio is 18.
+Found area constraint ratio of 100 (+ 5) on block b200, actual ratio is 17.
 In hierarchy level b200_core.
 Forward register balancing over carry chain radio_ctrl_proc/time_compare/Mcompar_now_cy<0>
 Forward register balancing over carry chain extra_rx_buff/fifo_bram/Mcount_wr_addr_cy<0>
@@ -17913,48 +17769,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 
 Pipelining and Register Balancing Report ...
 
-Processing Unit <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk> :
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5.
-Unit <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk> processed.
-
-Processing Unit <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk> :
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5.
-Unit <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk> processed.
-
 Processing Unit <b200_core/radio_0> :
 	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_0 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_0_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB5.
 	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_1 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_1_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB5.
@@ -17976,6 +17790,87 @@ Processing Unit <b200_core/radio_0> :
 	Register(s) fe_gpio_atr/ogpio_6 has(ve) been backward balanced into : fe_gpio_atr/ogpio_6_BRB1 fe_gpio_atr/ogpio_6_BRB3 fe_gpio_atr/ogpio_6_BRB4 fe_gpio_atr/ogpio_6_BRB5.
 	Register(s) fe_gpio_atr/ogpio_7 has(ve) been backward balanced into : fe_gpio_atr/ogpio_7_BRB1 fe_gpio_atr/ogpio_7_BRB3 fe_gpio_atr/ogpio_7_BRB4 fe_gpio_atr/ogpio_7_BRB5.
 Unit <b200_core/radio_0> processed.
+
+Processing Unit <b200> :
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB4.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB2.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB4.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB2.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB4 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB4 .
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB4 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB5.
+	Register(s) slave_fifo32/next_addr_0 has(ve) been backward balanced into : slave_fifo32/next_addr_0_BRB0 .
+	Register(s) slave_fifo32/next_addr_1 has(ve) been backward balanced into : slave_fifo32/next_addr_1_BRB0.
+Unit <b200> processed.
+
+Processing Unit <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk> :
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5.
+Unit <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk> processed.
+
+Processing Unit <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk> :
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
+Unit <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk> processed.
+
+Processing Unit <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk> :
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3.
+	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5.
+Unit <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk> processed.
 
 Processing Unit <b200_core> :
 	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_1 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_0 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi1_FRB.
@@ -18040,45 +17935,6 @@ Processing Unit <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2cl
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
 Unit <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk> processed.
-
-Processing Unit <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk> :
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
-Unit <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk> processed.
-
-Processing Unit <b200> :
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB4.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB2.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB4.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB2.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB4 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB4 .
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB4 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB5.
-	Register(s) slave_fifo32/next_addr_0 has(ve) been backward balanced into : slave_fifo32/next_addr_0_BRB0 .
-	Register(s) slave_fifo32/next_addr_1 has(ve) been backward balanced into : slave_fifo32/next_addr_1_BRB0.
-Unit <b200> processed.
 
 Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> :
 	Register(s) blk000000bf has(ve) been backward balanced into : blk000000bf_BRB0 blk000000bf_BRB1 blk000000bf_BRB2 blk000000bf_BRB3.
@@ -23831,8 +23687,8 @@ Unit <radio_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 8150
- Flip-Flops                                            : 8150
+# Registers                                            : 7673
+ Flip-Flops                                            : 7673
 # Shift Registers                                      : 6
  2-bit shift register                                  : 6
 
@@ -26711,25 +26567,25 @@ Top Level Output File Name         : b200.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 19575
+# BELS                             : 16411
 #      GND                         : 100
-#      INV                         : 225
+#      INV                         : 217
 #      LUT1                        : 341
-#      LUT2                        : 2769
-#      LUT3                        : 2169
-#      LUT4                        : 1266
-#      LUT5                        : 1587
-#      LUT6                        : 3262
+#      LUT2                        : 2230
+#      LUT3                        : 2080
+#      LUT4                        : 1137
+#      LUT5                        : 1375
+#      LUT6                        : 2118
 #      MULT_AND                    : 15
-#      MUXCY                       : 3900
+#      MUXCY                       : 3393
 #      MUXCY_D                     : 82
 #      MUXCY_L                     : 30
-#      MUXF7                       : 268
-#      MUXF8                       : 72
+#      MUXF7                       : 127
+#      MUXF8                       : 24
 #      VCC                         : 6
-#      XORCY                       : 3483
-# FlipFlops/Latches                : 13027
-#      FD                          : 764
+#      XORCY                       : 3136
+# FlipFlops/Latches                : 12550
+#      FD                          : 522
 #      FD_1                        : 1
 #      FDC                         : 592
 #      FDCE                        : 1376
@@ -26738,7 +26594,7 @@ Primitive and Black Box Usage:
 #      FDP                         : 163
 #      FDPE                        : 18
 #      FDR                         : 1931
-#      FDRE                        : 3726
+#      FDRE                        : 3491
 #      FDS                         : 53
 #      FDSE                        : 59
 #      IDDR2                       : 13
@@ -26774,19 +26630,19 @@ Selected Device : 6slx75fgg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           12896  out of  93296    13%  
- Number of Slice LUTs:                15580  out of  46648    33%  
-    Number used as Logic:             11619  out of  46648    24%  
+ Number of Slice Registers:           12419  out of  93296    13%  
+ Number of Slice LUTs:                13459  out of  46648    28%  
+    Number used as Logic:              9498  out of  46648    20%  
     Number used as Memory:             3961  out of  11072    35%  
        Number used as RAM:              972
        Number used as SRL:             2989
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  21471
-   Number with an unused Flip Flop:    8575  out of  21471    39%  
-   Number with an unused LUT:          5891  out of  21471    27%  
-   Number of fully used LUT-FF pairs:  7005  out of  21471    32%  
-   Number of unique control sets:       459
+ Number of LUT Flip Flop pairs used:  18873
+   Number with an unused Flip Flop:    6454  out of  18873    34%  
+   Number with an unused LUT:          5414  out of  18873    28%  
+   Number of fully used LUT-FF pairs:  7005  out of  18873    37%  
+   Number of unique control sets:       453
 
 IO Utilization: 
  Number of IOs:                         172
@@ -26821,7 +26677,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)                 | Load  |
 -----------------------------------+---------------------------------------+-------+
 codec_main_clk_p                   | DCM_SP:CLKFX                          | 5578  |
-codec_data_clk_p                   | IBUFG+BUFIO2+BUFGMUX                  | 11019 |
+codec_data_clk_p                   | IBUFG+BUFIO2+BUFGMUX                  | 10542 |
 base_signal/sig_out                | NONE(S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN)| 2     |
 -----------------------------------+---------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -26871,69 +26727,49 @@ Delay:               7.084ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'codec_data_clk_p'
-  Clock period: 13.754ns (frequency: 72.705MHz)
-  Total number of paths / destination ports: 1025645369 / 33335
+  Clock period: 13.147ns (frequency: 76.060MHz)
+  Total number of paths / destination ports: 4726001 / 32388
 -------------------------------------------------------------------------
-Delay:               13.754ns (Levels of Logic = 45)
-  Source:            b200_core/radio_0/inp_sig/phase_acc2_0 (FF)
-  Destination:       b200_core/radio_0/inp_sig/tx_out_13 (FF)
+Delay:               13.147ns (Levels of Logic = 25)
+  Source:            b200_core/radio_0/inp_sig/phase_acc0_0 (FF)
+  Destination:       b200_core/radio_0/inp_sig/tx_out_11 (FF)
   Source Clock:      codec_data_clk_p rising
   Destination Clock: codec_data_clk_p rising
 
-  Data Path: b200_core/radio_0/inp_sig/phase_acc2_0 to b200_core/radio_0/inp_sig/tx_out_13
+  Data Path: b200_core/radio_0/inp_sig/phase_acc0_0 to b200_core/radio_0/inp_sig/tx_out_11
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.447   0.721  inp_sig/phase_acc2_0 (inp_sig/phase_acc2_0)
-     LUT2:I0->O            1   0.203   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_lut<0> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<0> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<1> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<2> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<3> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<4> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<5> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<6> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<7> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<8> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<9> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<10> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<10>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<11> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<11>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<12> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<12>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<13> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<13>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<14> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<14>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<15> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<15>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<16> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<16>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<17> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<17>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<18> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<18>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<19> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<19>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<20> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<20>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<21> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<21>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<22> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<22>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<23> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<23>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<24> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<24>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<25> (inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_cy<25>)
-     XORCY:CI->O         177   0.180   2.280  inp_sig/Madd_phase_acc2[31]_codeword2[31]_add_2_OUT_xor<26> (inp_sig/phase_acc2[31]_codeword2[31]_add_2_OUT<26>)
-     LUT4:I0->O            1   0.203   0.808  inp_sig_SF82 (inp_sig_SF82)
-     LUT6:I3->O            1   0.205   0.580  inp_sig_SF85 (inp_sig_SF85)
-     LUT5:I4->O            2   0.205   0.961  inp_sig_SF86 (inp_sig_SF8)
-     LUT5:I0->O            1   0.203   0.827  inp_sig_Mram_phase_acc2[31]_GND_84_o_wide_mux_11_OUT1781318 (inp_sig_Mram_phase_acc2[31]_GND_84_o_wide_mux_11_OUT1781317)
-     LUT6:I2->O            2   0.203   0.721  inp_sig_Mram_phase_acc2[31]_GND_84_o_wide_mux_11_OUT1781321 (inp_sig/phase_acc2[31]_GND_84_o_wide_mux_11_OUT<7>)
-     LUT3:I1->O            1   0.203   0.580  inp_sig/ADDERTREE_INTERNAL_Madd17 (inp_sig/ADDERTREE_INTERNAL_Madd17)
-     LUT4:I3->O            1   0.205   0.000  inp_sig/ADDERTREE_INTERNAL_Madd1_lut<0>8 (inp_sig/ADDERTREE_INTERNAL_Madd1_lut<0>8)
-     XORCY:LI->O           2   0.136   0.617  inp_sig/ADDERTREE_INTERNAL_Madd1_xor<0>_7 (inp_sig/ADDERTREE_INTERNAL_Madd_81)
-     LUT3:I2->O            1   0.205   0.580  inp_sig/ADDERTREE_INTERNAL_Madd38 (inp_sig/ADDERTREE_INTERNAL_Madd38)
-     LUT4:I3->O            1   0.205   0.000  inp_sig/ADDERTREE_INTERNAL_Madd3_lut<0>9 (inp_sig/ADDERTREE_INTERNAL_Madd3_lut<0>9)
-     MUXCY:S->O            1   0.172   0.000  inp_sig/ADDERTREE_INTERNAL_Madd3_cy<0>_8 (inp_sig/ADDERTREE_INTERNAL_Madd3_cy<0>9)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/ADDERTREE_INTERNAL_Madd3_cy<0>_9 (inp_sig/ADDERTREE_INTERNAL_Madd3_cy<0>10)
-     MUXCY:CI->O           0   0.019   0.000  inp_sig/ADDERTREE_INTERNAL_Madd3_cy<0>_10 (inp_sig/ADDERTREE_INTERNAL_Madd3_cy<0>11)
-     XORCY:CI->O           1   0.180   0.580  inp_sig/ADDERTREE_INTERNAL_Madd3_xor<0>_11 (inp_sig/ADDERTREE_INTERNAL_Madd7_lut<12>)
-     LUT1:I0->O            1   0.205   0.000  inp_sig/ADDERTREE_INTERNAL_Madd7_cy<12>_rt (inp_sig/ADDERTREE_INTERNAL_Madd7_cy<12>_rt)
-     MUXCY:S->O            0   0.172   0.000  inp_sig/ADDERTREE_INTERNAL_Madd7_cy<12> (inp_sig/ADDERTREE_INTERNAL_Madd7_cy<12>)
-     XORCY:CI->O           1   0.180   0.000  inp_sig/ADDERTREE_INTERNAL_Madd7_xor<13> (inp_sig/ADDERTREE_INTERNAL_Madd_137)
-     FD:D                      0.102          inp_sig/tx_out_13
+     FD:C->Q               2   0.447   0.721  inp_sig/phase_acc0_0 (inp_sig/phase_acc0_0)
+     LUT2:I0->O            1   0.203   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_lut<0> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<0> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<1> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<2> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<3> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<4> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<5> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<6> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<7> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<7>)
+     XORCY:CI->O           1   0.180   0.684  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_xor<8> (inp_sig/phase_acc0[15]_codeword0[15]_add_1_OUT<8>)
+     LUT2:I0->O            1   0.203   0.000  inp_sig/Madd_phase_acc0[15]_GND_84_o_add_4_OUT_lut<3> (inp_sig/Madd_phase_acc0[15]_GND_84_o_add_4_OUT_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  inp_sig/Madd_phase_acc0[15]_GND_84_o_add_4_OUT_cy<3> (inp_sig/Madd_phase_acc0[15]_GND_84_o_add_4_OUT_cy<3>)
+     XORCY:CI->O         175   0.180   2.375  inp_sig/Madd_phase_acc0[15]_GND_84_o_add_4_OUT_xor<4> (inp_sig/phase_acc0[15]_GND_84_o_add_4_OUT<4>)
+     LUT6:I1->O            2   0.203   0.721  inp_sig_SF41 (inp_sig_SF41)
+     LUT5:I3->O            2   0.203   0.961  inp_sig_SF46 (inp_sig_SF4)
+     LUT6:I1->O            1   0.203   0.580  inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781313 (inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781312)
+     LUT6:I5->O            1   0.205   0.944  inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781314 (inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781313)
+     LUT6:I0->O            1   0.203   0.924  inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781316 (inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781315)
+     LUT6:I1->O            2   0.203   0.845  inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781318 (inp_sig/phase_acc0[15]_GND_84_o_wide_mux_5_OUT<7>)
+     LUT3:I0->O            1   0.205   0.580  inp_sig/Madd_n0052[11:0]7 (inp_sig/Madd_n0052[11:0]7)
+     LUT4:I3->O            1   0.205   0.000  inp_sig/Madd_n0052[11:0]_lut<0>8 (inp_sig/Madd_n0052[11:0]_lut<0>8)
+     MUXCY:S->O            1   0.172   0.000  inp_sig/Madd_n0052[11:0]_cy<0>_7 (inp_sig/Madd_n0052[11:0]_cy<0>8)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_n0052[11:0]_cy<0>_8 (inp_sig/Madd_n0052[11:0]_cy<0>9)
+     MUXCY:CI->O           0   0.019   0.000  inp_sig/Madd_n0052[11:0]_cy<0>_9 (inp_sig/Madd_n0052[11:0]_cy<0>10)
+     XORCY:CI->O           1   0.180   0.000  inp_sig/Madd_n0052[11:0]_xor<0>_10 (inp_sig/n0052[11:0]<11>)
+     FD:D                      0.102          inp_sig/tx_out_11
     ----------------------------------------
-    Total                     13.754ns (4.499ns logic, 9.255ns route)
-                                       (32.7% logic, 67.3% route)
+    Total                     13.147ns (3.812ns logic, 9.335ns route)
+                                       (29.0% logic, 71.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'codec_main_clk_p'
@@ -27043,7 +26879,7 @@ Clock to Setup on destination clock codec_data_clk_p
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-codec_data_clk_p|   13.754|    6.025|    4.068|         |
+codec_data_clk_p|   13.147|    6.025|    4.068|         |
 codec_main_clk_p|    3.502|         |         |         |
 ----------------+---------+---------+---------+---------+
 
@@ -27052,22 +26888,22 @@ Clock to Setup on destination clock codec_main_clk_p
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-codec_data_clk_p|    3.633|         |         |         |
+codec_data_clk_p|    3.577|         |         |         |
 codec_main_clk_p|    7.084|         |         |         |
 ----------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 296.00 secs
-Total CPU time to Xst completion: 278.56 secs
+Total REAL time to Xst completion: 280.00 secs
+Total CPU time to Xst completion: 262.19 secs
  
 --> 
 
 
-Total memory usage is 718288 kilobytes
+Total memory usage is 686092 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 19903 (   0 filtered)
+Number of warnings : 19936 (   0 filtered)
 Number of infos    :  614 (   0 filtered)
 

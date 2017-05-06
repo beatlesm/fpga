@@ -11,7 +11,7 @@ Target Device  : xc6slx75
 Target Package : fgg484
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu May  4 21:55:59 2017
+Mapped Date    : Fri May  5 22:49:00 2017
 
 Mapping design into LUTs...
 WARNING:MapLib:701 - Signal fx3_miso connected to top level port fx3_miso has
@@ -28,158 +28,73 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 36 secs 
-Total CPU  time at the beginning of Placer: 36 secs 
+Total REAL time at the beginning of Placer: 33 secs 
+Total CPU  time at the beginning of Placer: 33 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:d416a447) REAL time: 39 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:e6d1dcc8) REAL time: 36 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:d416a447) REAL time: 40 secs 
+Phase 2.7  Design Feasibility Check (Checksum:e6d1dcc8) REAL time: 37 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:d416a447) REAL time: 40 secs 
+Phase 3.31  Local Placement Optimization (Checksum:e6d1dcc8) REAL time: 37 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:e3a009de) REAL time: 1 mins 20 secs 
+(Checksum:e886bbdb) REAL time: 1 mins 16 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:e3a009de) REAL time: 1 mins 20 secs 
+Phase 5.36  Local Placement Optimization (Checksum:e886bbdb) REAL time: 1 mins 16 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:e3a009de) REAL time: 1 mins 20 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:e886bbdb) REAL time: 1 mins 16 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:e3a009de) REAL time: 1 mins 20 secs 
+Phase 7.3  Local Placement Optimization (Checksum:e886bbdb) REAL time: 1 mins 16 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:e3a009de) REAL time: 1 mins 21 secs 
+Phase 8.5  Local Placement Optimization (Checksum:e886bbdb) REAL time: 1 mins 16 secs 
 
 Phase 9.8  Global Placement
-.............................
-..........................................................................................
-.....................................................................................................................................................................................
-.......................................................................................................................................................................
-.....................................................................................................................
-Phase 9.8  Global Placement (Checksum:be6c3ab0) REAL time: 2 mins 42 secs 
+...........................................................................................................................................................
+...........................................................................................................................................
+..........................................................................................................................................................................................
+.............................................
+Phase 9.8  Global Placement (Checksum:b13e9ec3) REAL time: 2 mins 9 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:be6c3ab0) REAL time: 2 mins 42 secs 
+Phase 10.5  Local Placement Optimization (Checksum:b13e9ec3) REAL time: 2 mins 9 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:fabbc2b0) REAL time: 2 mins 58 secs 
+Phase 11.18  Placement Optimization (Checksum:f003e2ca) REAL time: 2 mins 23 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:fabbc2b0) REAL time: 2 mins 58 secs 
+Phase 12.5  Local Placement Optimization (Checksum:f003e2ca) REAL time: 2 mins 23 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:700b3864) REAL time: 2 mins 59 secs 
+Phase 13.34  Placement Validation (Checksum:f2fd0da5) REAL time: 2 mins 23 secs 
 
-Total REAL time to Placer completion: 3 mins 
-Total CPU  time to Placer completion: 2 mins 58 secs 
+Total REAL time to Placer completion: 2 mins 24 secs 
+Total CPU  time to Placer completion: 2 mins 23 secs 
 Running post-placement packing...
 Writing output files...
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
-   /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
-   /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
    /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
-   /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O> is incomplete. The
+   /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM11_RAMD_D1_O> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
-   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
-   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
-   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM10_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
-   /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
-   /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
-   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
-   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
-   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMC_D1
-   _DPO> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
-   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM8_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM7_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM11_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM9_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
    /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM7_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
+   /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
@@ -191,20 +106,96 @@ WARNING:PhysDesignRules:367 - The signal
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
-   /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM11_RAMD_D1_O> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
    /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM9_RAMD_D1_O> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
+   /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
+   /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
+   /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/rx_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf
+   /grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
    _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMC_D1
    _DPO> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
    _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1
    _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM11_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM8_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM7_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM10_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM9_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/resp_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
    rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM10_RAMD_D1_O> is incomplete.
@@ -215,7 +206,7 @@ WARNING:PhysDesignRules:367 - The signal
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O> is incomplete.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
@@ -226,16 +217,24 @@ WARNING:PhysDesignRules:367 - The signal
    rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
-   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
-   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
+   <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
+   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMC_
+   D1_DPO> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
-   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_
+   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_
+   D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
+   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_
+   D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
+   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_
+   D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
+   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_
    D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
@@ -243,39 +242,11 @@ WARNING:PhysDesignRules:367 - The signal
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
    rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM7_RAMD_D1_O> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
-   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
-   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
-   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1
-   _O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
-   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_
-   D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
-   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_
-   D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
-   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_
-   D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
-   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1_O> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
@@ -286,20 +257,28 @@ WARNING:PhysDesignRules:367 - The signal
    rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM8_RAMD_D1_O> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
+   <b200_core/radio_0/ctrl_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.
+   rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM7_RAMD_D1_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
+   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_
+   D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
    <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
    fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_
    D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
-   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMC_
-   D1_DPO> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
-   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_
+   <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
+   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_
    D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
-   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_
+   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMC_
+   D1_DPO> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
+   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_
    D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
@@ -307,24 +286,44 @@ WARNING:PhysDesignRules:367 - The signal
    D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
-   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_
-   D1_O> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
    fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_
    D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
-   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMC_
-   D1_DPO> is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
-   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_
+   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_
    D1_O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk/U0/xst_fi
-   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_
+   fo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_
    D1_O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMC_D1
+   _DPO> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM6_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM5_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM4_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM3_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo
+   _generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_D1
+   _O> is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
    FPGA_TXD0_PULLUP is set but the tri state is not configured. 
 WARNING:PhysDesignRules:1269 - Issue with pin connections and/or configuration
@@ -342,16 +341,16 @@ Design Summary:
 Number of errors:      0
 Number of warnings:   67
 Slice Logic Utilization:
-  Number of Slice Registers:                 6,383 out of  93,296    6%
-    Number used as Flip Flops:               6,358
+  Number of Slice Registers:                 5,881 out of  93,296    6%
+    Number used as Flip Flops:               5,881
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:               25
-  Number of Slice LUTs:                      8,308 out of  46,648   17%
-    Number used as logic:                    6,415 out of  46,648   13%
-      Number using O6 output only:           4,684
-      Number using O5 output only:             275
-      Number using O5 and O6:                1,456
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      6,309 out of  46,648   13%
+    Number used as logic:                    4,452 out of  46,648    9%
+      Number using O6 output only:           2,881
+      Number using O5 output only:             276
+      Number using O5 and O6:                1,295
       Number used as ROM:                        0
     Number used as Memory:                   1,703 out of  11,072   15%
       Number used as Dual Port RAM:            228
@@ -363,21 +362,21 @@ Slice Logic Utilization:
         Number using O6 output only:         1,475
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:    190
-      Number with same-slice register load:    171
-      Number with same-slice carry load:        19
+    Number used exclusively as route-thrus:    154
+      Number with same-slice register load:    134
+      Number with same-slice carry load:        20
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 3,110 out of  11,662   26%
-  Number of MUXCYs used:                     1,640 out of  23,324    7%
-  Number of LUT Flip Flop pairs used:       10,070
-    Number with an unused Flip Flop:         4,129 out of  10,070   41%
-    Number with an unused LUT:               1,762 out of  10,070   17%
-    Number of fully used LUT-FF pairs:       4,179 out of  10,070   41%
-    Number of unique control sets:             311
+  Number of occupied Slices:                 2,579 out of  11,662   22%
+  Number of MUXCYs used:                     1,112 out of  23,324    4%
+  Number of LUT Flip Flop pairs used:        8,028
+    Number with an unused Flip Flop:         2,543 out of   8,028   31%
+    Number with an unused LUT:               1,719 out of   8,028   21%
+    Number of fully used LUT-FF pairs:       3,766 out of   8,028   46%
+    Number of unique control sets:             305
     Number of slice register sites lost
-      to control set restrictions:           1,234 out of  93,296    1%
+      to control set restrictions:           1,239 out of  93,296    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -428,11 +427,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.59
+Average Fanout of Non-Clock Nets:                4.49
 
-Peak Memory Usage:  1083 MB
-Total REAL time to MAP completion:  3 mins 6 secs 
-Total CPU time to MAP completion:   3 mins 4 secs 
+Peak Memory Usage:  1047 MB
+Total REAL time to MAP completion:  2 mins 29 secs 
+Total CPU time to MAP completion:   2 mins 28 secs 
 
 Mapping completed.
 See MAP report file "b200_map.mrp" for details.

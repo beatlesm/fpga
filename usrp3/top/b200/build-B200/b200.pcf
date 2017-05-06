@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri May 05 22:51:27 2017
+// Written by: Map P.20131013 on Sat May 06 14:21:36 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -7079,14 +7079,14 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/num_packets_6"
         BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/num_packets_7"
-        BEL "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<0>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<1>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<2>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<3>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<4>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<5>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<6>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<7>_FRB" BEL
+        BEL "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<0>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<1>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<2>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<3>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<4>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<5>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<6>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<7>_FRB" BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<1>_FRB"
         BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<2>_FRB"
@@ -15224,14 +15224,14 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/num_packets_6"
         BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/num_packets_7"
-        BEL "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<0>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<1>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<2>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<3>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<4>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<5>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<6>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_230_o_add_50_OUT<7>_FRB" BEL
+        BEL "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<0>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<1>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<2>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<3>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<4>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<5>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<6>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<7>_FRB" BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<1>_FRB"
         BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<2>_FRB"
@@ -17460,6 +17460,8 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "S6CLK2PIN_gpif/ODDR2_S6CLK2PIN_pins<2>" PIN
         "S6CLK2PIN_gpif/ODDR2_S6CLK2PIN_pins<1>" PIN
         "S6CLK2PIN_gpif/ODDR2_S6CLK2PIN_pins<2>";
+PIN b200_core/radio_0/inp_sig/Mmult_n0028_pins<92> = BEL
+        "b200_core/radio_0/inp_sig/Mmult_n0028" PINNAME CLK;
 PIN b200_core/radio_0/new_rx_framer/datafifo/fifo_bram/ram/Mram_ram7_pins<22>
         = BEL
         "b200_core/radio_0/new_rx_framer/datafifo/fifo_bram/ram/Mram_ram7"
@@ -18228,6 +18230,22 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_2" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_1" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_0" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_15" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_14" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_13" BEL
@@ -18259,23 +18277,8 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_3" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_2" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_1" BEL
-        "b200_core/radio_0/inp_sig/phase_acc1_0" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_15" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_14" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_13" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_12" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_11" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_10" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_9" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_8" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_7" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_6" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_5" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_4" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_3" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_2" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_1" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc1_0" PIN
+        "b200_core/radio_0/inp_sig/Mmult_n0028_pins<92>" BEL
         "b200_core/radio_0/inp_sig/tx_out_11" BEL
         "b200_core/radio_0/inp_sig/tx_out_10" BEL
         "b200_core/radio_0/inp_sig/tx_out_9" BEL
@@ -19934,29 +19937,29 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/new_rx_control/output_fifo/o_tvalid" BEL
         "b200_core/radio_0/rx_mux/axi_fifo_short/o_tvalid" BEL
         "b200_core/radio_0/new_rx_framer/datafifo/fifo_bram/space_11" BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<0>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<0>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<1>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<2>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<3>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<4>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<5>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<6>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<7>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<8>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<9>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<10>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<11>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<11>_FRB"
         BEL "b200_core/radio_0/tx_fifo/fifo_1clk/fifo_bram/Mcount_wr_addr_FRB"
         BEL
         "b200_core/radio_0/tx_fifo/fifo_1clk/fifo_bram/Mcount_wr_addr1_FRB"
@@ -21913,6 +21916,22 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_2" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_1" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc0_0" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_15" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_14" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_13" BEL
@@ -21944,23 +21963,8 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_3" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_2" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_1" BEL
-        "b200_core/radio_0/inp_sig/phase_acc1_0" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_15" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_14" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_13" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_12" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_11" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_10" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_9" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_8" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_7" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_6" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_5" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_4" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_3" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_2" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_1" BEL
-        "b200_core/radio_0/inp_sig/phase_acc0_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc1_0" PIN
+        "b200_core/radio_0/inp_sig/Mmult_n0028_pins<92>" BEL
         "b200_core/radio_0/inp_sig/tx_out_11" BEL
         "b200_core/radio_0/inp_sig/tx_out_10" BEL
         "b200_core/radio_0/inp_sig/tx_out_9" BEL
@@ -23619,29 +23623,29 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/new_rx_control/output_fifo/o_tvalid" BEL
         "b200_core/radio_0/rx_mux/axi_fifo_short/o_tvalid" BEL
         "b200_core/radio_0/new_rx_framer/datafifo/fifo_bram/space_11" BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<0>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<0>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<1>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<1>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<2>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<2>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<3>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<3>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<4>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<4>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<5>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<5>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<6>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<6>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<7>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<7>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<8>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<8>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<9>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<9>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<10>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<10>_FRB"
         BEL
-        "b200_core/radio_0/tx_control/seqnum[11]_GND_87_o_add_18_OUT<11>_FRB"
+        "b200_core/radio_0/tx_control/seqnum[11]_GND_88_o_add_18_OUT<11>_FRB"
         BEL "b200_core/radio_0/tx_fifo/fifo_1clk/fifo_bram/Mcount_wr_addr_FRB"
         BEL
         "b200_core/radio_0/tx_fifo/fifo_1clk/fifo_bram/Mcount_wr_addr1_FRB"

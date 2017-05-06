@@ -374,7 +374,7 @@ endgenerate
 //   input_signal inp_sig(.radio_clk(radio_clk), .codeword(llr_reg0_val), .get_tx(get_tx));
 // input_signal_adv allows for multiple codewords. need to find a smoother way of doing this/ 
 //  input_signal_adv inp_sig(.radio_clk(radio_clk), .codeword1(llr_reg0_val), .codeword2(llr_reg1_val), .codeword3(llr_reg2_val), .codeword4(llr_reg3_val),.codeword5(llr_reg4_val), .codeword6(llr_reg5_val), .codeword7(llr_reg6_val), .codeword8(llr_reg7_val), .codeword9(llr_reg8_val),.get_tx(get_tx));
-	input_signal2 inp_sig(.radio_clk(radio_clk), .codeword0(llr_reg0_val), .codeword1(llr_reg1_val), .codeword2(llr_reg2_val),.rst(radio_rst),.get_tx(get_tx));
+	input_signal2 inp_sig(.radio_clk(radio_clk), .codeword0(llr_reg0_val), .codeword1(llr_reg1_val), .codeword2(llr_reg2_val),.get_tx(get_tx));
 
 //   input_signal2 inp_sig(.radio_clk(radio_clk), .data0(llr_reg0_val), .data1(llr_reg1_val), .data2(llr_reg2_val), .get_tx(get_tx));
 

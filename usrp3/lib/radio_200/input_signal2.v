@@ -1,5 +1,4 @@
-`include "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/add_then_mac.v"
-module input_signal2(radio_clk, codeword0, codeword1,codeword2, rst, get_tx);
+module input_signal2(radio_clk, codeword0, codeword1,codeword2, get_tx);
    input radio_clk;
    input [31:0] codeword0;
    input [15:0] codeword1;
@@ -47,15 +46,8 @@ setting_reg #(.my_addr(SR_USER_RB_ADDR), .awidth(8), .width(8)) user_rb_addr
 	end
    end
 */
-
+	reg [17:0] amp_times_sin;
 	
-	// Declaring DSP slice multiplier
-	wire [31:0] tx_out1;
-	wire load;
-	add_then_mac #(.DEVICE("SPARTAN6")) amp_sin_mult (.acc(tx_out1), .carryin(1'b0), .ce(1'b1), 
-		.clk(radio_clk), .b(amp_test), .load(1'b0), .c(1'b0), .a(sine[phase_acc0[15:5] + ph_test]), .d(1'b0), .rst(radio_rest));
-
-	// END DSP SLICE
     always @(posedge radio_clk) begin
 		freq_test = codeword0[15:0];
 		amp_test = codeword0[23:16];
@@ -65,8 +57,9 @@ setting_reg #(.my_addr(SR_USER_RB_ADDR), .awidth(8), .width(8)) user_rb_addr
         phase_acc0 = phase_acc0 + freq_test;
 		phase_acc1 = phase_acc1 + codeword1;
 		phase_acc2 = phase_acc2 + codeword2;
+		amp_times_sin = amp_test*sine[phase_acc0[15:5] + ph_test];
 
-        tx_out[13:0] = tx_out1[31:22] + sine[phase_acc1[15:5]] + sine[phase_acc2[15:5]];
+        tx_out[13:0] = amp_times_sin[17:8] + sine[phase_acc1[15:5]] + sine[phase_acc2[15:5]];
         tx_out[31:14] = 20'b000000000000000000;
     end
    assign get_tx = tx_out;

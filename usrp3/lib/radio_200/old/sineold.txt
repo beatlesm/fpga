@@ -1,113 +1,73 @@
-module input_signal2(radio_clk, codeword0, codeword1,codeword2,codeword3, codeword4, codeword5, codeword6, codeword7,codeword8, codeword9, codeword10, get_tx);
+`include "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/add_then_mac.v"
+module input_signal2(radio_clk, codeword0, codeword1,codeword2, rst, get_tx);
    input radio_clk;
    input [31:0] codeword0;
-   input [31:0] codeword1;
-   input [31:0] codeword2;
-	input [31:0] codeword3;
-	input [31:0] codeword4;
-	input [31:0] codeword5;
-	input [31:0] codeword6;
-	input [31:0] codeword7;
-	input [31:0] codeword8;
-	input [31:0] codeword9;
-	input [31:0] codeword10;
+   input [15:0] codeword1;
+   input [15:0] codeword2;
 
    output [31:0] get_tx;
 
    reg [15:0] phase_acc0;
    reg [15:0] phase_acc1;
    reg [15:0] phase_acc2;
-	reg [15:0] phase_acc3;
-	reg [15:0] phase_acc4;
-	reg [15:0] phase_acc5;
-	reg [15:0] phase_acc6;
-	reg [15:0] phase_acc7;
-	reg [15:0] phase_acc8;
-	reg [15:0] phase_acc9;
-	reg [15:0] phase_acc10;
 
    reg [31:0] tx_out;
 
-   reg [15:0] freq0, freq1, freq2, freq3, freq4, freq5, freq6, freq7, freq8, freq9, freq10;
-   reg [7:0] amp0, amp1, amp2, amp3, amp4, amp5, amp6, amp7, amp8, amp9, amp10;
-   reg [10:0] ph0, ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10;
-   reg [7:0] tmp;
+   reg [15:0] freq_test;
+   reg [7:0] amp_test;
+   reg [7:0] ph_test;
 
-	reg [22:0] amp_times_sin;
+/*
+setting_reg #(.my_addr(SR_USER_RB_ADDR), .awidth(8), .width(8)) user_rb_addr
+        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+         .out(rb_addr_user), .changed());
+*/
+
+/*   
+   always @(posedge radio_clk) begin
+        if (count == 0) begin
+            codeword = 920030940;
+        end
+        if (codeword_ch) begin
+            count = count + 1;
+            codeword = codeword_sr;
+        end
+    end*/
+   // Square Wave
+  /* 
+   always @(posedge radio_clk) begin
+      counter = counter + 1;
+      if (counter[1] == 1) begin
+      	tx_out[31:16] <= 16'b1010101010101010;
+      	tx_out[15:0] <= 16'b1010101010101010;
+	end 
+      else begin
+      	tx_out[31:16] <= 16'b0000000000000000;
+      	tx_out[15:0] <= 16'b0000000000000000;
+	end
+   end
+*/
+
 	
+	// Declaring DSP slice multiplier
+	wire [31:0] tx_out1;
+	wire load;
+	add_then_mac #(.DEVICE("SPARTAN6")) amp_sin_mult (.acc(tx_out1), .carryin(1'b0), .ce(1'b1), 
+		.clk(radio_clk), .b(amp_test), .load(1'b0), .c(1'b0), .a(sine[phase_acc0[15:5] + ph_test]), .d(1'b0), .rst(radio_rest));
+
+	// END DSP SLICE
     always @(posedge radio_clk) begin
+		freq_test = codeword0[15:0];
+		amp_test = codeword0[23:16];
+		ph_test = codeword0[31:24];
+		ph_test = ph_test << 3;
 
-		freq0 = codeword0[15:0];
-		amp0 = codeword0[23:16];
-		tmp = codeword0[31:24];
-		ph0 = tmp << 3; 
+        phase_acc0 = phase_acc0 + freq_test;
+		phase_acc1 = phase_acc1 + codeword1;
+		phase_acc2 = phase_acc2 + codeword2;
 
-		freq1 = codeword1[15:0];
-		amp1 = codeword1[23:16];
-		tmp = codeword1[31:24];
-		ph1 = tmp << 3; 
-
-		freq2 = codeword2[15:0];
-		amp2 = codeword2[23:16];
-		tmp = codeword2[31:24];
-		ph2 = tmp << 3; 
-
-		freq3 = codeword3[15:0];
-		amp3 = codeword3[23:16];
-		tmp=codeword3[31:24];
-		ph3 = tmp << 3;
-
-		freq4 = codeword4[15:0];
-		amp4 = codeword4[23:16];
-		tmp=codeword4[31:24];
-		ph4 = tmp << 3;
-
-		freq5 = codeword5[15:0];
-		amp5 = codeword5[23:16];
-		tmp=codeword5[31:24];
-		ph5 = tmp << 3;
-
-		freq6 = codeword6[15:0];
-		amp6 = codeword6[23:16];
-		tmp=codeword6[31:24];
-		ph6 = tmp << 3;
-
-		freq7 = codeword7[15:0];
-		amp7 = codeword7[23:16];
-		tmp=codeword7[31:24];
-		ph7 = tmp << 3;
-
-		freq8 = codeword8[15:0];
-		amp8 = codeword8[23:16];
-		tmp=codeword8[31:24];
-		ph8 = tmp << 3;
-
-		freq9 = codeword9[15:0];
-		amp9 = codeword9[23:16];
-		tmp=codeword9[31:24];
-		ph9 = tmp << 3;
-
-		freq10 = codeword10[15:0];
-		amp10 = codeword10[23:16];
-		tmp=codeword10[31:24];
-		ph10 = tmp << 3;
-
-      phase_acc0 = phase_acc0 + freq0;
-		phase_acc1 = phase_acc1 + freq1;
-		phase_acc2 = phase_acc2 + freq2;
-		phase_acc3 = phase_acc3 + freq3;
-		phase_acc4 = phase_acc4 + freq4;
-		phase_acc5 = phase_acc5 + freq5;
-		phase_acc6 = phase_acc6 + freq6;
-		phase_acc7 = phase_acc7 + freq7;
-		phase_acc8 = phase_acc8 + freq8;
-		phase_acc9 = phase_acc9 + freq9;
-		phase_acc10 = phase_acc10 + freq10;
-
-		amp_times_sin = amp0*sine[phase_acc0[15:5] + ph0] + amp1*sine[phase_acc1[15:5] + ph1] + amp2*sine[phase_acc2[15:5] + ph2] + amp3*sine[phase_acc3[15:5] + ph3] + amp4*sine[phase_acc4[15:5] + ph4] + amp5*sine[phase_acc5[15:5] + ph5] + amp6*sine[phase_acc6[15:5] + ph6] + amp7*sine[phase_acc7[15:5] + ph7] + amp8*sine[phase_acc8[15:5] + ph8] + amp9*sine[phase_acc9[15:5] + ph9] + amp10*sine[phase_acc10[15:5] + ph10];
-
-        tx_out[15:0] = amp_times_sin[22:7];
-        tx_out[31:16] = 16'b0000000000000000;
+        tx_out[13:0] = tx_out1[31:22] + sine[phase_acc1[15:5]] + sine[phase_acc2[15:5]];
+        tx_out[31:14] = 20'b000000000000000000;
     end
    assign get_tx = tx_out;
 

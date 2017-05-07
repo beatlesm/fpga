@@ -1,0 +1,8 @@
+reg [15:0] phase_acc3;
+reg [15:0] phase_acc4;
+reg [15:0] phase_acc5;
+reg [15:0] phase_acc6;
+reg [15:0] phase_acc7;
+reg [15:0] phase_acc8;
+reg [15:0] phase_acc9;
+reg [15:0] phase_acc10;

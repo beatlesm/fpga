@@ -1,112 +1,149 @@
-module input_signal2(radio_clk, codeword0, codeword1,codeword2,codeword3, codeword4, codeword5, codeword6, codeword7,codeword8, codeword9, codeword10, get_tx);
+module input_signal2(radio_clk, codeword0, codeword1,codeword2,codeword3, codeword4, codeword5, codeword6, codeword7,codeword8, codeword9, codeword10, codeword11, codeword12, codeword13, codeword14, codeword15, codeword16, codeword17, codeword18, codeword19, get_tx);
    input radio_clk;
-   input [31:0] codeword0;
-   input [31:0] codeword1;
-   input [31:0] codeword2;
-	input [31:0] codeword3;
-	input [31:0] codeword4;
-	input [31:0] codeword5;
-	input [31:0] codeword6;
-	input [31:0] codeword7;
-	input [31:0] codeword8;
-	input [31:0] codeword9;
-	input [31:0] codeword10;
+
+	input [31:0] codeword0, codeword1, codeword2, codeword3, codeword4,codeword5, codeword6,codeword7, codeword8, codeword9, codeword10, codeword11, codeword12, codeword13, codeword14, codeword15, codeword16, codeword17, codeword18, codeword19;
 
    output [31:0] get_tx;
 
-   reg [15:0] phase_acc0;
-   reg [15:0] phase_acc1;
-   reg [15:0] phase_acc2;
-	reg [15:0] phase_acc3;
-	reg [15:0] phase_acc4;
-	reg [15:0] phase_acc5;
-	reg [15:0] phase_acc6;
-	reg [15:0] phase_acc7;
-	reg [15:0] phase_acc8;
-	reg [15:0] phase_acc9;
-	reg [15:0] phase_acc10;
+	reg [15:0] phase_acc0, phase_acc1, phase_acc2, phase_acc3, phase_acc4, phase_acc5, phase_acc6, phase_acc7, phase_acc8, phase_acc9, phase_acc10, phase_acc11, phase_acc12, phase_acc13, phase_acc14, phase_acc15, phase_acc16, phase_acc17, phase_acc18, phase_acc19;
 
    reg [31:0] tx_out;
 
-   reg [15:0] freq0, freq1, freq2, freq3, freq4, freq5, freq6, freq7, freq8, freq9, freq10;
-   reg [7:0] amp0, amp1, amp2, amp3, amp4, amp5, amp6, amp7, amp8, amp9, amp10;
-   reg [10:0] ph0, ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10;
+   reg [15:0] freq0, freq1, freq2, freq3, freq4, freq5, freq6, freq7, freq8, freq9, freq10, freq11, freq12, freq13, freq14, freq15, freq16, freq17, freq18, freq19;
+	reg [7:0] amp0, amp1, amp2, amp3, amp4, amp5, amp6, amp7, amp8, amp9, amp10, amp11, amp12, amp13, amp14, amp15, amp16, amp17, amp18, amp19;
+   reg [10:0] ph0, ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10, ph11, ph12, ph13, ph14, ph15, ph16, ph17, ph18, ph19;
    reg [7:0] tmp;
 
-	reg [22:0] amp_times_sin;
+	reg [23:0] amp_times_sin;
 	
     always @(posedge radio_clk) begin
 
-		freq0 = codeword0[15:0];
-		amp0 = codeword0[23:16];
-		tmp = codeword0[31:24];
-		ph0 = tmp << 3; 
+			freq0 = codeword0[15:0];
+			amp0 = codeword0[23:16];
+			tmp=codeword0[31:24];
+			ph0 = tmp << 3;
 
-		freq1 = codeword1[15:0];
-		amp1 = codeword1[23:16];
-		tmp = codeword1[31:24];
-		ph1 = tmp << 3; 
+			freq1 = codeword1[15:0];
+			amp1 = codeword1[23:16];
+			tmp=codeword1[31:24];
+			ph1 = tmp << 3;
 
-		freq2 = codeword2[15:0];
-		amp2 = codeword2[23:16];
-		tmp = codeword2[31:24];
-		ph2 = tmp << 3; 
+			freq2 = codeword2[15:0];
+			amp2 = codeword2[23:16];
+			tmp=codeword2[31:24];
+			ph2 = tmp << 3;
 
-		freq3 = codeword3[15:0];
-		amp3 = codeword3[23:16];
-		tmp=codeword3[31:24];
-		ph3 = tmp << 3;
+			freq3 = codeword3[15:0];
+			amp3 = codeword3[23:16];
+			tmp=codeword3[31:24];
+			ph3 = tmp << 3;
 
-		freq4 = codeword4[15:0];
-		amp4 = codeword4[23:16];
-		tmp=codeword4[31:24];
-		ph4 = tmp << 3;
+			freq4 = codeword4[15:0];
+			amp4 = codeword4[23:16];
+			tmp=codeword4[31:24];
+			ph4 = tmp << 3;
 
-		freq5 = codeword5[15:0];
-		amp5 = codeword5[23:16];
-		tmp=codeword5[31:24];
-		ph5 = tmp << 3;
+			freq5 = codeword5[15:0];
+			amp5 = codeword5[23:16];
+			tmp=codeword5[31:24];
+			ph5 = tmp << 3;
 
-		freq6 = codeword6[15:0];
-		amp6 = codeword6[23:16];
-		tmp=codeword6[31:24];
-		ph6 = tmp << 3;
+			freq6 = codeword6[15:0];
+			amp6 = codeword6[23:16];
+			tmp=codeword6[31:24];
+			ph6 = tmp << 3;
 
-		freq7 = codeword7[15:0];
-		amp7 = codeword7[23:16];
-		tmp=codeword7[31:24];
-		ph7 = tmp << 3;
+			freq7 = codeword7[15:0];
+			amp7 = codeword7[23:16];
+			tmp=codeword7[31:24];
+			ph7 = tmp << 3;
 
-		freq8 = codeword8[15:0];
-		amp8 = codeword8[23:16];
-		tmp=codeword8[31:24];
-		ph8 = tmp << 3;
+			freq8 = codeword8[15:0];
+			amp8 = codeword8[23:16];
+			tmp=codeword8[31:24];
+			ph8 = tmp << 3;
 
-		freq9 = codeword9[15:0];
-		amp9 = codeword9[23:16];
-		tmp=codeword9[31:24];
-		ph9 = tmp << 3;
+			freq9 = codeword9[15:0];
+			amp9 = codeword9[23:16];
+			tmp=codeword9[31:24];
+			ph9 = tmp << 3;
 
-		freq10 = codeword10[15:0];
-		amp10 = codeword10[23:16];
-		tmp=codeword10[31:24];
-		ph10 = tmp << 3;
+			freq10 = codeword10[15:0];
+			amp10 = codeword10[23:16];
+			tmp=codeword10[31:24];
+			ph10 = tmp << 3;
 
-      phase_acc0 = phase_acc0 + freq0;
-		phase_acc1 = phase_acc1 + freq1;
-		phase_acc2 = phase_acc2 + freq2;
-		phase_acc3 = phase_acc3 + freq3;
-		phase_acc4 = phase_acc4 + freq4;
-		phase_acc5 = phase_acc5 + freq5;
-		phase_acc6 = phase_acc6 + freq6;
-		phase_acc7 = phase_acc7 + freq7;
-		phase_acc8 = phase_acc8 + freq8;
-		phase_acc9 = phase_acc9 + freq9;
-		phase_acc10 = phase_acc10 + freq10;
+			freq11 = codeword11[15:0];
+			amp11 = codeword11[23:16];
+			tmp=codeword11[31:24];
+			ph11 = tmp << 3;
 
-		amp_times_sin = amp0*sine[phase_acc0[15:5] + ph0] + amp1*sine[phase_acc1[15:5] + ph1] + amp2*sine[phase_acc2[15:5] + ph2] + amp3*sine[phase_acc3[15:5] + ph3] + amp4*sine[phase_acc4[15:5] + ph4] + amp5*sine[phase_acc5[15:5] + ph5] + amp6*sine[phase_acc6[15:5] + ph6] + amp7*sine[phase_acc7[15:5] + ph7] + amp8*sine[phase_acc8[15:5] + ph8] + amp9*sine[phase_acc9[15:5] + ph9] + amp10*sine[phase_acc10[15:5] + ph10];
+			freq12 = codeword12[15:0];
+			amp12 = codeword12[23:16];
+			tmp=codeword12[31:24];
+			ph12 = tmp << 3;
 
-        tx_out[15:0] = amp_times_sin[22:7];
+			freq13 = codeword13[15:0];
+			amp13 = codeword13[23:16];
+			tmp=codeword13[31:24];
+			ph13 = tmp << 3;
+
+			freq14 = codeword14[15:0];
+			amp14 = codeword14[23:16];
+			tmp=codeword14[31:24];
+			ph14 = tmp << 3;
+
+			freq15 = codeword15[15:0];
+			amp15 = codeword15[23:16];
+			tmp=codeword15[31:24];
+			ph15 = tmp << 3;
+
+			freq16 = codeword16[15:0];
+			amp16 = codeword16[23:16];
+			tmp=codeword16[31:24];
+			ph16 = tmp << 3;
+
+			freq17 = codeword17[15:0];
+			amp17 = codeword17[23:16];
+			tmp=codeword17[31:24];
+			ph17 = tmp << 3;
+
+			freq18 = codeword18[15:0];
+			amp18 = codeword18[23:16];
+			tmp=codeword18[31:24];
+			ph18 = tmp << 3;
+
+			freq19 = codeword19[15:0];
+			amp19 = codeword19[23:16];
+			tmp=codeword19[31:24];
+			ph19 = tmp << 3;
+
+			phase_acc0 = phase_acc0 + freq0;
+			phase_acc1 = phase_acc1 + freq1;
+			phase_acc2 = phase_acc2 + freq2;
+			phase_acc3 = phase_acc3 + freq3;
+			phase_acc4 = phase_acc4 + freq4;
+			phase_acc5 = phase_acc5 + freq5;
+			phase_acc6 = phase_acc6 + freq6;
+			phase_acc7 = phase_acc7 + freq7;
+			phase_acc8 = phase_acc8 + freq8;
+			phase_acc9 = phase_acc9 + freq9;
+			phase_acc10 = phase_acc10 + freq10;
+			phase_acc11 = phase_acc11 + freq11;
+			phase_acc12 = phase_acc12 + freq12;
+			phase_acc13 = phase_acc13 + freq13;
+			phase_acc14 = phase_acc14 + freq14;
+			phase_acc15 = phase_acc15 + freq15;
+			phase_acc16 = phase_acc16 + freq16;
+			phase_acc17 = phase_acc17 + freq17;
+			phase_acc18 = phase_acc18 + freq18;
+			phase_acc19 = phase_acc19 + freq19;
+
+
+		amp_times_sin = amp0*sine[phase_acc0[15:5] + ph0] + amp1*sine[phase_acc1[15:5] + ph1] + amp2*sine[phase_acc2[15:5] + ph2] + amp3*sine[phase_acc3[15:5] + ph3] + amp4*sine[phase_acc4[15:5] + ph4] + amp5*sine[phase_acc5[15:5] + ph5] + amp6*sine[phase_acc6[15:5] + ph6] + amp7*sine[phase_acc7[15:5] + ph7] + amp8*sine[phase_acc8[15:5] + ph8] + amp9*sine[phase_acc9[15:5] + ph9] + amp10*sine[phase_acc10[15:5] + ph10] + amp11*sine[phase_acc11[15:5] + ph11] + amp12*sine[phase_acc12[15:5] + ph12] + amp13*sine[phase_acc13[15:5] + ph13] + amp14*sine[phase_acc14[15:5] + ph14] + amp15*sine[phase_acc15[15:5] + ph15] + amp16*sine[phase_acc16[15:5] + ph16] + amp17*sine[phase_acc17[15:5] + ph17] + amp18*sine[phase_acc18[15:5] + ph18] + amp19*sine[phase_acc19[15:5] + ph19]; 
+
+
+        tx_out[15:0] = amp_times_sin[23:8];
         tx_out[31:16] = 16'b0000000000000000;
     end
    assign get_tx = tx_out;

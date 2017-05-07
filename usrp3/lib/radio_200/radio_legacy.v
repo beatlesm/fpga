@@ -150,8 +150,15 @@ module radio_legacy
    localparam SR_LLR_REG8    = 8'd172;//sr_llr_reg4
    localparam SR_LLR_REG9    = 8'd173;//sr_llr_reg4
 	localparam SR_LLR_REG10   = 8'd174;
-
-
+	localparam SR_LLR_REG11	  = 8'd175;
+	localparam SR_LLR_REG12	  = 8'd176;
+	localparam SR_LLR_REG13	  = 8'd177;
+	localparam SR_LLR_REG14	  = 8'd178;
+	localparam SR_LLR_REG15	  = 8'd179;
+	localparam SR_LLR_REG16	  = 8'd180;
+	localparam SR_LLR_REG17	  = 8'd181;
+	localparam SR_LLR_REG18	  = 8'd182;
+	localparam SR_LLR_REG19	  = 8'd183;
    
    
 
@@ -368,14 +375,13 @@ endgenerate
    wire [31:0] debug_tx_control;
 
    // Starting JTL code
+	// EXPAND
    wire [31:0] get_tx;
-   wire [31:0] llr_reg1_val, llr_reg2_val,llr_reg3_val,llr_reg4_val,llr_reg5_val,llr_reg6_val,llr_reg7_val,llr_reg8_val,llr_reg9_val;
-   wire [31:0] llr_reg0_val;
+   wire [31:0] llr_reg0_val, llr_reg1_val, llr_reg2_val,llr_reg3_val,llr_reg4_val,llr_reg5_val,llr_reg6_val,llr_reg7_val,llr_reg8_val,llr_reg9_val, llr_reg10_val, llr_reg11_val, llr_reg12_val, llr_reg13_val, llr_reg14_val, llr_reg15_val, llr_reg16_val, llr_reg17_val, llr_reg18_val, llr_reg19_val, llr_reg21_val, llr_reg22_val, llr_reg23_val, llr_reg24_val, llr_reg25_val, llr_reg26_val, llr_reg27_val, llr_reg28_val, llr_reg29_val;
+;
 
-//   input_signal inp_sig(.radio_clk(radio_clk), .codeword(llr_reg0_val), .get_tx(get_tx));
-// input_signal_adv allows for multiple codewords. need to find a smoother way of doing this/ 
-//  input_signal_adv inp_sig(.radio_clk(radio_clk), .codeword1(llr_reg0_val), .codeword2(llr_reg1_val), .codeword3(llr_reg2_val), .codeword4(llr_reg3_val),.codeword5(llr_reg4_val), .codeword6(llr_reg5_val), .codeword7(llr_reg6_val), .codeword8(llr_reg7_val), .codeword9(llr_reg8_val),.get_tx(get_tx));
-	input_signal2 inp_sig(.radio_clk(radio_clk), .codeword0(llr_reg0_val), .codeword1(llr_reg1_val), .codeword2(llr_reg2_val), .codeword3(llr_reg3_val), .codeword4(llr_reg4_val), .codeword5(llr_reg5_val), .codeword6(llr_reg6_val), .codeword7(llr_reg7_val), .codeword8(llr_reg8_val), .codeword9(llr_reg9_val), .codeword10(llr_reg10_val), .get_tx(get_tx));
+// EXPAND
+	input_signal2 inp_sig(.radio_clk(radio_clk), .codeword0(llr_reg0_val), .codeword1(llr_reg1_val), .codeword2(llr_reg2_val), .codeword3(llr_reg3_val), .codeword4(llr_reg4_val), .codeword5(llr_reg5_val), .codeword6(llr_reg6_val), .codeword7(llr_reg7_val), .codeword8(llr_reg8_val), .codeword9(llr_reg9_val), .codeword10(llr_reg10_val), .codeword11(llr_reg11_val), .codeword12(llr_reg12_val), .codeword13(llr_reg13_val), .codeword14(llr_reg14_val), .codeword15(llr_reg15_val), .codeword16(llr_reg16_val), .codeword17(llr_reg17_val), .codeword18(llr_reg18_val), .codeword19(llr_reg19_val), .get_tx(get_tx));
 
 //   input_signal2 inp_sig(.radio_clk(radio_clk), .data0(llr_reg0_val), .data1(llr_reg1_val), .data2(llr_reg2_val), .get_tx(get_tx));
 
@@ -488,6 +494,16 @@ endgenerate
 		setting_reg #(.my_addr(SR_LLR_REG10), .awidth(8), .width(32)) sr_llr_reg10
         (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
          .out(llr_reg10_val), .changed());
+			setting_reg #(.my_addr(SR_LLR_REG11), .awidth(8), .width(32)) sr_llr_reg11 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg11_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG12), .awidth(8), .width(32)) sr_llr_reg12 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg12_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG13), .awidth(8), .width(32)) sr_llr_reg13 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg13_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG14), .awidth(8), .width(32)) sr_llr_reg14 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg14_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG15), .awidth(8), .width(32)) sr_llr_reg15 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg15_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG16), .awidth(8), .width(32)) sr_llr_reg16 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg16_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG17), .awidth(8), .width(32)) sr_llr_reg17 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg17_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG18), .awidth(8), .width(32)) sr_llr_reg18 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg18_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG19), .awidth(8), .width(32)) sr_llr_reg19 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg19_val), .changed());
+
 
 
 	assign rst_wfrm =  cntrl_reg_val[0];//Resets RX

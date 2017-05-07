@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: b200.prj
@@ -482,7 +482,7 @@ Elaborating module <setting_reg(my_addr=32'b011001100,width=10,at_reset=0)>.
 Elaborating module <setting_reg(my_addr=32'b011001101,width=10)>.
 
 Elaborating module <input_signal2>.
-WARNING:HDLCompiler:872 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal2.v" Line 70: Using initial value of sine since it is never assigned
+WARNING:HDLCompiler:872 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal2.v" Line 52: Using initial value of sine since it is never assigned
 
 Elaborating module <new_tx_deframer>.
 
@@ -525,29 +525,36 @@ Elaborating module <setting_reg(my_addr=8'b10100011,awidth=8,width=32)>.
 
 Elaborating module <setting_reg(my_addr=8'b10100100,awidth=8,width=32)>.
 
-Elaborating module <setting_reg(my_addr=8'b10100101,awidth=8,width=16)>.
+Elaborating module <setting_reg(my_addr=8'b10100101,awidth=8,width=32)>.
 
-Elaborating module <setting_reg(my_addr=8'b10100110,awidth=8,width=16)>.
+Elaborating module <setting_reg(my_addr=8'b10100110,awidth=8,width=32)>.
 
 Elaborating module <setting_reg(my_addr=8'b10100111,awidth=8,width=16)>.
+WARNING:HDLCompiler:189 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 461: Size mismatch in connection of port <out>. Formal port size is 16-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 461: Assignment to llr_reg3_val ignored, since the identifier is never used
 
 Elaborating module <setting_reg(my_addr=8'b10101000,awidth=8,width=16)>.
+WARNING:HDLCompiler:189 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 465: Size mismatch in connection of port <out>. Formal port size is 16-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 465: Assignment to llr_reg4_val ignored, since the identifier is never used
 
 Elaborating module <setting_reg(my_addr=8'b10101001,awidth=8,width=16)>.
+WARNING:HDLCompiler:189 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 469: Size mismatch in connection of port <out>. Formal port size is 16-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 469: Assignment to llr_reg5_val ignored, since the identifier is never used
 
 Elaborating module <setting_reg(my_addr=8'b10101010,awidth=8,width=16)>.
+WARNING:HDLCompiler:189 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 473: Size mismatch in connection of port <out>. Formal port size is 16-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 473: Assignment to llr_reg6_val ignored, since the identifier is never used
 
 Elaborating module <setting_reg(my_addr=8'b10101011,awidth=8,width=16)>.
+WARNING:HDLCompiler:189 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 477: Size mismatch in connection of port <out>. Formal port size is 16-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 477: Assignment to llr_reg7_val ignored, since the identifier is never used
 
 Elaborating module <setting_reg(my_addr=8'b10101100,awidth=8,width=16)>.
+WARNING:HDLCompiler:189 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 481: Size mismatch in connection of port <out>. Formal port size is 16-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 481: Assignment to llr_reg8_val ignored, since the identifier is never used
 
 Elaborating module <setting_reg(my_addr=8'b10101101,awidth=8,width=16)>.
+WARNING:HDLCompiler:189 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 485: Size mismatch in connection of port <out>. Formal port size is 16-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 485: Assignment to llr_reg9_val ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 489: Assignment to rst_local ignored, since the identifier is never used
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/duc_chain.v" Line 227: Port reset is not connected to this instance
@@ -2221,27 +2228,30 @@ Unit <setting_reg_29> synthesized.
 
 Synthesizing Unit <input_signal2>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal2.v".
-WARNING:Xst:647 - Input <codeword0<31:29>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit register for signal <phase_acc0>.
     Found 16-bit register for signal <phase_acc1>.
     Found 16-bit register for signal <phase_acc2>.
-    Found 12-bit register for signal <tx_out>.
-    Found 16-bit adder for signal <phase_acc0[15]_codeword0[15]_add_1_OUT> created at line 57.
-    Found 16-bit adder for signal <phase_acc1[15]_codeword1[15]_add_2_OUT> created at line 58.
-    Found 16-bit adder for signal <phase_acc2[15]_codeword2[15]_add_3_OUT> created at line 59.
-    Found 11-bit adder for signal <phase_acc0[15]_GND_84_o_add_4_OUT> created at line 60.
-    Found 11-bit adder for signal <n0051[10:0]> created at line 62.
-    Found 12-bit adder for signal <n0054[11:0]> created at line 62.
-    Found 8x10-bit multiplier for signal <n0028> created at line 60.
+    Found 15-bit register for signal <tx_out>.
+    Found 16-bit adder for signal <phase_acc0[15]_codeword0[15]_add_1_OUT> created at line 38.
+    Found 16-bit adder for signal <phase_acc1[15]_codeword1[15]_add_2_OUT> created at line 39.
+    Found 16-bit adder for signal <phase_acc2[15]_codeword2[15]_add_3_OUT> created at line 40.
+    Found 11-bit adder for signal <phase_acc0[15]_codeword0[31]_add_4_OUT> created at line 42.
+    Found 11-bit adder for signal <phase_acc1[15]_codeword1[31]_add_7_OUT> created at line 42.
+    Found 19-bit adder for signal <n0064[18:0]> created at line 42.
+    Found 11-bit adder for signal <phase_acc2[15]_codeword2[31]_add_11_OUT> created at line 42.
+    Found 20-bit adder for signal <n0070> created at line 42.
+    Found 8x10-bit multiplier for signal <codeword0[23]_phase_acc0[15]_MuLt_6_OUT> created at line 42.
+    Found 8x10-bit multiplier for signal <codeword1[23]_phase_acc1[15]_MuLt_9_OUT> created at line 42.
+    Found 8x10-bit multiplier for signal <codeword2[23]_phase_acc2[15]_MuLt_13_OUT> created at line 42.
     Found 2048x10-bit Read Only RAM for signal <phase_acc0[15]_GND_84_o_wide_mux_5_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc1[15]_GND_84_o_wide_mux_7_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc2[15]_GND_84_o_wide_mux_9_OUT>
-    WARNING:Xst:2404 -  FFs/Latches <tx_out<31:12>> (without init value) have a constant value of 0 in block <input_signal2>.
+    Found 2048x10-bit Read Only RAM for signal <phase_acc1[15]_GND_84_o_wide_mux_8_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc2[15]_GND_84_o_wide_mux_12_OUT>
+    WARNING:Xst:2404 -  FFs/Latches <tx_out<31:15>> (without init value) have a constant value of 0 in block <input_signal2>.
     Summary:
 	inferred   3 RAM(s).
-	inferred   1 Multiplier(s).
-	inferred   6 Adder/Subtractor(s).
-	inferred  60 D-type flip-flop(s).
+	inferred   3 Multiplier(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred  63 D-type flip-flop(s).
 Unit <input_signal2> synthesized.
 
 Synthesizing Unit <new_tx_deframer>.
@@ -2436,26 +2446,24 @@ Synthesizing Unit <setting_reg_38>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/control/setting_reg.v".
         my_addr = 8'b10100101
         awidth = 8
-        width = 16
+        width = 32
         at_reset = 0
-WARNING:Xst:647 - Input <in<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <changed>.
-    Found 16-bit register for signal <out>.
+    Found 32-bit register for signal <out>.
     Summary:
-	inferred  17 D-type flip-flop(s).
+	inferred  33 D-type flip-flop(s).
 Unit <setting_reg_38> synthesized.
 
 Synthesizing Unit <setting_reg_39>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/control/setting_reg.v".
         my_addr = 8'b10100110
         awidth = 8
-        width = 16
+        width = 32
         at_reset = 0
-WARNING:Xst:647 - Input <in<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <changed>.
-    Found 16-bit register for signal <out>.
+    Found 32-bit register for signal <out>.
     Summary:
-	inferred  17 D-type flip-flop(s).
+	inferred  33 D-type flip-flop(s).
 Unit <setting_reg_39> synthesized.
 
 Synthesizing Unit <duc_chain>.
@@ -4935,14 +4943,14 @@ WARNING:Xst:653 - Signal <gate_terror> is used but never assigned. This sourcele
     -----------------------------------------------------------------------
     Found 16-bit subtractor for signal <lines32[15]_GND_270_o_sub_28_OUT> created at line 85.
     Found 16-bit adder for signal <hdr_bytes> created at line 43.
-    Found 13-bit adder for signal <_n0209> created at line 71.
-    Found 13-bit adder for signal <_n0244> created at line 72.
+    Found 13-bit adder for signal <_n0256> created at line 71.
+    Found 13-bit adder for signal <_n0217> created at line 72.
     Found 12-bit adder for signal <seq_id_actual[11]_GND_270_o_add_20_OUT> created at line 74.
     Found 13-bit adder for signal <_n0283> created at line 76.
     Found 16-bit comparator greater for signal <GND_270_o_hdr_lines32[15]_LessThan_5_o> created at line 48
     Found 12-bit comparator not equal for signal <n0022> created at line 73
-    Found 13-bit comparator not equal for signal <n0015> created at line 0
     Found 13-bit comparator not equal for signal <n0019> created at line 0
+    Found 13-bit comparator not equal for signal <n0015> created at line 0
     Found 13-bit comparator not equal for signal <n0011> created at line 0
     Summary:
 	inferred   6 Adder/Subtractor(s).
@@ -5126,15 +5134,15 @@ WARNING:Xst:653 - Signal <gate_terror> is used but never assigned. This sourcele
     -----------------------------------------------------------------------
     Found 16-bit subtractor for signal <lines32[15]_GND_281_o_sub_28_OUT> created at line 85.
     Found 16-bit adder for signal <hdr_bytes> created at line 43.
-    Found 13-bit adder for signal <_n0213> created at line 71.
-    Found 13-bit adder for signal <_n0244> created at line 72.
+    Found 13-bit adder for signal <_n0244> created at line 71.
+    Found 13-bit adder for signal <_n0271> created at line 72.
     Found 12-bit adder for signal <seq_id_actual[11]_GND_281_o_add_20_OUT> created at line 74.
-    Found 13-bit adder for signal <_n0271> created at line 76.
+    Found 13-bit adder for signal <_n0209> created at line 76.
     Found 16-bit comparator greater for signal <GND_281_o_hdr_lines32[15]_LessThan_5_o> created at line 48
     Found 12-bit comparator not equal for signal <n0022> created at line 73
+    Found 13-bit comparator not equal for signal <n0011> created at line 0
     Found 13-bit comparator not equal for signal <n0015> created at line 0
     Found 13-bit comparator not equal for signal <n0019> created at line 0
-    Found 13-bit comparator not equal for signal <n0011> created at line 0
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred  30 D-type flip-flop(s).
@@ -5193,12 +5201,12 @@ Macro Statistics
  256x33-bit dual-port RAM                              : 1
  256x8-bit dual-port RAM                               : 1
  4096x65-bit dual-port RAM                             : 4
-# Multipliers                                          : 1
- 10x8-bit multiplier                                   : 1
-# Adders/Subtractors                                   : 397
- 11-bit adder                                          : 4
+# Multipliers                                          : 3
+ 10x8-bit multiplier                                   : 3
+# Adders/Subtractors                                   : 399
+ 11-bit adder                                          : 5
  11-bit subtractor                                     : 1
- 12-bit adder                                          : 15
+ 12-bit adder                                          : 14
  12-bit subtractor                                     : 4
  13-bit adder                                          : 6
  14-bit adder                                          : 4
@@ -5208,8 +5216,10 @@ Macro Statistics
  16-bit subtractor                                     : 2
  17-bit adder                                          : 1
  18-bit subtractor                                     : 6
+ 19-bit adder                                          : 1
  2-bit adder                                           : 2
  2-bit subtractor                                      : 2
+ 20-bit adder                                          : 1
  23-bit addsub                                         : 40
  26-bit addsub                                         : 40
  26-bit subtractor                                     : 2
@@ -5238,10 +5248,11 @@ Macro Statistics
  1-bit register                                        : 340
  10-bit register                                       : 13
  11-bit register                                       : 2
- 12-bit register                                       : 37
+ 12-bit register                                       : 36
  14-bit register                                       : 4
+ 15-bit register                                       : 1
  156-bit register                                      : 6
- 16-bit register                                       : 42
+ 16-bit register                                       : 40
  176-bit register                                      : 1
  18-bit register                                       : 114
  19-bit register                                       : 2
@@ -5255,7 +5266,7 @@ Macro Statistics
  28-bit register                                       : 1
  3-bit register                                        : 6
  31-bit register                                       : 6
- 32-bit register                                       : 42
+ 32-bit register                                       : 44
  33-bit register                                       : 29
  4-bit register                                        : 5
  48-bit register                                       : 12
@@ -5684,9 +5695,6 @@ WARNING:Xst:2677 - Node <out_27> of sequential type is unconnected in block <sr_
 WARNING:Xst:2677 - Node <out_28> of sequential type is unconnected in block <sr_packets>.
 WARNING:Xst:2677 - Node <out_29> of sequential type is unconnected in block <sr_packets>.
 WARNING:Xst:2677 - Node <out_30> of sequential type is unconnected in block <sr_packets>.
-WARNING:Xst:2677 - Node <out_29> of sequential type is unconnected in block <sr_llr_reg0>.
-WARNING:Xst:2677 - Node <out_30> of sequential type is unconnected in block <sr_llr_reg0>.
-WARNING:Xst:2677 - Node <out_31> of sequential type is unconnected in block <sr_llr_reg0>.
 WARNING:Xst:2677 - Node <result_0> of sequential type is unconnected in block <new_hb.hb1_i0>.
 WARNING:Xst:2677 - Node <result_1> of sequential type is unconnected in block <new_hb.hb1_i0>.
 WARNING:Xst:2677 - Node <result_2> of sequential type is unconnected in block <new_hb.hb1_i0>.
@@ -6133,31 +6141,11 @@ The following registers are absorbed into counter <lines32>: 1 register on signa
 Unit <gpif2_error_checker_2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <input_signal2>.
+The following registers are absorbed into accumulator <phase_acc0>: 1 register on signal <phase_acc0>.
 The following registers are absorbed into accumulator <phase_acc1>: 1 register on signal <phase_acc1>.
 The following registers are absorbed into accumulator <phase_acc2>: 1 register on signal <phase_acc2>.
-The following registers are absorbed into accumulator <phase_acc0>: 1 register on signal <phase_acc0>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc1[15]_GND_84_o_wide_mux_7_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 2048-word x 10-bit                  |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc1[15]_codeword1[15]_add_2_OUT> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc2[15]_GND_84_o_wide_mux_9_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 2048-word x 10-bit                  |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc2[15]_codeword2[15]_add_3_OUT> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
+	Multiplier <Mmult_codeword2[23]_phase_acc2[15]_MuLt_13_OUT> in block <input_signal2> and adder/subtractor <Madd_n0070> in block <input_signal2> are combined into a MAC<Maddsub_codeword2[23]_phase_acc2[15]_MuLt_13_OUT>.
+	Multiplier <Mmult_codeword0[23]_phase_acc0[15]_MuLt_6_OUT> in block <input_signal2> and adder/subtractor <Madd_n0064[18:0]> in block <input_signal2> are combined into a MAC<Maddsub_codeword0[23]_phase_acc0[15]_MuLt_6_OUT>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -6165,7 +6153,29 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc0[15]_GND_84_o_wide_mux_5_O
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc0[15]_GND_84_o_add_4_OUT> |          |
+    |     addrA          | connected to signal <phase_acc0[15]_codeword0[31]_add_4_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc1[15]_GND_84_o_wide_mux_8_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 10-bit                  |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <phase_acc1[15]_codeword1[31]_add_7_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc2[15]_GND_84_o_wide_mux_12_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 10-bit                  |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <phase_acc2[15]_codeword2[31]_add_11_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
@@ -6255,12 +6265,15 @@ Macro Statistics
  256x33-bit dual-port block RAM                        : 1
  256x8-bit dual-port block RAM                         : 1
  4096x65-bit dual-port block RAM                       : 4
+# MACs                                                 : 2
+ 10x8-to-19-bit MAC                                    : 1
+ 10x8-to-20-bit MAC                                    : 1
 # Multipliers                                          : 1
  10x8-bit multiplier                                   : 1
 # Adders/Subtractors                                   : 271
- 11-bit adder                                          : 2
+ 11-bit adder                                          : 3
  11-bit subtractor                                     : 1
- 12-bit adder                                          : 4
+ 12-bit adder                                          : 3
  12-bit subtractor                                     : 4
  13-bit adder                                          : 6
  14-bit subtractor                                     : 2
@@ -6310,8 +6323,8 @@ Macro Statistics
 # Accumulators                                         : 5
  16-bit up accumulator                                 : 3
  32-bit up loadable accumulator                        : 2
-# Registers                                            : 13854
- Flip-Flops                                            : 13854
+# Registers                                            : 13889
+ Flip-Flops                                            : 13889
 # Comparators                                          : 58
  11-bit comparator equal                               : 2
  12-bit comparator equal                               : 9
@@ -7811,9 +7824,6 @@ WARNING:Xst:2677 - Node <tx_responder/ack_queue/space_2> of sequential type is u
 WARNING:Xst:2677 - Node <tx_responder/ack_queue/space_1> of sequential type is unconnected in block <radio_0>.
 WARNING:Xst:2677 - Node <tx_responder/ack_queue/space_0> of sequential type is unconnected in block <radio_0>.
 WARNING:Xst:2677 - Node <sr_llr_reg0/changed> of sequential type is unconnected in block <radio_0>.
-WARNING:Xst:2677 - Node <sr_llr_reg0/out_31> of sequential type is unconnected in block <radio_0>.
-WARNING:Xst:2677 - Node <sr_llr_reg0/out_30> of sequential type is unconnected in block <radio_0>.
-WARNING:Xst:2677 - Node <sr_llr_reg0/out_29> of sequential type is unconnected in block <radio_0>.
 WARNING:Xst:2677 - Node <sr_llr_reg1/changed> of sequential type is unconnected in block <radio_0>.
 WARNING:Xst:2677 - Node <sr_llr_reg2/changed> of sequential type is unconnected in block <radio_0>.
 WARNING:Xst:2677 - Node <duc_chain/sr_0/changed> of sequential type is unconnected in block <radio_0>.
@@ -9465,6 +9475,7 @@ Forward register balancing over carry chain slave_fifo32/gpif2_to_fifo64_tx/min_
 Forward register balancing over carry chain slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/main_fifo/fifo_bram/Msub_dont_write_past_me_cy<1>
 In hierarchy level b200_core.
 Forward register balancing over carry chain uart/Mcount_seqnum_cy<0>
+Forward register balancing over carry chain uart/simple_uart_rx/Madd_baud_ctr[15]_GND_28_o_add_11_OUT_cy<0>
 Forward register balancing over carry chain misc_spi/Madd_n0140[16:0]_cy<0>
 In hierarchy level b200_core/radio_0.
 Forward register balancing over carry chain tx_fifo/fifo_1clk/fifo_bram/Mcount_wr_addr_cy<0>
@@ -15999,6 +16010,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
@@ -16009,16 +16022,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -16107,6 +16110,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -16117,16 +16122,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
@@ -17426,6 +17421,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
@@ -17436,16 +17433,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -17534,6 +17521,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -17544,16 +17533,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
@@ -17757,6 +17736,21 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 
 Pipelining and Register Balancing Report ...
 
+Processing Unit <b200> :
+	Register(s) slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/pre_fifo/empty_BRB1.
+	Register(s) slave_fifo32/fifo64_to_gpif2_resp/outgress_timing_fifo/fifo_short/empty has(ve) been backward balanced into : slave_fifo32/fifo64_to_gpif2_resp/outgress_timing_fifo/fifo_short/empty_BRB0 slave_fifo32/fifo64_to_gpif2_resp/outgress_timing_fifo/fifo_short/empty_BRB1.
+	Register(s) slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/pre_fifo/empty_BRB1.
+	Register(s) slave_fifo32/fifo64_to_gpif2_rx/outgress_timing_fifo/fifo_short/empty has(ve) been backward balanced into : slave_fifo32/fifo64_to_gpif2_rx/outgress_timing_fifo/fifo_short/empty_BRB0 slave_fifo32/fifo64_to_gpif2_rx/outgress_timing_fifo/fifo_short/empty_BRB1.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB5.
+	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5_BRB3.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB3.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1 .
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2.
+	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full_BRB3.
+	Register(s) slave_fifo32/next_addr_0 has(ve) been backward balanced into : slave_fifo32/next_addr_0_BRB0 .
+	Register(s) slave_fifo32/next_addr_1 has(ve) been backward balanced into : slave_fifo32/next_addr_1_BRB0.
+Unit <b200> processed.
+
 Processing Unit <b200_core/radio_0> :
 	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_0 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_0_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB5.
 	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_1 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_1_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB5.
@@ -17768,7 +17762,6 @@ Processing Unit <b200_core/radio_0> :
 	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_7 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_7_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB5.
 	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_8 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_8_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB5.
 	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_9 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_9_BRB0 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB2 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB5.
-	Register(s) buffer_whole_pkt/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : buffer_whole_pkt/axi_fifo/post_fifo/a_4_BRB0 buffer_whole_pkt/axi_fifo/post_fifo/a_4_BRB1.
 	Register(s) fe_gpio_atr/ogpio_0 has(ve) been backward balanced into : fe_gpio_atr/ogpio_0_BRB1 fe_gpio_atr/ogpio_0_BRB3 fe_gpio_atr/ogpio_0_BRB4 fe_gpio_atr/ogpio_0_BRB5.
 	Register(s) fe_gpio_atr/ogpio_1 has(ve) been backward balanced into : fe_gpio_atr/ogpio_1_BRB1 fe_gpio_atr/ogpio_1_BRB3 fe_gpio_atr/ogpio_1_BRB4 fe_gpio_atr/ogpio_1_BRB5.
 	Register(s) fe_gpio_atr/ogpio_2 has(ve) been backward balanced into : fe_gpio_atr/ogpio_2_BRB1 fe_gpio_atr/ogpio_2_BRB3 fe_gpio_atr/ogpio_2_BRB4 fe_gpio_atr/ogpio_2_BRB5.
@@ -17778,36 +17771,6 @@ Processing Unit <b200_core/radio_0> :
 	Register(s) fe_gpio_atr/ogpio_6 has(ve) been backward balanced into : fe_gpio_atr/ogpio_6_BRB1 fe_gpio_atr/ogpio_6_BRB3 fe_gpio_atr/ogpio_6_BRB4 fe_gpio_atr/ogpio_6_BRB5.
 	Register(s) fe_gpio_atr/ogpio_7 has(ve) been backward balanced into : fe_gpio_atr/ogpio_7_BRB1 fe_gpio_atr/ogpio_7_BRB3 fe_gpio_atr/ogpio_7_BRB4 fe_gpio_atr/ogpio_7_BRB5.
 Unit <b200_core/radio_0> processed.
-
-Processing Unit <b200> :
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB4.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB2.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB0 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB1 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB2 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB3 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB4 slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/a_4_BRB4.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0_BRB2.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB4 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB4 .
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4 has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4_BRB5.
-	Register(s) slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty has(ve) been backward balanced into : slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB3 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB4 slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB5.
-	Register(s) slave_fifo32/next_addr_0 has(ve) been backward balanced into : slave_fifo32/next_addr_0_BRB0 .
-	Register(s) slave_fifo32/next_addr_1 has(ve) been backward balanced into : slave_fifo32/next_addr_1_BRB0.
-Unit <b200> processed.
-
-Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> :
-	Register(s) blk000000bf has(ve) been backward balanced into : blk000000bf_BRB0 blk000000bf_BRB1 blk000000bf_BRB2 blk000000bf_BRB3.
-	Register(s) blk000000c1 has(ve) been backward balanced into : blk000000c1_BRB0 blk000000c1_BRB1 blk000000c1_BRB2.
-Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> processed.
-
-Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003> :
-	Register(s) blk000000bc has(ve) been backward balanced into : blk000000bc_BRB0 blk000000bc_BRB1 blk000000bc_BRB2 blk000000bc_BRB3.
-	Register(s) blk000000be has(ve) been backward balanced into : blk000000be_BRB0 blk000000be_BRB1 blk000000be_BRB2.
-Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003> processed.
 
 Processing Unit <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk> :
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB1.
@@ -17826,8 +17789,6 @@ Processing Unit <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB1.
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5.
 Unit <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk> processed.
 
 Processing Unit <slave_fifo32/fifo64_to_gpif2_resp/cross_clock_fifo/fifo_short_2clk> :
@@ -17866,19 +17827,26 @@ Processing Unit <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2cl
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1_BRB1.
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3.
-	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5.
 Unit <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk> processed.
 
 Processing Unit <b200_core> :
 	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_1 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_0 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi1_FRB.
+	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_11 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_10 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi51_FRB.
+	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_13 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_12 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi61_FRB.
+	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_15 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_14 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi71_FRB.
+	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_17 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_16 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi81_FRB.
+	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_19 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_18 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi91_FRB.
+	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_21 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_20 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi101_FRB.
+	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_23 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_22 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi111_FRB.
+	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_25 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_24 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi121_FRB.
+	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_27 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_26 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi131_FRB.
+	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_29 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_28 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi141_FRB.
 	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_3 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_2 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi11_FRB.
 	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_5 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_4 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi21_FRB.
 	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_7 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_6 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi31_FRB.
 	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_9 radio_ctrl_proc_timing_fifo/fifo_short/o_tdata_8 has(ve) been forward balanced into : radio_ctrl_proc/time_compare/Mcompar_late_lutdi41_FRB.
-	Register(s) uart/context_packet_gen/cp_state_FSM_FFd1 uart/context_packet_gen/cp_state_FSM_FFd2 has(ve) been forward balanced into : uart/context_packet_gen/o_tvalid1_FRB.
-	Register(s) demux_for_ctrl/axi_fifo_short/a_4 has(ve) been backward balanced into : demux_for_ctrl/axi_fifo_short/a_4_BRB0 demux_for_ctrl/axi_fifo_short/a_4_BRB1 demux_for_ctrl/axi_fifo_short/a_4_BRB2 demux_for_ctrl/axi_fifo_short/a_4_BRB3 demux_for_ctrl/axi_fifo_short/a_4_BRB4 demux_for_ctrl/axi_fifo_short/a_4_BRB5.
-	Register(s) demux_for_tx/axi_fifo_short/a_4 has(ve) been backward balanced into : demux_for_tx/axi_fifo_short/a_4_BRB0 demux_for_tx/axi_fifo_short/a_4_BRB1.
+	Register(s) demux_for_ctrl/axi_fifo_short/a_4 has(ve) been backward balanced into : demux_for_ctrl/axi_fifo_short/a_4_BRB0 demux_for_ctrl/axi_fifo_short/a_4_BRB1.
+	Register(s) demux_for_ctrl/axi_fifo_short/empty has(ve) been backward balanced into : demux_for_ctrl/axi_fifo_short/empty_BRB0 demux_for_ctrl/axi_fifo_short/empty_BRB1.
 	Register(s) misc_spi/dataout_reg_0 has(ve) been backward balanced into : misc_spi/dataout_reg_0_BRB1.
 	Register(s) misc_spi/dataout_reg_1 has(ve) been backward balanced into : misc_spi/dataout_reg_1_BRB1 misc_spi/dataout_reg_1_BRB2.
 	Register(s) misc_spi/dataout_reg_10 has(ve) been backward balanced into : misc_spi/dataout_reg_10_BRB1 misc_spi/dataout_reg_10_BRB2.
@@ -17911,8 +17879,11 @@ Processing Unit <b200_core> :
 	Register(s) misc_spi/dataout_reg_7 has(ve) been backward balanced into : misc_spi/dataout_reg_7_BRB1 misc_spi/dataout_reg_7_BRB2.
 	Register(s) misc_spi/dataout_reg_8 has(ve) been backward balanced into : misc_spi/dataout_reg_8_BRB1 misc_spi/dataout_reg_8_BRB2.
 	Register(s) misc_spi/dataout_reg_9 has(ve) been backward balanced into : misc_spi/dataout_reg_9_BRB1 misc_spi/dataout_reg_9_BRB2.
-	Register(s) radio_ctrl_proc/rc_state_FSM_FFd3 has(ve) been backward balanced into : radio_ctrl_proc/rc_state_FSM_FFd3_BRB0 radio_ctrl_proc/rc_state_FSM_FFd3_BRB1 radio_ctrl_proc/rc_state_FSM_FFd3_BRB2 radio_ctrl_proc/rc_state_FSM_FFd3_BRB3 radio_ctrl_proc/rc_state_FSM_FFd3_BRB4 radio_ctrl_proc/rc_state_FSM_FFd3_BRB5.
-	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/a_4 has(ve) been backward balanced into : radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB1 radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB2 radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB3 radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB4 radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB5 radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB6 radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB7.
+	Register(s) radio_ctrl_proc_timing_fifo/fifo_short/a_4 has(ve) been backward balanced into : radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB0 radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB1.
+	Register(s) uart/simple_uart_rx/fifo/fifo_bram/full_reg has(ve) been backward balanced into : uart/simple_uart_rx/fifo/fifo_bram/full_reg_BRB0 uart/simple_uart_rx/fifo/fifo_bram/full_reg_BRB1.
+	Register(s) uart/simple_uart_tx/fifo/fifo_bram/empty_reg has(ve) been backward balanced into : uart/simple_uart_tx/fifo/fifo_bram/empty_reg_BRB0 uart/simple_uart_tx/fifo/fifo_bram/empty_reg_BRB1 uart/simple_uart_tx/fifo/fifo_bram/empty_reg_BRB2.
+	Register(s) uart/simple_uart_tx/fifo/fifo_bram/full_reg has(ve) been backward balanced into : uart/simple_uart_tx/fifo/fifo_bram/full_reg_BRB0 uart/simple_uart_tx/fifo/fifo_bram/full_reg_BRB1 uart/simple_uart_tx/fifo/fifo_bram/full_reg_BRB2.
+	Register(s) uart/simple_uart_tx/fifo/fifo_bram/read_state_FSM_FFd2 has(ve) been backward balanced into : uart/simple_uart_tx/fifo/fifo_bram/read_state_FSM_FFd2_BRB0 uart/simple_uart_tx/fifo/fifo_bram/read_state_FSM_FFd2_BRB1 uart/simple_uart_tx/fifo/fifo_bram/read_state_FSM_FFd2_BRB2.
 Unit <b200_core> processed.
 
 Processing Unit <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk> :
@@ -17933,6 +17904,16 @@ Processing Unit <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2cl
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
 Unit <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk> processed.
+
+Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> :
+	Register(s) blk000000bf has(ve) been backward balanced into : blk000000bf_BRB0 blk000000bf_BRB1 blk000000bf_BRB2 blk000000bf_BRB3.
+	Register(s) blk000000c1 has(ve) been backward balanced into : blk000000c1_BRB0 blk000000c1_BRB1 blk000000c1_BRB2.
+Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> processed.
+
+Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003> :
+	Register(s) blk000000bc has(ve) been backward balanced into : blk000000bc_BRB0 blk000000bc_BRB1 blk000000bc_BRB2 blk000000bc_BRB3.
+	Register(s) blk000000be has(ve) been backward balanced into : blk000000be_BRB0 blk000000be_BRB1 blk000000be_BRB2.
+Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003> processed.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> of sequential type is unconnected in block <vita_time_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <vita_time_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <vita_time_fifo/fifo_short_2clk>.
@@ -19032,6 +19013,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
@@ -19042,16 +19025,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -19140,6 +19113,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -19150,16 +19125,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
@@ -19369,8 +19334,6 @@ Replicating register slave_fifo32/pktend to handle IOB=TRUE attribute
 Replicating register slave_fifo32/fifoadr_1 to handle IOB=TRUE attribute
 Replicating register slave_fifo32/fifoadr_0 to handle IOB=TRUE attribute
 
-FlipFlop slave_fifo32/fifoadr_0 has been replicated 1 time(s)
-FlipFlop slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/axi_fifo/pre_fifo/full has been replicated 1 time(s)
 FlipFlop slave_fifo32/sloe has been replicated 1 time(s)
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> of sequential type is unconnected in block <vita_time_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <vita_time_fifo/fifo_short_2clk>.
@@ -20471,6 +20434,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
@@ -20481,16 +20446,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -20579,6 +20534,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -20589,16 +20546,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
@@ -21898,6 +21845,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
@@ -21908,16 +21857,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -22006,6 +21945,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -22016,16 +21957,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
@@ -23325,6 +23256,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
@@ -23335,16 +23268,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -23433,6 +23356,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -23443,16 +23368,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
@@ -23675,8 +23590,8 @@ Unit <radio_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 7673
- Flip-Flops                                            : 7673
+# Registers                                            : 7666
+ Flip-Flops                                            : 7666
 # Shift Registers                                      : 6
  2-bit shift register                                  : 6
 
@@ -24780,6 +24695,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
@@ -24790,16 +24707,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -24888,6 +24795,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -24898,16 +24807,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
@@ -26207,6 +26106,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
@@ -26217,16 +26118,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_ctrl/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -26315,6 +26206,8 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
+WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/user_valid> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwdc1.wdcext/wr_data_count_i_4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
@@ -26325,16 +26218,6 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_0_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB0> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB1> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB2> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB3> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB4> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
-WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.grdc2.rdc/rd_dc_i_1_BRB5> of sequential type is unconnected in block <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_70> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
 WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_69> of sequential type is unconnected in block <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk>.
@@ -26555,36 +26438,36 @@ Top Level Output File Name         : b200.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 16414
+# BELS                             : 16322
 #      GND                         : 100
-#      INV                         : 217
-#      LUT1                        : 341
-#      LUT2                        : 2232
-#      LUT3                        : 2083
-#      LUT4                        : 1141
-#      LUT5                        : 1369
-#      LUT6                        : 2117
+#      INV                         : 218
+#      LUT1                        : 337
+#      LUT2                        : 2254
+#      LUT3                        : 2052
+#      LUT4                        : 1113
+#      LUT5                        : 1393
+#      LUT6                        : 2045
 #      MULT_AND                    : 15
 #      MUXCY                       : 3393
 #      MUXCY_D                     : 82
 #      MUXCY_L                     : 30
-#      MUXF7                       : 128
+#      MUXF7                       : 120
 #      MUXF8                       : 24
 #      VCC                         : 6
-#      XORCY                       : 3136
-# FlipFlops/Latches                : 12550
-#      FD                          : 522
+#      XORCY                       : 3140
+# FlipFlops/Latches                : 12527
+#      FD                          : 470
 #      FD_1                        : 1
 #      FDC                         : 592
 #      FDCE                        : 1376
-#      FDE                         : 4267
+#      FDE                         : 4256
 #      FDE_1                       : 48
 #      FDP                         : 163
 #      FDPE                        : 18
-#      FDR                         : 1931
-#      FDRE                        : 3491
-#      FDS                         : 53
-#      FDSE                        : 59
+#      FDR                         : 1899
+#      FDRE                        : 3565
+#      FDS                         : 50
+#      FDSE                        : 60
 #      IDDR2                       : 13
 #      ODDR2                       : 16
 # RAMS                             : 531
@@ -26608,8 +26491,8 @@ Primitive and Black Box Usage:
 #      OBUFT                       : 1
 # DCMs                             : 1
 #      DCM_SP                      : 1
-# DSPs                             : 49
-#      DSP48A1                     : 49
+# DSPs                             : 51
+#      DSP48A1                     : 51
 
 Device utilization summary:
 ---------------------------
@@ -26618,19 +26501,19 @@ Selected Device : 6slx75fgg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           12419  out of  93296    13%  
- Number of Slice LUTs:                13461  out of  46648    28%  
-    Number used as Logic:              9500  out of  46648    20%  
+ Number of Slice Registers:           12396  out of  93296    13%  
+ Number of Slice LUTs:                13373  out of  46648    28%  
+    Number used as Logic:              9412  out of  46648    20%  
     Number used as Memory:             3961  out of  11072    35%  
        Number used as RAM:              972
        Number used as SRL:             2989
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  18875
-   Number with an unused Flip Flop:    6456  out of  18875    34%  
-   Number with an unused LUT:          5414  out of  18875    28%  
-   Number of fully used LUT-FF pairs:  7005  out of  18875    37%  
-   Number of unique control sets:       453
+ Number of LUT Flip Flop pairs used:  18872
+   Number with an unused Flip Flop:    6476  out of  18872    34%  
+   Number with an unused LUT:          5499  out of  18872    29%  
+   Number of fully used LUT-FF pairs:  6897  out of  18872    36%  
+   Number of unique control sets:       452
 
 IO Utilization: 
  Number of IOs:                         172
@@ -26641,7 +26524,7 @@ Specific Feature Utilization:
  Number of Block RAM/FIFO:              138  out of    172    80%  
     Number using Block RAM only:        138
  Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
- Number of DSP48A1s:                     49  out of    132    37%  
+ Number of DSP48A1s:                     51  out of    132    38%  
 
 ---------------------------
 Partition Resource Summary:
@@ -26664,8 +26547,8 @@ Clock Information:
 -----------------------------------+---------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                 | Load  |
 -----------------------------------+---------------------------------------+-------+
-codec_main_clk_p                   | DCM_SP:CLKFX                          | 5578  |
-codec_data_clk_p                   | IBUFG+BUFIO2+BUFGMUX                  | 10543 |
+codec_main_clk_p                   | DCM_SP:CLKFX                          | 5548  |
+codec_data_clk_p                   | IBUFG+BUFIO2+BUFGMUX                  | 10552 |
 base_signal/sig_out                | NONE(S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN)| 2     |
 -----------------------------------+---------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -26678,7 +26561,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 17.711ns (Maximum Frequency: 56.462MHz)
+   Minimum period: 19.203ns (Maximum Frequency: 52.075MHz)
    Minimum input arrival time before clock: 3.501ns
    Maximum output required time after clock: 4.555ns
    Maximum combinational path delay: 5.194ns
@@ -26689,80 +26572,69 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'codec_main_clk_p'
-  Clock period: 17.711ns (frequency: 56.462MHz)
-  Total number of paths / destination ports: 168134 / 21050
+  Clock period: 19.203ns (frequency: 52.075MHz)
+  Total number of paths / destination ports: 175396 / 21076
 -------------------------------------------------------------------------
-Delay:               7.084ns (Levels of Logic = 5)
+Delay:               7.681ns (Levels of Logic = 5)
   Source:            slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/num_packets_2 (FF)
-  Destination:       b200_core/extra_tx_buff/fifo_bram/ram/Mram_ram16 (RAM)
+  Destination:       slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71 (FF)
   Source Clock:      codec_main_clk_p rising 2.5X
   Destination Clock: codec_main_clk_p rising 2.5X
 
-  Data Path: slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/num_packets_2 to b200_core/extra_tx_buff/fifo_bram/ram/Mram_ram16
+  Data Path: slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/num_packets_2 to slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_71
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             8   0.447   1.031  slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/num_packets_2 (slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/num_packets_2)
-     LUT3:I0->O            6   0.205   0.745  slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/Mmux_num_packets[7]_num_packets[7]_mux_17_OUT411 (slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/Mmux_num_packets[7]_num_packets[7]_mux_17_OUT41)
-     LUT5:I4->O           13   0.205   0.933  slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/Msub_num_packets[7]_GND_271_o_sub_15_OUT_cy<6>11 (slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/Msub_num_packets[7]_GND_271_o_sub_15_OUT_cy<6>)
-     LUT5:I4->O           28   0.205   1.235  slave_fifo32/gpif2_to_fifo64_tx/fifo32_to_fifo64/Mmux_o_tvalid11 (tx_tvalid)
-     begin scope: 'b200_core:tx_tvalid'
-     LUT2:I1->O           54   0.205   1.573  extra_tx_buff/fifo_bram/write1 (extra_tx_buff/fifo_bram/write)
-     RAMB16BWER:WEA2           0.300          extra_tx_buff/fifo_bram/ram/Mram_ram16
+     FDRE:C->Q             8   0.447   1.147  slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/num_packets_2 (slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/num_packets_2)
+     LUT5:I0->O            1   0.203   0.580  slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/Mmux_i_tready1_SW0 (N70)
+     LUT6:I5->O            5   0.205   0.715  slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/Mmux_i_tready1 (slave_fifo32/gpif2_to_fifo64_tx/chk_tready)
+     LUT2:I1->O           78   0.205   1.961  slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/read1 (slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/read)
+     begin scope: 'slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk:rd_en'
+     LUT3:I0->O           72   0.205   1.692  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/RAM_REGOUT_EN1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_regout_en)
+     FDCE:CE                   0.322          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_0
     ----------------------------------------
-    Total                      7.084ns (1.567ns logic, 5.517ns route)
-                                       (22.1% logic, 77.9% route)
+    Total                      7.681ns (1.587ns logic, 6.094ns route)
+                                       (20.7% logic, 79.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'codec_data_clk_p'
-  Clock period: 14.301ns (frequency: 69.923MHz)
-  Total number of paths / destination ports: 24504110 / 32398
+  Clock period: 17.905ns (frequency: 55.850MHz)
+  Total number of paths / destination ports: 42068471 / 32492
 -------------------------------------------------------------------------
-Delay:               14.301ns (Levels of Logic = 30)
-  Source:            b200_core/radio_0/inp_sig/phase_acc0_0 (FF)
-  Destination:       b200_core/radio_0/inp_sig/tx_out_11 (FF)
+Delay:               17.905ns (Levels of Logic = 19)
+  Source:            b200_core/radio_0/inp_sig/phase_acc1_0 (FF)
+  Destination:       b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_13_OUT (DSP)
   Source Clock:      codec_data_clk_p rising
   Destination Clock: codec_data_clk_p rising
 
-  Data Path: b200_core/radio_0/inp_sig/phase_acc0_0 to b200_core/radio_0/inp_sig/tx_out_11
+  Data Path: b200_core/radio_0/inp_sig/phase_acc1_0 to b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_13_OUT
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.447   0.721  inp_sig/phase_acc0_0 (inp_sig/phase_acc0_0)
-     LUT2:I0->O            1   0.203   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_lut<0> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<0> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<1> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<2> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<3> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<4> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<5> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<6> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<7> (inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_cy<7>)
-     XORCY:CI->O           1   0.180   0.580  inp_sig/Madd_phase_acc0[15]_codeword0[15]_add_1_OUT_xor<8> (inp_sig/phase_acc0[15]_codeword0[15]_add_1_OUT<8>)
-     LUT2:I1->O            1   0.205   0.000  inp_sig/Madd_phase_acc0[15]_GND_84_o_add_4_OUT_lut<3> (inp_sig/Madd_phase_acc0[15]_GND_84_o_add_4_OUT_lut<3>)
-     MUXCY:S->O            1   0.172   0.000  inp_sig/Madd_phase_acc0[15]_GND_84_o_add_4_OUT_cy<3> (inp_sig/Madd_phase_acc0[15]_GND_84_o_add_4_OUT_cy<3>)
-     XORCY:CI->O         179   0.180   2.139  inp_sig/Madd_phase_acc0[15]_GND_84_o_add_4_OUT_xor<4> (inp_sig/phase_acc0[15]_GND_84_o_add_4_OUT<4>)
-     LUT4:I2->O            1   0.203   0.808  inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781313_SW1 (inp_sig_N6)
-     LUT6:I3->O            1   0.205   0.580  inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781313 (inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781312)
-     LUT5:I4->O            1   0.205   0.580  inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781314 (inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781313)
-     LUT6:I5->O            1   0.205   0.579  inp_sig_Mram_phase_acc0[15]_GND_84_o_wide_mux_5_OUT1781321 (inp_sig/phase_acc0[15]_GND_84_o_wide_mux_5_OUT<7>)
-     DSP48A1:B7->M9        2   3.364   0.845  inp_sig/Mmult_n0028 (inp_sig/n0028<9>)
-     LUT3:I0->O            1   0.205   0.580  inp_sig/Madd_n0054[11:0]1 (inp_sig/Madd_n0054[11:0]1)
-     LUT4:I3->O            1   0.205   0.000  inp_sig/Madd_n0054[11:0]_lut<0>2 (inp_sig/Madd_n0054[11:0]_lut<0>2)
-     MUXCY:S->O            1   0.172   0.000  inp_sig/Madd_n0054[11:0]_cy<0>_1 (inp_sig/Madd_n0054[11:0]_cy<0>2)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_n0054[11:0]_cy<0>_2 (inp_sig/Madd_n0054[11:0]_cy<0>3)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_n0054[11:0]_cy<0>_3 (inp_sig/Madd_n0054[11:0]_cy<0>4)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_n0054[11:0]_cy<0>_4 (inp_sig/Madd_n0054[11:0]_cy<0>5)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_n0054[11:0]_cy<0>_5 (inp_sig/Madd_n0054[11:0]_cy<0>6)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_n0054[11:0]_cy<0>_6 (inp_sig/Madd_n0054[11:0]_cy<0>7)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_n0054[11:0]_cy<0>_7 (inp_sig/Madd_n0054[11:0]_cy<0>8)
-     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_n0054[11:0]_cy<0>_8 (inp_sig/Madd_n0054[11:0]_cy<0>9)
-     MUXCY:CI->O           0   0.019   0.000  inp_sig/Madd_n0054[11:0]_cy<0>_9 (inp_sig/Madd_n0054[11:0]_cy<0>10)
-     XORCY:CI->O           1   0.180   0.000  inp_sig/Madd_n0054[11:0]_xor<0>_10 (inp_sig/n0054[11:0]<11>)
-     FD:D                      0.102          inp_sig/tx_out_11
+     FD:C->Q               2   0.447   0.721  inp_sig/phase_acc1_0 (inp_sig/phase_acc1_0)
+     LUT2:I0->O            1   0.203   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_lut<0> (inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<0> (inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<1> (inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<2> (inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<3> (inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<4> (inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<5> (inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<6> (inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<7> (inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<7>)
+     XORCY:CI->O           1   0.180   0.580  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_xor<8> (inp_sig/phase_acc1[15]_codeword1[15]_add_2_OUT<8>)
+     LUT2:I1->O            1   0.205   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_7_OUT_lut<3> (inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_7_OUT_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_7_OUT_cy<3> (inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_7_OUT_cy<3>)
+     XORCY:CI->O         179   0.180   2.139  inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_7_OUT_xor<4> (inp_sig/phase_acc1[15]_codeword1[31]_add_7_OUT<4>)
+     LUT4:I2->O            1   0.203   0.808  inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_8_OUT1781313_SW1 (inp_sig_N6)
+     LUT6:I3->O            1   0.205   0.580  inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_8_OUT1781313 (inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_8_OUT1781312)
+     LUT5:I4->O            1   0.205   0.580  inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_8_OUT1781314 (inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_8_OUT1781313)
+     LUT6:I5->O            1   0.205   0.579  inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_8_OUT1781321 (inp_sig/phase_acc1[15]_GND_84_o_wide_mux_8_OUT<7>)
+     DSP48A1:B7->M17       1   3.364   0.579  inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_9_OUT (inp_sig/codeword1[23]_phase_acc1[15]_MuLt_9_OUT<17>)
+     DSP48A1:C17->P18      1   2.687   0.579  inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_6_OUT (inp_sig/n0064[18:0]<18>)
+     DSP48A1:C18               2.200          inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_13_OUT
     ----------------------------------------
-    Total                     14.301ns (6.890ns logic, 7.411ns route)
-                                       (48.2% logic, 51.8% route)
+    Total                     17.905ns (10.761ns logic, 7.144ns route)
+                                       (60.1% logic, 39.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'codec_main_clk_p'
@@ -26872,7 +26744,7 @@ Clock to Setup on destination clock codec_data_clk_p
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-codec_data_clk_p|   14.301|    6.025|    4.068|         |
+codec_data_clk_p|   17.905|    6.025|    4.068|         |
 codec_main_clk_p|    3.502|         |         |         |
 ----------------+---------+---------+---------+---------+
 
@@ -26881,22 +26753,22 @@ Clock to Setup on destination clock codec_main_clk_p
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-codec_data_clk_p|    3.577|         |         |         |
-codec_main_clk_p|    7.084|         |         |         |
+codec_data_clk_p|    3.582|         |         |         |
+codec_main_clk_p|    7.681|         |         |         |
 ----------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 283.00 secs
-Total CPU time to Xst completion: 265.79 secs
+Total REAL time to Xst completion: 276.00 secs
+Total CPU time to Xst completion: 258.44 secs
  
 --> 
 
 
-Total memory usage is 699912 kilobytes
+Total memory usage is 700948 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 19918 (   0 filtered)
+Number of warnings : 19788 (   0 filtered)
 Number of infos    :  614 (   0 filtered)
 

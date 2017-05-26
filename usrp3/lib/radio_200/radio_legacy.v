@@ -134,7 +134,7 @@ module radio_legacy
    localparam SR_USER_SR_BASE = 8'd253;
    localparam SR_USER_RB_ADDR = 8'd255;
    
-   
+  //JTL start 
    localparam SR_CMD_RX      = 8'd160;//sr_cmd_tx
    localparam SR_TIME_H_RX   = 8'd161;//sr_time_h_tx
    localparam SR_TIME_L_RX   = 8'd162;//sr_time_l_tx
@@ -159,8 +159,39 @@ module radio_legacy
 	localparam SR_LLR_REG17	  = 8'd181;
 	localparam SR_LLR_REG18	  = 8'd182;
 	localparam SR_LLR_REG19	  = 8'd183;
-   
-   
+	/*
+ 	localparam SR_LLR_REG20	= 8'd185;
+	localparam SR_LLR_REG21	= 8'd185;
+	localparam SR_LLR_REG22	= 8'd186;
+	localparam SR_LLR_REG23	= 8'd187;
+	localparam SR_LLR_REG24	= 8'd188;
+	localparam SR_LLR_REG25	= 8'd189;
+	localparam SR_LLR_REG26	= 8'd190;
+	localparam SR_LLR_REG27	= 8'd191;
+	localparam SR_LLR_REG28	= 8'd192;
+	localparam SR_LLR_REG29	= 8'd193;
+	localparam SR_LLR_REG30	= 8'd194;
+	localparam SR_LLR_REG31	= 8'd195;
+	localparam SR_LLR_REG32	= 8'd196;
+	localparam SR_LLR_REG33	= 8'd197;
+	localparam SR_LLR_REG34	= 8'd198;
+	localparam SR_LLR_REG35	= 8'd199;
+	localparam SR_LLR_REG36	= 8'd201;
+	localparam SR_LLR_REG37	= 8'd201;
+	localparam SR_LLR_REG38	= 8'd202;
+	localparam SR_LLR_REG39	= 8'd203;
+	localparam SR_LLR_REG40	= 8'd204;
+	localparam SR_LLR_REG41	= 8'd205;
+	localparam SR_LLR_REG42	= 8'd206;
+	localparam SR_LLR_REG43	= 8'd207;
+	localparam SR_LLR_REG44	= 8'd208;
+	localparam SR_LLR_REG45	= 8'd209;
+	localparam SR_LLR_REG46	= 8'd210;
+	localparam SR_LLR_REG47	= 8'd211;
+	localparam SR_LLR_REG48	= 8'd212;
+	localparam SR_LLR_REG49	= 8'd213;  
+	*/
+	// JTL end	
 
    wire           set_stb;
    wire [7:0]     set_addr;
@@ -377,18 +408,18 @@ endgenerate
    // Starting JTL code
 	// EXPAND
    wire [31:0] get_tx;
-   wire [31:0] llr_reg0_val, llr_reg1_val, llr_reg2_val,llr_reg3_val,llr_reg4_val,llr_reg5_val,llr_reg6_val,llr_reg7_val,llr_reg8_val,llr_reg9_val, llr_reg10_val, llr_reg11_val, llr_reg12_val, llr_reg13_val, llr_reg14_val, llr_reg15_val, llr_reg16_val, llr_reg17_val, llr_reg18_val, llr_reg19_val, llr_reg21_val, llr_reg22_val, llr_reg23_val, llr_reg24_val, llr_reg25_val, llr_reg26_val, llr_reg27_val, llr_reg28_val, llr_reg29_val;
+   wire [31:0] llr_reg0_val, llr_reg1_val, llr_reg2_val,llr_reg3_val,llr_reg4_val,llr_reg5_val,llr_reg6_val,llr_reg7_val,llr_reg8_val,llr_reg9_val, llr_reg10_val, llr_reg11_val, llr_reg12_val, llr_reg13_val, llr_reg14_val, llr_reg15_val, llr_reg16_val, llr_reg17_val, llr_reg18_val, llr_reg19_val, llr_reg21_val, llr_reg22_val, llr_reg23_val, llr_reg24_val, llr_reg25_val, llr_reg26_val, llr_reg27_val, llr_reg28_val, llr_reg29_val, llr_reg30_val, llr_reg31_val, llr_reg32_val, llr_reg33_val, llr_reg34_val, llr_reg35_val, llr_reg36_val, llr_reg37_val, llr_reg38_val, llr_reg39_val, llr_reg40_val, llr_reg41_val, llr_reg42_val, llr_reg43_val, llr_reg44_val, llr_reg45_val, llr_reg46_val, llr_reg47_val, llr_reg48_val, llr_reg49_val;
 ;
 
 // EXPAND
-	input_signal2 inp_sig(.radio_clk(radio_clk), .codeword0(llr_reg0_val), .codeword1(llr_reg1_val), .codeword2(llr_reg2_val), .codeword3(llr_reg3_val), .codeword4(llr_reg4_val), .codeword5(llr_reg5_val), .codeword6(llr_reg6_val), .codeword7(llr_reg7_val), .codeword8(llr_reg8_val), .codeword9(llr_reg9_val), .codeword10(llr_reg10_val), .codeword11(llr_reg11_val), .codeword12(llr_reg12_val), .codeword13(llr_reg13_val), .codeword14(llr_reg14_val), .codeword15(llr_reg15_val), .codeword16(llr_reg16_val), .codeword17(llr_reg17_val), .codeword18(llr_reg18_val), .codeword19(llr_reg19_val), .get_tx(get_tx));
+	input_signal2 inp_sig(.radio_clk(radio_clk), .codeword0(llr_reg0_val), .codeword1(llr_reg1_val), .codeword2(llr_reg2_val), .codeword3(llr_reg3_val), .codeword4(llr_reg4_val), .codeword5(llr_reg5_val), .codeword6(llr_reg6_val), .codeword7(llr_reg7_val), .codeword8(llr_reg8_val), .codeword9(llr_reg9_val), .codeword10(llr_reg10_val), .codeword11(llr_reg11_val), .codeword12(llr_reg12_val), .codeword13(llr_reg13_val), .codeword14(llr_reg14_val), .codeword15(llr_reg15_val), .codeword16(llr_reg16_val), .codeword17(llr_reg17_val), .codeword18(llr_reg18_val), .codeword19(llr_reg19_val), .codeword20(llr_reg20_val), .codeword21(llr_reg21_val), .codeword22(llr_reg22_val), .codeword23(llr_reg23_val), .codeword24(llr_reg24_val), .codeword25(llr_reg25_val), .codeword26(llr_reg26_val), .codeword27(llr_reg27_val), .codeword28(llr_reg28_val), .codeword29(llr_reg29_val), .codeword30(llr_reg30_val), .codeword31(llr_reg31_val), .codeword32(llr_reg32_val), .codeword33(llr_reg33_val), .codeword34(llr_reg34_val), .codeword35(llr_reg35_val), .codeword36(llr_reg36_val), .codeword37(llr_reg37_val), .codeword38(llr_reg38_val), .codeword39(llr_reg39_val), .codeword40(llr_reg40_val), .codeword41(llr_reg41_val), .codeword42(llr_reg42_val), .codeword43(llr_reg43_val), .codeword44(llr_reg44_val), .codeword45(llr_reg45_val), .codeword46(llr_reg46_val), .codeword47(llr_reg47_val), .codeword48(llr_reg48_val), .codeword49(llr_reg49_val), .get_tx(get_tx));
 
 //   input_signal2 inp_sig(.radio_clk(radio_clk), .data0(llr_reg0_val), .data1(llr_reg1_val), .data2(llr_reg2_val), .get_tx(get_tx));
 
 
    always @(posedge radio_clk) begin
-      	tx[31:16] <= (run_tx) ? get_tx[31:16] : tx_idle[31:16];
-      	tx[15:0] <= (run_tx) ? get_tx[15:0] : tx_idle[15:0];
+      	tx[31:16] <= (run_tx) ? get_tx[31:16] : tx_idle[31:16]; // I channel
+      	tx[15:0] <= (run_tx) ? get_tx[15:0] : tx_idle[15:0]; // Q channel
    end
 /////////////////////////////////////////////////////////////////////////////////////
 // Ending JTL code
@@ -455,56 +486,202 @@ endgenerate
         (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
          .out(llr_reg0_val), .changed());
 
-      setting_reg #(.my_addr(SR_LLR_REG1), .awidth(8), .width(32)) sr_llr_reg1
-        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
-         .out(llr_reg1_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG1), .awidth(8), .width(32)) sr_llr_reg1
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg1_val), .changed());
 
-      setting_reg #(.my_addr(SR_LLR_REG2), .awidth(8), .width(32)) sr_llr_reg2
-        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
-         .out(llr_reg2_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG2), .awidth(8), .width(32)) sr_llr_reg2
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg2_val), .changed());
 
-      setting_reg #(.my_addr(SR_LLR_REG3), .awidth(8), .width(32)) sr_llr_reg3
-        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
-         .out(llr_reg3_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG3), .awidth(8), .width(32)) sr_llr_reg3
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg3_val), .changed());
 
-      setting_reg #(.my_addr(SR_LLR_REG4), .awidth(8), .width(32)) sr_llr_reg4
-        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
-         .out(llr_reg4_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG4), .awidth(8), .width(32)) sr_llr_reg4
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg4_val), .changed());
 
-      setting_reg #(.my_addr(SR_LLR_REG5), .awidth(8), .width(32)) sr_llr_reg5
-        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
-         .out(llr_reg5_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG5), .awidth(8), .width(32)) sr_llr_reg5
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg5_val), .changed());
 
-      setting_reg #(.my_addr(SR_LLR_REG6), .awidth(8), .width(32)) sr_llr_reg6
-        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
-         .out(llr_reg6_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG6), .awidth(8), .width(32)) sr_llr_reg6
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg6_val), .changed());
 
-      setting_reg #(.my_addr(SR_LLR_REG7), .awidth(8), .width(32)) sr_llr_reg7
-        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
-         .out(llr_reg7_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG7), .awidth(8), .width(32)) sr_llr_reg7
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg7_val), .changed());
 
-      setting_reg #(.my_addr(SR_LLR_REG8), .awidth(8), .width(32)) sr_llr_reg8
-        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
-         .out(llr_reg8_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG8), .awidth(8), .width(32)) sr_llr_reg8
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg8_val), .changed());
 
-      setting_reg #(.my_addr(SR_LLR_REG9), .awidth(8), .width(32)) sr_llr_reg9
-        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
-         .out(llr_reg9_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG9), .awidth(8), .width(32)) sr_llr_reg9
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg9_val), .changed());
 
 		setting_reg #(.my_addr(SR_LLR_REG10), .awidth(8), .width(32)) sr_llr_reg10
-        (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
-         .out(llr_reg10_val), .changed());
-			setting_reg #(.my_addr(SR_LLR_REG11), .awidth(8), .width(32)) sr_llr_reg11 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg11_val), .changed());
-		setting_reg #(.my_addr(SR_LLR_REG12), .awidth(8), .width(32)) sr_llr_reg12 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg12_val), .changed());
-		setting_reg #(.my_addr(SR_LLR_REG13), .awidth(8), .width(32)) sr_llr_reg13 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg13_val), .changed());
-		setting_reg #(.my_addr(SR_LLR_REG14), .awidth(8), .width(32)) sr_llr_reg14 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg14_val), .changed());
-		setting_reg #(.my_addr(SR_LLR_REG15), .awidth(8), .width(32)) sr_llr_reg15 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg15_val), .changed());
-		setting_reg #(.my_addr(SR_LLR_REG16), .awidth(8), .width(32)) sr_llr_reg16 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg16_val), .changed());
-		setting_reg #(.my_addr(SR_LLR_REG17), .awidth(8), .width(32)) sr_llr_reg17 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg17_val), .changed());
-		setting_reg #(.my_addr(SR_LLR_REG18), .awidth(8), .width(32)) sr_llr_reg18 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg18_val), .changed());
-		setting_reg #(.my_addr(SR_LLR_REG19), .awidth(8), .width(32)) sr_llr_reg19 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg19_val), .changed());
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg10_val), .changed());
 
+		setting_reg #(.my_addr(SR_LLR_REG11), .awidth(8), .width(32)) sr_llr_reg11
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg11_val), .changed());
 
+		setting_reg #(.my_addr(SR_LLR_REG12), .awidth(8), .width(32)) sr_llr_reg12
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg12_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG13), .awidth(8), .width(32)) sr_llr_reg13
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg13_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG14), .awidth(8), .width(32)) sr_llr_reg14
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg14_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG15), .awidth(8), .width(32)) sr_llr_reg15
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg15_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG16), .awidth(8), .width(32)) sr_llr_reg16
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg16_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG17), .awidth(8), .width(32)) sr_llr_reg17
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg17_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG18), .awidth(8), .width(32)) sr_llr_reg18
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg18_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG19), .awidth(8), .width(32)) sr_llr_reg19
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg19_val), .changed());
+
+/*
+		setting_reg #(.my_addr(SR_LLR_REG20), .awidth(8), .width(16)) sr_llr_reg20
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg20_val), .changed());
+		setting_reg #(.my_addr(SR_LLR_REG21), .awidth(8), .width(16)) sr_llr_reg21
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg21_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG22), .awidth(8), .width(16)) sr_llr_reg22
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg22_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG23), .awidth(8), .width(16)) sr_llr_reg23
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg23_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG24), .awidth(8), .width(16)) sr_llr_reg24
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg24_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG25), .awidth(8), .width(16)) sr_llr_reg25
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg25_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG26), .awidth(8), .width(16)) sr_llr_reg26
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg26_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG27), .awidth(8), .width(16)) sr_llr_reg27
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg27_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG28), .awidth(8), .width(16)) sr_llr_reg28
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg28_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG29), .awidth(8), .width(16)) sr_llr_reg29
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg29_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG30), .awidth(8), .width(16)) sr_llr_reg30
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg30_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG31), .awidth(8), .width(16)) sr_llr_reg31
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg31_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG32), .awidth(8), .width(16)) sr_llr_reg32
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg32_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG33), .awidth(8), .width(16)) sr_llr_reg33
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg33_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG34), .awidth(8), .width(16)) sr_llr_reg34
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg34_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG35), .awidth(8), .width(16)) sr_llr_reg35
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg35_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG36), .awidth(8), .width(16)) sr_llr_reg36
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg36_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG37), .awidth(8), .width(16)) sr_llr_reg37
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg37_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG38), .awidth(8), .width(16)) sr_llr_reg38
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg38_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG39), .awidth(8), .width(16)) sr_llr_reg39
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg39_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG40), .awidth(8), .width(16)) sr_llr_reg40
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg40_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG41), .awidth(8), .width(16)) sr_llr_reg41
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg41_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG42), .awidth(8), .width(16)) sr_llr_reg42
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg42_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG43), .awidth(8), .width(16)) sr_llr_reg43
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg43_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG44), .awidth(8), .width(16)) sr_llr_reg44
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg44_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG45), .awidth(8), .width(16)) sr_llr_reg45
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg45_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG46), .awidth(8), .width(16)) sr_llr_reg46
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg46_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG47), .awidth(8), .width(16)) sr_llr_reg47
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg47_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG48), .awidth(8), .width(16)) sr_llr_reg48
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg48_val), .changed());
+
+		setting_reg #(.my_addr(SR_LLR_REG49), .awidth(8), .width(16)) sr_llr_reg49
+			(.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data),
+			.out(llr_reg49_val), .changed());
+			*/
 
 	assign rst_wfrm =  cntrl_reg_val[0];//Resets RX
 

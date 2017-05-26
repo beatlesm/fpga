@@ -1,85 +1,30 @@
-wire [31:0] llr_reg21_val, llr_reg22_val, llr_reg23_val, llr_reg24_val, llr_reg25_val, llr_reg26_val, llr_reg27_val, llr_reg28_val, llr_reg29_val, 
-
-.codeword21(llr_reg21_val), .codeword22(llr_reg22_val), .codeword23(llr_reg23_val), .codeword24(llr_reg24_val), .codeword25(llr_reg25_val), .codeword26(llr_reg26_val), .codeword27(llr_reg27_val), .codeword28(llr_reg28_val), .codeword29(llr_reg29_val), 
-
-setting_reg #(.my_addr(SR_LLR_REG21), .awidth(8), .width(32)) sr_llr_reg21 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg21_val), .changed());
-setting_reg #(.my_addr(SR_LLR_REG22), .awidth(8), .width(32)) sr_llr_reg22 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg22_val), .changed());
-setting_reg #(.my_addr(SR_LLR_REG23), .awidth(8), .width(32)) sr_llr_reg23 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg23_val), .changed());
-setting_reg #(.my_addr(SR_LLR_REG24), .awidth(8), .width(32)) sr_llr_reg24 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg24_val), .changed());
-setting_reg #(.my_addr(SR_LLR_REG25), .awidth(8), .width(32)) sr_llr_reg25 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg25_val), .changed());
-setting_reg #(.my_addr(SR_LLR_REG26), .awidth(8), .width(32)) sr_llr_reg26 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg26_val), .changed());
-setting_reg #(.my_addr(SR_LLR_REG27), .awidth(8), .width(32)) sr_llr_reg27 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg27_val), .changed());
-setting_reg #(.my_addr(SR_LLR_REG28), .awidth(8), .width(32)) sr_llr_reg28 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg28_val), .changed());
-setting_reg #(.my_addr(SR_LLR_REG29), .awidth(8), .width(32)) sr_llr_reg29 (.clk(radio_clk), .rst(radio_rst), .strobe(set_stb), .addr(set_addr), .in(set_data), .out(llr_reg29_val), .changed());
-
-
-input [31:0] codeword21, codeword22, codeword23, codeword24, codeword25, codeword26, codeword27, codeword28, codeword29, 
-
-reg [15:0] phase_acc21, phase_acc22, phase_acc23, phase_acc24, phase_acc25, phase_acc26, phase_acc27, phase_acc28, phase_acc29, 
-
-freq21, freq22, freq23, freq24, freq25, freq26, freq27, freq28, freq29, 
-
-amp21, amp22, amp23, amp24, amp25, amp26, amp27, amp28, amp29, 
-
-ph21, ph22, ph23, ph24, ph25, ph26, ph27, ph28, ph29, 
-
-freq21 = codeword21[15:0];
-amp21 = codeword21[23:16];
-tmp=codeword21[31:24];
-ph21 = tmp << 3;
-
-freq22 = codeword22[15:0];
-amp22 = codeword22[23:16];
-tmp=codeword22[31:24];
-ph22 = tmp << 3;
-
-freq23 = codeword23[15:0];
-amp23 = codeword23[23:16];
-tmp=codeword23[31:24];
-ph23 = tmp << 3;
-
-freq24 = codeword24[15:0];
-amp24 = codeword24[23:16];
-tmp=codeword24[31:24];
-ph24 = tmp << 3;
-
-freq25 = codeword25[15:0];
-amp25 = codeword25[23:16];
-tmp=codeword25[31:24];
-ph25 = tmp << 3;
-
-freq26 = codeword26[15:0];
-amp26 = codeword26[23:16];
-tmp=codeword26[31:24];
-ph26 = tmp << 3;
-
-freq27 = codeword27[15:0];
-amp27 = codeword27[23:16];
-tmp=codeword27[31:24];
-ph27 = tmp << 3;
-
-freq28 = codeword28[15:0];
-amp28 = codeword28[23:16];
-tmp=codeword28[31:24];
-ph28 = tmp << 3;
-
-freq29 = codeword29[15:0];
-amp29 = codeword29[23:16];
-tmp=codeword29[31:24];
-ph29 = tmp << 3;
-
-
-
-phase_acc21 = phase_acc21 + freq21;
-phase_acc22 = phase_acc22 + freq22;
-phase_acc23 = phase_acc23 + freq23;
-phase_acc24 = phase_acc24 + freq24;
-phase_acc25 = phase_acc25 + freq25;
-phase_acc26 = phase_acc26 + freq26;
-phase_acc27 = phase_acc27 + freq27;
-phase_acc28 = phase_acc28 + freq28;
-phase_acc29 = phase_acc29 + freq29;
-
-
-amp21*sine[phase_acc21[15:5] + ph21] + amp22*sine[phase_acc22[15:5] + ph22] + amp23*sine[phase_acc23[15:5] + ph23] + amp24*sine[phase_acc24[15:5] + ph24] + amp25*sine[phase_acc25[15:5] + ph25] + amp26*sine[phase_acc26[15:5] + ph26] + amp27*sine[phase_acc27[15:5] + ph27] + amp28*sine[phase_acc28[15:5] + ph28] + amp29*sine[phase_acc29[15:5] + ph29] + 
-
+localparam SR_LLR_REG20	= 8'd185;
+localparam SR_LLR_REG21	= 8'd185;
+localparam SR_LLR_REG22	= 8'd186;
+localparam SR_LLR_REG23	= 8'd187;
+localparam SR_LLR_REG24	= 8'd188;
+localparam SR_LLR_REG25	= 8'd189;
+localparam SR_LLR_REG26	= 8'd190;
+localparam SR_LLR_REG27	= 8'd191;
+localparam SR_LLR_REG28	= 8'd192;
+localparam SR_LLR_REG29	= 8'd193;
+localparam SR_LLR_REG30	= 8'd194;
+localparam SR_LLR_REG31	= 8'd195;
+localparam SR_LLR_REG32	= 8'd196;
+localparam SR_LLR_REG33	= 8'd197;
+localparam SR_LLR_REG34	= 8'd198;
+localparam SR_LLR_REG35	= 8'd199;
+localparam SR_LLR_REG36	= 8'd201;
+localparam SR_LLR_REG37	= 8'd201;
+localparam SR_LLR_REG38	= 8'd202;
+localparam SR_LLR_REG39	= 8'd203;
+localparam SR_LLR_REG40	= 8'd204;
+localparam SR_LLR_REG41	= 8'd205;
+localparam SR_LLR_REG42	= 8'd206;
+localparam SR_LLR_REG43	= 8'd207;
+localparam SR_LLR_REG44	= 8'd208;
+localparam SR_LLR_REG45	= 8'd209;
+localparam SR_LLR_REG46	= 8'd210;
+localparam SR_LLR_REG47	= 8'd211;
+localparam SR_LLR_REG48	= 8'd212;
+localparam SR_LLR_REG49	= 8'd213;

@@ -1,20 +1,21 @@
-module input_signal2(radio_clk, codeword0, codeword1,codeword2,codeword3, codeword4, codeword5, codeword6, codeword7,codeword8, codeword9, codeword10, codeword11, codeword12, codeword13, codeword14, codeword15, codeword16, codeword17, codeword18, codeword19, get_tx);
+module input_signal2(radio_clk, codeword0, codeword1,codeword2,codeword3, codeword4, codeword5, codeword6, codeword7,codeword8, codeword9, codeword10, codeword11, codeword12, codeword13, codeword14, codeword15, codeword16, codeword17, codeword18, codeword19, codeword20, codeword21, codeword22, codeword23, codeword24, codeword25, codeword26, codeword27, codeword28, codeword29, codeword30, codeword31, codeword32, codeword33, codeword34, codeword35, codeword36, codeword37, codeword38, codeword39, codeword40, codeword41, codeword42, codeword43, codeword44, codeword45, codeword46, codeword47, codeword48, codeword49, get_tx);
    input radio_clk;
 
-	input [31:0] codeword0, codeword1, codeword2, codeword3, codeword4,codeword5, codeword6,codeword7, codeword8, codeword9, codeword10, codeword11, codeword12, codeword13, codeword14, codeword15, codeword16, codeword17, codeword18, codeword19;
+	input [31:0] codeword0, codeword1, codeword2, codeword3, codeword4,codeword5, codeword6,codeword7, codeword8, codeword9, codeword10, codeword11, codeword12, codeword13, codeword14, codeword15, codeword16, codeword17, codeword18, codeword19, codeword20, codeword21, codeword22, codeword23, codeword24, codeword25, codeword26, codeword27, codeword28, codeword29, codeword30, codeword31, codeword32, codeword33, codeword34, codeword35, codeword36, codeword37, codeword38, codeword39, codeword40, codeword41, codeword42, codeword43, codeword44, codeword45, codeword46, codeword47, codeword48, codeword49;
 
    output [31:0] get_tx;
 
-	reg [15:0] phase_acc0, phase_acc1, phase_acc2, phase_acc3, phase_acc4, phase_acc5, phase_acc6, phase_acc7, phase_acc8, phase_acc9, phase_acc10, phase_acc11, phase_acc12, phase_acc13, phase_acc14, phase_acc15, phase_acc16, phase_acc17, phase_acc18, phase_acc19;
+	reg [15:0] phase_acc0, phase_acc1, phase_acc2, phase_acc3, phase_acc4, phase_acc5, phase_acc6, phase_acc7, phase_acc8, phase_acc9, phase_acc10, phase_acc11, phase_acc12, phase_acc13, phase_acc14, phase_acc15, phase_acc16, phase_acc17, phase_acc18, phase_acc19, phase_acc20, phase_acc21, phase_acc22, phase_acc23, phase_acc24, phase_acc25, phase_acc26, phase_acc27, phase_acc28, phase_acc29, phase_acc30, phase_acc31, phase_acc32, phase_acc33, phase_acc34, phase_acc35, phase_acc36, phase_acc37, phase_acc38, phase_acc39, phase_acc40, phase_acc41, phase_acc42, phase_acc43, phase_acc44, phase_acc45, phase_acc46, phase_acc47, phase_acc48, phase_acc49;
 
    reg [31:0] tx_out;
 
-   reg [15:0] freq0, freq1, freq2, freq3, freq4, freq5, freq6, freq7, freq8, freq9, freq10, freq11, freq12, freq13, freq14, freq15, freq16, freq17, freq18, freq19;
-	reg [7:0] amp0, amp1, amp2, amp3, amp4, amp5, amp6, amp7, amp8, amp9, amp10, amp11, amp12, amp13, amp14, amp15, amp16, amp17, amp18, amp19;
-   reg [10:0] ph0, ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10, ph11, ph12, ph13, ph14, ph15, ph16, ph17, ph18, ph19;
+   reg [15:0] freq0, freq1, freq2, freq3, freq4, freq5, freq6, freq7, freq8, freq9, freq10, freq11, freq12, freq13, freq14, freq15, freq16, freq17, freq18, freq19, freq20, freq21, freq22, freq23, freq24, freq25, freq26, freq27, freq28, freq29, freq30, freq31, freq32, freq33, freq34, freq35, freq36, freq37, freq38, freq39, freq40, freq41, freq42, freq43, freq44, freq45, freq46, freq47, freq48, freq49;
+	reg [7:0] amp0, amp1, amp2, amp3, amp4, amp5, amp6, amp7, amp8, amp9, amp10, amp11, amp12, amp13, amp14, amp15, amp16, amp17, amp18, amp19, amp20, amp21, amp22, amp23, amp24, amp25, amp26, amp27, amp28, amp29, amp30, amp31, amp32, amp33, amp34, amp35, amp36, amp37, amp38, amp39, amp40, amp41, amp42, amp43, amp44, amp45, amp46, amp47, amp48, amp49;
+   reg [10:0] ph0, ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10, ph11, ph12, ph13, ph14, ph15, ph16, ph17, ph18, ph19, ph20, ph21, ph22, ph23, ph24, ph25, ph26, ph27, ph28, ph29, ph30, ph31, ph32, ph33, ph34, ph35, ph36, ph37, ph38, ph39, ph40, ph41, ph42, ph43, ph44, ph45, ph46, ph47, ph48, ph49;
    reg [7:0] tmp;
 
-	reg [23:0] amp_times_sin;
+	reg [25:0] amp_times_sin; // 26 bits: 8 bits for amplitude, 10 bits for sine wave, 6 bits for 50 frequencies, and two bits for coercion
+	reg [15:0] neg_amp_times_sin;
 	
     always @(posedge radio_clk) begin
 
@@ -118,6 +119,155 @@ module input_signal2(radio_clk, codeword0, codeword1,codeword2,codeword3, codewo
 			tmp=codeword19[31:24];
 			ph19 = tmp << 3;
 
+			freq20 = codeword20[15:0];
+			amp20 = codeword20[23:16];
+			tmp = codeword20[31:24];
+			ph20 = tmp << 3;
+
+			freq21 = codeword21[15:0];
+			amp21 = codeword21[23:16];
+			tmp = codeword21[31:24];
+			ph21 = tmp << 3;
+
+			freq22 = codeword22[15:0];
+			amp22 = codeword22[23:16];
+			tmp = codeword22[31:24];
+			ph22 = tmp << 3;
+
+			freq23 = codeword23[15:0];
+			amp23 = codeword23[23:16];
+			tmp = codeword23[31:24];
+			ph23 = tmp << 3;
+
+			freq24 = codeword24[15:0];
+			amp24 = codeword24[23:16];
+			tmp = codeword24[31:24];
+			ph24 = tmp << 3;
+
+			freq25 = codeword25[15:0];
+			amp25 = codeword25[23:16];
+			tmp = codeword25[31:24];
+			ph25 = tmp << 3;
+
+			freq26 = codeword26[15:0];
+			amp26 = codeword26[23:16];
+			tmp = codeword26[31:24];
+			ph26 = tmp << 3;
+
+			freq27 = codeword27[15:0];
+			amp27 = codeword27[23:16];
+			tmp = codeword27[31:24];
+			ph27 = tmp << 3;
+
+			freq28 = codeword28[15:0];
+			amp28 = codeword28[23:16];
+			tmp = codeword28[31:24];
+			ph28 = tmp << 3;
+
+			freq29 = codeword29[15:0];
+			amp29 = codeword29[23:16];
+			tmp = codeword29[31:24];
+			ph29 = tmp << 3;
+
+			freq30 = codeword30[15:0];
+			amp30 = codeword30[23:16];
+			tmp = codeword30[31:24];
+			ph30 = tmp << 3;
+
+			freq31 = codeword31[15:0];
+			amp31 = codeword31[23:16];
+			tmp = codeword31[31:24];
+			ph31 = tmp << 3;
+
+			freq32 = codeword32[15:0];
+			amp32 = codeword32[23:16];
+			tmp = codeword32[31:24];
+			ph32 = tmp << 3;
+
+			freq33 = codeword33[15:0];
+			amp33 = codeword33[23:16];
+			tmp = codeword33[31:24];
+			ph33 = tmp << 3;
+
+			freq34 = codeword34[15:0];
+			amp34 = codeword34[23:16];
+			tmp = codeword34[31:24];
+			ph34 = tmp << 3;
+
+			freq35 = codeword35[15:0];
+			amp35 = codeword35[23:16];
+			tmp = codeword35[31:24];
+			ph35 = tmp << 3;
+
+			freq36 = codeword36[15:0];
+			amp36 = codeword36[23:16];
+			tmp = codeword36[31:24];
+			ph36 = tmp << 3;
+
+			freq37 = codeword37[15:0];
+			amp37 = codeword37[23:16];
+			tmp = codeword37[31:24];
+			ph37 = tmp << 3;
+
+			freq38 = codeword38[15:0];
+			amp38 = codeword38[23:16];
+			tmp = codeword38[31:24];
+			ph38 = tmp << 3;
+
+			freq39 = codeword39[15:0];
+			amp39 = codeword39[23:16];
+			tmp = codeword39[31:24];
+			ph39 = tmp << 3;
+
+			freq40 = codeword40[15:0];
+			amp40 = codeword40[23:16];
+			tmp = codeword40[31:24];
+			ph40 = tmp << 3;
+
+			freq41 = codeword41[15:0];
+			amp41 = codeword41[23:16];
+			tmp = codeword41[31:24];
+			ph41 = tmp << 3;
+
+			freq42 = codeword42[15:0];
+			amp42 = codeword42[23:16];
+			tmp = codeword42[31:24];
+			ph42 = tmp << 3;
+
+			freq43 = codeword43[15:0];
+			amp43 = codeword43[23:16];
+			tmp = codeword43[31:24];
+			ph43 = tmp << 3;
+
+			freq44 = codeword44[15:0];
+			amp44 = codeword44[23:16];
+			tmp = codeword44[31:24];
+			ph44 = tmp << 3;
+
+			freq45 = codeword45[15:0];
+			amp45 = codeword45[23:16];
+			tmp = codeword45[31:24];
+			ph45 = tmp << 3;
+
+			freq46 = codeword46[15:0];
+			amp46 = codeword46[23:16];
+			tmp = codeword46[31:24];
+			ph46 = tmp << 3;
+
+			freq47 = codeword47[15:0];
+			amp47 = codeword47[23:16];
+			tmp = codeword47[31:24];
+			ph47 = tmp << 3;
+
+			freq48 = codeword48[15:0];
+			amp48 = codeword48[23:16];
+			tmp = codeword48[31:24];
+			ph48 = tmp << 3;
+
+			freq49 = codeword49[15:0];
+			amp49 = codeword49[23:16];
+			tmp = codeword49[31:24];
+			ph49 = tmp << 3;
 			phase_acc0 = phase_acc0 + freq0;
 			phase_acc1 = phase_acc1 + freq1;
 			phase_acc2 = phase_acc2 + freq2;
@@ -138,13 +288,49 @@ module input_signal2(radio_clk, codeword0, codeword1,codeword2,codeword3, codewo
 			phase_acc17 = phase_acc17 + freq17;
 			phase_acc18 = phase_acc18 + freq18;
 			phase_acc19 = phase_acc19 + freq19;
+			phase_acc20 = phase_acc20 + freq20;
+			phase_acc21 = phase_acc21 + freq21;
+			phase_acc22 = phase_acc22 + freq22;
+			phase_acc23 = phase_acc23 + freq23;
+			phase_acc24 = phase_acc24 + freq24;
+			phase_acc25 = phase_acc25 + freq25;
+			phase_acc26 = phase_acc26 + freq26;
+			phase_acc27 = phase_acc27 + freq27;
+			phase_acc28 = phase_acc28 + freq28;
+			phase_acc29 = phase_acc29 + freq29;
+			phase_acc30 = phase_acc30 + freq30;
+			phase_acc31 = phase_acc31 + freq31;
+			phase_acc32 = phase_acc32 + freq32;
+			phase_acc33 = phase_acc33 + freq33;
+			phase_acc34 = phase_acc34 + freq34;
+			phase_acc35 = phase_acc35 + freq35;
+			phase_acc36 = phase_acc36 + freq36;
+			phase_acc37 = phase_acc37 + freq37;
+			phase_acc38 = phase_acc38 + freq38;
+			phase_acc39 = phase_acc39 + freq39;
+			phase_acc40 = phase_acc40 + freq40;
+			phase_acc41 = phase_acc41 + freq41;
+			phase_acc42 = phase_acc42 + freq42;
+			phase_acc43 = phase_acc43 + freq43;
+			phase_acc44 = phase_acc44 + freq44;
+			phase_acc45 = phase_acc45 + freq45;
+			phase_acc46 = phase_acc46 + freq46;
+			phase_acc47 = phase_acc47 + freq47;
+			phase_acc48 = phase_acc48 + freq48;
+			phase_acc49 = phase_acc49 + freq49;
+		amp_times_sin = amp0*sine[phase_acc0[15:5] + ph0] + amp1*sine[phase_acc1[15:5] + ph1] + amp2*sine[phase_acc2[15:5] + ph2] + amp3*sine[phase_acc3[15:5] + ph3] + amp4*sine[phase_acc4[15:5] + ph4] + amp5*sine[phase_acc5[15:5] + ph5] + amp6*sine[phase_acc6[15:5] + ph6] + amp7*sine[phase_acc7[15:5] + ph7] + amp8*sine[phase_acc8[15:5] + ph8] + amp9*sine[phase_acc9[15:5] + ph9] + amp10*sine[phase_acc10[15:5] + ph10] + amp11*sine[phase_acc11[15:5] + ph11] + amp12*sine[phase_acc12[15:5] + ph12] + amp13*sine[phase_acc13[15:5] + ph13] + amp14*sine[phase_acc14[15:5] + ph14] + amp15*sine[phase_acc15[15:5] + ph15] + amp16*sine[phase_acc16[15:5] + ph16] + amp17*sine[phase_acc17[15:5] + ph17] + amp18*sine[phase_acc18[15:5] + ph18] + amp19*sine[phase_acc19[15:5] + ph19];// + amp20*sine[phase_acc20[15:5] + ph20] + amp21*sine[phase_acc21[15:5] + ph21] + amp22*sine[phase_acc22[15:5] + ph22] + amp23*sine[phase_acc23[15:5] + ph23] + amp24*sine[phase_acc24[15:5] + ph24] + amp25*sine[phase_acc25[15:5] + ph25] + amp26*sine[phase_acc26[15:5] + ph26] + amp27*sine[phase_acc27[15:5] + ph27] + amp28*sine[phase_acc28[15:5] + ph28] + amp29*sine[phase_acc29[15:5] + ph29] + amp30*sine[phase_acc30[15:5] + ph30] + amp31*sine[phase_acc31[15:5] + ph31] + amp32*sine[phase_acc32[15:5] + ph32] + amp33*sine[phase_acc33[15:5] + ph33] + amp34*sine[phase_acc34[15:5] + ph34] + amp35*sine[phase_acc35[15:5] + ph35] + amp36*sine[phase_acc36[15:5] + ph36] + amp37*sine[phase_acc37[15:5] + ph37] + amp38*sine[phase_acc38[15:5] + ph38] + amp39*sine[phase_acc39[15:5] + ph39] + amp40*sine[phase_acc40[15:5] + ph40] + amp41*sine[phase_acc41[15:5] + ph41] + amp42*sine[phase_acc42[15:5] + ph42] + amp43*sine[phase_acc43[15:5] + ph43] + amp44*sine[phase_acc44[15:5] + ph44] + amp45*sine[phase_acc45[15:5] + ph45] + amp46*sine[phase_acc46[15:5] + ph46] + amp47*sine[phase_acc47[15:5] + ph47] + amp48*sine[phase_acc48[15:5] + ph48] + amp49*sine[phase_acc49[15:5] + ph49]; 
 
+			tx_out[15:0] = amp_times_sin[23:8];
+			begin
+				if (amp_times_sin[25] == 1 || amp_times_sin[24] == 1) 
+					tx_out[15:0] = 16'b1111111111111111; // Coercion line. 
+			end
+		  tx_out[31:16] = amp_times_sin[23:8];//16'b0000000000000000;
+//        tx_out[31:16] = 16'b0000000000000000;
+		  // Trying IQ channel thing
+		//  tx_out[31:16] =  amp_times_sin[23:8];
+		//   	tx[31:16] <= (run_tx) ? get_tx[31:16] : tx_idle[31:16]; // I channel
 
-		amp_times_sin = amp0*sine[phase_acc0[15:5] + ph0] + amp1*sine[phase_acc1[15:5] + ph1] + amp2*sine[phase_acc2[15:5] + ph2] + amp3*sine[phase_acc3[15:5] + ph3] + amp4*sine[phase_acc4[15:5] + ph4] + amp5*sine[phase_acc5[15:5] + ph5] + amp6*sine[phase_acc6[15:5] + ph6] + amp7*sine[phase_acc7[15:5] + ph7] + amp8*sine[phase_acc8[15:5] + ph8] + amp9*sine[phase_acc9[15:5] + ph9] + amp10*sine[phase_acc10[15:5] + ph10] + amp11*sine[phase_acc11[15:5] + ph11] + amp12*sine[phase_acc12[15:5] + ph12] + amp13*sine[phase_acc13[15:5] + ph13] + amp14*sine[phase_acc14[15:5] + ph14] + amp15*sine[phase_acc15[15:5] + ph15] + amp16*sine[phase_acc16[15:5] + ph16] + amp17*sine[phase_acc17[15:5] + ph17] + amp18*sine[phase_acc18[15:5] + ph18] + amp19*sine[phase_acc19[15:5] + ph19]; 
-
-
-        tx_out[15:0] = amp_times_sin[23:8];
-        tx_out[31:16] = 16'b0000000000000000;
     end
    assign get_tx = tx_out;
 

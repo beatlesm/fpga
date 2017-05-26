@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat May 06 23:06:56 2017
+// Written by: Map P.20131013 on Fri May 26 13:29:34 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -1300,6 +1300,7 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "b200_core/demux_for_ctrl/axi_fifo_short/gen_srlc32e[2].srlc32e" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/gen_srlc32e[1].srlc32e" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/gen_srlc32e[0].srlc32e" BEL
+        "b200_core/demux_for_ctrl/axi_fifo_short/a_4" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/a_3" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/a_1" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/a_0" BEL
@@ -1603,7 +1604,8 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/gen_srlc32e[1].srlc32e"
         BEL
         "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/gen_srlc32e[0].srlc32e"
-        BEL "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_3" BEL
+        BEL "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_4" BEL
+        "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_3" BEL
         "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_1" BEL
         "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_0" BEL
         "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_2" BEL
@@ -3894,6 +3896,7 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "b200_core/uart/simple_uart_tx/fifo/fifo_bram/wr_addr_4" BEL
         "b200_core/uart/simple_uart_tx/fifo/fifo_bram/wr_addr_5" BEL
         "b200_core/uart/simple_uart_tx/fifo/fifo_bram/wr_addr_6" BEL
+        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/read_state_FSM_FFd2" BEL
         "b200_core/uart/simple_uart_tx/baud_ctr_15" BEL
         "b200_core/uart/simple_uart_tx/baud_ctr_14" BEL
         "b200_core/uart/simple_uart_tx/baud_ctr_13" BEL
@@ -4178,6 +4181,7 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "b200_core/demux_for_tx/dm_state_FSM_FFd2" BEL
         "b200_core/demux_for_tx/dm_state_FSM_FFd3" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/full" BEL
+        "b200_core/demux_for_ctrl/axi_fifo_short/empty" BEL
         "b200_core/uart_timing_fifo/fifo_short/full" BEL
         "b200_core/uart_timing_fifo/fifo_short/empty" BEL
         "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/full" BEL
@@ -4188,6 +4192,8 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "b200_core/mux_for_rx/axi_fifo_short/full" BEL
         "b200_core/mux_for_resp/axi_fifo_short/empty" BEL
         "b200_core/mux_for_resp/axi_fifo_short/full" BEL
+        "b200_core/uart/simple_uart_rx/fifo/fifo_bram/full_reg" BEL
+        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/full_reg" BEL
         "b200_core/demux_for_tx/axi_fifo_short/empty" BEL
         "b200_core/demux_for_tx/axi_fifo_short/full" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/o_tvalid" BEL
@@ -4199,6 +4205,7 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "b200_core/mux_for_resp/axi_fifo_short/o_tvalid" BEL
         "b200_core/uart/simple_uart_rx/fifo/fifo_bram/o_tvalid" BEL
         "b200_core/uart/simple_uart_tx/fifo/fifo_bram/o_tvalid" BEL
+        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/empty_reg" BEL
         "b200_core/misc_spi/sclk_reg" BEL "b200_core/misc_spi/ready_reg" BEL
         "b200_core/demux_for_tx/axi_fifo_short/o_tvalid" BEL
         "b200_core/uart/rxd_state_FSM_FFd2" BEL
@@ -4306,23 +4313,6 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "b200_core/misc_spi/n0140[16:0]<13>_FRB" BEL
         "b200_core/misc_spi/n0140[16:0]<14>_FRB" BEL
         "b200_core/misc_spi/n0140[16:0]<15>_FRB" BEL
-        "b200_core/demux_for_ctrl/axi_fifo_short/a_4_BRB0" BEL
-        "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB0" BEL
-        "b200_core/demux_for_ctrl/axi_fifo_short/empty_BRB0" BEL
-        "b200_core/demux_for_ctrl/axi_fifo_short/empty_BRB1" BEL
-        "b200_core/uart/simple_uart_rx/fifo/fifo_bram/full_reg_BRB0" BEL
-        "b200_core/uart/simple_uart_rx/fifo/fifo_bram/full_reg_BRB1" BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/read_state_FSM_FFd2_BRB0"
-        BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/read_state_FSM_FFd2_BRB1"
-        BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/read_state_FSM_FFd2_BRB2"
-        BEL "b200_core/uart/simple_uart_tx/fifo/fifo_bram/full_reg_BRB0" BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/full_reg_BRB1" BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/full_reg_BRB2" BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/empty_reg_BRB0" BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/empty_reg_BRB1" BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/empty_reg_BRB2" BEL
         "b200_core/misc_spi/dataout_reg_31_BRB0" BEL
         "b200_core/misc_spi/dataout_reg_31_BRB1" BEL
         "b200_core/misc_spi/dataout_reg_31_BRB2" BEL
@@ -4386,24 +4376,7 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "b200_core/misc_spi/dataout_reg_2_BRB2" BEL
         "b200_core/misc_spi/dataout_reg_1_BRB1" BEL
         "b200_core/misc_spi/dataout_reg_1_BRB2" BEL
-        "b200_core/misc_spi/dataout_reg_0_BRB1" BEL
-        "b200_core/demux_for_ctrl/axi_fifo_short/a_4_BRB1" BEL
-        "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB1" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi1_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi11_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi21_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi31_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi41_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi51_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi61_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi71_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi81_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi91_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi101_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi111_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi121_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi131_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi141_FRB" PIN
+        "b200_core/misc_spi/dataout_reg_0_BRB1" PIN
         "b200_core/extra_rx_buff/fifo_bram/ram/Mram_ram17_pins<26>" PIN
         "b200_core/extra_rx_buff/fifo_bram/ram/Mram_ram17_pins<27>" PIN
         "b200_core/extra_rx_buff/fifo_bram/ram/Mram_ram16_pins<24>" PIN
@@ -6158,6 +6131,10 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0"
         BEL
+        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1"
+        BEL
+        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2"
+        BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3"
         BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4"
@@ -6470,6 +6447,8 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_3"
         BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_4"
+        BEL
+        "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5"
         BEL "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/a_0"
         BEL "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/a_1"
         BEL "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/a_2"
@@ -7030,10 +7009,13 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/lines32_2" BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/lines32_1" BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/lines32_0" BEL
+        "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1" BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2" BEL
         "slave_fifo32/fifo64_to_gpif2_resp/fifo64_to_fifo32/state" BEL
         "slave_fifo32/fifo64_to_gpif2_rx/fifo64_to_fifo32/state" BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/pre_fifo/full"
+        BEL
+        "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/pre_fifo/empty"
         BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/post_fifo/full"
         BEL
@@ -7041,7 +7023,11 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         BEL
         "slave_fifo32/fifo64_to_gpif2_rx/outgress_timing_fifo/fifo_short/full"
         BEL
+        "slave_fifo32/fifo64_to_gpif2_rx/outgress_timing_fifo/fifo_short/empty"
+        BEL
         "slave_fifo32/fifo64_to_gpif2_resp/outgress_timing_fifo/fifo_short/full"
+        BEL
+        "slave_fifo32/fifo64_to_gpif2_resp/outgress_timing_fifo/fifo_short/empty"
         BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/full_reg"
         BEL
@@ -7052,6 +7038,8 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/post_fifo/empty"
         BEL
         "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/post_fifo/full"
+        BEL
+        "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/pre_fifo/empty"
         BEL
         "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/pre_fifo/full"
         BEL
@@ -7065,6 +7053,10 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/empty"
         BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/full"
+        BEL
+        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty"
+        BEL
+        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full"
         BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/ingress_timing_fifo/fifo_short/empty"
         BEL
@@ -7126,14 +7118,14 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/dump" BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/dump" BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/dump" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<0>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<1>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<2>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<3>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<4>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<5>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<6>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<7>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<0>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<1>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<2>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<3>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<4>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<5>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<6>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<7>_FRB" BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<1>_FRB"
         BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<2>_FRB"
@@ -7200,60 +7192,6 @@ TIMEGRP gpif_clk = BEL "clocks_ready" BEL "misc_outs_r_0" BEL "misc_outs_r_1"
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<12>_FRB"
         BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<13>_FRB"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/pre_fifo/empty_BRB0"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/pre_fifo/empty_BRB1"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_rx/outgress_timing_fifo/fifo_short/empty_BRB0"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_rx/outgress_timing_fifo/fifo_short/empty_BRB1"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_resp/outgress_timing_fifo/fifo_short/empty_BRB0"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_resp/outgress_timing_fifo/fifo_short/empty_BRB1"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/pre_fifo/empty_BRB0"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/pre_fifo/empty_BRB1"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB0"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB1"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB2"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB3"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5_BRB0"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5_BRB1"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5_BRB2"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5_BRB3"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1"
-        BEL "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB0"
-        BEL "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB1"
-        BEL "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB2"
-        BEL "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB3"
-        BEL "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB4"
-        BEL "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB5"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full_BRB0"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full_BRB1"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full_BRB2"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full_BRB3"
         BEL "slave_fifo32/next_addr_1_BRB0" BEL
         "slave_fifo32/next_addr_0_BRB0" BEL "slave_fifo32/sloe" BEL
         "slave_fifo32/gpif_data_out_31_1" BEL "slave_fifo32/slwr_1" BEL
@@ -9427,6 +9365,7 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/gen_srlc32e[2].srlc32e" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/gen_srlc32e[1].srlc32e" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/gen_srlc32e[0].srlc32e" BEL
+        "b200_core/demux_for_ctrl/axi_fifo_short/a_4" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/a_3" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/a_1" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/a_0" BEL
@@ -9730,7 +9669,8 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/gen_srlc32e[1].srlc32e"
         BEL
         "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/gen_srlc32e[0].srlc32e"
-        BEL "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_3" BEL
+        BEL "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_4" BEL
+        "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_3" BEL
         "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_1" BEL
         "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_0" BEL
         "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_2" BEL
@@ -12021,6 +11961,7 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "b200_core/uart/simple_uart_tx/fifo/fifo_bram/wr_addr_4" BEL
         "b200_core/uart/simple_uart_tx/fifo/fifo_bram/wr_addr_5" BEL
         "b200_core/uart/simple_uart_tx/fifo/fifo_bram/wr_addr_6" BEL
+        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/read_state_FSM_FFd2" BEL
         "b200_core/uart/simple_uart_tx/baud_ctr_15" BEL
         "b200_core/uart/simple_uart_tx/baud_ctr_14" BEL
         "b200_core/uart/simple_uart_tx/baud_ctr_13" BEL
@@ -12305,6 +12246,7 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "b200_core/demux_for_tx/dm_state_FSM_FFd2" BEL
         "b200_core/demux_for_tx/dm_state_FSM_FFd3" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/full" BEL
+        "b200_core/demux_for_ctrl/axi_fifo_short/empty" BEL
         "b200_core/uart_timing_fifo/fifo_short/full" BEL
         "b200_core/uart_timing_fifo/fifo_short/empty" BEL
         "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/full" BEL
@@ -12315,6 +12257,8 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "b200_core/mux_for_rx/axi_fifo_short/full" BEL
         "b200_core/mux_for_resp/axi_fifo_short/empty" BEL
         "b200_core/mux_for_resp/axi_fifo_short/full" BEL
+        "b200_core/uart/simple_uart_rx/fifo/fifo_bram/full_reg" BEL
+        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/full_reg" BEL
         "b200_core/demux_for_tx/axi_fifo_short/empty" BEL
         "b200_core/demux_for_tx/axi_fifo_short/full" BEL
         "b200_core/demux_for_ctrl/axi_fifo_short/o_tvalid" BEL
@@ -12326,6 +12270,7 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "b200_core/mux_for_resp/axi_fifo_short/o_tvalid" BEL
         "b200_core/uart/simple_uart_rx/fifo/fifo_bram/o_tvalid" BEL
         "b200_core/uart/simple_uart_tx/fifo/fifo_bram/o_tvalid" BEL
+        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/empty_reg" BEL
         "b200_core/misc_spi/sclk_reg" BEL "b200_core/misc_spi/ready_reg" BEL
         "b200_core/demux_for_tx/axi_fifo_short/o_tvalid" BEL
         "b200_core/uart/rxd_state_FSM_FFd2" BEL
@@ -12433,23 +12378,6 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "b200_core/misc_spi/n0140[16:0]<13>_FRB" BEL
         "b200_core/misc_spi/n0140[16:0]<14>_FRB" BEL
         "b200_core/misc_spi/n0140[16:0]<15>_FRB" BEL
-        "b200_core/demux_for_ctrl/axi_fifo_short/a_4_BRB0" BEL
-        "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB0" BEL
-        "b200_core/demux_for_ctrl/axi_fifo_short/empty_BRB0" BEL
-        "b200_core/demux_for_ctrl/axi_fifo_short/empty_BRB1" BEL
-        "b200_core/uart/simple_uart_rx/fifo/fifo_bram/full_reg_BRB0" BEL
-        "b200_core/uart/simple_uart_rx/fifo/fifo_bram/full_reg_BRB1" BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/read_state_FSM_FFd2_BRB0"
-        BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/read_state_FSM_FFd2_BRB1"
-        BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/read_state_FSM_FFd2_BRB2"
-        BEL "b200_core/uart/simple_uart_tx/fifo/fifo_bram/full_reg_BRB0" BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/full_reg_BRB1" BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/full_reg_BRB2" BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/empty_reg_BRB0" BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/empty_reg_BRB1" BEL
-        "b200_core/uart/simple_uart_tx/fifo/fifo_bram/empty_reg_BRB2" BEL
         "b200_core/misc_spi/dataout_reg_31_BRB0" BEL
         "b200_core/misc_spi/dataout_reg_31_BRB1" BEL
         "b200_core/misc_spi/dataout_reg_31_BRB2" BEL
@@ -12513,24 +12441,7 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "b200_core/misc_spi/dataout_reg_2_BRB2" BEL
         "b200_core/misc_spi/dataout_reg_1_BRB1" BEL
         "b200_core/misc_spi/dataout_reg_1_BRB2" BEL
-        "b200_core/misc_spi/dataout_reg_0_BRB1" BEL
-        "b200_core/demux_for_ctrl/axi_fifo_short/a_4_BRB1" BEL
-        "b200_core/radio_ctrl_proc_timing_fifo/fifo_short/a_4_BRB1" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi1_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi11_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi21_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi31_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi41_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi51_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi61_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi71_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi81_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi91_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi101_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi111_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi121_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi131_FRB" BEL
-        "b200_core/radio_ctrl_proc/time_compare/Mcompar_late_lutdi141_FRB" PIN
+        "b200_core/misc_spi/dataout_reg_0_BRB1" PIN
         "b200_core/extra_rx_buff/fifo_bram/ram/Mram_ram17_pins<26>" PIN
         "b200_core/extra_rx_buff/fifo_bram/ram/Mram_ram17_pins<27>" PIN
         "b200_core/extra_rx_buff/fifo_bram/ram/Mram_ram16_pins<24>" PIN
@@ -14285,6 +14196,10 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_0"
         BEL
+        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1"
+        BEL
+        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2"
+        BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_3"
         BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_4"
@@ -14597,6 +14512,8 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_3"
         BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_4"
+        BEL
+        "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5"
         BEL "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/a_0"
         BEL "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/a_1"
         BEL "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/a_2"
@@ -15157,10 +15074,13 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/lines32_2" BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/lines32_1" BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/lines32_0" BEL
+        "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1" BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd2" BEL
         "slave_fifo32/fifo64_to_gpif2_resp/fifo64_to_fifo32/state" BEL
         "slave_fifo32/fifo64_to_gpif2_rx/fifo64_to_fifo32/state" BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/pre_fifo/full"
+        BEL
+        "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/pre_fifo/empty"
         BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/post_fifo/full"
         BEL
@@ -15168,7 +15088,11 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         BEL
         "slave_fifo32/fifo64_to_gpif2_rx/outgress_timing_fifo/fifo_short/full"
         BEL
+        "slave_fifo32/fifo64_to_gpif2_rx/outgress_timing_fifo/fifo_short/empty"
+        BEL
         "slave_fifo32/fifo64_to_gpif2_resp/outgress_timing_fifo/fifo_short/full"
+        BEL
+        "slave_fifo32/fifo64_to_gpif2_resp/outgress_timing_fifo/fifo_short/empty"
         BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/full_reg"
         BEL
@@ -15179,6 +15103,8 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/post_fifo/empty"
         BEL
         "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/post_fifo/full"
+        BEL
+        "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/pre_fifo/empty"
         BEL
         "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/pre_fifo/full"
         BEL
@@ -15192,6 +15118,10 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/empty"
         BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/post_fifo/full"
+        BEL
+        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty"
+        BEL
+        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full"
         BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/ingress_timing_fifo/fifo_short/empty"
         BEL
@@ -15253,14 +15183,14 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/dump" BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/dump" BEL
         "slave_fifo32/gpif2_to_fifo64_ctrl/checker/gate_xfer/dump" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<0>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<1>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<2>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<3>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<4>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<5>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<6>_FRB" BEL
-        "slave_fifo32/transfer_size[15]_GND_231_o_add_50_OUT<7>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<0>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<1>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<2>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<3>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<4>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<5>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<6>_FRB" BEL
+        "slave_fifo32/transfer_size[15]_GND_241_o_add_50_OUT<7>_FRB" BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<1>_FRB"
         BEL
         "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<2>_FRB"
@@ -15327,60 +15257,6 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<12>_FRB"
         BEL
         "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/main_fifo/fifo_bram/dont_write_past_me<13>_FRB"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/pre_fifo/empty_BRB0"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_rx/buffer_whole_pkt/axi_fifo/pre_fifo/empty_BRB1"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_rx/outgress_timing_fifo/fifo_short/empty_BRB0"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_rx/outgress_timing_fifo/fifo_short/empty_BRB1"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_resp/outgress_timing_fifo/fifo_short/empty_BRB0"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_resp/outgress_timing_fifo/fifo_short/empty_BRB1"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/pre_fifo/empty_BRB0"
-        BEL
-        "slave_fifo32/fifo64_to_gpif2_resp/buffer_whole_pkt/axi_fifo/pre_fifo/empty_BRB1"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB0"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB1"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/empty_BRB2"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB0"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB1"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB2"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_1_BRB3"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5_BRB0"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5_BRB1"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5_BRB2"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_ctrl/min_read_buff/fifo_short/space_5_BRB3"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/a_2_BRB1"
-        BEL "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB0"
-        BEL "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB1"
-        BEL "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB2"
-        BEL "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB3"
-        BEL "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB4"
-        BEL "slave_fifo32/gpif2_to_fifo64_ctrl/checker/state_FSM_FFd1_BRB5"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full_BRB0"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full_BRB1"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full_BRB2"
-        BEL
-        "slave_fifo32/gpif2_to_fifo64_tx/checker/gate_xfer/axi_fifo/pre_fifo/full_BRB3"
         BEL "slave_fifo32/next_addr_1_BRB0" BEL
         "slave_fifo32/next_addr_0_BRB0" BEL "slave_fifo32/sloe" BEL
         "slave_fifo32/gpif_data_out_31_1" BEL "slave_fifo32/slwr_1" BEL
@@ -17425,19 +17301,104 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "S6CLK2PIN_gpif/ODDR2_S6CLK2PIN_pins<1>" PIN
         "S6CLK2PIN_gpif/ODDR2_S6CLK2PIN_pins<2>";
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_13_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_13_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_6_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_86_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_6_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_86_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_9_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_82_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_9_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_82_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_78_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_78_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_74_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_74_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_70_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_70_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_66_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_66_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_62_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_62_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_58_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_58_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_54_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_54_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_50_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_50_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_46_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_46_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_98_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_98_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_94_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_94_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_42_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_42_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_38_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_38_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_34_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_34_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_30_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_30_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_23_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_23_OUT"
+        PINNAME CLK;
+PIN
+        b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_26_OUT_pins<92>
+        = BEL
+        "b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_26_OUT"
         PINNAME CLK;
 PIN b200_core/radio_0/new_rx_framer/datafifo/fifo_bram/ram/Mram_ram7_pins<22>
         = BEL
@@ -18207,6 +18168,278 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_2" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_1" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_0" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_15" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_14" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_13" BEL
@@ -18255,11 +18488,45 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_2" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_1" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_0" PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_13_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_6_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_86_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_9_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_82_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_78_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_74_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_70_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_66_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_62_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_58_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_54_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_50_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_46_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_98_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_94_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_42_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_38_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_34_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_30_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_23_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_26_OUT_pins<92>"
         BEL "b200_core/radio_0/tx_deframer/td_state_FSM_FFd1" BEL
         "b200_core/radio_0/tx_deframer/td_state_FSM_FFd2" BEL
         "b200_core/radio_0/tx_deframer/sid_31" BEL
@@ -19032,6 +19299,414 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/sr_llr_reg2/out_2" BEL
         "b200_core/radio_0/sr_llr_reg2/out_1" BEL
         "b200_core/radio_0/sr_llr_reg2/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_0" BEL
         "b200_core/radio_0/duc_chain/strobe_hb1" BEL
         "b200_core/radio_0/duc_chain/sr_2/out_9" BEL
         "b200_core/radio_0/duc_chain/sr_2/out_8" BEL
@@ -21904,6 +22579,278 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_2" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_1" BEL
         "b200_core/radio_0/fe_gpio_atr/reg_atr_disable/out_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc19_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc18_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc17_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc15_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc14_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc16_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc13_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc12_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc10_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc9_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc11_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc8_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc7_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc5_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc4_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc6_0" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_15" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_14" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_13" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_12" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_11" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_10" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_9" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_8" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_7" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_6" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_5" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_4" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_3" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_2" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_1" BEL
+        "b200_core/radio_0/inp_sig/phase_acc3_0" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_15" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_14" BEL
         "b200_core/radio_0/inp_sig/phase_acc2_13" BEL
@@ -21952,11 +22899,45 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_2" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_1" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_0" PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_13_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_6_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_86_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_9_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_82_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_78_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_74_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_70_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_66_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_62_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_58_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_54_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_50_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_46_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_98_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_94_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_42_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_38_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_34_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_30_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_23_OUT_pins<92>"
+        PIN
+        "b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_26_OUT_pins<92>"
         BEL "b200_core/radio_0/tx_deframer/td_state_FSM_FFd1" BEL
         "b200_core/radio_0/tx_deframer/td_state_FSM_FFd2" BEL
         "b200_core/radio_0/tx_deframer/sid_31" BEL
@@ -22729,6 +23710,414 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/sr_llr_reg2/out_2" BEL
         "b200_core/radio_0/sr_llr_reg2/out_1" BEL
         "b200_core/radio_0/sr_llr_reg2/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg3/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg4/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg5/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg6/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg7/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg8/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg9/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg10/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg11/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg12/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg13/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg14/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg15/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg16/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg17/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg18/out_0" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_31" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_30" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_29" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_28" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_27" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_26" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_25" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_24" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_15" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_14" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_13" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_12" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_11" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_10" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_9" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_8" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_7" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_6" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_5" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_4" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_3" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_2" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_1" BEL
+        "b200_core/radio_0/sr_llr_reg19/out_0" BEL
         "b200_core/radio_0/duc_chain/strobe_hb1" BEL
         "b200_core/radio_0/duc_chain/sr_2/out_9" BEL
         "b200_core/radio_0/duc_chain/sr_2/out_8" BEL

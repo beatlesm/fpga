@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri May 26 13:29:34 2017
+// Written by: Map P.20131013 on Fri May 26 18:36:42 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -17301,104 +17301,104 @@ TIMEGRP gen_clks_clkfx = BEL "clocks_ready" BEL "misc_outs_r_0" BEL
         "S6CLK2PIN_gpif/ODDR2_S6CLK2PIN_pins<1>" PIN
         "S6CLK2PIN_gpif/ODDR2_S6CLK2PIN_pins<2>";
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_112_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_112_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_86_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_108_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_86_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_108_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_82_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_104_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_82_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_104_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_78_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_100_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_78_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_100_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_74_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_96_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_74_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_96_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_70_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_92_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_70_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_92_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_66_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_88_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_66_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_88_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_62_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_84_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_62_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_84_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_58_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_128_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_58_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_128_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_54_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_124_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_54_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_124_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_50_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_120_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_50_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_120_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_46_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_116_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_46_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_116_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_98_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_80_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_98_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_80_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_94_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_76_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_94_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_76_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_42_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_72_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_42_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_72_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_38_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_68_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_38_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_68_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_34_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_64_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_34_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_64_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_30_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_60_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_30_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_60_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_23_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_53_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_23_OUT"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_53_OUT"
         PINNAME CLK;
 PIN
-        b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_26_OUT_pins<92>
+        b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_56_OUT_pins<92>
         = BEL
-        "b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_26_OUT"
+        "b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_56_OUT"
         PINNAME CLK;
 PIN b200_core/radio_0/new_rx_framer/datafifo/fifo_bram/ram/Mram_ram7_pins<22>
         = BEL
@@ -18488,45 +18488,45 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_2" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_1" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_0" PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_112_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_86_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_108_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_82_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_104_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_78_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_100_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_74_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_96_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_70_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_92_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_66_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_88_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_62_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_84_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_58_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_128_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_54_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_124_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_50_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_120_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_46_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_116_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_98_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_80_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_94_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_76_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_42_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_72_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_38_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_68_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_34_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_64_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_30_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_60_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_23_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_53_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_26_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_56_OUT_pins<92>"
         BEL "b200_core/radio_0/tx_deframer/td_state_FSM_FFd1" BEL
         "b200_core/radio_0/tx_deframer/td_state_FSM_FFd2" BEL
         "b200_core/radio_0/tx_deframer/sid_31" BEL
@@ -20669,7 +20669,25 @@ TIMEGRP b200_io_i0_siso_clk2_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/tx_fifo/fifo_1clk/fifo_bram/Mcount_rd_addr10_FRB"
         BEL
         "b200_core/radio_0/tx_fifo/fifo_1clk/fifo_bram/Mcount_rd_addr11_FRB"
-        BEL "b200_core/radio_0/add_fp_gpio.fp_gpio_atr/ogpio_9_BRB1" BEL
+        BEL "b200_core/radio_0/inp_sig/tx_out_15_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_15_BRB1" BEL
+        "b200_core/radio_0/inp_sig/tx_out_15_BRB2" BEL
+        "b200_core/radio_0/inp_sig/tx_out_14_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_13_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_12_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_11_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_10_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_9_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_8_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_7_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_6_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_5_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_4_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_3_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_2_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_1_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_0_BRB0" BEL
+        "b200_core/radio_0/add_fp_gpio.fp_gpio_atr/ogpio_9_BRB1" BEL
         "b200_core/radio_0/add_fp_gpio.fp_gpio_atr/ogpio_9_BRB2" BEL
         "b200_core/radio_0/add_fp_gpio.fp_gpio_atr/ogpio_9_BRB3" BEL
         "b200_core/radio_0/add_fp_gpio.fp_gpio_atr/ogpio_9_BRB4" BEL
@@ -22899,45 +22917,45 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_2" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_1" BEL
         "b200_core/radio_0/inp_sig/phase_acc1_0" PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_112_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_86_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_108_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_82_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_104_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_78_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_100_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_74_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_96_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_70_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_92_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_66_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_88_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_62_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_84_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_58_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_128_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_54_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_124_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_50_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_120_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_46_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_116_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_98_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_80_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_94_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_76_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_42_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_72_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_38_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_68_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_34_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_64_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_30_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_60_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_23_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_53_OUT_pins<92>"
         PIN
-        "b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_26_OUT_pins<92>"
+        "b200_core/radio_0/inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_56_OUT_pins<92>"
         BEL "b200_core/radio_0/tx_deframer/td_state_FSM_FFd1" BEL
         "b200_core/radio_0/tx_deframer/td_state_FSM_FFd2" BEL
         "b200_core/radio_0/tx_deframer/sid_31" BEL
@@ -25080,7 +25098,25 @@ TIMEGRP b200_io_i0_mimo_clk_unbuf = BEL "fe1_gpio_0" BEL "fe1_gpio_1" BEL
         "b200_core/radio_0/tx_fifo/fifo_1clk/fifo_bram/Mcount_rd_addr10_FRB"
         BEL
         "b200_core/radio_0/tx_fifo/fifo_1clk/fifo_bram/Mcount_rd_addr11_FRB"
-        BEL "b200_core/radio_0/add_fp_gpio.fp_gpio_atr/ogpio_9_BRB1" BEL
+        BEL "b200_core/radio_0/inp_sig/tx_out_15_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_15_BRB1" BEL
+        "b200_core/radio_0/inp_sig/tx_out_15_BRB2" BEL
+        "b200_core/radio_0/inp_sig/tx_out_14_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_13_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_12_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_11_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_10_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_9_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_8_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_7_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_6_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_5_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_4_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_3_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_2_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_1_BRB0" BEL
+        "b200_core/radio_0/inp_sig/tx_out_0_BRB0" BEL
+        "b200_core/radio_0/add_fp_gpio.fp_gpio_atr/ogpio_9_BRB1" BEL
         "b200_core/radio_0/add_fp_gpio.fp_gpio_atr/ogpio_9_BRB2" BEL
         "b200_core/radio_0/add_fp_gpio.fp_gpio_atr/ogpio_9_BRB3" BEL
         "b200_core/radio_0/add_fp_gpio.fp_gpio_atr/ogpio_9_BRB4" BEL

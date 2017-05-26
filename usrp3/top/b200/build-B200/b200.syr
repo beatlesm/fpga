@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: b200.prj
@@ -432,7 +432,7 @@ Elaborating module <setting_reg(my_addr=8'b10000000,width=32)>.
 Elaborating module <setting_reg(my_addr=32'b010000001,width=32)>.
 
 Elaborating module <setting_reg(my_addr=32'b010000010,width=3)>.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 191: Assignment to debug_radio_ctrl_proc ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 222: Assignment to debug_radio_ctrl_proc ignored, since the identifier is never used
 
 Elaborating module <user_settings(BASE=8'b11111101)>.
 
@@ -482,7 +482,9 @@ Elaborating module <setting_reg(my_addr=32'b011001100,width=10,at_reset=0)>.
 Elaborating module <setting_reg(my_addr=32'b011001101,width=10)>.
 
 Elaborating module <input_signal2>.
-WARNING:HDLCompiler:872 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal2.v" Line 154: Using initial value of sine since it is never assigned
+WARNING:HDLCompiler:872 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal2.v" Line 340: Using initial value of sine since it is never assigned
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal2.v" Line 20: Assignment to amp20 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 415: Size mismatch in connection of port <codeword20>. Formal port size is 32-bit while actual signal size is 1-bit.
 
 Elaborating module <new_tx_deframer>.
 
@@ -494,7 +496,7 @@ Elaborating module <new_tx_control(BASE=8'b01000000)>.
 
 Elaborating module <setting_reg(my_addr=8'b01000000,width=3)>.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/new_tx_control.v" Line 48: Assignment to policy_wait ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 417: Assignment to debug_tx_control ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 448: Assignment to debug_tx_control ignored, since the identifier is never used
 
 Elaborating module <tx_responder(BASE=32'b01000010)>.
 
@@ -513,13 +515,13 @@ WARNING:HDLCompiler:413 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_f
 WARNING:HDLCompiler:413 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_fifo_short.v" Line 80: Result of 6-bit expression is truncated to fit in 5-bit target.
 
 Elaborating module <setting_reg(my_addr=8'b10100000,awidth=8,width=32)>.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 440: Assignment to new_command ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 471: Assignment to new_command ignored, since the identifier is never used
 
 Elaborating module <setting_reg(my_addr=8'b10100001,awidth=8,width=32)>.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 444: Assignment to new_time ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 475: Assignment to new_time ignored, since the identifier is never used
 
 Elaborating module <setting_reg(my_addr=8'b10100010,awidth=8,width=32)>.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 448: Assignment to new_time ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 479: Assignment to new_time ignored, since the identifier is never used
 
 Elaborating module <setting_reg(my_addr=8'b10100011,awidth=8,width=32)>.
 
@@ -562,7 +564,7 @@ Elaborating module <setting_reg(my_addr=8'b10110101,awidth=8,width=32)>.
 Elaborating module <setting_reg(my_addr=8'b10110110,awidth=8,width=32)>.
 
 Elaborating module <setting_reg(my_addr=8'b10110111,awidth=8,width=32)>.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 511: Assignment to rst_local ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 688: Assignment to rst_local ignored, since the identifier is never used
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/duc_chain.v" Line 227: Port reset is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/duc_chain.v" Line 229: Port reset is not connected to this instance
 
@@ -655,8 +657,8 @@ Elaborating module <clip_reg(bits_in=36,bits_out=33,STROBED=1)>.
 Elaborating module <clip(bits_in=36,bits_out=33)>.
 WARNING:HDLCompiler:552 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/duc_chain.v" Line 227: Input port reset is not connected on this instance
 WARNING:HDLCompiler:552 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/duc_chain.v" Line 229: Input port reset is not connected on this instance
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 525: Assignment to tx_fe_i ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 527: Assignment to debug_duc_chain ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 702: Assignment to tx_fe_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 704: Assignment to debug_duc_chain ignored, since the identifier is never used
 
 Elaborating module <new_rx_framer(BASE=32'b01100100,SAMPLE_FIFO_SIZE=11)>.
 
@@ -680,7 +682,7 @@ WARNING:HDLCompiler:413 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_f
 Elaborating module <axi_fifo_short(WIDTH=81)>.
 WARNING:HDLCompiler:413 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_fifo_short.v" Line 74: Result of 32-bit expression is truncated to fit in 5-bit target.
 WARNING:HDLCompiler:413 - "/home/thompsonlab/Documents/fpga/usrp3/lib/fifo/axi_fifo_short.v" Line 80: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 561: Assignment to debug_rx_framer ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 738: Assignment to debug_rx_framer ignored, since the identifier is never used
 
 Elaborating module <new_rx_control(BASE=8'b01100000)>.
 
@@ -692,7 +694,7 @@ Elaborating module <setting_reg(my_addr=32'b01100010)>.
 
 Elaborating module <setting_reg(my_addr=32'b01100011)>.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/vita_200/new_rx_control.v" Line 87: Assignment to early ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 572: Assignment to debug_rx_control ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 749: Assignment to debug_rx_control ignored, since the identifier is never used
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_chain.v" Line 241: Port reset is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_chain.v" Line 243: Port reset is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_chain.v" Line 278: Port reset is not connected to this instance
@@ -791,14 +793,16 @@ WARNING:HDLCompiler:552 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_ch
 WARNING:HDLCompiler:552 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_chain.v" Line 243: Input port reset is not connected on this instance
 WARNING:HDLCompiler:552 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_chain.v" Line 278: Input port reset is not connected on this instance
 WARNING:HDLCompiler:552 - "/home/thompsonlab/Documents/fpga/usrp3/lib/dsp/ddc_chain.v" Line 280: Input port reset is not connected on this instance
-WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 597: Assignment to debug_ddc_chain ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 774: Assignment to debug_ddc_chain ignored, since the identifier is never used
 
 Elaborating module <axi_mux4(PRIO=1,WIDTH=64,BUFFER=1)>.
 
 Elaborating module <axi_mux4(PRIO=0,WIDTH=64)>.
-WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 193: Net <rb_data_user[63]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 547: Net <strobe_rx2> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 548: Net <sample_rx2[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 224: Net <rb_data_user[63]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 411: Net <llr_reg21_val[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 724: Net <strobe_rx2> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 725: Net <sample_rx2[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" Line 415: Net <llr_reg20_val> does not have a driver.
 WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200_core.v" Line 318: Assignment to radio0_debug ignored, since the identifier is never used
 
 Elaborating module <serial_to_settings>.
@@ -903,12 +907,12 @@ WARNING:HDLCompiler:1127 - "/home/thompsonlab/Documents/fpga/usrp3/lib/gpif2/gpi
 
 Elaborating module <fifo64_to_gpif2(FIFO_SIZE=5)>.
 WARNING:HDLCompiler:634 - "/home/thompsonlab/Documents/fpga/usrp3/top/b200/b200.v" Line 189: Net <reset> does not have a driver.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 201. All outputs of instance <user_settings> of block <user_settings> are unconnected in block <radio_legacy>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 206. All outputs of instance <user_rb_addr> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 438. All outputs of instance <sr_cmd_rx> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 442. All outputs of instance <sr_time_h_rx> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 446. All outputs of instance <sr_time_l_rx> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 450. All outputs of instance <sr_cntrl> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 232. All outputs of instance <user_settings> of block <user_settings> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 237. All outputs of instance <user_rb_addr> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 469. All outputs of instance <sr_cmd_rx> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 473. All outputs of instance <sr_time_h_rx> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 477. All outputs of instance <sr_time_l_rx> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 481. All outputs of instance <sr_cntrl> of block <setting_reg> are unconnected in block <radio_legacy>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -1612,67 +1616,97 @@ Synthesizing Unit <radio_legacy>.
         USER_SETTINGS = 1
         DEVICE = "SPARTAN6"
         CUSTOM_ON = 1
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 177: Output port <sync_out> of the instance <timekeeper> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 184: Output port <debug> of the instance <radio_ctrl_proc> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 201: Output port <set_addr_user> of the instance <user_settings> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 201: Output port <set_data_user> of the instance <user_settings> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 201: Output port <set_stb_user> of the instance <user_settings> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 206: Output port <out> of the instance <user_rb_addr> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 206: Output port <changed> of the instance <user_rb_addr> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 259: Output port <i_tready> of the instance <vita_time_fifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 269: Output port <changed> of the instance <sr_loopback> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 273: Output port <changed> of the instance <sr_test> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 277: Output port <changed> of the instance <sr_codec_idle> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 281: Output port <changed> of the instance <sr_rdback> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 288: Output port <gpio_sw_rb> of the instance <fe_gpio_atr> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 403: Output port <debug> of the instance <tx_deframer> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 409: Output port <debug> of the instance <tx_control> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 438: Output port <out> of the instance <sr_cmd_rx> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 438: Output port <changed> of the instance <sr_cmd_rx> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 442: Output port <out> of the instance <sr_time_h_rx> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 442: Output port <changed> of the instance <sr_time_h_rx> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 446: Output port <out> of the instance <sr_time_l_rx> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 446: Output port <changed> of the instance <sr_time_l_rx> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 450: Output port <out> of the instance <sr_cntrl> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 450: Output port <changed> of the instance <sr_cntrl> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 454: Output port <changed> of the instance <sr_llr_reg0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 458: Output port <changed> of the instance <sr_llr_reg1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 462: Output port <changed> of the instance <sr_llr_reg2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 466: Output port <changed> of the instance <sr_llr_reg3> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 470: Output port <changed> of the instance <sr_llr_reg4> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 474: Output port <changed> of the instance <sr_llr_reg5> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 478: Output port <changed> of the instance <sr_llr_reg6> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 482: Output port <changed> of the instance <sr_llr_reg7> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 486: Output port <changed> of the instance <sr_llr_reg8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 490: Output port <changed> of the instance <sr_llr_reg9> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 494: Output port <changed> of the instance <sr_llr_reg10> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 497: Output port <changed> of the instance <sr_llr_reg11> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 498: Output port <changed> of the instance <sr_llr_reg12> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 499: Output port <changed> of the instance <sr_llr_reg13> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 500: Output port <changed> of the instance <sr_llr_reg14> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 501: Output port <changed> of the instance <sr_llr_reg15> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 502: Output port <changed> of the instance <sr_llr_reg16> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 503: Output port <changed> of the instance <sr_llr_reg17> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 504: Output port <changed> of the instance <sr_llr_reg18> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 505: Output port <changed> of the instance <sr_llr_reg19> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 522: Output port <tx_fe_i> of the instance <duc_chain> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 522: Output port <tx_fe_q> of the instance <duc_chain> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 522: Output port <debug> of the instance <duc_chain> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 554: Output port <debug> of the instance <new_rx_framer> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 564: Output port <debug> of the instance <new_rx_control> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 592: Output port <sample> of the instance <ddc_chain> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 592: Output port <debug> of the instance <ddc_chain> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 592: Output port <strobe> of the instance <ddc_chain> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 617: Output port <i2_tready> of the instance <rx_mux> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 617: Output port <i3_tready> of the instance <rx_mux> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 628: Output port <i2_tready> of the instance <response_mux> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 628: Output port <i3_tready> of the instance <response_mux> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 208: Output port <sync_out> of the instance <timekeeper> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 215: Output port <debug> of the instance <radio_ctrl_proc> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 232: Output port <set_addr_user> of the instance <user_settings> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 232: Output port <set_data_user> of the instance <user_settings> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 232: Output port <set_stb_user> of the instance <user_settings> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 237: Output port <out> of the instance <user_rb_addr> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 237: Output port <changed> of the instance <user_rb_addr> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 290: Output port <i_tready> of the instance <vita_time_fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 300: Output port <changed> of the instance <sr_loopback> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 304: Output port <changed> of the instance <sr_test> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 308: Output port <changed> of the instance <sr_codec_idle> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 312: Output port <changed> of the instance <sr_rdback> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 319: Output port <gpio_sw_rb> of the instance <fe_gpio_atr> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 434: Output port <debug> of the instance <tx_deframer> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 440: Output port <debug> of the instance <tx_control> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 469: Output port <out> of the instance <sr_cmd_rx> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 469: Output port <changed> of the instance <sr_cmd_rx> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 473: Output port <out> of the instance <sr_time_h_rx> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 473: Output port <changed> of the instance <sr_time_h_rx> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 477: Output port <out> of the instance <sr_time_l_rx> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 477: Output port <changed> of the instance <sr_time_l_rx> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 481: Output port <out> of the instance <sr_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 481: Output port <changed> of the instance <sr_cntrl> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 485: Output port <changed> of the instance <sr_llr_reg0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 489: Output port <changed> of the instance <sr_llr_reg1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 493: Output port <changed> of the instance <sr_llr_reg2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 497: Output port <changed> of the instance <sr_llr_reg3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 501: Output port <changed> of the instance <sr_llr_reg4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 505: Output port <changed> of the instance <sr_llr_reg5> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 509: Output port <changed> of the instance <sr_llr_reg6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 513: Output port <changed> of the instance <sr_llr_reg7> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 517: Output port <changed> of the instance <sr_llr_reg8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 521: Output port <changed> of the instance <sr_llr_reg9> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 525: Output port <changed> of the instance <sr_llr_reg10> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 529: Output port <changed> of the instance <sr_llr_reg11> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 533: Output port <changed> of the instance <sr_llr_reg12> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 537: Output port <changed> of the instance <sr_llr_reg13> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 541: Output port <changed> of the instance <sr_llr_reg14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 545: Output port <changed> of the instance <sr_llr_reg15> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 549: Output port <changed> of the instance <sr_llr_reg16> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 553: Output port <changed> of the instance <sr_llr_reg17> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 557: Output port <changed> of the instance <sr_llr_reg18> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 561: Output port <changed> of the instance <sr_llr_reg19> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 699: Output port <tx_fe_i> of the instance <duc_chain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 699: Output port <tx_fe_q> of the instance <duc_chain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 699: Output port <debug> of the instance <duc_chain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 731: Output port <debug> of the instance <new_rx_framer> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 741: Output port <debug> of the instance <new_rx_control> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 769: Output port <sample> of the instance <ddc_chain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 769: Output port <debug> of the instance <ddc_chain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 769: Output port <strobe> of the instance <ddc_chain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 794: Output port <i2_tready> of the instance <rx_mux> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 794: Output port <i3_tready> of the instance <rx_mux> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 805: Output port <i2_tready> of the instance <response_mux> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/radio_legacy.v" line 805: Output port <i3_tready> of the instance <response_mux> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <rb_data_user> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg21_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg22_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg23_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg24_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg25_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg26_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg27_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg28_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg29_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg30_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg31_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg32_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg33_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg34_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg35_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg36_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg37_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg38_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg39_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg40_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg41_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg42_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg43_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg44_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg45_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg46_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg47_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg48_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg49_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <sample_rx2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <strobe_rx2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <llr_reg20_val> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 32-bit register for signal <tx>.
     Found 64-bit register for signal <vita_time_b>.
-    Found 64-bit 7-to-1 multiplexer for signal <rb_data> created at line 241.
+    Found 64-bit 7-to-1 multiplexer for signal <rb_data> created at line 272.
     Summary:
 	inferred  96 D-type flip-flop(s).
 	inferred   3 Multiplexer(s).
@@ -2230,6 +2264,36 @@ Unit <setting_reg_29> synthesized.
 
 Synthesizing Unit <input_signal2>.
     Related source file is "/home/thompsonlab/Documents/fpga/usrp3/lib/radio_200/input_signal2.v".
+WARNING:Xst:647 - Input <codeword20> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword21> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword22> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword23> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword24> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword25> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword26> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword27> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword28> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword29> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword30> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword31> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword32> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword33> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword34> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword35> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword36> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword37> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword38> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword39> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword40> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword41> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword42> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword43> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword44> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword45> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword46> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword47> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword48> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <codeword49> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit register for signal <phase_acc0>.
     Found 16-bit register for signal <phase_acc1>.
     Found 16-bit register for signal <phase_acc2>.
@@ -2251,105 +2315,105 @@ Synthesizing Unit <input_signal2>.
     Found 16-bit register for signal <phase_acc18>.
     Found 16-bit register for signal <phase_acc19>.
     Found 16-bit register for signal <tx_out>.
-    Found 16-bit adder for signal <phase_acc0[15]_codeword0[15]_add_1_OUT> created at line 121.
-    Found 16-bit adder for signal <phase_acc1[15]_codeword1[15]_add_2_OUT> created at line 122.
-    Found 16-bit adder for signal <phase_acc2[15]_codeword2[15]_add_3_OUT> created at line 123.
-    Found 16-bit adder for signal <phase_acc3[15]_codeword3[15]_add_4_OUT> created at line 124.
-    Found 16-bit adder for signal <phase_acc4[15]_codeword4[15]_add_5_OUT> created at line 125.
-    Found 16-bit adder for signal <phase_acc5[15]_codeword5[15]_add_6_OUT> created at line 126.
-    Found 16-bit adder for signal <phase_acc6[15]_codeword6[15]_add_7_OUT> created at line 127.
-    Found 16-bit adder for signal <phase_acc7[15]_codeword7[15]_add_8_OUT> created at line 128.
-    Found 16-bit adder for signal <phase_acc8[15]_codeword8[15]_add_9_OUT> created at line 129.
-    Found 16-bit adder for signal <phase_acc9[15]_codeword9[15]_add_10_OUT> created at line 130.
-    Found 16-bit adder for signal <phase_acc10[15]_codeword10[15]_add_11_OUT> created at line 131.
-    Found 16-bit adder for signal <phase_acc11[15]_codeword11[15]_add_12_OUT> created at line 132.
-    Found 16-bit adder for signal <phase_acc12[15]_codeword12[15]_add_13_OUT> created at line 133.
-    Found 16-bit adder for signal <phase_acc13[15]_codeword13[15]_add_14_OUT> created at line 134.
-    Found 16-bit adder for signal <phase_acc14[15]_codeword14[15]_add_15_OUT> created at line 135.
-    Found 16-bit adder for signal <phase_acc15[15]_codeword15[15]_add_16_OUT> created at line 136.
-    Found 16-bit adder for signal <phase_acc16[15]_codeword16[15]_add_17_OUT> created at line 137.
-    Found 16-bit adder for signal <phase_acc17[15]_codeword17[15]_add_18_OUT> created at line 138.
-    Found 16-bit adder for signal <phase_acc18[15]_codeword18[15]_add_19_OUT> created at line 139.
-    Found 16-bit adder for signal <phase_acc19[15]_codeword19[15]_add_20_OUT> created at line 140.
-    Found 11-bit adder for signal <phase_acc0[15]_codeword0[31]_add_21_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc1[15]_codeword1[31]_add_24_OUT> created at line 143.
-    Found 19-bit adder for signal <n0375[18:0]> created at line 143.
-    Found 11-bit adder for signal <phase_acc2[15]_codeword2[31]_add_28_OUT> created at line 143.
-    Found 20-bit adder for signal <n0381[19:0]> created at line 143.
-    Found 11-bit adder for signal <phase_acc3[15]_codeword3[31]_add_32_OUT> created at line 143.
-    Found 21-bit adder for signal <n0387[20:0]> created at line 143.
-    Found 11-bit adder for signal <phase_acc4[15]_codeword4[31]_add_36_OUT> created at line 143.
-    Found 22-bit adder for signal <n0393[21:0]> created at line 143.
-    Found 11-bit adder for signal <phase_acc5[15]_codeword5[31]_add_40_OUT> created at line 143.
-    Found 23-bit adder for signal <n0399[22:0]> created at line 143.
-    Found 11-bit adder for signal <phase_acc6[15]_codeword6[31]_add_44_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc7[15]_codeword7[31]_add_48_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc8[15]_codeword8[31]_add_52_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc9[15]_codeword9[31]_add_56_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc10[15]_codeword10[31]_add_60_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc11[15]_codeword11[31]_add_64_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc12[15]_codeword12[31]_add_68_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc13[15]_codeword13[31]_add_72_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc14[15]_codeword14[31]_add_76_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc15[15]_codeword15[31]_add_80_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc16[15]_codeword16[31]_add_84_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc17[15]_codeword17[31]_add_88_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc18[15]_codeword18[31]_add_92_OUT> created at line 143.
-    Found 11-bit adder for signal <phase_acc19[15]_codeword19[31]_add_96_OUT> created at line 143.
-    Found 24-bit adder for signal <_n0485> created at line 143.
-    Found 24-bit adder for signal <_n0486> created at line 143.
-    Found 24-bit adder for signal <_n0487> created at line 143.
-    Found 24-bit adder for signal <_n0488> created at line 143.
-    Found 24-bit adder for signal <_n0489> created at line 143.
-    Found 24-bit adder for signal <_n0490> created at line 143.
-    Found 24-bit adder for signal <_n0491> created at line 143.
-    Found 24-bit adder for signal <_n0492> created at line 143.
-    Found 24-bit adder for signal <_n0493> created at line 143.
-    Found 24-bit adder for signal <_n0494> created at line 143.
-    Found 24-bit adder for signal <_n0495> created at line 143.
-    Found 24-bit adder for signal <_n0496> created at line 143.
-    Found 24-bit adder for signal <_n0497> created at line 143.
-    Found 24-bit adder for signal <n0261> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword0[23]_phase_acc0[15]_MuLt_23_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword1[23]_phase_acc1[15]_MuLt_26_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword2[23]_phase_acc2[15]_MuLt_30_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword3[23]_phase_acc3[15]_MuLt_34_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword4[23]_phase_acc4[15]_MuLt_38_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword5[23]_phase_acc5[15]_MuLt_42_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword6[23]_phase_acc6[15]_MuLt_46_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword7[23]_phase_acc7[15]_MuLt_50_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword8[23]_phase_acc8[15]_MuLt_54_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword9[23]_phase_acc9[15]_MuLt_58_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword10[23]_phase_acc10[15]_MuLt_62_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword11[23]_phase_acc11[15]_MuLt_66_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword12[23]_phase_acc12[15]_MuLt_70_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword13[23]_phase_acc13[15]_MuLt_74_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword14[23]_phase_acc14[15]_MuLt_78_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword15[23]_phase_acc15[15]_MuLt_82_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword16[23]_phase_acc16[15]_MuLt_86_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword17[23]_phase_acc17[15]_MuLt_90_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword18[23]_phase_acc18[15]_MuLt_94_OUT> created at line 143.
-    Found 8x10-bit multiplier for signal <codeword19[23]_phase_acc19[15]_MuLt_98_OUT> created at line 143.
-    Found 2048x10-bit Read Only RAM for signal <phase_acc0[15]_GND_84_o_wide_mux_22_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc1[15]_GND_84_o_wide_mux_25_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc2[15]_GND_84_o_wide_mux_29_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc3[15]_GND_84_o_wide_mux_33_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc4[15]_GND_84_o_wide_mux_37_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc5[15]_GND_84_o_wide_mux_41_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc6[15]_GND_84_o_wide_mux_45_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc7[15]_GND_84_o_wide_mux_49_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc8[15]_GND_84_o_wide_mux_53_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc9[15]_GND_84_o_wide_mux_57_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc10[15]_GND_84_o_wide_mux_61_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc11[15]_GND_84_o_wide_mux_65_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc12[15]_GND_84_o_wide_mux_69_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc13[15]_GND_84_o_wide_mux_73_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc14[15]_GND_84_o_wide_mux_77_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc15[15]_GND_84_o_wide_mux_81_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc16[15]_GND_84_o_wide_mux_85_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc17[15]_GND_84_o_wide_mux_89_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc18[15]_GND_84_o_wide_mux_93_OUT>
-    Found 2048x10-bit Read Only RAM for signal <phase_acc19[15]_GND_84_o_wide_mux_97_OUT>
+    Found 16-bit adder for signal <phase_acc0[15]_codeword0[15]_add_1_OUT> created at line 271.
+    Found 16-bit adder for signal <phase_acc1[15]_codeword1[15]_add_2_OUT> created at line 272.
+    Found 16-bit adder for signal <phase_acc2[15]_codeword2[15]_add_3_OUT> created at line 273.
+    Found 16-bit adder for signal <phase_acc3[15]_codeword3[15]_add_4_OUT> created at line 274.
+    Found 16-bit adder for signal <phase_acc4[15]_codeword4[15]_add_5_OUT> created at line 275.
+    Found 16-bit adder for signal <phase_acc5[15]_codeword5[15]_add_6_OUT> created at line 276.
+    Found 16-bit adder for signal <phase_acc6[15]_codeword6[15]_add_7_OUT> created at line 277.
+    Found 16-bit adder for signal <phase_acc7[15]_codeword7[15]_add_8_OUT> created at line 278.
+    Found 16-bit adder for signal <phase_acc8[15]_codeword8[15]_add_9_OUT> created at line 279.
+    Found 16-bit adder for signal <phase_acc9[15]_codeword9[15]_add_10_OUT> created at line 280.
+    Found 16-bit adder for signal <phase_acc10[15]_codeword10[15]_add_11_OUT> created at line 281.
+    Found 16-bit adder for signal <phase_acc11[15]_codeword11[15]_add_12_OUT> created at line 282.
+    Found 16-bit adder for signal <phase_acc12[15]_codeword12[15]_add_13_OUT> created at line 283.
+    Found 16-bit adder for signal <phase_acc13[15]_codeword13[15]_add_14_OUT> created at line 284.
+    Found 16-bit adder for signal <phase_acc14[15]_codeword14[15]_add_15_OUT> created at line 285.
+    Found 16-bit adder for signal <phase_acc15[15]_codeword15[15]_add_16_OUT> created at line 286.
+    Found 16-bit adder for signal <phase_acc16[15]_codeword16[15]_add_17_OUT> created at line 287.
+    Found 16-bit adder for signal <phase_acc17[15]_codeword17[15]_add_18_OUT> created at line 288.
+    Found 16-bit adder for signal <phase_acc18[15]_codeword18[15]_add_19_OUT> created at line 289.
+    Found 16-bit adder for signal <phase_acc19[15]_codeword19[15]_add_20_OUT> created at line 290.
+    Found 11-bit adder for signal <phase_acc0[15]_codeword0[31]_add_51_OUT> created at line 321.
+    Found 11-bit adder for signal <phase_acc1[15]_codeword1[31]_add_54_OUT> created at line 321.
+    Found 19-bit adder for signal <n0428[18:0]> created at line 321.
+    Found 11-bit adder for signal <phase_acc2[15]_codeword2[31]_add_58_OUT> created at line 321.
+    Found 20-bit adder for signal <n0434[19:0]> created at line 321.
+    Found 11-bit adder for signal <phase_acc3[15]_codeword3[31]_add_62_OUT> created at line 321.
+    Found 21-bit adder for signal <n0440[20:0]> created at line 321.
+    Found 11-bit adder for signal <phase_acc4[15]_codeword4[31]_add_66_OUT> created at line 321.
+    Found 22-bit adder for signal <n0446[21:0]> created at line 321.
+    Found 11-bit adder for signal <phase_acc5[15]_codeword5[31]_add_70_OUT> created at line 321.
+    Found 23-bit adder for signal <n0452[22:0]> created at line 321.
+    Found 11-bit adder for signal <phase_acc6[15]_codeword6[31]_add_74_OUT> created at line 321.
+    Found 24-bit adder for signal <n0458[23:0]> created at line 321.
+    Found 11-bit adder for signal <phase_acc7[15]_codeword7[31]_add_78_OUT> created at line 321.
+    Found 25-bit adder for signal <n0464[24:0]> created at line 321.
+    Found 11-bit adder for signal <phase_acc8[15]_codeword8[31]_add_82_OUT> created at line 321.
+    Found 11-bit adder for signal <phase_acc9[15]_codeword9[31]_add_86_OUT> created at line 321.
+    Found 11-bit adder for signal <phase_acc10[15]_codeword10[31]_add_90_OUT> created at line 321.
+    Found 11-bit adder for signal <phase_acc11[15]_codeword11[31]_add_94_OUT> created at line 321.
+    Found 11-bit adder for signal <phase_acc12[15]_codeword12[31]_add_98_OUT> created at line 321.
+    Found 11-bit adder for signal <phase_acc13[15]_codeword13[31]_add_102_OUT> created at line 321.
+    Found 11-bit adder for signal <phase_acc14[15]_codeword14[31]_add_106_OUT> created at line 321.
+    Found 11-bit adder for signal <phase_acc15[15]_codeword15[31]_add_110_OUT> created at line 321.
+    Found 11-bit adder for signal <phase_acc16[15]_codeword16[31]_add_114_OUT> created at line 321.
+    Found 11-bit adder for signal <phase_acc17[15]_codeword17[31]_add_118_OUT> created at line 321.
+    Found 11-bit adder for signal <phase_acc18[15]_codeword18[31]_add_122_OUT> created at line 321.
+    Found 11-bit adder for signal <phase_acc19[15]_codeword19[31]_add_126_OUT> created at line 321.
+    Found 26-bit adder for signal <_n0540> created at line 321.
+    Found 26-bit adder for signal <_n0541> created at line 321.
+    Found 26-bit adder for signal <_n0542> created at line 321.
+    Found 26-bit adder for signal <_n0543> created at line 321.
+    Found 26-bit adder for signal <_n0544> created at line 321.
+    Found 26-bit adder for signal <_n0545> created at line 321.
+    Found 26-bit adder for signal <_n0546> created at line 321.
+    Found 26-bit adder for signal <_n0547> created at line 321.
+    Found 26-bit adder for signal <_n0548> created at line 321.
+    Found 26-bit adder for signal <_n0549> created at line 321.
+    Found 26-bit adder for signal <_n0550> created at line 321.
+    Found 26-bit adder for signal <n0310> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword0[23]_phase_acc0[15]_MuLt_53_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword1[23]_phase_acc1[15]_MuLt_56_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword2[23]_phase_acc2[15]_MuLt_60_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword3[23]_phase_acc3[15]_MuLt_64_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword4[23]_phase_acc4[15]_MuLt_68_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword5[23]_phase_acc5[15]_MuLt_72_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword6[23]_phase_acc6[15]_MuLt_76_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword7[23]_phase_acc7[15]_MuLt_80_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword8[23]_phase_acc8[15]_MuLt_84_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword9[23]_phase_acc9[15]_MuLt_88_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword10[23]_phase_acc10[15]_MuLt_92_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword11[23]_phase_acc11[15]_MuLt_96_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword12[23]_phase_acc12[15]_MuLt_100_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword13[23]_phase_acc13[15]_MuLt_104_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword14[23]_phase_acc14[15]_MuLt_108_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword15[23]_phase_acc15[15]_MuLt_112_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword16[23]_phase_acc16[15]_MuLt_116_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword17[23]_phase_acc17[15]_MuLt_120_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword18[23]_phase_acc18[15]_MuLt_124_OUT> created at line 321.
+    Found 8x10-bit multiplier for signal <codeword19[23]_phase_acc19[15]_MuLt_128_OUT> created at line 321.
+    Found 2048x10-bit Read Only RAM for signal <phase_acc0[15]_GND_84_o_wide_mux_52_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc1[15]_GND_84_o_wide_mux_55_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc2[15]_GND_84_o_wide_mux_59_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc3[15]_GND_84_o_wide_mux_63_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc4[15]_GND_84_o_wide_mux_67_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc5[15]_GND_84_o_wide_mux_71_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc6[15]_GND_84_o_wide_mux_75_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc7[15]_GND_84_o_wide_mux_79_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc8[15]_GND_84_o_wide_mux_83_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc9[15]_GND_84_o_wide_mux_87_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc10[15]_GND_84_o_wide_mux_91_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc11[15]_GND_84_o_wide_mux_95_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc12[15]_GND_84_o_wide_mux_99_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc13[15]_GND_84_o_wide_mux_103_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc14[15]_GND_84_o_wide_mux_107_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc15[15]_GND_84_o_wide_mux_111_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc16[15]_GND_84_o_wide_mux_115_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc17[15]_GND_84_o_wide_mux_119_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc18[15]_GND_84_o_wide_mux_123_OUT>
+    Found 2048x10-bit Read Only RAM for signal <phase_acc19[15]_GND_84_o_wide_mux_127_OUT>
     WARNING:Xst:2404 -  FFs/Latches <tx_out<31:16>> (without init value) have a constant value of 0 in block <input_signal2>.
     Summary:
 	inferred  20 RAM(s).
@@ -2423,7 +2487,7 @@ Synthesizing Unit <new_tx_control>.
     | States             | 4                                              |
     | Transitions        | 21                                             |
     | Inputs             | 9                                              |
-    | Outputs            | 6                                              |
+    | Outputs            | 2                                              |
     | Clock              | clk (rising_edge)                              |
     | Reset              | reset (positive)                               |
     | Reset type         | synchronous                                    |
@@ -2432,7 +2496,7 @@ Synthesizing Unit <new_tx_control>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 12-bit adder for signal <seqnum[11]_GND_88_o_add_18_OUT> created at line 95.
-    Found 1-bit 4-to-1 multiplexer for signal <_n0265> created at line 106.
+    Found 1-bit 4-to-1 multiplexer for signal <_n0266> created at line 106.
     Found 12-bit comparator equal for signal <n0037> created at line 112
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -5442,15 +5506,15 @@ WARNING:Xst:653 - Signal <gate_terror> is used but never assigned. This sourcele
     -----------------------------------------------------------------------
     Found 16-bit subtractor for signal <lines32[15]_GND_291_o_sub_28_OUT> created at line 85.
     Found 16-bit adder for signal <hdr_bytes> created at line 43.
-    Found 13-bit adder for signal <_n0200> created at line 71.
-    Found 13-bit adder for signal <_n0236> created at line 72.
+    Found 13-bit adder for signal <_n0271> created at line 71.
+    Found 13-bit adder for signal <_n0217> created at line 72.
     Found 12-bit adder for signal <seq_id_actual[11]_GND_291_o_add_20_OUT> created at line 74.
-    Found 13-bit adder for signal <_n0287> created at line 76.
+    Found 13-bit adder for signal <_n0244> created at line 76.
     Found 16-bit comparator greater for signal <GND_291_o_hdr_lines32[15]_LessThan_5_o> created at line 48
     Found 12-bit comparator not equal for signal <n0022> created at line 73
-    Found 13-bit comparator not equal for signal <n0015> created at line 0
     Found 13-bit comparator not equal for signal <n0019> created at line 0
     Found 13-bit comparator not equal for signal <n0011> created at line 0
+    Found 13-bit comparator not equal for signal <n0015> created at line 0
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred  30 D-type flip-flop(s).
@@ -5532,7 +5596,9 @@ Macro Statistics
  22-bit adder                                          : 1
  23-bit adder                                          : 1
  23-bit addsub                                         : 40
- 24-bit adder                                          : 14
+ 24-bit adder                                          : 1
+ 25-bit adder                                          : 1
+ 26-bit adder                                          : 12
  26-bit addsub                                         : 40
  26-bit subtractor                                     : 2
  27-bit addsub                                         : 40
@@ -6472,246 +6538,246 @@ The following registers are absorbed into accumulator <phase_acc16>: 1 register 
 The following registers are absorbed into accumulator <phase_acc17>: 1 register on signal <phase_acc17>.
 The following registers are absorbed into accumulator <phase_acc18>: 1 register on signal <phase_acc18>.
 The following registers are absorbed into accumulator <phase_acc19>: 1 register on signal <phase_acc19>.
-	The following adders/subtractors are grouped into adder tree <Madd_n02611> :
- 	<Madd_n0375[18:0]> in block <input_signal2>, 	<Madd_n0381[19:0]> in block <input_signal2>, 	<Madd_n0387[20:0]> in block <input_signal2>, 	<Madd_n0393[21:0]> in block <input_signal2>, 	<Madd_n0399[22:0]> in block <input_signal2>, 	<Madd__n0485> in block <input_signal2>, 	<Madd__n0486> in block <input_signal2>, 	<Madd__n0487> in block <input_signal2>, 	<Madd__n0490> in block <input_signal2>, 	<Madd__n0491> in block <input_signal2>, 	<Madd__n0493> in block <input_signal2>, 	<Madd__n0494> in block <input_signal2>.
-	The following adders/subtractors are grouped into adder tree <Madd__n04971> :
- 	<Madd__n0489> in block <input_signal2>, 	<Madd__n0488> in block <input_signal2>, 	<Madd__n0492> in block <input_signal2>, 	<Madd__n0495> in block <input_signal2>.
-	Multiplier <Mmult_codeword17[23]_phase_acc17[15]_MuLt_90_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd18> in block <input_signal2> are combined into a MAC<Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT>.
-	Multiplier <Mmult_codeword16[23]_phase_acc16[15]_MuLt_86_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd17> in block <input_signal2> are combined into a MAC<Maddsub_codeword16[23]_phase_acc16[15]_MuLt_86_OUT>.
-	Multiplier <Mmult_codeword15[23]_phase_acc15[15]_MuLt_82_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd16> in block <input_signal2> are combined into a MAC<Maddsub_codeword15[23]_phase_acc15[15]_MuLt_82_OUT>.
-	Multiplier <Mmult_codeword14[23]_phase_acc14[15]_MuLt_78_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd15> in block <input_signal2> are combined into a MAC<Maddsub_codeword14[23]_phase_acc14[15]_MuLt_78_OUT>.
-	Multiplier <Mmult_codeword13[23]_phase_acc13[15]_MuLt_74_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd14> in block <input_signal2> are combined into a MAC<Maddsub_codeword13[23]_phase_acc13[15]_MuLt_74_OUT>.
-	Multiplier <Mmult_codeword12[23]_phase_acc12[15]_MuLt_70_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd13> in block <input_signal2> are combined into a MAC<Maddsub_codeword12[23]_phase_acc12[15]_MuLt_70_OUT>.
-	Multiplier <Mmult_codeword11[23]_phase_acc11[15]_MuLt_66_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd12> in block <input_signal2> are combined into a MAC<Maddsub_codeword11[23]_phase_acc11[15]_MuLt_66_OUT>.
-	Multiplier <Mmult_codeword10[23]_phase_acc10[15]_MuLt_62_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd11> in block <input_signal2> are combined into a MAC<Maddsub_codeword10[23]_phase_acc10[15]_MuLt_62_OUT>.
-	Multiplier <Mmult_codeword9[23]_phase_acc9[15]_MuLt_58_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd10> in block <input_signal2> are combined into a MAC<Maddsub_codeword9[23]_phase_acc9[15]_MuLt_58_OUT>.
-	Multiplier <Mmult_codeword8[23]_phase_acc8[15]_MuLt_54_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd9> in block <input_signal2> are combined into a MAC<Maddsub_codeword8[23]_phase_acc8[15]_MuLt_54_OUT>.
-	Multiplier <Mmult_codeword7[23]_phase_acc7[15]_MuLt_50_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd8> in block <input_signal2> are combined into a MAC<Maddsub_codeword7[23]_phase_acc7[15]_MuLt_50_OUT>.
-	Multiplier <Mmult_codeword6[23]_phase_acc6[15]_MuLt_46_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd7> in block <input_signal2> are combined into a MAC<Maddsub_codeword6[23]_phase_acc6[15]_MuLt_46_OUT>.
-	Multiplier <Mmult_codeword19[23]_phase_acc19[15]_MuLt_98_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd6> in block <input_signal2> are combined into a MAC<Maddsub_codeword19[23]_phase_acc19[15]_MuLt_98_OUT>.
-	Multiplier <Mmult_codeword18[23]_phase_acc18[15]_MuLt_94_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd5> in block <input_signal2> are combined into a MAC<Maddsub_codeword18[23]_phase_acc18[15]_MuLt_94_OUT>.
-	Multiplier <Mmult_codeword5[23]_phase_acc5[15]_MuLt_42_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd4> in block <input_signal2> are combined into a MAC<Maddsub_codeword5[23]_phase_acc5[15]_MuLt_42_OUT>.
-	Multiplier <Mmult_codeword4[23]_phase_acc4[15]_MuLt_38_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd3> in block <input_signal2> are combined into a MAC<Maddsub_codeword4[23]_phase_acc4[15]_MuLt_38_OUT>.
-	Multiplier <Mmult_codeword3[23]_phase_acc3[15]_MuLt_34_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd2> in block <input_signal2> are combined into a MAC<Maddsub_codeword3[23]_phase_acc3[15]_MuLt_34_OUT>.
-	Multiplier <Mmult_codeword2[23]_phase_acc2[15]_MuLt_30_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd1> in block <input_signal2> are combined into a MAC<Maddsub_codeword2[23]_phase_acc2[15]_MuLt_30_OUT>.
-	Multiplier <Mmult_codeword0[23]_phase_acc0[15]_MuLt_23_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd> in block <input_signal2> are combined into a MAC<Maddsub_codeword0[23]_phase_acc0[15]_MuLt_23_OUT>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc0[15]_GND_84_o_wide_mux_22_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+	The following adders/subtractors are grouped into adder tree <Madd_n03101> :
+ 	<Madd_n0428[18:0]> in block <input_signal2>, 	<Madd_n0434[19:0]> in block <input_signal2>, 	<Madd_n0440[20:0]> in block <input_signal2>, 	<Madd_n0446[21:0]> in block <input_signal2>, 	<Madd_n0452[22:0]> in block <input_signal2>, 	<Madd_n0458[23:0]> in block <input_signal2>, 	<Madd_n0464[24:0]> in block <input_signal2>, 	<Madd__n0540> in block <input_signal2>, 	<Madd__n0541> in block <input_signal2>, 	<Madd__n0543> in block <input_signal2>, 	<Madd__n0544> in block <input_signal2>, 	<Madd__n0546> in block <input_signal2>, 	<Madd__n0547> in block <input_signal2>.
+	The following adders/subtractors are grouped into adder tree <Madd__n05501> :
+ 	<Madd__n0542> in block <input_signal2>, 	<Madd__n0545> in block <input_signal2>, 	<Madd__n0548> in block <input_signal2>.
+	Multiplier <Mmult_codeword15[23]_phase_acc15[15]_MuLt_112_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd18> in block <input_signal2> are combined into a MAC<Maddsub_codeword15[23]_phase_acc15[15]_MuLt_112_OUT>.
+	Multiplier <Mmult_codeword14[23]_phase_acc14[15]_MuLt_108_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd17> in block <input_signal2> are combined into a MAC<Maddsub_codeword14[23]_phase_acc14[15]_MuLt_108_OUT>.
+	Multiplier <Mmult_codeword13[23]_phase_acc13[15]_MuLt_104_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd16> in block <input_signal2> are combined into a MAC<Maddsub_codeword13[23]_phase_acc13[15]_MuLt_104_OUT>.
+	Multiplier <Mmult_codeword12[23]_phase_acc12[15]_MuLt_100_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd15> in block <input_signal2> are combined into a MAC<Maddsub_codeword12[23]_phase_acc12[15]_MuLt_100_OUT>.
+	Multiplier <Mmult_codeword11[23]_phase_acc11[15]_MuLt_96_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd14> in block <input_signal2> are combined into a MAC<Maddsub_codeword11[23]_phase_acc11[15]_MuLt_96_OUT>.
+	Multiplier <Mmult_codeword10[23]_phase_acc10[15]_MuLt_92_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd13> in block <input_signal2> are combined into a MAC<Maddsub_codeword10[23]_phase_acc10[15]_MuLt_92_OUT>.
+	Multiplier <Mmult_codeword9[23]_phase_acc9[15]_MuLt_88_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd12> in block <input_signal2> are combined into a MAC<Maddsub_codeword9[23]_phase_acc9[15]_MuLt_88_OUT>.
+	Multiplier <Mmult_codeword8[23]_phase_acc8[15]_MuLt_84_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd11> in block <input_signal2> are combined into a MAC<Maddsub_codeword8[23]_phase_acc8[15]_MuLt_84_OUT>.
+	Multiplier <Mmult_codeword19[23]_phase_acc19[15]_MuLt_128_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd10> in block <input_signal2> are combined into a MAC<Maddsub_codeword19[23]_phase_acc19[15]_MuLt_128_OUT>.
+	Multiplier <Mmult_codeword18[23]_phase_acc18[15]_MuLt_124_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd9> in block <input_signal2> are combined into a MAC<Maddsub_codeword18[23]_phase_acc18[15]_MuLt_124_OUT>.
+	Multiplier <Mmult_codeword17[23]_phase_acc17[15]_MuLt_120_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd8> in block <input_signal2> are combined into a MAC<Maddsub_codeword17[23]_phase_acc17[15]_MuLt_120_OUT>.
+	Multiplier <Mmult_codeword16[23]_phase_acc16[15]_MuLt_116_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd7> in block <input_signal2> are combined into a MAC<Maddsub_codeword16[23]_phase_acc16[15]_MuLt_116_OUT>.
+	Multiplier <Mmult_codeword7[23]_phase_acc7[15]_MuLt_80_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd6> in block <input_signal2> are combined into a MAC<Maddsub_codeword7[23]_phase_acc7[15]_MuLt_80_OUT>.
+	Multiplier <Mmult_codeword6[23]_phase_acc6[15]_MuLt_76_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd5> in block <input_signal2> are combined into a MAC<Maddsub_codeword6[23]_phase_acc6[15]_MuLt_76_OUT>.
+	Multiplier <Mmult_codeword5[23]_phase_acc5[15]_MuLt_72_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd4> in block <input_signal2> are combined into a MAC<Maddsub_codeword5[23]_phase_acc5[15]_MuLt_72_OUT>.
+	Multiplier <Mmult_codeword4[23]_phase_acc4[15]_MuLt_68_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd3> in block <input_signal2> are combined into a MAC<Maddsub_codeword4[23]_phase_acc4[15]_MuLt_68_OUT>.
+	Multiplier <Mmult_codeword3[23]_phase_acc3[15]_MuLt_64_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd2> in block <input_signal2> are combined into a MAC<Maddsub_codeword3[23]_phase_acc3[15]_MuLt_64_OUT>.
+	Multiplier <Mmult_codeword2[23]_phase_acc2[15]_MuLt_60_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd1> in block <input_signal2> are combined into a MAC<Maddsub_codeword2[23]_phase_acc2[15]_MuLt_60_OUT>.
+	Multiplier <Mmult_codeword0[23]_phase_acc0[15]_MuLt_53_OUT> in block <input_signal2> and adder/subtractor <ADDER_FOR_MULTADD_Madd> in block <input_signal2> are combined into a MAC<Maddsub_codeword0[23]_phase_acc0[15]_MuLt_53_OUT>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc0[15]_GND_84_o_wide_mux_52_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc0[15]_codeword0[31]_add_21_OUT> |          |
+    |     addrA          | connected to signal <phase_acc0[15]_codeword0[31]_add_51_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc1[15]_GND_84_o_wide_mux_25_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc1[15]_GND_84_o_wide_mux_55_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc1[15]_codeword1[31]_add_24_OUT> |          |
+    |     addrA          | connected to signal <phase_acc1[15]_codeword1[31]_add_54_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc2[15]_GND_84_o_wide_mux_29_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc2[15]_GND_84_o_wide_mux_59_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc2[15]_codeword2[31]_add_28_OUT> |          |
+    |     addrA          | connected to signal <phase_acc2[15]_codeword2[31]_add_58_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc3[15]_GND_84_o_wide_mux_33_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc3[15]_GND_84_o_wide_mux_63_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc3[15]_codeword3[31]_add_32_OUT> |          |
+    |     addrA          | connected to signal <phase_acc3[15]_codeword3[31]_add_62_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc4[15]_GND_84_o_wide_mux_37_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc4[15]_GND_84_o_wide_mux_67_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc4[15]_codeword4[31]_add_36_OUT> |          |
+    |     addrA          | connected to signal <phase_acc4[15]_codeword4[31]_add_66_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc5[15]_GND_84_o_wide_mux_41_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc5[15]_GND_84_o_wide_mux_71_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc5[15]_codeword5[31]_add_40_OUT> |          |
+    |     addrA          | connected to signal <phase_acc5[15]_codeword5[31]_add_70_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc6[15]_GND_84_o_wide_mux_45_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc6[15]_GND_84_o_wide_mux_75_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc6[15]_codeword6[31]_add_44_OUT> |          |
+    |     addrA          | connected to signal <phase_acc6[15]_codeword6[31]_add_74_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc7[15]_GND_84_o_wide_mux_49_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc7[15]_GND_84_o_wide_mux_79_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc7[15]_codeword7[31]_add_48_OUT> |          |
+    |     addrA          | connected to signal <phase_acc7[15]_codeword7[31]_add_78_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc8[15]_GND_84_o_wide_mux_53_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc8[15]_GND_84_o_wide_mux_83_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc8[15]_codeword8[31]_add_52_OUT> |          |
+    |     addrA          | connected to signal <phase_acc8[15]_codeword8[31]_add_82_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc9[15]_GND_84_o_wide_mux_57_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc9[15]_GND_84_o_wide_mux_87_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc9[15]_codeword9[31]_add_56_OUT> |          |
+    |     addrA          | connected to signal <phase_acc9[15]_codeword9[31]_add_86_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc10[15]_GND_84_o_wide_mux_61_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc10[15]_GND_84_o_wide_mux_91_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc10[15]_codeword10[31]_add_60_OUT> |          |
+    |     addrA          | connected to signal <phase_acc10[15]_codeword10[31]_add_90_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc11[15]_GND_84_o_wide_mux_65_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc11[15]_GND_84_o_wide_mux_95_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc11[15]_codeword11[31]_add_64_OUT> |          |
+    |     addrA          | connected to signal <phase_acc11[15]_codeword11[31]_add_94_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc12[15]_GND_84_o_wide_mux_69_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc12[15]_GND_84_o_wide_mux_99_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc12[15]_codeword12[31]_add_68_OUT> |          |
+    |     addrA          | connected to signal <phase_acc12[15]_codeword12[31]_add_98_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc13[15]_GND_84_o_wide_mux_73_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc13[15]_GND_84_o_wide_mux_103_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc13[15]_codeword13[31]_add_72_OUT> |          |
+    |     addrA          | connected to signal <phase_acc13[15]_codeword13[31]_add_102_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc14[15]_GND_84_o_wide_mux_77_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc14[15]_GND_84_o_wide_mux_107_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc14[15]_codeword14[31]_add_76_OUT> |          |
+    |     addrA          | connected to signal <phase_acc14[15]_codeword14[31]_add_106_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc15[15]_GND_84_o_wide_mux_81_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc15[15]_GND_84_o_wide_mux_111_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc15[15]_codeword15[31]_add_80_OUT> |          |
+    |     addrA          | connected to signal <phase_acc15[15]_codeword15[31]_add_110_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc16[15]_GND_84_o_wide_mux_85_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc16[15]_GND_84_o_wide_mux_115_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc16[15]_codeword16[31]_add_84_OUT> |          |
+    |     addrA          | connected to signal <phase_acc16[15]_codeword16[31]_add_114_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc17[15]_GND_84_o_wide_mux_89_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc17[15]_GND_84_o_wide_mux_119_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc17[15]_codeword17[31]_add_88_OUT> |          |
+    |     addrA          | connected to signal <phase_acc17[15]_codeword17[31]_add_118_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc18[15]_GND_84_o_wide_mux_93_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc18[15]_GND_84_o_wide_mux_123_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc18[15]_codeword18[31]_add_92_OUT> |          |
+    |     addrA          | connected to signal <phase_acc18[15]_codeword18[31]_add_122_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc19[15]_GND_84_o_wide_mux_97_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_phase_acc19[15]_GND_84_o_wide_mux_127_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 2048-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <phase_acc19[15]_codeword19[31]_add_96_OUT> |          |
+    |     addrA          | connected to signal <phase_acc19[15]_codeword19[31]_add_126_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
@@ -6802,7 +6868,7 @@ Macro Statistics
  256x8-bit dual-port block RAM                         : 1
  4096x65-bit dual-port block RAM                       : 4
 # MACs                                                 : 19
- 10x8-to-24-bit MAC                                    : 19
+ 10x8-to-26-bit MAC                                    : 19
 # Multipliers                                          : 1
  10x8-bit multiplier                                   : 1
 # Adders/Subtractors                                   : 305
@@ -9951,6 +10017,7 @@ INFO:Xst:2261 - The FF/Latch <add_fp_gpio.fp_gpio_atr/tx_d> in Unit <radio_0> is
 INFO:Xst:2261 - The FF/Latch <duc_chain/cordic/cordic_stage4/zo_22> in Unit <radio_0> is equivalent to the following FF/Latch, which will be removed : <duc_chain/cordic/cordic_stage4/zo_21> 
 INFO:Xst:2261 - The FF/Latch <ddc_chain/cordic/cordic_stage11/zo_22> in Unit <radio_0> is equivalent to the following FF/Latch, which will be removed : <ddc_chain/cordic/cordic_stage11/zo_21> 
 INFO:Xst:2261 - The FF/Latch <duc_chain/cordic/cordic_stage3/zo_22> in Unit <radio_0> is equivalent to the following FF/Latch, which will be removed : <duc_chain/cordic/cordic_stage3/zo_21> 
+INFO:Xst:2261 - The FF/Latch <ddc_chain/cordic/cordic_stage2/xo_4> in Unit <radio_0> is equivalent to the following FF/Latch, which will be removed : <ddc_chain/cordic/cordic_stage2/xo_3> 
 INFO:Xst:2261 - The FF/Latch <ddc_chain/cordic/cordic_stage10/zo_22> in Unit <radio_0> is equivalent to the following FF/Latch, which will be removed : <ddc_chain/cordic/cordic_stage10/zo_21> 
 INFO:Xst:2261 - The FF/Latch <duc_chain/cordic/cordic_stage2/zo_22> in Unit <radio_0> is equivalent to the following FF/Latch, which will be removed : <duc_chain/cordic/cordic_stage2/zo_21> 
 INFO:Xst:2261 - The FF/Latch <duc_chain/cic_interp_q/pipeline_3_116> in Unit <radio_0> is equivalent to the following 19 FFs/Latches, which will be removed : <duc_chain/cic_interp_q/pipeline_3_115> <duc_chain/cic_interp_q/pipeline_3_114> <duc_chain/cic_interp_q/pipeline_3_113> <duc_chain/cic_interp_q/pipeline_3_112> <duc_chain/cic_interp_q/pipeline_3_111> <duc_chain/cic_interp_q/pipeline_3_110> <duc_chain/cic_interp_q/pipeline_3_109> <duc_chain/cic_interp_q/pipeline_3_108> <duc_chain/cic_interp_q/pipeline_3_107> <duc_chain/cic_interp_q/pipeline_3_106> <duc_chain/cic_interp_q/pipeline_3_105> <duc_chain/cic_interp_q/pipeline_3_104> <duc_chain/cic_interp_q/pipeline_3_103> <duc_chain/cic_interp_q/pipeline_3_102> <duc_chain/cic_interp_q/pipeline_3_101> <duc_chain/cic_interp_q/pipeline_3_100> <duc_chain/cic_interp_q/pipeline_3_99> <duc_chain/cic_interp_q/pipeline_3_98> <duc_chain/cic_interp_q/pipeline_3_97> 
@@ -18321,6 +18388,88 @@ WARNING:Xst:2677 - Node <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_
 
 Pipelining and Register Balancing Report ...
 
+Processing Unit <b200> :
+	Register(s) slave_fifo32/next_addr_0 has(ve) been backward balanced into : slave_fifo32/next_addr_0_BRB0 .
+	Register(s) slave_fifo32/next_addr_1 has(ve) been backward balanced into : slave_fifo32/next_addr_1_BRB0.
+Unit <b200> processed.
+
+Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> :
+	Register(s) blk000000bf has(ve) been backward balanced into : blk000000bf_BRB0 blk000000bf_BRB1 blk000000bf_BRB2 blk000000bf_BRB3.
+	Register(s) blk000000c1 has(ve) been backward balanced into : blk000000c1_BRB0 blk000000c1_BRB1 blk000000c1_BRB2.
+Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> processed.
+
+Processing Unit <b200_core/radio_0> :
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_0 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_0_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_1 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_1_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_2 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_2_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_3 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_3_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_4 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_4_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_5 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_5_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_6 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_6_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_7 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_7_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_8 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_8_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB5.
+	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_9 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_9_BRB0 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB2 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB5.
+	Register(s) fe_gpio_atr/ogpio_0 has(ve) been backward balanced into : fe_gpio_atr/ogpio_0_BRB1 fe_gpio_atr/ogpio_0_BRB3 fe_gpio_atr/ogpio_0_BRB4 fe_gpio_atr/ogpio_0_BRB5.
+	Register(s) fe_gpio_atr/ogpio_1 has(ve) been backward balanced into : fe_gpio_atr/ogpio_1_BRB1 fe_gpio_atr/ogpio_1_BRB3 fe_gpio_atr/ogpio_1_BRB4 fe_gpio_atr/ogpio_1_BRB5.
+	Register(s) fe_gpio_atr/ogpio_2 has(ve) been backward balanced into : fe_gpio_atr/ogpio_2_BRB1 fe_gpio_atr/ogpio_2_BRB3 fe_gpio_atr/ogpio_2_BRB4 fe_gpio_atr/ogpio_2_BRB5.
+	Register(s) fe_gpio_atr/ogpio_3 has(ve) been backward balanced into : fe_gpio_atr/ogpio_3_BRB1 fe_gpio_atr/ogpio_3_BRB3 fe_gpio_atr/ogpio_3_BRB4 fe_gpio_atr/ogpio_3_BRB5.
+	Register(s) fe_gpio_atr/ogpio_4 has(ve) been backward balanced into : fe_gpio_atr/ogpio_4_BRB1 fe_gpio_atr/ogpio_4_BRB3 fe_gpio_atr/ogpio_4_BRB4 fe_gpio_atr/ogpio_4_BRB5.
+	Register(s) fe_gpio_atr/ogpio_5 has(ve) been backward balanced into : fe_gpio_atr/ogpio_5_BRB1 fe_gpio_atr/ogpio_5_BRB3 fe_gpio_atr/ogpio_5_BRB4 fe_gpio_atr/ogpio_5_BRB5.
+	Register(s) fe_gpio_atr/ogpio_6 has(ve) been backward balanced into : fe_gpio_atr/ogpio_6_BRB1 fe_gpio_atr/ogpio_6_BRB3 fe_gpio_atr/ogpio_6_BRB4 fe_gpio_atr/ogpio_6_BRB5.
+	Register(s) fe_gpio_atr/ogpio_7 has(ve) been backward balanced into : fe_gpio_atr/ogpio_7_BRB1 fe_gpio_atr/ogpio_7_BRB3 fe_gpio_atr/ogpio_7_BRB4 fe_gpio_atr/ogpio_7_BRB5.
+	Register(s) inp_sig/tx_out_0 has(ve) been backward balanced into : inp_sig/tx_out_0_BRB0 .
+	Register(s) inp_sig/tx_out_1 has(ve) been backward balanced into : inp_sig/tx_out_1_BRB0 .
+	Register(s) inp_sig/tx_out_10 has(ve) been backward balanced into : inp_sig/tx_out_10_BRB0 .
+	Register(s) inp_sig/tx_out_11 has(ve) been backward balanced into : inp_sig/tx_out_11_BRB0 .
+	Register(s) inp_sig/tx_out_12 has(ve) been backward balanced into : inp_sig/tx_out_12_BRB0 .
+	Register(s) inp_sig/tx_out_13 has(ve) been backward balanced into : inp_sig/tx_out_13_BRB0 .
+	Register(s) inp_sig/tx_out_14 has(ve) been backward balanced into : inp_sig/tx_out_14_BRB0 .
+	Register(s) inp_sig/tx_out_15 has(ve) been backward balanced into : inp_sig/tx_out_15_BRB0 inp_sig/tx_out_15_BRB1 inp_sig/tx_out_15_BRB2.
+	Register(s) inp_sig/tx_out_2 has(ve) been backward balanced into : inp_sig/tx_out_2_BRB0 .
+	Register(s) inp_sig/tx_out_3 has(ve) been backward balanced into : inp_sig/tx_out_3_BRB0 .
+	Register(s) inp_sig/tx_out_4 has(ve) been backward balanced into : inp_sig/tx_out_4_BRB0 .
+	Register(s) inp_sig/tx_out_5 has(ve) been backward balanced into : inp_sig/tx_out_5_BRB0 .
+	Register(s) inp_sig/tx_out_6 has(ve) been backward balanced into : inp_sig/tx_out_6_BRB0 .
+	Register(s) inp_sig/tx_out_7 has(ve) been backward balanced into : inp_sig/tx_out_7_BRB0 .
+	Register(s) inp_sig/tx_out_8 has(ve) been backward balanced into : inp_sig/tx_out_8_BRB0 .
+	Register(s) inp_sig/tx_out_9 has(ve) been backward balanced into : inp_sig/tx_out_9_BRB0 .
+Unit <b200_core/radio_0> processed.
+
+Processing Unit <b200_core> :
+	Register(s) misc_spi/dataout_reg_0 has(ve) been backward balanced into : misc_spi/dataout_reg_0_BRB1.
+	Register(s) misc_spi/dataout_reg_1 has(ve) been backward balanced into : misc_spi/dataout_reg_1_BRB1 misc_spi/dataout_reg_1_BRB2.
+	Register(s) misc_spi/dataout_reg_10 has(ve) been backward balanced into : misc_spi/dataout_reg_10_BRB1 misc_spi/dataout_reg_10_BRB2.
+	Register(s) misc_spi/dataout_reg_11 has(ve) been backward balanced into : misc_spi/dataout_reg_11_BRB1 misc_spi/dataout_reg_11_BRB2.
+	Register(s) misc_spi/dataout_reg_12 has(ve) been backward balanced into : misc_spi/dataout_reg_12_BRB1 misc_spi/dataout_reg_12_BRB2.
+	Register(s) misc_spi/dataout_reg_13 has(ve) been backward balanced into : misc_spi/dataout_reg_13_BRB1 misc_spi/dataout_reg_13_BRB2.
+	Register(s) misc_spi/dataout_reg_14 has(ve) been backward balanced into : misc_spi/dataout_reg_14_BRB1 misc_spi/dataout_reg_14_BRB2.
+	Register(s) misc_spi/dataout_reg_15 has(ve) been backward balanced into : misc_spi/dataout_reg_15_BRB1 misc_spi/dataout_reg_15_BRB2.
+	Register(s) misc_spi/dataout_reg_16 has(ve) been backward balanced into : misc_spi/dataout_reg_16_BRB1 misc_spi/dataout_reg_16_BRB2.
+	Register(s) misc_spi/dataout_reg_17 has(ve) been backward balanced into : misc_spi/dataout_reg_17_BRB1 misc_spi/dataout_reg_17_BRB2.
+	Register(s) misc_spi/dataout_reg_18 has(ve) been backward balanced into : misc_spi/dataout_reg_18_BRB1 misc_spi/dataout_reg_18_BRB2.
+	Register(s) misc_spi/dataout_reg_19 has(ve) been backward balanced into : misc_spi/dataout_reg_19_BRB1 misc_spi/dataout_reg_19_BRB2.
+	Register(s) misc_spi/dataout_reg_2 has(ve) been backward balanced into : misc_spi/dataout_reg_2_BRB1 misc_spi/dataout_reg_2_BRB2.
+	Register(s) misc_spi/dataout_reg_20 has(ve) been backward balanced into : misc_spi/dataout_reg_20_BRB1 misc_spi/dataout_reg_20_BRB2.
+	Register(s) misc_spi/dataout_reg_21 has(ve) been backward balanced into : misc_spi/dataout_reg_21_BRB1 misc_spi/dataout_reg_21_BRB2.
+	Register(s) misc_spi/dataout_reg_22 has(ve) been backward balanced into : misc_spi/dataout_reg_22_BRB1 misc_spi/dataout_reg_22_BRB2.
+	Register(s) misc_spi/dataout_reg_23 has(ve) been backward balanced into : misc_spi/dataout_reg_23_BRB1 misc_spi/dataout_reg_23_BRB2.
+	Register(s) misc_spi/dataout_reg_24 has(ve) been backward balanced into : misc_spi/dataout_reg_24_BRB1 misc_spi/dataout_reg_24_BRB2.
+	Register(s) misc_spi/dataout_reg_25 has(ve) been backward balanced into : misc_spi/dataout_reg_25_BRB1 misc_spi/dataout_reg_25_BRB2.
+	Register(s) misc_spi/dataout_reg_26 has(ve) been backward balanced into : misc_spi/dataout_reg_26_BRB1 misc_spi/dataout_reg_26_BRB2.
+	Register(s) misc_spi/dataout_reg_27 has(ve) been backward balanced into : misc_spi/dataout_reg_27_BRB1 misc_spi/dataout_reg_27_BRB2.
+	Register(s) misc_spi/dataout_reg_28 has(ve) been backward balanced into : misc_spi/dataout_reg_28_BRB1 misc_spi/dataout_reg_28_BRB2.
+	Register(s) misc_spi/dataout_reg_29 has(ve) been backward balanced into : misc_spi/dataout_reg_29_BRB1 misc_spi/dataout_reg_29_BRB2.
+	Register(s) misc_spi/dataout_reg_3 has(ve) been backward balanced into : misc_spi/dataout_reg_3_BRB1 misc_spi/dataout_reg_3_BRB2.
+	Register(s) misc_spi/dataout_reg_30 has(ve) been backward balanced into : misc_spi/dataout_reg_30_BRB1 misc_spi/dataout_reg_30_BRB2.
+	Register(s) misc_spi/dataout_reg_31 has(ve) been backward balanced into : misc_spi/dataout_reg_31_BRB0 misc_spi/dataout_reg_31_BRB1 misc_spi/dataout_reg_31_BRB2.
+	Register(s) misc_spi/dataout_reg_4 has(ve) been backward balanced into : misc_spi/dataout_reg_4_BRB1 misc_spi/dataout_reg_4_BRB2.
+	Register(s) misc_spi/dataout_reg_5 has(ve) been backward balanced into : misc_spi/dataout_reg_5_BRB1 misc_spi/dataout_reg_5_BRB2.
+	Register(s) misc_spi/dataout_reg_6 has(ve) been backward balanced into : misc_spi/dataout_reg_6_BRB1 misc_spi/dataout_reg_6_BRB2.
+	Register(s) misc_spi/dataout_reg_7 has(ve) been backward balanced into : misc_spi/dataout_reg_7_BRB1 misc_spi/dataout_reg_7_BRB2.
+	Register(s) misc_spi/dataout_reg_8 has(ve) been backward balanced into : misc_spi/dataout_reg_8_BRB1 misc_spi/dataout_reg_8_BRB2.
+	Register(s) misc_spi/dataout_reg_9 has(ve) been backward balanced into : misc_spi/dataout_reg_9_BRB1 misc_spi/dataout_reg_9_BRB2.
+Unit <b200_core> processed.
+
 Processing Unit <slave_fifo32/fifo64_to_gpif2_rx/cross_clock_fifo/fifo_short_2clk> :
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0_BRB1.
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1_BRB1.
@@ -18377,72 +18526,6 @@ Processing Unit <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2cl
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2_BRB1.
 	Register(s) U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3 has(ve) been backward balanced into : U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB0 U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3_BRB1.
 Unit <slave_fifo32/gpif2_to_fifo64_tx/cross_clock_fifo/fifo_short_2clk> processed.
-
-Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> :
-	Register(s) blk000000bf has(ve) been backward balanced into : blk000000bf_BRB0 blk000000bf_BRB1 blk000000bf_BRB2 blk000000bf_BRB3.
-	Register(s) blk000000c1 has(ve) been backward balanced into : blk000000c1_BRB0 blk000000c1_BRB1 blk000000c1_BRB2.
-Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec1/blk00000003> processed.
-
-Processing Unit <b200_core/radio_0> :
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_0 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_0_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_0_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_1 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_1_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_1_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_2 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_2_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_2_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_3 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_3_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_3_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_4 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_4_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_4_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_5 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_5_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_5_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_6 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_6_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_6_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_7 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_7_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_7_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_8 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_8_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_8_BRB5.
-	Register(s) add_fp_gpio.fp_gpio_atr/ogpio_9 has(ve) been backward balanced into : add_fp_gpio.fp_gpio_atr/ogpio_9_BRB0 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB1 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB2 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB3 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB4 add_fp_gpio.fp_gpio_atr/ogpio_9_BRB5.
-	Register(s) fe_gpio_atr/ogpio_0 has(ve) been backward balanced into : fe_gpio_atr/ogpio_0_BRB1 fe_gpio_atr/ogpio_0_BRB3 fe_gpio_atr/ogpio_0_BRB4 fe_gpio_atr/ogpio_0_BRB5.
-	Register(s) fe_gpio_atr/ogpio_1 has(ve) been backward balanced into : fe_gpio_atr/ogpio_1_BRB1 fe_gpio_atr/ogpio_1_BRB3 fe_gpio_atr/ogpio_1_BRB4 fe_gpio_atr/ogpio_1_BRB5.
-	Register(s) fe_gpio_atr/ogpio_2 has(ve) been backward balanced into : fe_gpio_atr/ogpio_2_BRB1 fe_gpio_atr/ogpio_2_BRB3 fe_gpio_atr/ogpio_2_BRB4 fe_gpio_atr/ogpio_2_BRB5.
-	Register(s) fe_gpio_atr/ogpio_3 has(ve) been backward balanced into : fe_gpio_atr/ogpio_3_BRB1 fe_gpio_atr/ogpio_3_BRB3 fe_gpio_atr/ogpio_3_BRB4 fe_gpio_atr/ogpio_3_BRB5.
-	Register(s) fe_gpio_atr/ogpio_4 has(ve) been backward balanced into : fe_gpio_atr/ogpio_4_BRB1 fe_gpio_atr/ogpio_4_BRB3 fe_gpio_atr/ogpio_4_BRB4 fe_gpio_atr/ogpio_4_BRB5.
-	Register(s) fe_gpio_atr/ogpio_5 has(ve) been backward balanced into : fe_gpio_atr/ogpio_5_BRB1 fe_gpio_atr/ogpio_5_BRB3 fe_gpio_atr/ogpio_5_BRB4 fe_gpio_atr/ogpio_5_BRB5.
-	Register(s) fe_gpio_atr/ogpio_6 has(ve) been backward balanced into : fe_gpio_atr/ogpio_6_BRB1 fe_gpio_atr/ogpio_6_BRB3 fe_gpio_atr/ogpio_6_BRB4 fe_gpio_atr/ogpio_6_BRB5.
-	Register(s) fe_gpio_atr/ogpio_7 has(ve) been backward balanced into : fe_gpio_atr/ogpio_7_BRB1 fe_gpio_atr/ogpio_7_BRB3 fe_gpio_atr/ogpio_7_BRB4 fe_gpio_atr/ogpio_7_BRB5.
-Unit <b200_core/radio_0> processed.
-
-Processing Unit <b200_core> :
-	Register(s) misc_spi/dataout_reg_0 has(ve) been backward balanced into : misc_spi/dataout_reg_0_BRB1.
-	Register(s) misc_spi/dataout_reg_1 has(ve) been backward balanced into : misc_spi/dataout_reg_1_BRB1 misc_spi/dataout_reg_1_BRB2.
-	Register(s) misc_spi/dataout_reg_10 has(ve) been backward balanced into : misc_spi/dataout_reg_10_BRB1 misc_spi/dataout_reg_10_BRB2.
-	Register(s) misc_spi/dataout_reg_11 has(ve) been backward balanced into : misc_spi/dataout_reg_11_BRB1 misc_spi/dataout_reg_11_BRB2.
-	Register(s) misc_spi/dataout_reg_12 has(ve) been backward balanced into : misc_spi/dataout_reg_12_BRB1 misc_spi/dataout_reg_12_BRB2.
-	Register(s) misc_spi/dataout_reg_13 has(ve) been backward balanced into : misc_spi/dataout_reg_13_BRB1 misc_spi/dataout_reg_13_BRB2.
-	Register(s) misc_spi/dataout_reg_14 has(ve) been backward balanced into : misc_spi/dataout_reg_14_BRB1 misc_spi/dataout_reg_14_BRB2.
-	Register(s) misc_spi/dataout_reg_15 has(ve) been backward balanced into : misc_spi/dataout_reg_15_BRB1 misc_spi/dataout_reg_15_BRB2.
-	Register(s) misc_spi/dataout_reg_16 has(ve) been backward balanced into : misc_spi/dataout_reg_16_BRB1 misc_spi/dataout_reg_16_BRB2.
-	Register(s) misc_spi/dataout_reg_17 has(ve) been backward balanced into : misc_spi/dataout_reg_17_BRB1 misc_spi/dataout_reg_17_BRB2.
-	Register(s) misc_spi/dataout_reg_18 has(ve) been backward balanced into : misc_spi/dataout_reg_18_BRB1 misc_spi/dataout_reg_18_BRB2.
-	Register(s) misc_spi/dataout_reg_19 has(ve) been backward balanced into : misc_spi/dataout_reg_19_BRB1 misc_spi/dataout_reg_19_BRB2.
-	Register(s) misc_spi/dataout_reg_2 has(ve) been backward balanced into : misc_spi/dataout_reg_2_BRB1 misc_spi/dataout_reg_2_BRB2.
-	Register(s) misc_spi/dataout_reg_20 has(ve) been backward balanced into : misc_spi/dataout_reg_20_BRB1 misc_spi/dataout_reg_20_BRB2.
-	Register(s) misc_spi/dataout_reg_21 has(ve) been backward balanced into : misc_spi/dataout_reg_21_BRB1 misc_spi/dataout_reg_21_BRB2.
-	Register(s) misc_spi/dataout_reg_22 has(ve) been backward balanced into : misc_spi/dataout_reg_22_BRB1 misc_spi/dataout_reg_22_BRB2.
-	Register(s) misc_spi/dataout_reg_23 has(ve) been backward balanced into : misc_spi/dataout_reg_23_BRB1 misc_spi/dataout_reg_23_BRB2.
-	Register(s) misc_spi/dataout_reg_24 has(ve) been backward balanced into : misc_spi/dataout_reg_24_BRB1 misc_spi/dataout_reg_24_BRB2.
-	Register(s) misc_spi/dataout_reg_25 has(ve) been backward balanced into : misc_spi/dataout_reg_25_BRB1 misc_spi/dataout_reg_25_BRB2.
-	Register(s) misc_spi/dataout_reg_26 has(ve) been backward balanced into : misc_spi/dataout_reg_26_BRB1 misc_spi/dataout_reg_26_BRB2.
-	Register(s) misc_spi/dataout_reg_27 has(ve) been backward balanced into : misc_spi/dataout_reg_27_BRB1 misc_spi/dataout_reg_27_BRB2.
-	Register(s) misc_spi/dataout_reg_28 has(ve) been backward balanced into : misc_spi/dataout_reg_28_BRB1 misc_spi/dataout_reg_28_BRB2.
-	Register(s) misc_spi/dataout_reg_29 has(ve) been backward balanced into : misc_spi/dataout_reg_29_BRB1 misc_spi/dataout_reg_29_BRB2.
-	Register(s) misc_spi/dataout_reg_3 has(ve) been backward balanced into : misc_spi/dataout_reg_3_BRB1 misc_spi/dataout_reg_3_BRB2.
-	Register(s) misc_spi/dataout_reg_30 has(ve) been backward balanced into : misc_spi/dataout_reg_30_BRB1 misc_spi/dataout_reg_30_BRB2.
-	Register(s) misc_spi/dataout_reg_31 has(ve) been backward balanced into : misc_spi/dataout_reg_31_BRB0 misc_spi/dataout_reg_31_BRB1 misc_spi/dataout_reg_31_BRB2.
-	Register(s) misc_spi/dataout_reg_4 has(ve) been backward balanced into : misc_spi/dataout_reg_4_BRB1 misc_spi/dataout_reg_4_BRB2.
-	Register(s) misc_spi/dataout_reg_5 has(ve) been backward balanced into : misc_spi/dataout_reg_5_BRB1 misc_spi/dataout_reg_5_BRB2.
-	Register(s) misc_spi/dataout_reg_6 has(ve) been backward balanced into : misc_spi/dataout_reg_6_BRB1 misc_spi/dataout_reg_6_BRB2.
-	Register(s) misc_spi/dataout_reg_7 has(ve) been backward balanced into : misc_spi/dataout_reg_7_BRB1 misc_spi/dataout_reg_7_BRB2.
-	Register(s) misc_spi/dataout_reg_8 has(ve) been backward balanced into : misc_spi/dataout_reg_8_BRB1 misc_spi/dataout_reg_8_BRB2.
-	Register(s) misc_spi/dataout_reg_9 has(ve) been backward balanced into : misc_spi/dataout_reg_9_BRB1 misc_spi/dataout_reg_9_BRB2.
-Unit <b200_core> processed.
-
-Processing Unit <b200> :
-	Register(s) slave_fifo32/next_addr_0 has(ve) been backward balanced into : slave_fifo32/next_addr_0_BRB0 .
-	Register(s) slave_fifo32/next_addr_1 has(ve) been backward balanced into : slave_fifo32/next_addr_1_BRB0.
-Unit <b200> processed.
 
 Processing Unit <b200_core/radio_0/ddc_chain/new_hb.hbdec2/blk00000003> :
 	Register(s) blk000000bc has(ve) been backward balanced into : blk000000bc_BRB0 blk000000bc_BRB1 blk000000bc_BRB2 blk000000bc_BRB3.
@@ -24143,8 +24226,8 @@ Unit <radio_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 8302
- Flip-Flops                                            : 8302
+# Registers                                            : 8319
+ Flip-Flops                                            : 8319
 # Shift Registers                                      : 6
  2-bit shift register                                  : 6
 
@@ -26995,21 +27078,21 @@ Primitive and Black Box Usage:
 #      GND                         : 100
 #      INV                         : 235
 #      LUT1                        : 337
-#      LUT2                        : 3012
-#      LUT3                        : 2260
-#      LUT4                        : 1373
-#      LUT5                        : 1905
-#      LUT6                        : 5345
+#      LUT2                        : 3011
+#      LUT3                        : 2242
+#      LUT4                        : 1370
+#      LUT5                        : 1923
+#      LUT6                        : 5347
 #      MULT_AND                    : 15
 #      MUXCY                       : 4016
 #      MUXCY_D                     : 82
 #      MUXCY_L                     : 30
-#      MUXF7                       : 519
+#      MUXF7                       : 522
 #      MUXF8                       : 160
 #      VCC                         : 6
-#      XORCY                       : 3736
-# FlipFlops/Latches                : 13163
-#      FD                          : 730
+#      XORCY                       : 3735
+# FlipFlops/Latches                : 13180
+#      FD                          : 748
 #      FD_1                        : 1
 #      FDC                         : 592
 #      FDCE                        : 1376
@@ -27017,7 +27100,7 @@ Primitive and Black Box Usage:
 #      FDE_1                       : 48
 #      FDP                         : 163
 #      FDPE                        : 18
-#      FDR                         : 1889
+#      FDR                         : 1888
 #      FDRE                        : 3975
 #      FDS                         : 49
 #      FDSE                        : 59
@@ -27054,18 +27137,18 @@ Selected Device : 6slx75fgg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           13032  out of  93296    13%  
- Number of Slice LUTs:                18428  out of  46648    39%  
-    Number used as Logic:             14467  out of  46648    31%  
+ Number of Slice Registers:           13049  out of  93296    13%  
+ Number of Slice LUTs:                18426  out of  46648    39%  
+    Number used as Logic:             14465  out of  46648    31%  
     Number used as Memory:             3961  out of  11072    35%  
        Number used as RAM:              972
        Number used as SRL:             2989
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  24602
-   Number with an unused Flip Flop:   11570  out of  24602    47%  
-   Number with an unused LUT:          6174  out of  24602    25%  
-   Number of fully used LUT-FF pairs:  6858  out of  24602    27%  
+ Number of LUT Flip Flop pairs used:  24618
+   Number with an unused Flip Flop:   11569  out of  24618    46%  
+   Number with an unused LUT:          6192  out of  24618    25%  
+   Number of fully used LUT-FF pairs:  6857  out of  24618    27%  
    Number of unique control sets:       468
 
 IO Utilization: 
@@ -27101,7 +27184,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)                 | Load  |
 -----------------------------------+---------------------------------------+-------+
 codec_main_clk_p                   | DCM_SP:CLKFX                          | 5503  |
-codec_data_clk_p                   | IBUFG+BUFIO2+BUFGMUX                  | 11250 |
+codec_data_clk_p                   | IBUFG+BUFIO2+BUFGMUX                  | 11267 |
 base_signal/sig_out                | NONE(S6CLK2PIN_gpif_2/ODDR2_S6CLK2PIN)| 2     |
 -----------------------------------+---------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -27114,7 +27197,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 55.038ns (Maximum Frequency: 18.169MHz)
+   Minimum period: 56.578ns (Maximum Frequency: 17.675MHz)
    Minimum input arrival time before clock: 3.501ns
    Maximum output required time after clock: 4.555ns
    Maximum combinational path delay: 5.194ns
@@ -27165,16 +27248,16 @@ Delay:               9.881ns (Levels of Logic = 19)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'codec_data_clk_p'
-  Clock period: 55.038ns (frequency: 18.169MHz)
-  Total number of paths / destination ports: 3981956158541054600474490005090205696 / 34189
+  Clock period: 56.578ns (frequency: 17.675MHz)
+  Total number of paths / destination ports: 71675210853738450361719876539125858304 / 34147
 -------------------------------------------------------------------------
-Delay:               55.038ns (Levels of Logic = 36)
+Delay:               56.578ns (Levels of Logic = 37)
   Source:            b200_core/radio_0/inp_sig/phase_acc1_0 (FF)
-  Destination:       b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT (DSP)
+  Destination:       b200_core/radio_0/inp_sig/tx_out_15_BRB0 (FF)
   Source Clock:      codec_data_clk_p rising
   Destination Clock: codec_data_clk_p rising
 
-  Data Path: b200_core/radio_0/inp_sig/phase_acc1_0 to b200_core/radio_0/inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT
+  Data Path: b200_core/radio_0/inp_sig/phase_acc1_0 to b200_core/radio_0/inp_sig/tx_out_15_BRB0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -27189,36 +27272,37 @@ Delay:               55.038ns (Levels of Logic = 36)
      MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<6> (inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<6>)
      MUXCY:CI->O           1   0.019   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<7> (inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_cy<7>)
      XORCY:CI->O           1   0.180   0.580  inp_sig/Madd_phase_acc1[15]_codeword1[15]_add_2_OUT_xor<8> (inp_sig/phase_acc1[15]_codeword1[15]_add_2_OUT<8>)
-     LUT2:I1->O            1   0.205   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_24_OUT_lut<3> (inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_24_OUT_lut<3>)
-     MUXCY:S->O            1   0.172   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_24_OUT_cy<3> (inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_24_OUT_cy<3>)
-     XORCY:CI->O         179   0.180   2.139  inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_24_OUT_xor<4> (inp_sig/phase_acc1[15]_codeword1[31]_add_24_OUT<4>)
-     LUT4:I2->O            1   0.203   0.808  inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_25_OUT1781313_SW1 (inp_sig_N16)
-     LUT6:I3->O            1   0.205   0.580  inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_25_OUT1781313 (inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_25_OUT1781312)
-     LUT5:I4->O            1   0.205   0.580  inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_25_OUT1781314 (inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_25_OUT1781313)
-     LUT6:I5->O            1   0.205   0.579  inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_25_OUT1781321 (inp_sig/phase_acc1[15]_GND_84_o_wide_mux_25_OUT<7>)
-     DSP48A1:B7->M17       1   3.364   0.579  inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_26_OUT (inp_sig/codeword1[23]_phase_acc1[15]_MuLt_26_OUT<17>)
-     DSP48A1:C17->PCOUT47    1   2.689   0.000  inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_23_OUT (inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_23_OUT_PCOUT_to_Maddsub_codeword2[23]_phase_acc2[15]_MuLt_30_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_30_OUT (inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_30_OUT_PCOUT_to_Maddsub_codeword3[23]_phase_acc3[15]_MuLt_34_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_34_OUT (inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_34_OUT_PCOUT_to_Maddsub_codeword4[23]_phase_acc4[15]_MuLt_38_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_38_OUT (inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_38_OUT_PCOUT_to_Maddsub_codeword5[23]_phase_acc5[15]_MuLt_42_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_42_OUT (inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_42_OUT_PCOUT_to_Maddsub_codeword18[23]_phase_acc18[15]_MuLt_94_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_94_OUT (inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_94_OUT_PCOUT_to_Maddsub_codeword19[23]_phase_acc19[15]_MuLt_98_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_98_OUT (inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_98_OUT_PCOUT_to_Maddsub_codeword6[23]_phase_acc6[15]_MuLt_46_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_46_OUT (inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_46_OUT_PCOUT_to_Maddsub_codeword7[23]_phase_acc7[15]_MuLt_50_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_50_OUT (inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_50_OUT_PCOUT_to_Maddsub_codeword8[23]_phase_acc8[15]_MuLt_54_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_54_OUT (inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_54_OUT_PCOUT_to_Maddsub_codeword9[23]_phase_acc9[15]_MuLt_58_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_58_OUT (inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_58_OUT_PCOUT_to_Maddsub_codeword10[23]_phase_acc10[15]_MuLt_62_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_62_OUT (inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_62_OUT_PCOUT_to_Maddsub_codeword11[23]_phase_acc11[15]_MuLt_66_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_66_OUT (inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_66_OUT_PCOUT_to_Maddsub_codeword12[23]_phase_acc12[15]_MuLt_70_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_70_OUT (inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_70_OUT_PCOUT_to_Maddsub_codeword13[23]_phase_acc13[15]_MuLt_74_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_74_OUT (inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_74_OUT_PCOUT_to_Maddsub_codeword14[23]_phase_acc14[15]_MuLt_78_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_78_OUT (inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_78_OUT_PCOUT_to_Maddsub_codeword15[23]_phase_acc15[15]_MuLt_82_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_82_OUT (inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_82_OUT_PCOUT_to_Maddsub_codeword16[23]_phase_acc16[15]_MuLt_86_OUT_PCIN_47)
-     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_86_OUT (inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_86_OUT_PCOUT_to_Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT_PCIN_47)
-     DSP48A1:PCIN47            1.405          inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_90_OUT
+     LUT2:I1->O            1   0.205   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_54_OUT_lut<3> (inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_54_OUT_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_54_OUT_cy<3> (inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_54_OUT_cy<3>)
+     XORCY:CI->O         179   0.180   2.139  inp_sig/Madd_phase_acc1[15]_codeword1[31]_add_54_OUT_xor<4> (inp_sig/phase_acc1[15]_codeword1[31]_add_54_OUT<4>)
+     LUT4:I2->O            1   0.203   0.808  inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_55_OUT1781313_SW1 (inp_sig_N16)
+     LUT6:I3->O            1   0.205   0.580  inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_55_OUT1781313 (inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_55_OUT1781312)
+     LUT5:I4->O            1   0.205   0.580  inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_55_OUT1781314 (inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_55_OUT1781313)
+     LUT6:I5->O            1   0.205   0.579  inp_sig_Mram_phase_acc1[15]_GND_84_o_wide_mux_55_OUT1781321 (inp_sig/phase_acc1[15]_GND_84_o_wide_mux_55_OUT<7>)
+     DSP48A1:B7->M17       1   3.364   0.579  inp_sig/Mmult_codeword1[23]_phase_acc1[15]_MuLt_56_OUT (inp_sig/codeword1[23]_phase_acc1[15]_MuLt_56_OUT<17>)
+     DSP48A1:C17->PCOUT47    1   2.689   0.000  inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_53_OUT (inp_sig/Maddsub_codeword0[23]_phase_acc0[15]_MuLt_53_OUT_PCOUT_to_Maddsub_codeword2[23]_phase_acc2[15]_MuLt_60_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_60_OUT (inp_sig/Maddsub_codeword2[23]_phase_acc2[15]_MuLt_60_OUT_PCOUT_to_Maddsub_codeword3[23]_phase_acc3[15]_MuLt_64_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_64_OUT (inp_sig/Maddsub_codeword3[23]_phase_acc3[15]_MuLt_64_OUT_PCOUT_to_Maddsub_codeword4[23]_phase_acc4[15]_MuLt_68_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_68_OUT (inp_sig/Maddsub_codeword4[23]_phase_acc4[15]_MuLt_68_OUT_PCOUT_to_Maddsub_codeword5[23]_phase_acc5[15]_MuLt_72_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_72_OUT (inp_sig/Maddsub_codeword5[23]_phase_acc5[15]_MuLt_72_OUT_PCOUT_to_Maddsub_codeword6[23]_phase_acc6[15]_MuLt_76_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_76_OUT (inp_sig/Maddsub_codeword6[23]_phase_acc6[15]_MuLt_76_OUT_PCOUT_to_Maddsub_codeword7[23]_phase_acc7[15]_MuLt_80_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_80_OUT (inp_sig/Maddsub_codeword7[23]_phase_acc7[15]_MuLt_80_OUT_PCOUT_to_Maddsub_codeword16[23]_phase_acc16[15]_MuLt_116_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_116_OUT (inp_sig/Maddsub_codeword16[23]_phase_acc16[15]_MuLt_116_OUT_PCOUT_to_Maddsub_codeword17[23]_phase_acc17[15]_MuLt_120_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_120_OUT (inp_sig/Maddsub_codeword17[23]_phase_acc17[15]_MuLt_120_OUT_PCOUT_to_Maddsub_codeword18[23]_phase_acc18[15]_MuLt_124_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_124_OUT (inp_sig/Maddsub_codeword18[23]_phase_acc18[15]_MuLt_124_OUT_PCOUT_to_Maddsub_codeword19[23]_phase_acc19[15]_MuLt_128_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_128_OUT (inp_sig/Maddsub_codeword19[23]_phase_acc19[15]_MuLt_128_OUT_PCOUT_to_Maddsub_codeword8[23]_phase_acc8[15]_MuLt_84_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_84_OUT (inp_sig/Maddsub_codeword8[23]_phase_acc8[15]_MuLt_84_OUT_PCOUT_to_Maddsub_codeword9[23]_phase_acc9[15]_MuLt_88_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_88_OUT (inp_sig/Maddsub_codeword9[23]_phase_acc9[15]_MuLt_88_OUT_PCOUT_to_Maddsub_codeword10[23]_phase_acc10[15]_MuLt_92_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_92_OUT (inp_sig/Maddsub_codeword10[23]_phase_acc10[15]_MuLt_92_OUT_PCOUT_to_Maddsub_codeword11[23]_phase_acc11[15]_MuLt_96_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_96_OUT (inp_sig/Maddsub_codeword11[23]_phase_acc11[15]_MuLt_96_OUT_PCOUT_to_Maddsub_codeword12[23]_phase_acc12[15]_MuLt_100_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_100_OUT (inp_sig/Maddsub_codeword12[23]_phase_acc12[15]_MuLt_100_OUT_PCOUT_to_Maddsub_codeword13[23]_phase_acc13[15]_MuLt_104_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_104_OUT (inp_sig/Maddsub_codeword13[23]_phase_acc13[15]_MuLt_104_OUT_PCOUT_to_Maddsub_codeword14[23]_phase_acc14[15]_MuLt_108_OUT_PCIN_47)
+     DSP48A1:PCIN47->PCOUT47    1   2.265   0.000  inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_108_OUT (inp_sig/Maddsub_codeword14[23]_phase_acc14[15]_MuLt_108_OUT_PCOUT_to_Maddsub_codeword15[23]_phase_acc15[15]_MuLt_112_OUT_PCIN_47)
+     DSP48A1:PCIN47->P25    1   2.264   0.579  inp_sig/Maddsub_codeword15[23]_phase_acc15[15]_MuLt_112_OUT (inp_sig/ADDER_FOR_MULTADD_Madd_2518)
+     FD:D                      0.102          inp_sig/tx_out_15_BRB1
     ----------------------------------------
-    Total                     55.038ns (48.473ns logic, 6.565ns route)
-                                       (88.1% logic, 11.9% route)
+    Total                     56.578ns (49.434ns logic, 7.144ns route)
+                                       (87.4% logic, 12.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'codec_main_clk_p'
@@ -27328,7 +27412,7 @@ Clock to Setup on destination clock codec_data_clk_p
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-codec_data_clk_p|   55.038|    6.025|    4.068|         |
+codec_data_clk_p|   56.578|    6.025|    4.068|         |
 codec_main_clk_p|    3.502|         |         |         |
 ----------------+---------+---------+---------+---------+
 
@@ -27344,15 +27428,15 @@ codec_main_clk_p|    9.881|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 345.00 secs
-Total CPU time to Xst completion: 326.50 secs
+Total REAL time to Xst completion: 346.00 secs
+Total CPU time to Xst completion: 328.64 secs
  
 --> 
 
 
-Total memory usage is 785440 kilobytes
+Total memory usage is 791332 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 19784 (   0 filtered)
-Number of infos    :  633 (   0 filtered)
+Number of warnings : 19848 (   0 filtered)
+Number of infos    :  634 (   0 filtered)
 
